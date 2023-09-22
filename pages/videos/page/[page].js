@@ -4,8 +4,8 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import videosPageInitialPaths8f9abResource from '../../../resources/videos-page-initial-paths-8f9ab'
-import videosPageInitialProps2390fResource from '../../../resources/videos-page-initial-props-2390f'
+import videosPageInitialPaths3fa7bResource from '../../../resources/videos-page-initial-paths-3fa7b'
+import videosPageInitialPropsA09acResource from '../../../resources/videos-page-initial-props-a09ac'
 
 const Videos1 = (props) => {
   return (
@@ -72,7 +72,7 @@ export default Videos1
 
 export async function getStaticPaths() {
   try {
-    const response = await videosPageInitialPaths8f9abResource({})
+    const response = await videosPageInitialPaths3fa7bResource({})
     const totalCount = response?.meta?.pagination?.total
     const pagesCount = Math.ceil(totalCount / 10)
     return {
@@ -98,7 +98,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await videosPageInitialProps2390fResource({
+    const response = await videosPageInitialPropsA09acResource({
       ...context?.params,
       start: (context.params.page - 1) * 10,
     })

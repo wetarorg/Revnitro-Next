@@ -34,7 +34,14 @@ const Home = (props) => {
               data-role="Nav"
               className="home-nav"
             >
-              <span className="navLink">Blogs</span>
+              <a
+                href="https://revnitroblog2.vercel.app/blog"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="home-link navLink"
+              >
+                Blogs
+              </a>
               <span className="navLink">Course</span>
               <a
                 href="https://forum.revnitro.com"
@@ -48,9 +55,9 @@ const Home = (props) => {
                 <a className="home-link4 navLink">Team</a>
               </Link>
             </nav>
-            <button className="home-register button">
+            <a href="#service" className="home-register button">
               <span className="home-text">BOOK SERVICES</span>
-            </button>
+            </a>
           </div>
           <div data-thq="thq-burger-menu" className="home-burger-menu">
             <svg viewBox="0 0 1024 1024" className="home-icon">
@@ -295,7 +302,7 @@ new BlazeSlider(el, {
           </div>
         </section>
         <Blogs1></Blogs1>
-        <section className="home-services">
+        <section id="service" className="home-services">
           <div className="home-service">
             <div className="home-brand brand">
               <h2 className="home-title">Book a consultation</h2>
@@ -573,6 +580,9 @@ new BlazeSlider(el, {
             align-items: center;
             flex-direction: row;
           }
+          .home-link {
+            text-decoration: none;
+          }
           .home-link2 {
             text-decoration: none;
           }
@@ -581,6 +591,7 @@ new BlazeSlider(el, {
           }
           .home-register {
             margin-right: var(--dl-space-space-twounits);
+            text-decoration: none;
           }
           .home-text {
             font-size: 16px;

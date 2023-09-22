@@ -34,14 +34,18 @@ const Team = (props) => {
               data-role="Nav"
               className="team-nav"
             >
-              <span className="navLink">Blogs</span>
+              <a
+                href="https://revnitroblog2.vercel.app/blog"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="team-link1 navLink"
+              >
+                Blogs
+              </a>
               <span className="navLink">Course</span>
               <span className="navLink">Forum</span>
               <span className="navLink">Team</span>
             </nav>
-            <button className="team-register button">
-              <span className="team-text">BOOK SERVICES</span>
-            </button>
           </div>
           <div data-thq="thq-burger-menu" className="team-burger-menu">
             <svg viewBox="0 0 1024 1024" className="team-icon">
@@ -66,8 +70,8 @@ const Team = (props) => {
                 data-role="Nav"
                 className="team-nav2"
               >
-                <span className="navLink team-text01">Team</span>
-                <span className="navLink team-text02">Blog</span>
+                <span className="navLink team-text">Team</span>
+                <span className="navLink team-text01">Blog</span>
               </nav>
               <div className="team-icon-group">
                 <div className="team-icons">
@@ -106,7 +110,7 @@ const Team = (props) => {
             className="team-video"
           ></video>
           <div className="team-hero-content">
-            <h1 className="team-text03">RevNitro Team</h1>
+            <h1 className="team-text02">RevNitro Team</h1>
             <div className="team-caption">
               <p className="team-caption01">
                 RevNitro is a devoted community of engineers and auto
@@ -115,7 +119,7 @@ const Team = (props) => {
               </p>
             </div>
             <a href="#team" className="team-link5 button">
-              <span className="team-text04">OUR TEAM</span>
+              <span className="team-text03">OUR TEAM</span>
             </a>
           </div>
         </section>
@@ -144,7 +148,7 @@ const Team = (props) => {
         </section>
         <div className="team-header">
           <div className="team-hero-content1">
-            <h1 className="team-text09">For Tamil Speaking Audience</h1>
+            <h1 className="team-text08">For Tamil Speaking Audience</h1>
             <div className="team-caption03">
               <p className="team-caption04">
                 <span>
@@ -784,14 +788,14 @@ const Team = (props) => {
         </section>
         <div className="team-hero1">
           <h2 className="team-heading1">
-            <span className="team-text32">Need help?</span>
-            <br className="team-text33"></br>
-            <span className="team-text34">Contact our </span>
-            <span className="team-text35">team</span>
-            <span className="team-text36"> </span>
-            <span className="team-text37">now!</span>
-            <br className="team-text38"></br>
-            <span className="team-text39">
+            <span className="team-text31">Need help?</span>
+            <br className="team-text32"></br>
+            <span className="team-text33">Contact our </span>
+            <span className="team-text34">team</span>
+            <span className="team-text35"> </span>
+            <span className="team-text36">now!</span>
+            <br className="team-text37"></br>
+            <span className="team-text38">
               <span
                 dangerouslySetInnerHTML={{
                   __html: ' ',
@@ -805,7 +809,7 @@ const Team = (props) => {
             rel="noreferrer noopener"
             className="team-link6 button"
           >
-            <span className="team-text40">CONNECT</span>
+            <span className="team-text39">CONNECT</span>
           </a>
         </div>
         <div className="team-footer">
@@ -816,9 +820,9 @@ const Team = (props) => {
                   src="/logo/ba365a50c6760909f3950a57a9b9ff1c-200h.webp"
                   className="team-image7"
                 />
-                <span className="team-text41">
+                <span className="team-text40">
                   <span>Redefining Automobile Journalism</span>
-                  <br className="team-text43"></br>
+                  <br className="team-text42"></br>
                   <br></br>
                   <span>
                     <span
@@ -840,10 +844,10 @@ const Team = (props) => {
                 <div className="team-column">
                   <span className="team-header2">Company</span>
                   <div className="team-list2">
-                    <span className="team-text47">About</span>
-                    <span className="team-text48">Services</span>
-                    <span className="team-text49">
-                      <span className="team-text50">Team</span>
+                    <span className="team-text46">About</span>
+                    <span className="team-text47">Services</span>
+                    <span className="team-text48">
+                      <span className="team-text49">Team</span>
                       <br></br>
                     </span>
                   </div>
@@ -854,22 +858,22 @@ const Team = (props) => {
                     <br></br>
                   </span>
                   <div className="team-list3">
-                    <span className="team-text54">Articles</span>
-                    <span className="team-text55">Blog</span>
+                    <span className="team-text53">Articles</span>
+                    <span className="team-text54">Blog</span>
                   </div>
                 </div>
                 <div className="team-column2">
                   <span className="team-header4">Social</span>
                   <div className="team-list4">
-                    <span className="team-text56">Twitter</span>
-                    <span className="team-text57">Instagram</span>
-                    <span className="team-text58">Facebook</span>
+                    <span className="team-text55">Twitter</span>
+                    <span className="team-text56">Instagram</span>
+                    <span className="team-text57">Facebook</span>
                   </div>
                 </div>
               </div>
             </div>
             <div className="team-bottom">
-              <span className="team-text59">
+              <span className="team-text58">
                 © 2023 Revnitro - All rights reserved
               </span>
             </div>
@@ -915,13 +919,11 @@ const Team = (props) => {
             flex: 0 0 auto;
             display: flex;
             align-items: center;
+            margin-right: var(--dl-space-space-twounits);
             flex-direction: row;
           }
-          .team-register {
-            margin-right: var(--dl-space-space-twounits);
-          }
-          .team-text {
-            font-size: 16px;
+          .team-link1 {
+            text-decoration: none;
           }
           .team-burger-menu {
             display: none;
@@ -1028,7 +1030,7 @@ const Team = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .team-text03 {
+          .team-text02 {
             color: rgb(255, 0, 0);
             font-size: 90px;
             font-style: normal;
@@ -1058,7 +1060,7 @@ const Team = (props) => {
             text-decoration: none;
             background-color: #2200ff;
           }
-          .team-text04 {
+          .team-text03 {
             margin: var(--dl-space-space-unit);
             font-size: 24px;
           }
@@ -1104,7 +1106,7 @@ const Team = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .team-text09 {
+          .team-text08 {
             color: rgb(255, 255, 255);
             font-size: 45px;
             font-style: normal;
@@ -1581,17 +1583,23 @@ const Team = (props) => {
             text-align: center;
             font-weight: 500;
           }
+          .team-text31 {
+            font-size: 54px;
+            font-weight: 500;
+          }
           .team-text32 {
             font-size: 54px;
             font-weight: 500;
           }
           .team-text33 {
-            font-size: 54px;
+            font-size: 100px;
             font-weight: 500;
           }
           .team-text34 {
-            font-size: 100px;
-            font-weight: 500;
+            color: #2200ff;
+            font-style: italic;
+            font-family: Open Sans;
+            font-weight: 600;
           }
           .team-text35 {
             color: #2200ff;
@@ -1600,21 +1608,15 @@ const Team = (props) => {
             font-weight: 600;
           }
           .team-text36 {
-            color: #2200ff;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 600;
-          }
-          .team-text37 {
             font-style: normal;
           }
-          .team-text38 {
+          .team-text37 {
             color: #ffffff;
             font-size: 100px;
             font-style: normal;
             font-weight: 500;
           }
-          .team-text39 {
+          .team-text38 {
             font-style: normal;
           }
           .team-link6 {
@@ -1626,7 +1628,7 @@ const Team = (props) => {
             text-decoration: none;
             background-color: #2200ff;
           }
-          .team-text40 {
+          .team-text39 {
             margin: var(--dl-space-space-unit);
             font-size: 24px;
           }
@@ -1669,11 +1671,11 @@ const Team = (props) => {
             width: 120px;
             object-fit: cover;
           }
-          .team-text41 {
+          .team-text40 {
             color: rgb(124, 124, 128);
             line-height: 24px;
           }
-          .team-text43 {
+          .team-text42 {
             color: #7c7c80;
             line-height: 24px;
           }
@@ -1701,6 +1703,16 @@ const Team = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
+          .team-text46 {
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            line-height: 32px;
+            text-decoration: none;
+          }
+          .team-text46:hover {
+            opacity: 0.5;
+          }
           .team-text47 {
             cursor: pointer;
             font-size: 16px;
@@ -1721,17 +1733,7 @@ const Team = (props) => {
           .team-text48:hover {
             opacity: 0.5;
           }
-          .team-text49 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
           .team-text49:hover {
-            opacity: 0.5;
-          }
-          .team-text50:hover {
             opacity: 0.5;
           }
           .team-column1 {
@@ -1752,6 +1754,16 @@ const Team = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
+          .team-text53 {
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            line-height: 32px;
+            text-decoration: none;
+          }
+          .team-text53:hover {
+            opacity: 0.5;
+          }
           .team-text54 {
             cursor: pointer;
             font-size: 16px;
@@ -1760,16 +1772,6 @@ const Team = (props) => {
             text-decoration: none;
           }
           .team-text54:hover {
-            opacity: 0.5;
-          }
-          .team-text55 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .team-text55:hover {
             opacity: 0.5;
           }
           .team-column2 {
@@ -1789,6 +1791,16 @@ const Team = (props) => {
             display: flex;
             align-items: flex-start;
             flex-direction: column;
+          }
+          .team-text55 {
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            line-height: 32px;
+            text-decoration: none;
+          }
+          .team-text55:hover {
+            opacity: 0.5;
           }
           .team-text56 {
             cursor: pointer;
@@ -1810,16 +1822,6 @@ const Team = (props) => {
           .team-text57:hover {
             opacity: 0.5;
           }
-          .team-text58 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .team-text58:hover {
-            opacity: 0.5;
-          }
           .team-bottom {
             width: 100%;
             display: flex;
@@ -1827,7 +1829,7 @@ const Team = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .team-text59 {
+          .team-text58 {
             color: rgb(124, 124, 128);
             font-size: 14px;
             line-height: 21px;
@@ -1908,10 +1910,10 @@ const Team = (props) => {
             .team-nav2 {
               gap: var(--dl-space-space-unit);
             }
-            .team-text01 {
+            .team-text {
               color: rgb(0, 0, 0);
             }
-            .team-text02 {
+            .team-text01 {
               color: rgb(0, 0, 0);
             }
             .team-icon-group {
@@ -2048,13 +2050,13 @@ const Team = (props) => {
             .team-icon-group {
               justify-content: center;
             }
-            .team-text03 {
+            .team-text02 {
               font-size: 50px;
             }
             .team-link5 {
               text-align: center;
             }
-            .team-text09 {
+            .team-text08 {
               font-size: 50px;
             }
             .team-hero1 {
