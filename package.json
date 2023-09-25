@@ -18,7 +18,8 @@
     "@teleporthq/cms-mappers": "latest",
     "dangerous-html": "0.1.13",
     "@teleporthq/react-components": "latest",
-    "prop-types": "15.7.2"
+    "prop-types": "15.7.2",
+    "markdown-to-jsx": "7.2.0"
   },
   "devDependencies": {
     "tailwindcss": "^3.0.24",

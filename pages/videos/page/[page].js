@@ -4,16 +4,16 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import videosPageInitialPaths3fa7bResource from '../../../resources/videos-page-initial-paths-3fa7b'
-import videosPageInitialPropsA09acResource from '../../../resources/videos-page-initial-props-a09ac'
+import videosPageInitialPathsF6e6bResource from '../../../resources/videos-page-initial-paths-f6e6b'
+import videosPageInitialProps32186Resource from '../../../resources/videos-page-initial-props-32186'
 
-const Videos1 = (props) => {
+const Videos11 = (props) => {
   return (
     <>
-      <div className="videos1-container">
+      <div className="videos11-container">
         <Head>
-          <title>Videos - Revnitro</title>
-          <meta property="og:title" content="Videos - Revnitro" />
+          <title>Videos1 - Revnitro</title>
+          <meta property="og:title" content="Videos1 - Revnitro" />
         </Head>
         <DataProvider
           renderSuccess={(params) => (
@@ -22,10 +22,10 @@ const Videos1 = (props) => {
                 items={params}
                 renderItem={(VideosEntities) => (
                   <>
-                    <div className="videos1-container1">
+                    <div className="videos11-container1">
                       <h1>{VideosEntities?.Title}</h1>
                       <span>{VideosEntities?.Title}</span>
-                      <span>{VideosEntities?.videoid}</span>
+                      <span>{VideosEntities?.url}</span>
                     </div>
                   </>
                 )}
@@ -39,7 +39,7 @@ const Videos1 = (props) => {
       </div>
       <style jsx>
         {`
-          .videos1-container {
+          .videos11-container {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -47,7 +47,7 @@ const Videos1 = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .videos1-container1 {
+          .videos11-container1 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -60,19 +60,19 @@ const Videos1 = (props) => {
   )
 }
 
-Videos1.defaultProps = {
+Videos11.defaultProps = {
   videosEntities: [],
 }
 
-Videos1.propTypes = {
+Videos11.propTypes = {
   videosEntities: PropTypes.array,
 }
 
-export default Videos1
+export default Videos11
 
 export async function getStaticPaths() {
   try {
-    const response = await videosPageInitialPaths3fa7bResource({})
+    const response = await videosPageInitialPathsF6e6bResource({})
     const totalCount = response?.meta?.pagination?.total
     const pagesCount = Math.ceil(totalCount / 10)
     return {
@@ -98,7 +98,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await videosPageInitialPropsA09acResource({
+    const response = await videosPageInitialProps32186Resource({
       ...context?.params,
       start: (context.params.page - 1) * 10,
     })

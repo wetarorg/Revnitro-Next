@@ -2,12 +2,14 @@ import { normalize } from '@teleporthq/cms-mappers/strapi'
 
 export default async function (params = {}) {
   const urlParams = {
+    'pagination[limit]': 10,
+    ...(params['start'] && {
+      'pagination[start]': params['start'],
+    }),
     populate: '*',
-    'pagination[limit]': 4,
-    'filters[Category][$eq]': 'rider tips',
   }
   const data = await fetch(
-    `${process.env.CMS_URL}/api/Blogs?${new URLSearchParams(urlParams)}`,
+    `${process.env.CMS_URL}/api/Videos?${new URLSearchParams(urlParams)}`,
     {
       method: 'GET',
       headers: {

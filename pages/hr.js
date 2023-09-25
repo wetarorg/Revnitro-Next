@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 
-import Speaker from '../components/speaker'
+import Blogcard from '../components/blogcard'
 
 const Hr = (props) => {
   return (
@@ -111,12 +111,12 @@ const Hr = (props) => {
                   items={params}
                   renderItem={(context_ngumra) => (
                     <>
-                      <Speaker
+                      <Blogcard
                         name={context_ngumra?.Title}
                         image={context_ngumra?.ImageUrl}
                         linktext={context_ngumra?.BlogUrl}
-                        rootClassName="speaker-root-class-name55"
-                      ></Speaker>
+                        rootClassName="blogcard-root-class-name55"
+                      ></Blogcard>
                     </>
                   )}
                 />

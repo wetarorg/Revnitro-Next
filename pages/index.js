@@ -135,8 +135,8 @@ const Home = (props) => {
                         <>
                           <div className="home-container02">
                             <img
-                              alt="image"
-                              src={context_tz9kl?.Imageurl}
+                              src={context_tz9kl?.Image?.url}
+                              loading="lazy"
                               className="home-image01"
                             />
                             <div className="home-content">
@@ -145,7 +145,7 @@ const Home = (props) => {
                                   {context_tz9kl?.Title}
                                 </h3>
                                 <span className="home-text03">
-                                  {context_tz9kl?.Descriptions}
+                                  {context_tz9kl?.description}
                                 </span>
                                 <div className="home-container03"></div>
                               </div>
@@ -184,23 +184,25 @@ const Home = (props) => {
                         <>
                           <div className="home-container06">
                             <img
-                              alt="image"
-                              src={context_tz9kl?.Imageurl}
+                              src={context_tz9kl?.Image?.url}
+                              loading="lazy"
                               className="home-image02"
                             />
                             <div className="home-content1">
-                              <div className="home-header1">
+                              <div className="home-header01">
                                 <h3 className="home-heading1">
                                   {context_tz9kl?.Title}
                                 </h3>
                                 <span className="home-text05">
-                                  {context_tz9kl?.Descriptions}
+                                  {context_tz9kl?.description}
                                 </span>
                                 <div className="home-container07"></div>
                               </div>
-                              <div className="home-container08"></div>
-                              <div className="home-container09">
+                              <div className="home-container08">
                                 <span className="home-text06">KNOW MORE</span>
+                              </div>
+                              <div className="home-container09">
+                                <div className="home-more1"></div>
                               </div>
                             </div>
                           </div>
@@ -231,23 +233,123 @@ const Home = (props) => {
                         <>
                           <div className="home-container10">
                             <img
-                              alt="image"
-                              src={context_tz9kl?.Imageurl}
+                              src={context_tz9kl?.Image?.url}
+                              loading="lazy"
                               className="home-image03"
                             />
                             <div className="home-content2">
-                              <div className="home-header2">
+                              <div className="home-header02">
                                 <h3 className="home-heading2">
                                   {context_tz9kl?.Title}
                                 </h3>
                                 <span className="home-text07">
-                                  {context_tz9kl?.Descriptions}
+                                  {context_tz9kl?.description}
                                 </span>
                                 <div className="home-container11"></div>
                               </div>
-                              <div className="home-container12"></div>
-                              <div className="home-container13">
+                              <div className="home-container12">
                                 <span className="home-text08">KNOW MORE</span>
+                              </div>
+                              <div className="home-container13">
+                                <div className="home-more2"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                    />
+                  </div>
+                  <div
+                    data-role="current-banner"
+                    className="home-slide3 banner"
+                  >
+                    <DataProvider
+                      fetchData={(params) =>
+                        fetch(
+                          `/api/home3resource-home3?${new URLSearchParams(
+                            params
+                          )}`,
+                          {
+                            headers: {
+                              'Content-Type': 'application/json',
+                            },
+                          }
+                        )
+                          .then((res) => res.json())
+                          .then((data) => data?.data?.[0])
+                      }
+                      renderSuccess={(context_tz9kl) => (
+                        <>
+                          <div className="home-container14">
+                            <img
+                              src={context_tz9kl?.Image?.url}
+                              loading="lazy"
+                              className="home-image04"
+                            />
+                            <div className="home-content3">
+                              <div className="home-header03">
+                                <h3 className="home-heading3">
+                                  {context_tz9kl?.Title}
+                                </h3>
+                                <span className="home-text09">
+                                  {context_tz9kl?.description}
+                                </span>
+                                <div className="home-container15"></div>
+                              </div>
+                              <div className="home-container16">
+                                <span className="home-text10">KNOW MORE</span>
+                              </div>
+                              <div className="home-container17">
+                                <div className="home-more3"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                    />
+                  </div>
+                  <div
+                    data-role="current-banner"
+                    className="home-slide4 banner"
+                  >
+                    <DataProvider
+                      fetchData={(params) =>
+                        fetch(
+                          `/api/home4resource-home4?${new URLSearchParams(
+                            params
+                          )}`,
+                          {
+                            headers: {
+                              'Content-Type': 'application/json',
+                            },
+                          }
+                        )
+                          .then((res) => res.json())
+                          .then((data) => data?.data?.[0])
+                      }
+                      renderSuccess={(context_tz9kl) => (
+                        <>
+                          <div className="home-container18">
+                            <img
+                              src={context_tz9kl?.Image?.url}
+                              loading="lazy"
+                              className="home-image05"
+                            />
+                            <div className="home-content4">
+                              <div className="home-header04">
+                                <h3 className="home-heading4">
+                                  {context_tz9kl?.Title}
+                                </h3>
+                                <span className="home-text11">
+                                  {context_tz9kl?.description}
+                                </span>
+                                <div className="home-container19"></div>
+                              </div>
+                              <div className="home-container20">
+                                <span className="home-text12">KNOW MORE</span>
+                              </div>
+                              <div className="home-container21">
+                                <div className="home-more4"></div>
                               </div>
                             </div>
                           </div>
@@ -295,7 +397,7 @@ new BlazeSlider(el, {
         </section>
         <section className="home-hero">
           <div className="home-hero-content">
-            <h1 className="home-text09">REVNITRO</h1>
+            <h1 className="home-text13">REVNITRO</h1>
             <div className="home-caption">
               <p className="home-caption1">REDEFINING AUTOMOBILE JOURNALISM</p>
             </div>
@@ -311,27 +413,27 @@ new BlazeSlider(el, {
               <h2 className="home-title1">Schedule a service</h2>
             </div>
             <div className="home-brand2 brand">
-              <img alt="image" src="/bookings/3.svg" className="home-image04" />
+              <img alt="image" src="/bookings/3.svg" className="home-image06" />
               <h2 className="home-title2">New Car Purchase</h2>
             </div>
             <div className="home-brand3 brand">
-              <img alt="image" src="/bookings/4.svg" className="home-image05" />
+              <img alt="image" src="/bookings/4.svg" className="home-image07" />
               <h2 className="home-title3">Car Services</h2>
             </div>
             <div className="home-brand4 brand">
-              <img alt="image" src="/bookings/2.svg" className="home-image06" />
+              <img alt="image" src="/bookings/2.svg" className="home-image08" />
               <h2 className="home-title4">New Bike Purchase</h2>
             </div>
             <div className="home-brand5 brand">
-              <img alt="image" src="/bookings/1.svg" className="home-image07" />
+              <img alt="image" src="/bookings/1.svg" className="home-image09" />
               <h2 className="home-title5">Bike Services</h2>
             </div>
           </div>
           <div className="home-brand6"></div>
         </section>
         <section className="home-testimonials">
-          <div className="home-header3">
-            <div data-aos="fade-right" className="home-heading3">
+          <div className="home-header05">
+            <div data-aos="fade-right" className="home-heading5">
               <h2 className="home-title6">
                 Don’t just take our word for it. Here’s what our readers have to
                 say:
@@ -344,7 +446,7 @@ new BlazeSlider(el, {
                 <img
                   alt="image"
                   src="https://images.unsplash.com/photo-1622100685582-d8542910e078?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE1fHxpbmRpYW4lMjBtZW58ZW58MHx8fHwxNjk0NzY5MDMzfDA&amp;ixlib=rb-4.0.3&amp;w=200"
-                  className="home-image08"
+                  className="home-image10"
                 />
                 <div className="home-details">
                   <span className="home-name">Arjun</span>
@@ -360,7 +462,7 @@ new BlazeSlider(el, {
                 <img
                   alt="image"
                   src="https://images.unsplash.com/photo-1530268729831-4b0b9e170218?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE3fHxpbmRpYW4lMjBtZW58ZW58MHx8fHwxNjk0NzY5MDMzfDA&amp;ixlib=rb-4.0.3&amp;w=200"
-                  className="home-image09"
+                  className="home-image11"
                 />
                 <div className="home-details1">
                   <span className="home-name1">Prakash</span>
@@ -388,7 +490,7 @@ new BlazeSlider(el, {
                 <img
                   alt="image"
                   src="https://images.unsplash.com/photo-1623669458475-f0968102b12e?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDI1fHxpbmRpYW4lMjBtZW58ZW58MHx8fHwxNjk0NzY5MDYwfDA&amp;ixlib=rb-4.0.3&amp;w=200"
-                  className="home-image10"
+                  className="home-image12"
                 />
                 <div className="home-details2">
                   <span className="home-name2">John</span>
@@ -401,15 +503,15 @@ new BlazeSlider(el, {
             </div>
           </div>
           <div className="home-gradient gradient-background">
-            <div className="home-container14">
-              <div className="home-container15">
-                <h1 className="home-text13">
+            <div className="home-container22">
+              <div className="home-container23">
+                <h1 className="home-text17">
                   <span>FROM THE WORLD OF</span>
                   <br></br>
                   <span> MOTOSPORTS</span>
                 </h1>
-                <h1 className="home-text17">
-                  <span className="home-text18">Driven By Passion...</span>
+                <h1 className="home-text21">
+                  <span className="home-text22">Driven By Passion...</span>
                   <br></br>
                 </h1>
               </div>
@@ -427,12 +529,12 @@ new BlazeSlider(el, {
           </div>
         </section>
         <section className="home-racing">
-          <div className="home-header4">
+          <div className="home-header06">
             <div className="home-section-numeral">
               <div className="home-divide"></div>
-              <p className="home-text20">03</p>
+              <p className="home-text24">03</p>
             </div>
-            <div data-aos="fade-right" className="home-heading4">
+            <div data-aos="fade-right" className="home-heading6">
               <h2 className="home-title7">INDIAN RACING</h2>
               <h2 className="home-title8">LET YOUR PASSION THROTTLE</h2>
               <p className="home-caption2">
@@ -445,19 +547,19 @@ new BlazeSlider(el, {
             <Raceaccordian1></Raceaccordian1>
           </div>
         </section>
-        <div className="home-container16">
+        <div className="home-container24">
           <Videos2></Videos2>
         </div>
         <div className="home-hero1">
-          <h2 className="home-heading5">
-            <span className="home-text21">Questions on Automobiles?</span>
-            <br className="home-text22"></br>
-            <span className="home-text23">Reach our </span>
-            <span className="home-text24">forum</span>
-            <span className="home-text25"> </span>
-            <span className="home-text26">now!</span>
-            <br className="home-text27"></br>
-            <span className="home-text28">
+          <h2 className="home-heading7">
+            <span className="home-text25">Questions on Automobiles?</span>
+            <br className="home-text26"></br>
+            <span className="home-text27">Reach our </span>
+            <span className="home-text28">forum</span>
+            <span className="home-text29"> </span>
+            <span className="home-text30">now!</span>
+            <br className="home-text31"></br>
+            <span className="home-text32">
               <span
                 dangerouslySetInnerHTML={{
                   __html: ' ',
@@ -471,21 +573,21 @@ new BlazeSlider(el, {
             rel="noreferrer noopener"
             className="home-link5 button"
           >
-            <span className="home-text29">Enter Forum</span>
+            <span className="home-text33">Enter Forum</span>
           </a>
         </div>
         <div className="home-footer">
-          <div className="home-content3">
+          <div className="home-content5">
             <div className="home-main">
               <div className="home-branding">
                 <img
                   src="/logo/ba365a50c6760909f3950a57a9b9ff1c-200h.webp"
                   loading="eager"
-                  className="home-image11"
+                  className="home-image13"
                 />
-                <span className="home-text30">
+                <span className="home-text34">
                   <span>Redefining Automobile Journalism</span>
-                  <br className="home-text32"></br>
+                  <br className="home-text36"></br>
                   <br></br>
                   <span>
                     <span
@@ -505,38 +607,38 @@ new BlazeSlider(el, {
               </div>
               <div className="home-links">
                 <div className="home-column">
-                  <span className="home-header5">Company</span>
+                  <span className="home-header07">Company</span>
                   <div className="home-list">
-                    <span className="home-text36">About</span>
-                    <span className="home-text37">Services</span>
-                    <span className="home-text38">
-                      <span className="home-text39">Team</span>
+                    <span className="home-text40">About</span>
+                    <span className="home-text41">Services</span>
+                    <span className="home-text42">
+                      <span className="home-text43">Team</span>
                       <br></br>
                     </span>
                   </div>
                 </div>
                 <div className="home-column1">
-                  <span className="home-header6">
+                  <span className="home-header08">
                     <span>Resources</span>
                     <br></br>
                   </span>
                   <div className="home-list1">
-                    <span className="home-text43">Articles</span>
-                    <span className="home-text44">Blog</span>
+                    <span className="home-text47">Articles</span>
+                    <span className="home-text48">Blog</span>
                   </div>
                 </div>
                 <div className="home-column2">
-                  <span className="home-header7">Social</span>
+                  <span className="home-header09">Social</span>
                   <div className="home-list2">
-                    <span className="home-text45">Twitter</span>
-                    <span className="home-text46">Instagram</span>
-                    <span className="home-text47">Facebook</span>
+                    <span className="home-text49">Twitter</span>
+                    <span className="home-text50">Instagram</span>
+                    <span className="home-text51">Facebook</span>
                   </div>
                 </div>
               </div>
             </div>
             <div className="home-bottom">
-              <span className="home-text48">
+              <span className="home-text52">
                 © 2023 Revnitro - All rights reserved
               </span>
             </div>
@@ -714,6 +816,7 @@ new BlazeSlider(el, {
           .home-slide {
             width: 100%;
             height: 60vh;
+            background-color: transparent;
           }
           .home-container02 {
             flex: 0 0 auto;
@@ -723,7 +826,6 @@ new BlazeSlider(el, {
             position: relative;
             align-items: flex-start;
             flex-direction: row;
-            background-color: var(--dl-color-gray-black);
           }
           .home-image01 {
             width: 100%;
@@ -825,15 +927,17 @@ new BlazeSlider(el, {
           }
           .home-slide1 {
             width: 100%;
+            height: 60vh;
+            background-color: transparent;
           }
           .home-container06 {
             flex: 0 0 auto;
             width: 100%;
+            height: 100%;
             display: flex;
             position: relative;
             align-items: flex-start;
             flex-direction: row;
-            justify-content: center;
             background-color: var(--dl-color-gray-black);
           }
           .home-image02 {
@@ -859,7 +963,7 @@ new BlazeSlider(el, {
             padding-bottom: var(--dl-space-space-threeunits);
             justify-content: space-between;
           }
-          .home-header1 {
+          .home-header01 {
             gap: var(--dl-space-space-threeunits);
             display: flex;
             position: relative;
@@ -896,15 +1000,6 @@ new BlazeSlider(el, {
           }
           .home-container08 {
             flex: 0 0 auto;
-            width: auto;
-            border: 2px dashed rgba(120, 120, 120, 0.4);
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-          }
-          .home-container09 {
-            flex: 0 0 auto;
             width: var(--dl-size-size-large);
             height: 36px;
             display: flex;
@@ -922,12 +1017,36 @@ new BlazeSlider(el, {
             font-family: Poppins;
             font-weight: 500;
           }
+          .home-container09 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+          .home-more1 {
+            gap: 4px;
+            border: 2px dashed rgba(120, 120, 120, 0.4);
+            cursor: pointer;
+            display: flex;
+            transition: 0.3s;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+          }
+          .home-more1:hover {
+            opacity: 0.5;
+          }
           .home-slide2 {
             width: 100%;
+            height: 60vh;
+            background-color: transparent;
           }
           .home-container10 {
             flex: 0 0 auto;
             width: 100%;
+            height: 100%;
             display: flex;
             position: relative;
             align-items: flex-start;
@@ -957,7 +1076,7 @@ new BlazeSlider(el, {
             padding-bottom: var(--dl-space-space-threeunits);
             justify-content: space-between;
           }
-          .home-header2 {
+          .home-header02 {
             gap: var(--dl-space-space-threeunits);
             display: flex;
             position: relative;
@@ -994,15 +1113,6 @@ new BlazeSlider(el, {
           }
           .home-container12 {
             flex: 0 0 auto;
-            width: auto;
-            border: 2px dashed rgba(120, 120, 120, 0.4);
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-          }
-          .home-container13 {
-            flex: 0 0 auto;
             width: var(--dl-size-size-large);
             height: 36px;
             display: flex;
@@ -1019,6 +1129,253 @@ new BlazeSlider(el, {
             font-style: normal;
             font-family: Poppins;
             font-weight: 500;
+          }
+          .home-container13 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+          .home-more2 {
+            gap: 4px;
+            border: 2px dashed rgba(120, 120, 120, 0.4);
+            cursor: pointer;
+            display: flex;
+            transition: 0.3s;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+          }
+          .home-more2:hover {
+            opacity: 0.5;
+          }
+          .home-slide3 {
+            width: 100%;
+            height: 60vh;
+            background-color: transparent;
+          }
+          .home-container14 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            align-items: flex-start;
+            flex-direction: row;
+            background-color: var(--dl-color-gray-black);
+          }
+          .home-image04 {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            aspect-ratio: 1;
+          }
+          .home-content3 {
+            top: 4px;
+            flex: 1;
+            left: 0px;
+            right: 0px;
+            height: 400px;
+            margin: auto;
+            display: flex;
+            position: absolute;
+            align-items: flex-start;
+            padding-top: var(--dl-space-space-fiveunits);
+            padding-left: var(--dl-space-space-threeunits);
+            padding-right: var(--dl-space-space-threeunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-threeunits);
+            justify-content: space-between;
+          }
+          .home-header03 {
+            gap: var(--dl-space-space-threeunits);
+            display: flex;
+            position: relative;
+            flex-direction: column;
+          }
+          .home-heading3 {
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 700;
+          }
+          .home-text09 {
+            color: var(--dl-color-gray-white);
+            font-size: 20px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 400;
+          }
+          .home-container15 {
+            flex: 0 0 auto;
+            left: 0px;
+            width: 100%;
+            bottom: 54px;
+            height: 8px;
+            display: flex;
+            position: absolute;
+            margin-top: var(--dl-space-space-halfunit);
+            align-items: flex-start;
+            border-color: rgba(120, 120, 120, 0.4);
+            border-style: dashed;
+            border-width: 0px;
+            background-color: #ff0000;
+          }
+          .home-container16 {
+            flex: 0 0 auto;
+            width: var(--dl-size-size-large);
+            height: 36px;
+            display: flex;
+            align-items: center;
+            border-color: rgba(120, 120, 120, 0.4);
+            border-style: dashed;
+            border-width: 0px;
+            border-radius: 10px;
+            justify-content: center;
+            background-color: #ff0000;
+          }
+          .home-text10 {
+            color: var(--dl-color-gray-white);
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 500;
+          }
+          .home-container17 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+          .home-more3 {
+            gap: 4px;
+            border: 2px dashed rgba(120, 120, 120, 0.4);
+            cursor: pointer;
+            display: flex;
+            transition: 0.3s;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+          }
+          .home-more3:hover {
+            opacity: 0.5;
+          }
+          .home-slide4 {
+            width: 100%;
+            height: 60vh;
+            background-color: transparent;
+          }
+          .home-container18 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            align-items: flex-start;
+            flex-direction: row;
+            background-color: var(--dl-color-gray-black);
+          }
+          .home-image05 {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            aspect-ratio: 1;
+          }
+          .home-content4 {
+            top: 4px;
+            flex: 1;
+            left: 0px;
+            right: 0px;
+            height: 400px;
+            margin: auto;
+            display: flex;
+            position: absolute;
+            align-items: flex-start;
+            padding-top: var(--dl-space-space-fiveunits);
+            padding-left: var(--dl-space-space-threeunits);
+            padding-right: var(--dl-space-space-threeunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-threeunits);
+            justify-content: space-between;
+          }
+          .home-header04 {
+            gap: var(--dl-space-space-threeunits);
+            display: flex;
+            position: relative;
+            flex-direction: column;
+          }
+          .home-heading4 {
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 700;
+          }
+          .home-text11 {
+            color: var(--dl-color-gray-white);
+            font-size: 20px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 400;
+          }
+          .home-container19 {
+            flex: 0 0 auto;
+            left: 0px;
+            width: 100%;
+            bottom: 54px;
+            height: 8px;
+            display: flex;
+            position: absolute;
+            margin-top: var(--dl-space-space-halfunit);
+            align-items: flex-start;
+            border-color: rgba(120, 120, 120, 0.4);
+            border-style: dashed;
+            border-width: 0px;
+            background-color: #ff0000;
+          }
+          .home-container20 {
+            flex: 0 0 auto;
+            width: var(--dl-size-size-large);
+            height: 36px;
+            display: flex;
+            align-items: center;
+            border-color: rgba(120, 120, 120, 0.4);
+            border-style: dashed;
+            border-width: 0px;
+            border-radius: 10px;
+            justify-content: center;
+            background-color: #ff0000;
+          }
+          .home-text12 {
+            color: var(--dl-color-gray-white);
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 500;
+          }
+          .home-container21 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+          .home-more4 {
+            gap: 4px;
+            border: 2px dashed rgba(120, 120, 120, 0.4);
+            cursor: pointer;
+            display: flex;
+            transition: 0.3s;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+          }
+          .home-more4:hover {
+            opacity: 0.5;
           }
           .home-controls {
             gap: var(--dl-space-space-unit);
@@ -1115,7 +1472,7 @@ new BlazeSlider(el, {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text09 {
+          .home-text13 {
             color: var(--dl-color-gray-white);
             font-size: 90px;
             font-style: normal;
@@ -1184,8 +1541,9 @@ new BlazeSlider(el, {
           .home-brand2 {
             width: 484px;
             height: var(--dl-size-size-xxlarge);
+            text-decoration: none;
           }
-          .home-image04 {
+          .home-image06 {
             width: var(--dl-size-size-large);
             height: auto;
             object-fit: cover;
@@ -1203,7 +1561,7 @@ new BlazeSlider(el, {
             height: var(--dl-size-size-xxlarge);
             align-items: center;
           }
-          .home-image05 {
+          .home-image07 {
             width: var(--dl-size-size-large);
             height: auto;
             object-fit: cover;
@@ -1220,7 +1578,7 @@ new BlazeSlider(el, {
             width: 484px;
             height: var(--dl-size-size-xxlarge);
           }
-          .home-image06 {
+          .home-image08 {
             width: var(--dl-size-size-large);
             height: auto;
             object-fit: cover;
@@ -1237,7 +1595,7 @@ new BlazeSlider(el, {
             width: 484px;
             height: var(--dl-size-size-xxlarge);
           }
-          .home-image07 {
+          .home-image09 {
             width: var(--dl-size-size-large);
             height: auto;
             object-fit: cover;
@@ -1268,7 +1626,7 @@ new BlazeSlider(el, {
             flex-direction: column;
             justify-content: center;
           }
-          .home-header3 {
+          .home-header05 {
             gap: var(--dl-space-space-oneandhalfunits);
             color: white;
             width: 100%;
@@ -1280,7 +1638,7 @@ new BlazeSlider(el, {
             padding-right: var(--dl-space-space-fiveunits);
             flex-direction: column;
           }
-          .home-heading3 {
+          .home-heading5 {
             gap: var(--dl-space-space-oneandhalfunits);
             display: flex;
             align-items: flex-start;
@@ -1327,7 +1685,7 @@ new BlazeSlider(el, {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image08 {
+          .home-image10 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
@@ -1377,7 +1735,7 @@ new BlazeSlider(el, {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image09 {
+          .home-image11 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
@@ -1428,7 +1786,7 @@ new BlazeSlider(el, {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image10 {
+          .home-image12 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
@@ -1467,7 +1825,7 @@ new BlazeSlider(el, {
             align-self: flex-start;
             justify-content: space-between;
           }
-          .home-container14 {
+          .home-container22 {
             flex: 0 0 auto;
             width: 100%;
             height: auto;
@@ -1479,7 +1837,7 @@ new BlazeSlider(el, {
             flex-direction: column;
             padding-bottom: var(--dl-space-space-halfunit);
           }
-          .home-container15 {
+          .home-container23 {
             flex: 0 0 auto;
             height: 100px;
             display: flex;
@@ -1487,7 +1845,7 @@ new BlazeSlider(el, {
             align-items: flex-start;
             justify-content: space-between;
           }
-          .home-text13 {
+          .home-text17 {
             color: var(--dl-color-gray-white);
             width: 560px;
             font-size: 34px;
@@ -1496,7 +1854,7 @@ new BlazeSlider(el, {
             font-weight: 600;
             margin-left: var(--dl-space-space-twounits);
           }
-          .home-text17 {
+          .home-text21 {
             color: var(--dl-color-gray-white);
             width: auto;
             font-style: italic;
@@ -1505,7 +1863,7 @@ new BlazeSlider(el, {
             font-weight: 500;
             margin-right: var(--dl-space-space-twounits);
           }
-          .home-text18 {
+          .home-text22 {
             font-family: Arial;
           }
           .home-div {
@@ -1520,7 +1878,7 @@ new BlazeSlider(el, {
             align-items: center;
             flex-direction: column;
           }
-          .home-header4 {
+          .home-header06 {
             gap: var(--dl-space-space-oneandhalfunits);
             width: 100%;
             display: flex;
@@ -1546,7 +1904,7 @@ new BlazeSlider(el, {
             flex-direction: row;
             background-color: #000000;
           }
-          .home-heading4 {
+          .home-heading6 {
             gap: var(--dl-space-space-oneandhalfunits);
             display: flex;
             align-self: center;
@@ -1577,7 +1935,7 @@ new BlazeSlider(el, {
             font-family: Poppins;
             line-height: 27px;
           }
-          .home-container16 {
+          .home-container24 {
             flex: 0 0 auto;
             width: 100%;
             height: 100vh;
@@ -1597,7 +1955,7 @@ new BlazeSlider(el, {
             justify-content: center;
             background-color: var(--dl-color-gray-black);
           }
-          .home-heading5 {
+          .home-heading7 {
             color: rgb(255, 255, 255);
             height: auto;
             font-size: 100px;
@@ -1606,38 +1964,38 @@ new BlazeSlider(el, {
             font-family: Poppins;
             font-weight: 500;
           }
-          .home-text21 {
+          .home-text25 {
             font-size: 54px;
             font-weight: 500;
           }
-          .home-text22 {
-            font-weight: 500;
-          }
-          .home-text23 {
-            font-weight: 500;
-          }
-          .home-text24 {
-            color: #2200ff;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 600;
-          }
-          .home-text25 {
-            color: #2200ff;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 600;
-          }
           .home-text26 {
-            font-style: normal;
+            font-weight: 500;
           }
           .home-text27 {
+            font-weight: 500;
+          }
+          .home-text28 {
+            color: #2200ff;
+            font-style: italic;
+            font-family: Open Sans;
+            font-weight: 600;
+          }
+          .home-text29 {
+            color: #2200ff;
+            font-style: italic;
+            font-family: Open Sans;
+            font-weight: 600;
+          }
+          .home-text30 {
+            font-style: normal;
+          }
+          .home-text31 {
             color: #ffffff;
             font-size: 100px;
             font-style: normal;
             font-weight: 500;
           }
-          .home-text28 {
+          .home-text32 {
             font-style: normal;
           }
           .home-link5 {
@@ -1649,7 +2007,7 @@ new BlazeSlider(el, {
             text-decoration: none;
             background-color: #2200ff;
           }
-          .home-text29 {
+          .home-text33 {
             margin: var(--dl-space-space-unit);
             font-size: 24px;
             font-family: Poppins;
@@ -1663,7 +2021,7 @@ new BlazeSlider(el, {
             padding-right: var(--dl-space-space-fiveunits);
             flex-direction: column;
           }
-          .home-content3 {
+          .home-content5 {
             gap: var(--dl-space-space-fiveunits);
             width: 100%;
             display: flex;
@@ -1689,15 +2047,15 @@ new BlazeSlider(el, {
             align-items: flex-start;
             flex-direction: column;
           }
-          .home-image11 {
+          .home-image13 {
             width: 120px;
             object-fit: cover;
           }
-          .home-text30 {
+          .home-text34 {
             color: rgb(124, 124, 128);
             line-height: 24px;
           }
-          .home-text32 {
+          .home-text36 {
             color: #7c7c80;
             line-height: 24px;
           }
@@ -1714,7 +2072,7 @@ new BlazeSlider(el, {
             align-items: flex-start;
             flex-direction: column;
           }
-          .home-header5 {
+          .home-header07 {
             font-size: 24px;
             font-style: italic;
             font-family: Open Sans;
@@ -1725,37 +2083,37 @@ new BlazeSlider(el, {
             align-items: flex-start;
             flex-direction: column;
           }
-          .home-text36 {
+          .home-text40 {
             cursor: pointer;
             font-size: 16px;
             transition: 0.3s;
             line-height: 32px;
             text-decoration: none;
           }
-          .home-text36:hover {
+          .home-text40:hover {
             opacity: 0.5;
           }
-          .home-text37 {
+          .home-text41 {
             cursor: pointer;
             font-size: 16px;
             transition: 0.3s;
             line-height: 32px;
             text-decoration: none;
           }
-          .home-text37:hover {
+          .home-text41:hover {
             opacity: 0.5;
           }
-          .home-text38 {
+          .home-text42 {
             cursor: pointer;
             font-size: 16px;
             transition: 0.3s;
             line-height: 32px;
             text-decoration: none;
           }
-          .home-text38:hover {
+          .home-text42:hover {
             opacity: 0.5;
           }
-          .home-text39:hover {
+          .home-text43:hover {
             opacity: 0.5;
           }
           .home-column1 {
@@ -1765,7 +2123,7 @@ new BlazeSlider(el, {
             align-items: flex-start;
             flex-direction: column;
           }
-          .home-header6 {
+          .home-header08 {
             font-size: 24px;
             font-style: italic;
             font-family: Open Sans;
@@ -1775,64 +2133,6 @@ new BlazeSlider(el, {
             display: flex;
             align-items: flex-start;
             flex-direction: column;
-          }
-          .home-text43 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .home-text43:hover {
-            opacity: 0.5;
-          }
-          .home-text44 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .home-text44:hover {
-            opacity: 0.5;
-          }
-          .home-column2 {
-            gap: var(--dl-space-space-threeunits);
-            color: white;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .home-header7 {
-            font-size: 24px;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 500;
-          }
-          .home-list2 {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .home-text45 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .home-text45:hover {
-            opacity: 0.5;
-          }
-          .home-text46 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .home-text46:hover {
-            opacity: 0.5;
           }
           .home-text47 {
             cursor: pointer;
@@ -1844,6 +2144,64 @@ new BlazeSlider(el, {
           .home-text47:hover {
             opacity: 0.5;
           }
+          .home-text48 {
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            line-height: 32px;
+            text-decoration: none;
+          }
+          .home-text48:hover {
+            opacity: 0.5;
+          }
+          .home-column2 {
+            gap: var(--dl-space-space-threeunits);
+            color: white;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .home-header09 {
+            font-size: 24px;
+            font-style: italic;
+            font-family: Open Sans;
+            font-weight: 500;
+          }
+          .home-list2 {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .home-text49 {
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            line-height: 32px;
+            text-decoration: none;
+          }
+          .home-text49:hover {
+            opacity: 0.5;
+          }
+          .home-text50 {
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            line-height: 32px;
+            text-decoration: none;
+          }
+          .home-text50:hover {
+            opacity: 0.5;
+          }
+          .home-text51 {
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            line-height: 32px;
+            text-decoration: none;
+          }
+          .home-text51:hover {
+            opacity: 0.5;
+          }
           .home-bottom {
             width: 100%;
             display: flex;
@@ -1851,7 +2209,7 @@ new BlazeSlider(el, {
             flex-direction: row;
             justify-content: space-between;
           }
-          .home-text48 {
+          .home-text52 {
             color: rgb(124, 124, 128);
             font-size: 14px;
             line-height: 21px;
@@ -1895,7 +2253,7 @@ new BlazeSlider(el, {
               padding-bottom: var(--dl-space-space-oneandhalfunits);
               justify-content: flex-start;
             }
-            .home-header1 {
+            .home-header01 {
               gap: var(--dl-space-space-halfunit);
               width: 100%;
             }
@@ -1916,11 +2274,53 @@ new BlazeSlider(el, {
               padding-bottom: var(--dl-space-space-oneandhalfunits);
               justify-content: flex-start;
             }
-            .home-header2 {
+            .home-header02 {
               gap: var(--dl-space-space-halfunit);
               width: 100%;
             }
             .home-heading2 {
+              font-size: 24px;
+            }
+            .home-image04 {
+              width: 100%;
+              height: 120px;
+            }
+            .home-content3 {
+              gap: var(--dl-space-space-unit);
+              width: 100%;
+              height: auto;
+              padding-top: var(--dl-space-space-oneandhalfunits);
+              padding-left: var(--dl-space-space-oneandhalfunits);
+              padding-right: var(--dl-space-space-oneandhalfunits);
+              padding-bottom: var(--dl-space-space-oneandhalfunits);
+              justify-content: flex-start;
+            }
+            .home-header03 {
+              gap: var(--dl-space-space-halfunit);
+              width: 100%;
+            }
+            .home-heading3 {
+              font-size: 24px;
+            }
+            .home-image05 {
+              width: 100%;
+              height: 120px;
+            }
+            .home-content4 {
+              gap: var(--dl-space-space-unit);
+              width: 100%;
+              height: auto;
+              padding-top: var(--dl-space-space-oneandhalfunits);
+              padding-left: var(--dl-space-space-oneandhalfunits);
+              padding-right: var(--dl-space-space-oneandhalfunits);
+              padding-bottom: var(--dl-space-space-oneandhalfunits);
+              justify-content: flex-start;
+            }
+            .home-header04 {
+              gap: var(--dl-space-space-halfunit);
+              width: 100%;
+            }
+            .home-heading4 {
               font-size: 24px;
             }
             .home-service {
@@ -1948,10 +2348,10 @@ new BlazeSlider(el, {
             .home-brand6 {
               border-right-width: 0px;
             }
-            .home-heading5 {
+            .home-heading7 {
               font-size: 50px;
             }
-            .home-content3 {
+            .home-content5 {
               border-top-width: 0px;
             }
             .home-main {
@@ -2007,6 +2407,12 @@ new BlazeSlider(el, {
               font-size: 18px;
             }
             .home-heading2 {
+              font-size: 18px;
+            }
+            .home-heading3 {
+              font-size: 18px;
+            }
+            .home-heading4 {
               font-size: 18px;
             }
             .home-previous {
@@ -2080,11 +2486,11 @@ new BlazeSlider(el, {
               gap: var(--dl-space-space-threeunits);
               padding-top: 0px;
             }
-            .home-header3 {
+            .home-header05 {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .home-heading3 {
+            .home-heading5 {
               gap: var(--dl-space-space-unit);
             }
             .home-title6 {
@@ -2112,7 +2518,7 @@ new BlazeSlider(el, {
             .home-author {
               width: 100%;
             }
-            .home-image08 {
+            .home-image10 {
               width: 40px;
             }
             .home-details {
@@ -2148,7 +2554,7 @@ new BlazeSlider(el, {
             .home-author1 {
               width: 100%;
             }
-            .home-image09 {
+            .home-image11 {
               width: 40px;
             }
             .home-details1 {
@@ -2206,7 +2612,7 @@ new BlazeSlider(el, {
             .home-divide {
               width: 50px;
             }
-            .home-heading4 {
+            .home-heading6 {
               gap: var(--dl-space-space-unit);
             }
             .home-title7 {
@@ -2226,7 +2632,7 @@ new BlazeSlider(el, {
               padding-left: var(--dl-space-space-twounits);
               padding-right: var(--dl-space-space-twounits);
             }
-            .home-heading5 {
+            .home-heading7 {
               font-size: 36px;
             }
             .home-footer {
@@ -2245,14 +2651,12 @@ new BlazeSlider(el, {
             .home-icon-group {
               justify-content: center;
             }
-            .home-text09 {
+            .home-text13 {
               font-size: 50px;
             }
-            .home-image04 {
-              width: 75%;
-            }
-            .home-image05 {
-              width: 75%;
+            .home-service {
+              width: 100%;
+              height: 100%;
             }
             .home-image06 {
               width: 75%;
@@ -2260,10 +2664,16 @@ new BlazeSlider(el, {
             .home-image07 {
               width: 75%;
             }
+            .home-image08 {
+              width: 75%;
+            }
+            .home-image09 {
+              width: 75%;
+            }
             .home-divide {
               width: 20px;
             }
-            .home-text20 {
+            .home-text24 {
               font-size: 16px;
               line-height: 24px;
             }
@@ -2273,7 +2683,7 @@ new BlazeSlider(el, {
               padding-right: var(--dl-space-space-unit);
               padding-bottom: var(--dl-space-space-twounits);
             }
-            .home-heading5 {
+            .home-heading7 {
               color: rgb(255, 255, 255);
               font-style: normal;
               text-align: center;

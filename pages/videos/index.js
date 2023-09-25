@@ -4,15 +4,15 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import videosPageInitialProps84546Resource from '../../resources/videos-page-initial-props-84546'
+import videosPageInitialPropsD64e3Resource from '../../resources/videos-page-initial-props-d64e3'
 
-const Videos = (props) => {
+const Videos1 = (props) => {
   return (
     <>
-      <div className="videos-container">
+      <div className="videos1-container">
         <Head>
-          <title>Videos - Revnitro</title>
-          <meta property="og:title" content="Videos - Revnitro" />
+          <title>Videos1 - Revnitro</title>
+          <meta property="og:title" content="Videos1 - Revnitro" />
         </Head>
         <DataProvider
           renderSuccess={(params) => (
@@ -21,10 +21,10 @@ const Videos = (props) => {
                 items={params}
                 renderItem={(VideosEntities) => (
                   <>
-                    <div className="videos-container1">
+                    <div className="videos1-container1">
                       <h1>{VideosEntities?.Title}</h1>
                       <span>{VideosEntities?.Title}</span>
-                      <span>{VideosEntities?.videoid}</span>
+                      <span>{VideosEntities?.url}</span>
                     </div>
                   </>
                 )}
@@ -38,7 +38,7 @@ const Videos = (props) => {
       </div>
       <style jsx>
         {`
-          .videos-container {
+          .videos1-container {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -46,7 +46,7 @@ const Videos = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .videos-container1 {
+          .videos1-container1 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -59,19 +59,19 @@ const Videos = (props) => {
   )
 }
 
-Videos.defaultProps = {
+Videos1.defaultProps = {
   videosEntities: [],
 }
 
-Videos.propTypes = {
+Videos1.propTypes = {
   videosEntities: PropTypes.array,
 }
 
-export default Videos
+export default Videos1
 
 export async function getStaticProps(context) {
   try {
-    const response = await videosPageInitialProps84546Resource({
+    const response = await videosPageInitialPropsD64e3Resource({
       ...context?.params,
     })
     if (!response) {

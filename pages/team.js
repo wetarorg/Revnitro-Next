@@ -1056,9 +1056,11 @@ const Team = (props) => {
             width: auto;
             height: auto;
             margin-top: var(--dl-space-space-twounits);
+            border-color: #2200ff;
+            border-width: 3px;
             border-radius: 50px;
             text-decoration: none;
-            background-color: #2200ff;
+            background-color: transparent;
           }
           .team-text03 {
             margin: var(--dl-space-space-unit);

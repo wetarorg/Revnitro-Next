@@ -4,24 +4,24 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import slidersPageInitialPaths73448Resource from '../../resources/sliders-page-initial-paths-73448'
-import slidersPageInitialPropsF4a61Resource from '../../resources/sliders-page-initial-props-f4a61'
+import slidersPageInitialPaths82e29Resource from '../../resources/sliders-page-initial-paths-82e29'
+import slidersPageInitialProps82f79Resource from '../../resources/sliders-page-initial-props-82f79'
 
-const Sliders11 = (props) => {
+const Sliders = (props) => {
   return (
     <>
-      <div className="sliders11-container">
+      <div className="sliders-container">
         <Head>
-          <title>Sliders1 - Revnitro</title>
-          <meta property="og:title" content="Sliders1 - Revnitro" />
+          <title>Sliders - Revnitro</title>
+          <meta property="og:title" content="Sliders - Revnitro" />
         </Head>
         <DataProvider
           renderSuccess={(SlidersEntity) => (
             <>
-              <div className="sliders11-container1">
+              <div className="sliders-container1">
                 <h1>{SlidersEntity?.Title}</h1>
-                <span>{SlidersEntity?.Imageurl}</span>
-                <span>{SlidersEntity?.ButtonURL}</span>
+                <span>{SlidersEntity?.description}</span>
+                <span>{SlidersEntity?.url}</span>
               </div>
             </>
           )}
@@ -32,7 +32,7 @@ const Sliders11 = (props) => {
       </div>
       <style jsx>
         {`
-          .sliders11-container {
+          .sliders-container {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -40,7 +40,7 @@ const Sliders11 = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .sliders11-container1 {
+          .sliders-container1 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -52,19 +52,19 @@ const Sliders11 = (props) => {
   )
 }
 
-Sliders11.defaultProps = {
+Sliders.defaultProps = {
   slidersEntity: [],
 }
 
-Sliders11.propTypes = {
+Sliders.propTypes = {
   slidersEntity: PropTypes.array,
 }
 
-export default Sliders11
+export default Sliders
 
 export async function getStaticPaths() {
   try {
-    const response = await slidersPageInitialPaths73448Resource({})
+    const response = await slidersPageInitialPaths82e29Resource({})
     return {
       paths: (response?.data || []).map((item) => {
         return {
@@ -85,7 +85,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await slidersPageInitialPropsF4a61Resource({
+    const response = await slidersPageInitialProps82f79Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {

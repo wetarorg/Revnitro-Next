@@ -4,42 +4,42 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import slidersPageInitialPaths93e1dResource from '../../../resources/sliders-page-initial-paths-93e1d'
-import slidersPageInitialProps5c894Resource from '../../../resources/sliders-page-initial-props-5c894'
+import blogsPageInitialPaths794eaResource from '../../../resources/blogs-page-initial-paths-794ea'
+import blogsPageInitialPropsEc48bResource from '../../../resources/blogs-page-initial-props-ec48b'
 
-const Sliders11 = (props) => {
+const Blogs11 = (props) => {
   return (
     <>
-      <div className="sliders11-container">
+      <div className="blogs11-container">
         <Head>
-          <title>Sliders1 - Revnitro</title>
-          <meta property="og:title" content="Sliders1 - Revnitro" />
+          <title>Blogs1 - Revnitro</title>
+          <meta property="og:title" content="Blogs1 - Revnitro" />
         </Head>
         <DataProvider
           renderSuccess={(params) => (
             <>
               <Repeater
                 items={params}
-                renderItem={(SlidersEntities) => (
+                renderItem={(BlogsEntities) => (
                   <>
-                    <div className="sliders11-container1">
-                      <h1>{SlidersEntities?.Title}</h1>
-                      <span>{SlidersEntities?.Title}</span>
-                      <span>{SlidersEntities?.description}</span>
+                    <div className="blogs11-container1">
+                      <h1>{BlogsEntities?.Title}</h1>
+                      <span>{BlogsEntities?.Title}</span>
+                      <span>{BlogsEntities?.description}</span>
                     </div>
                   </>
                 )}
               />
             </>
           )}
-          initialData={props.slidersEntities}
+          initialData={props.blogsEntities}
           persistDataDuringLoading={true}
           key={props?.pagination?.page}
         />
       </div>
       <style jsx>
         {`
-          .sliders11-container {
+          .blogs11-container {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -47,7 +47,7 @@ const Sliders11 = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .sliders11-container1 {
+          .blogs11-container1 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -60,19 +60,19 @@ const Sliders11 = (props) => {
   )
 }
 
-Sliders11.defaultProps = {
-  slidersEntities: [],
+Blogs11.defaultProps = {
+  blogsEntities: [],
 }
 
-Sliders11.propTypes = {
-  slidersEntities: PropTypes.array,
+Blogs11.propTypes = {
+  blogsEntities: PropTypes.array,
 }
 
-export default Sliders11
+export default Blogs11
 
 export async function getStaticPaths() {
   try {
-    const response = await slidersPageInitialPaths93e1dResource({})
+    const response = await blogsPageInitialPaths794eaResource({})
     const totalCount = response?.meta?.pagination?.total
     const pagesCount = Math.ceil(totalCount / 10)
     return {
@@ -98,7 +98,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await slidersPageInitialProps5c894Resource({
+    const response = await blogsPageInitialPropsEc48bResource({
       ...context?.params,
       start: (context.params.page - 1) * 10,
     })
@@ -109,7 +109,7 @@ export async function getStaticProps(context) {
     }
     return {
       props: {
-        slidersEntities: response,
+        blogsEntities: response,
         ...response?.meta,
       },
       revalidate: 60,

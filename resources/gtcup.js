@@ -4,7 +4,7 @@ export default async function (params = {}) {
   const urlParams = {
     populate: '*',
     'pagination[limit]': 100,
-    'filters[Category][$eq]': 'gtcup',
+    'filters[Category][$eq]': 'GT Cup',
   }
   const data = await fetch(
     `${process.env.CMS_URL}/api/Blogs?${new URLSearchParams(urlParams)}`,

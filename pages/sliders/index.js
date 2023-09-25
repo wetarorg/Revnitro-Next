@@ -4,15 +4,15 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import slidersPageInitialProps0fbb5Resource from '../../resources/sliders-page-initial-props-0fbb5'
+import slidersPageInitialPropsF212cResource from '../../resources/sliders-page-initial-props-f212c'
 
-const Sliders = (props) => {
+const Sliders1 = (props) => {
   return (
     <>
-      <div className="sliders-container">
+      <div className="sliders1-container">
         <Head>
-          <title>Sliders - Revnitro</title>
-          <meta property="og:title" content="Sliders - Revnitro" />
+          <title>Sliders1 - Revnitro</title>
+          <meta property="og:title" content="Sliders1 - Revnitro" />
         </Head>
         <DataProvider
           renderSuccess={(params) => (
@@ -21,10 +21,10 @@ const Sliders = (props) => {
                 items={params}
                 renderItem={(SlidersEntities) => (
                   <>
-                    <div className="sliders-container1">
+                    <div className="sliders1-container1">
                       <h1>{SlidersEntities?.Title}</h1>
                       <span>{SlidersEntities?.Title}</span>
-                      <span>{SlidersEntities?.Imageurl}</span>
+                      <span>{SlidersEntities?.description}</span>
                     </div>
                   </>
                 )}
@@ -38,7 +38,7 @@ const Sliders = (props) => {
       </div>
       <style jsx>
         {`
-          .sliders-container {
+          .sliders1-container {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -46,7 +46,7 @@ const Sliders = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .sliders-container1 {
+          .sliders1-container1 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -59,19 +59,19 @@ const Sliders = (props) => {
   )
 }
 
-Sliders.defaultProps = {
+Sliders1.defaultProps = {
   slidersEntities: [],
 }
 
-Sliders.propTypes = {
+Sliders1.propTypes = {
   slidersEntities: PropTypes.array,
 }
 
-export default Sliders
+export default Sliders1
 
 export async function getStaticProps(context) {
   try {
-    const response = await slidersPageInitialProps0fbb5Resource({
+    const response = await slidersPageInitialPropsF212cResource({
       ...context?.params,
     })
     if (!response) {

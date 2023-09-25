@@ -66,7 +66,7 @@ const Videos2 = (props) => {
                         <>
                           <div className="videos2-container2">
                             <iframe
-                              src={context_t7eeho?.videoid}
+                              src={context_t7eeho?.url}
                               allowFullScreen="true"
                               className="videos2-iframe"
                             ></iframe>
@@ -107,7 +107,7 @@ const Videos2 = (props) => {
                         <>
                           <div className="videos2-container3">
                             <iframe
-                              src={context_t7eeho?.videoid}
+                              src={context_t7eeho?.url}
                               allowFullScreen="true"
                               className="videos2-iframe1"
                             ></iframe>
@@ -129,7 +129,7 @@ const Videos2 = (props) => {
         {`
           .videos2-videos {
             gap: var(--dl-space-space-fiveunits);
-            width: auto;
+            width: 100%;
             display: flex;
             padding: var(--dl-space-space-oneandhalfunits);
             position: relative;
@@ -273,6 +273,7 @@ const Videos2 = (props) => {
           }
           .videos2-main {
             width: 100%;
+            height: 100%;
             display: flex;
             align-self: center;
             align-items: center;

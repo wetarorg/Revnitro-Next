@@ -4,7 +4,7 @@ export default async function (params = {}) {
   const urlParams = {
     populate: '*',
     'pagination[limit]': 4,
-    'filters[Type][$eq]': 'Bike',
+    'filters[Category][$eq]': 'bike',
   }
   const data = await fetch(
     `${process.env.CMS_URL}/api/Videos?${new URLSearchParams(urlParams)}`,
