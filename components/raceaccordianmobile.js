@@ -3,23 +3,25 @@ import Link from 'next/link'
 
 import PropTypes from 'prop-types'
 
-const Raceaccordian1 = (props) => {
+const Raceaccordianmobile = (props) => {
   const [menu, setMenu] = useState(1)
   return (
     <>
-      <div className="raceaccordian1-container">
-        <div className="raceaccordian1-container1">
-          <div className="raceaccordian1-one">
+      <div className={`raceaccordianmobile-container ${props.rootClassName} `}>
+        <div className="raceaccordianmobile-container1">
+          <div className="raceaccordianmobile-one">
             <img
               alt={props.imagealt2}
               src={props.imagesrc2}
-              className="raceaccordian1-image"
+              className="raceaccordianmobile-image"
             />
             {menu === 1 && (
-              <div className="raceaccordian1-container2">
-                <span className="raceaccordian1-text">{props.text12}</span>
+              <div className="raceaccordianmobile-container2">
+                <span className="raceaccordianmobile-text">{props.text12}</span>
                 <Link href="/tvs">
-                  <a className="raceaccordian1-link button">{props.button12}</a>
+                  <a className="raceaccordianmobile-link button">
+                    {props.button12}
+                  </a>
                 </Link>
               </div>
             )}
@@ -27,18 +29,20 @@ const Raceaccordian1 = (props) => {
           <div
             onMouseOver={() => setMenu(2)}
             onMouseLeave={() => setMenu(1)}
-            className="raceaccordian1-two"
+            className="raceaccordianmobile-two"
           >
             <img
               alt={props.imagealt1}
               src={props.imagesrc1}
-              className="raceaccordian1-image1"
+              className="raceaccordianmobile-image1"
             />
             {menu === 2 && (
-              <div className="raceaccordian1-container3">
-                <span className="raceaccordian1-text1">{props.text1}</span>
+              <div className="raceaccordianmobile-container3">
+                <span className="raceaccordianmobile-text1">{props.text1}</span>
                 <Link href="/suzuki">
-                  <a className="raceaccordian1-link1 button">{props.button1}</a>
+                  <a className="raceaccordianmobile-link1 button">
+                    {props.button1}
+                  </a>
                 </Link>
               </div>
             )}
@@ -46,18 +50,20 @@ const Raceaccordian1 = (props) => {
           <div
             onMouseOver={() => setMenu(3)}
             onMouseLeave={() => setMenu(1)}
-            className="raceaccordian1-three"
+            className="raceaccordianmobile-three"
           >
             <img
               alt={props.imagealt11}
               src={props.imagesrc11}
-              className="raceaccordian1-image2"
+              className="raceaccordianmobile-image2"
             />
             {menu === 3 && (
-              <div className="raceaccordian1-container4">
-                <span className="raceaccordian1-text2">{props.text11}</span>
+              <div className="raceaccordianmobile-container4">
+                <span className="raceaccordianmobile-text2">
+                  {props.text11}
+                </span>
                 <Link href="/ktm">
-                  <a className="raceaccordian1-link2 button">
+                  <a className="raceaccordianmobile-link2 button">
                     {props.button11}
                   </a>
                 </Link>
@@ -67,18 +73,20 @@ const Raceaccordian1 = (props) => {
           <div
             onMouseOver={() => setMenu(4)}
             onMouseLeave={() => setMenu(1)}
-            className="raceaccordian1-four"
+            className="raceaccordianmobile-four"
           >
             <img
               alt={props.imagealt111}
               src={props.imagesrc111}
-              className="raceaccordian1-image3"
+              className="raceaccordianmobile-image3"
             />
             {menu === 4 && (
-              <div className="raceaccordian1-container5">
-                <span className="raceaccordian1-text3">{props.text111}</span>
+              <div className="raceaccordianmobile-container5">
+                <span className="raceaccordianmobile-text3">
+                  {props.text111}
+                </span>
                 <Link href="/gtcup">
-                  <a className="raceaccordian1-link3 button">
+                  <a className="raceaccordianmobile-link3 button">
                     {props.button111}
                   </a>
                 </Link>
@@ -88,18 +96,20 @@ const Raceaccordian1 = (props) => {
           <div
             onMouseOver={() => setMenu(5)}
             onMouseLeave={() => setMenu(1)}
-            className="raceaccordian1-five"
+            className="raceaccordianmobile-five"
           >
             <img
               alt={props.imagealt1111}
               src={props.imagesrc1111}
-              className="raceaccordian1-image4"
+              className="raceaccordianmobile-image4"
             />
             {menu === 5 && (
-              <div className="raceaccordian1-container6">
-                <span className="raceaccordian1-text4">{props.text1111}</span>
+              <div className="raceaccordianmobile-container6">
+                <span className="raceaccordianmobile-text4">
+                  {props.text1111}
+                </span>
                 <Link href="/hr">
-                  <a className="raceaccordian1-link4 button">
+                  <a className="raceaccordianmobile-link4 button">
                     {props.button1111}
                   </a>
                 </Link>
@@ -110,7 +120,7 @@ const Raceaccordian1 = (props) => {
       </div>
       <style jsx>
         {`
-          .raceaccordian1-container {
+          .raceaccordianmobile-container {
             width: auto;
             height: 400px;
             display: flex;
@@ -118,7 +128,7 @@ const Raceaccordian1 = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .raceaccordian1-container1 {
+          .raceaccordianmobile-container1 {
             flex: 0 0 auto;
             width: 100%;
             height: 100%;
@@ -129,7 +139,7 @@ const Raceaccordian1 = (props) => {
             flex-direction: row;
             justify-content: center;
           }
-          .raceaccordian1-one {
+          .raceaccordianmobile-one {
             flex: 0 0 auto;
             width: 20%;
             height: 100%;
@@ -139,16 +149,16 @@ const Raceaccordian1 = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .raceaccordian1-one:hover {
-            width: 30%;
-            height: 100%;
+          .raceaccordianmobile-one:hover {
+            width: 100%;
+            height: var(--dl-size-size-xxlarge);
           }
-          .raceaccordian1-image {
+          .raceaccordianmobile-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
           }
-          .raceaccordian1-container2 {
+          .raceaccordianmobile-container2 {
             flex: 0 0 auto;
             left: 0px;
             right: 0px;
@@ -168,7 +178,7 @@ const Raceaccordian1 = (props) => {
               rgba(0, 0, 0, 0) 92%
             );
           }
-          .raceaccordian1-text {
+          .raceaccordianmobile-text {
             color: var(--dl-color-gray-white);
             font-size: 20px;
             font-style: normal;
@@ -176,7 +186,7 @@ const Raceaccordian1 = (props) => {
             font-weight: 500;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .raceaccordian1-link {
+          .raceaccordianmobile-link {
             color: var(--dl-color-gray-white);
             border-color: #2200ff;
             border-width: 2px;
@@ -184,7 +194,7 @@ const Raceaccordian1 = (props) => {
             text-decoration: none;
             background-color: transparent;
           }
-          .raceaccordian1-two {
+          .raceaccordianmobile-two {
             flex: 0 0 auto;
             width: 20%;
             height: 100%;
@@ -194,16 +204,16 @@ const Raceaccordian1 = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .raceaccordian1-two:hover {
-            width: 30%;
-            height: 100%;
+          .raceaccordianmobile-two:hover {
+            width: 100%;
+            height: var(--dl-size-size-xxlarge);
           }
-          .raceaccordian1-image1 {
+          .raceaccordianmobile-image1 {
             width: 100%;
             height: 100%;
             object-fit: cover;
           }
-          .raceaccordian1-container3 {
+          .raceaccordianmobile-container3 {
             flex: 0 0 auto;
             left: 0px;
             right: 0px;
@@ -223,7 +233,7 @@ const Raceaccordian1 = (props) => {
               rgba(0, 0, 0, 0) 92%
             );
           }
-          .raceaccordian1-text1 {
+          .raceaccordianmobile-text1 {
             color: var(--dl-color-gray-white);
             font-size: 20px;
             font-style: normal;
@@ -231,7 +241,7 @@ const Raceaccordian1 = (props) => {
             font-weight: 500;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .raceaccordian1-link1 {
+          .raceaccordianmobile-link1 {
             color: var(--dl-color-gray-white);
             border-color: #2200ff;
             border-width: 2px;
@@ -239,7 +249,7 @@ const Raceaccordian1 = (props) => {
             text-decoration: none;
             background-color: transparent;
           }
-          .raceaccordian1-three {
+          .raceaccordianmobile-three {
             flex: 0 0 auto;
             width: 20%;
             height: 100%;
@@ -249,16 +259,16 @@ const Raceaccordian1 = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .raceaccordian1-three:hover {
-            width: 30%;
-            height: 100%;
+          .raceaccordianmobile-three:hover {
+            width: 100%;
+            height: var(--dl-size-size-xxlarge);
           }
-          .raceaccordian1-image2 {
+          .raceaccordianmobile-image2 {
             width: 100%;
             height: 100%;
             object-fit: cover;
           }
-          .raceaccordian1-container4 {
+          .raceaccordianmobile-container4 {
             flex: 0 0 auto;
             left: 0px;
             right: 0px;
@@ -278,7 +288,7 @@ const Raceaccordian1 = (props) => {
               rgba(0, 0, 0, 0) 92%
             );
           }
-          .raceaccordian1-text2 {
+          .raceaccordianmobile-text2 {
             color: var(--dl-color-gray-white);
             font-size: 20px;
             font-style: normal;
@@ -286,7 +296,7 @@ const Raceaccordian1 = (props) => {
             font-weight: 500;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .raceaccordian1-link2 {
+          .raceaccordianmobile-link2 {
             color: var(--dl-color-gray-white);
             border-color: #2200ff;
             border-width: 2px;
@@ -294,7 +304,7 @@ const Raceaccordian1 = (props) => {
             text-decoration: none;
             background-color: transparent;
           }
-          .raceaccordian1-four {
+          .raceaccordianmobile-four {
             flex: 0 0 auto;
             width: 20%;
             height: 100%;
@@ -304,16 +314,16 @@ const Raceaccordian1 = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .raceaccordian1-four:hover {
-            width: 30%;
-            height: 100%;
+          .raceaccordianmobile-four:hover {
+            width: 100%;
+            height: var(--dl-size-size-xxlarge);
           }
-          .raceaccordian1-image3 {
+          .raceaccordianmobile-image3 {
             width: 100%;
             height: 100%;
             object-fit: cover;
           }
-          .raceaccordian1-container5 {
+          .raceaccordianmobile-container5 {
             flex: 0 0 auto;
             left: 0px;
             right: 0px;
@@ -333,7 +343,7 @@ const Raceaccordian1 = (props) => {
               rgba(0, 0, 0, 0) 92%
             );
           }
-          .raceaccordian1-text3 {
+          .raceaccordianmobile-text3 {
             color: var(--dl-color-gray-white);
             font-size: 20px;
             font-style: normal;
@@ -341,7 +351,7 @@ const Raceaccordian1 = (props) => {
             font-weight: 500;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .raceaccordian1-link3 {
+          .raceaccordianmobile-link3 {
             color: var(--dl-color-gray-white);
             border-color: #2200ff;
             border-width: 2px;
@@ -349,7 +359,7 @@ const Raceaccordian1 = (props) => {
             text-decoration: none;
             background-color: transparent;
           }
-          .raceaccordian1-five {
+          .raceaccordianmobile-five {
             flex: 0 0 auto;
             width: 20%;
             height: 100%;
@@ -359,20 +369,20 @@ const Raceaccordian1 = (props) => {
             align-items: flex-end;
             flex-direction: column;
           }
-          .raceaccordian1-five:hover {
-            width: 30%;
-            height: 100%;
+          .raceaccordianmobile-five:hover {
+            width: 100%;
+            height: var(--dl-size-size-xxlarge);
           }
-          .raceaccordian1-image4 {
+          .raceaccordianmobile-image4 {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: 0.3s;
           }
-          .raceaccordian1-image4:hover {
+          .raceaccordianmobile-image4:hover {
             width: 130%;
           }
-          .raceaccordian1-container6 {
+          .raceaccordianmobile-container6 {
             flex: 0 0 auto;
             left: 0px;
             right: 0px;
@@ -392,7 +402,7 @@ const Raceaccordian1 = (props) => {
               rgba(0, 0, 0, 0) 92%
             );
           }
-          .raceaccordian1-text4 {
+          .raceaccordianmobile-text4 {
             color: var(--dl-color-gray-white);
             font-size: 20px;
             font-style: normal;
@@ -400,7 +410,7 @@ const Raceaccordian1 = (props) => {
             font-weight: 500;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
           }
-          .raceaccordian1-link4 {
+          .raceaccordianmobile-link4 {
             color: var(--dl-color-gray-white);
             border-color: #2200ff;
             border-width: 2px;
@@ -408,33 +418,83 @@ const Raceaccordian1 = (props) => {
             text-decoration: none;
             background-color: transparent;
           }
+
+          @media (max-width: 991px) {
+            .raceaccordianmobile-link {
+              text-align: center;
+            }
+            .raceaccordianmobile-link1 {
+              text-align: center;
+            }
+            .raceaccordianmobile-link2 {
+              text-align: center;
+            }
+            .raceaccordianmobile-link3 {
+              text-align: center;
+            }
+            .raceaccordianmobile-link4 {
+              text-align: center;
+            }
+          }
           @media (max-width: 767px) {
-            .raceaccordian1-text {
+            .raceaccordianmobile-text {
               font-size: 16px;
             }
-            .raceaccordian1-link {
+            .raceaccordianmobile-link {
               text-align: center;
             }
-            .raceaccordian1-text1 {
+            .raceaccordianmobile-text1 {
               font-size: 16px;
             }
-            .raceaccordian1-link1 {
+            .raceaccordianmobile-link1 {
               text-align: center;
             }
-            .raceaccordian1-text2 {
+            .raceaccordianmobile-text2 {
               font-size: 16px;
             }
-            .raceaccordian1-link2 {
+            .raceaccordianmobile-link2 {
               text-align: center;
             }
-            .raceaccordian1-text3 {
+            .raceaccordianmobile-text3 {
               font-size: 16px;
             }
-            .raceaccordian1-link3 {
+            .raceaccordianmobile-link3 {
               text-align: center;
             }
-            .raceaccordian1-link4 {
+            .raceaccordianmobile-link4 {
               text-align: center;
+            }
+          }
+          @media (max-width: 479px) {
+            .raceaccordianmobile-container {
+              height: 100%;
+            }
+            .raceaccordianmobile-container1 {
+              flex: 1;
+              width: 100%;
+              max-width: auto;
+              min-width: auto;
+              flex-direction: column;
+            }
+            .raceaccordianmobile-one {
+              width: 100%;
+              height: var(--dl-size-size-xlarge);
+            }
+            .raceaccordianmobile-two {
+              width: 100%;
+              height: var(--dl-size-size-xlarge);
+            }
+            .raceaccordianmobile-three {
+              width: 100%;
+              height: var(--dl-size-size-xlarge);
+            }
+            .raceaccordianmobile-four {
+              width: 100%;
+              height: var(--dl-size-size-xlarge);
+            }
+            .raceaccordianmobile-five {
+              width: 100%;
+              height: var(--dl-size-size-xlarge);
             }
           }
         `}
@@ -443,98 +503,52 @@ const Raceaccordian1 = (props) => {
   )
 }
 
-Raceaccordian1.defaultProps = {
-  imagealt1112: 'image',
-  imagealt11: 'image',
-  imagealt1: 'image',
-  imagesrc111: '/external/gallery-3-1500w-400h.jpg',
-  text12: 'TVS ONE CHAMPIONSHIP',
-  text1111: 'HONDA RACING',
-  imagesrc11111: 'a25d28c5-0370-4428-905a-d497b384b48a',
-  text: 'TVS ONE MAKE CHAMPIONSHIP',
-  button1112: 'Discover More',
-  imagesrc1112: '636424af-68bd-4acb-8150-967550fac640',
-  imagealt11111: 'image',
-  imagesrc2: '/external/1-1500w-400h.jpg',
-  text111: 'GT CUP',
-  imagesrc: 'e2ba21ce-8715-46f6-8480-a12a9bbaf05c',
-  button1111: 'Discover More',
-  button13: 'Discover More',
-  imagesrc1111: '/external/be-a-racer-1500w-400h.jpg',
-  button1: 'Discover More',
-  text1: 'SUZUKI ENDURANCE',
-  button11: 'Discover More',
-  imagealt: 'image',
-  button: 'Discover More',
+Raceaccordianmobile.defaultProps = {
   imagealt2: 'image',
-  text121: 'TVS ONE CHAMPIONSHIP',
   button12: 'Discover More',
-  text13: 'SUZUKI ENDURANCE',
-  button111: 'Discover More',
-  button121: 'Discover More',
-  text112: 'KTM RC CUP',
-  imagealt12: 'image',
-  imagealt112: 'image',
-  imagesrc12: 'bc45930e-49c9-49bf-b038-685d56affa50',
-  imagesrc1: '/external/0419_2-1500w-400h.jpg',
-  button112: 'Discover More',
-  imagesrc11: '/external/motorcycle-left-desk-1500w-1500w-400h.webp',
+  rootClassName: '',
   imagealt111: 'image',
-  imagealt21: 'image',
-  imagesrc112: '4ad7c58b-56eb-4d2a-905e-e2bf05c224cc',
-  text11111: 'HONDA RACING',
-  text1112: 'GT CUP',
-  imagesrc21: 'e2ba21ce-8715-46f6-8480-a12a9bbaf05c',
+  button1: 'Discover More',
+  imagealt11: 'image',
+  imagesrc11: '/external/motorcycle-left-desk-1500w-1500w-1500h.webp',
+  imagesrc1111: '/external/be-a-racer-1500w-1500h.jpg',
+  text1: 'SUZUKI ENDURANCE',
   text11: 'KTM RC CUP',
-  button11111: 'Discover More',
+  imagesrc1: '/external/0419_2-1500w-1500h.jpg',
+  button11: 'Discover More',
+  button111: 'Discover More',
   imagealt1111: 'image',
+  text111: 'GT CUP',
+  imagealt1: 'image',
+  imagesrc2: '/external/1-1500w-1500h.jpg',
+  text12: 'TVS ONE CHAMPIONSHIP',
+  button1111: 'Discover More',
+  text1111: 'HONDA RACING',
+  imagesrc111: '/external/gallery-3-1500w-1500h.jpg',
 }
 
-Raceaccordian1.propTypes = {
-  imagealt1112: PropTypes.string,
-  imagealt11: PropTypes.string,
-  imagealt1: PropTypes.string,
-  imagesrc111: PropTypes.string,
-  text12: PropTypes.string,
-  text1111: PropTypes.string,
-  imagesrc11111: PropTypes.string,
-  text: PropTypes.string,
-  button1112: PropTypes.string,
-  imagesrc1112: PropTypes.string,
-  imagealt11111: PropTypes.string,
-  imagesrc2: PropTypes.string,
-  text111: PropTypes.string,
-  imagesrc: PropTypes.string,
-  button1111: PropTypes.string,
-  button13: PropTypes.string,
-  imagesrc1111: PropTypes.string,
-  button1: PropTypes.string,
-  text1: PropTypes.string,
-  button11: PropTypes.string,
-  imagealt: PropTypes.string,
-  button: PropTypes.string,
+Raceaccordianmobile.propTypes = {
   imagealt2: PropTypes.string,
-  text121: PropTypes.string,
   button12: PropTypes.string,
-  text13: PropTypes.string,
-  button111: PropTypes.string,
-  button121: PropTypes.string,
-  text112: PropTypes.string,
-  imagealt12: PropTypes.string,
-  imagealt112: PropTypes.string,
-  imagesrc12: PropTypes.string,
-  imagesrc1: PropTypes.string,
-  button112: PropTypes.string,
-  imagesrc11: PropTypes.string,
+  rootClassName: PropTypes.string,
   imagealt111: PropTypes.string,
-  imagealt21: PropTypes.string,
-  imagesrc112: PropTypes.string,
-  text11111: PropTypes.string,
-  text1112: PropTypes.string,
-  imagesrc21: PropTypes.string,
+  button1: PropTypes.string,
+  imagealt11: PropTypes.string,
+  imagesrc11: PropTypes.string,
+  imagesrc1111: PropTypes.string,
+  text1: PropTypes.string,
   text11: PropTypes.string,
-  button11111: PropTypes.string,
+  imagesrc1: PropTypes.string,
+  button11: PropTypes.string,
+  button111: PropTypes.string,
   imagealt1111: PropTypes.string,
+  text111: PropTypes.string,
+  imagealt1: PropTypes.string,
+  imagesrc2: PropTypes.string,
+  text12: PropTypes.string,
+  button1111: PropTypes.string,
+  text1111: PropTypes.string,
+  imagesrc111: PropTypes.string,
 }
 
-export default Raceaccordian1
+export default Raceaccordianmobile

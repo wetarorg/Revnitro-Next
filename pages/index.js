@@ -1,13 +1,15 @@
 import React from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
 
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import Script from 'dangerous-html/react'
 
+import Navbar from '../components/navbar'
 import Blogs1 from '../components/blogs1'
 import Raceaccordian1 from '../components/raceaccordian1'
+import Raceaccordianmobile from '../components/raceaccordianmobile'
 import Videos2 from '../components/videos2'
+import Footer from '../components/footer'
 
 const Home = (props) => {
   return (
@@ -17,99 +19,7 @@ const Home = (props) => {
           <title>Revnitro</title>
           <meta property="og:title" content="Revnitro" />
         </Head>
-        <header data-thq="thq-navbar" className="home-navbar">
-          <img
-            alt="image"
-            src="/logo/ba365a50c6760909f3950a57a9b9ff1c-200h.webp"
-            loading="eager"
-            className="home-image"
-          />
-          <div
-            data-thq="thq-navbar-nav"
-            data-role="Nav"
-            className="home-desktop-menu"
-          >
-            <nav
-              data-thq="thq-navbar-nav-links"
-              data-role="Nav"
-              className="home-nav"
-            >
-              <a
-                href="https://revnitroblog2.vercel.app/blog"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="home-link navLink"
-              >
-                Blogs
-              </a>
-              <span className="navLink">Course</span>
-              <a
-                href="https://forum.revnitro.com"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="home-link2 navLink"
-              >
-                Forum
-              </a>
-              <Link href="/team">
-                <a className="home-link4 navLink">Team</a>
-              </Link>
-            </nav>
-            <a href="#service" className="home-register button">
-              <span className="home-text">BOOK SERVICES</span>
-            </a>
-          </div>
-          <div data-thq="thq-burger-menu" className="home-burger-menu">
-            <svg viewBox="0 0 1024 1024" className="home-icon">
-              <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
-            </svg>
-          </div>
-          <div data-thq="thq-mobile-menu" className="home-mobile-menu">
-            <div
-              data-thq="thq-mobile-menu-nav"
-              data-role="Nav"
-              className="home-nav1"
-            >
-              <div className="home-container01">
-                <div data-thq="thq-close-menu" className="home-menu-close">
-                  <svg viewBox="0 0 1024 1024" className="home-icon02">
-                    <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
-                  </svg>
-                </div>
-              </div>
-              <nav
-                data-thq="thq-mobile-menu-nav-links"
-                data-role="Nav"
-                className="home-nav2"
-              >
-                <span className="navLink home-text01">Team</span>
-                <span className="navLink home-text02">Blog</span>
-              </nav>
-              <div className="home-icon-group">
-                <div className="home-icons">
-                  <svg
-                    viewBox="0 0 950.8571428571428 1024"
-                    className="home-icon04"
-                  >
-                    <path d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"></path>
-                  </svg>
-                  <svg
-                    viewBox="0 0 877.7142857142857 1024"
-                    className="home-icon06"
-                  >
-                    <path d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"></path>
-                  </svg>
-                  <svg
-                    viewBox="0 0 602.2582857142856 1024"
-                    className="home-icon08"
-                  >
-                    <path d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
+        <Navbar rootClassName="navbar-root-class-name6"></Navbar>
         <section className="home-slides">
           <div className="home-slider slider blaze-slider">
             <div className="home-slider-container blaze-container">
@@ -133,27 +43,26 @@ const Home = (props) => {
                       }
                       renderSuccess={(context_tz9kl) => (
                         <>
-                          <div className="home-container02">
+                          <div className="home-container01">
                             <img
                               src={context_tz9kl?.Image?.url}
                               loading="lazy"
-                              className="home-image01"
+                              className="home-image"
                             />
                             <div className="home-content">
-                              <div className="home-header">
+                              <div className="home-title">
                                 <h3 className="home-heading">
                                   {context_tz9kl?.Title}
                                 </h3>
-                                <span className="home-text03">
+                                <div className="home-line"></div>
+                              </div>
+                              <div className="home-description">
+                                <h3 className="home-heading01">
                                   {context_tz9kl?.description}
-                                </span>
-                                <div className="home-container03"></div>
+                                </h3>
                               </div>
-                              <div className="home-container04">
-                                <span className="home-text04">KNOW MORE</span>
-                              </div>
-                              <div className="home-container05">
-                                <div className="home-more"></div>
+                              <div className="home-container02">
+                                <span className="home-text">KNOW MORE</span>
                               </div>
                             </div>
                           </div>
@@ -182,27 +91,26 @@ const Home = (props) => {
                       }
                       renderSuccess={(context_tz9kl) => (
                         <>
-                          <div className="home-container06">
+                          <div className="home-container03">
                             <img
                               src={context_tz9kl?.Image?.url}
                               loading="lazy"
-                              className="home-image02"
+                              className="home-image01"
                             />
                             <div className="home-content1">
-                              <div className="home-header01">
-                                <h3 className="home-heading1">
+                              <div className="home-title01">
+                                <h3 className="home-heading02">
                                   {context_tz9kl?.Title}
                                 </h3>
-                                <span className="home-text05">
+                                <div className="home-line1"></div>
+                              </div>
+                              <div className="home-description1">
+                                <h3 className="home-heading03">
                                   {context_tz9kl?.description}
-                                </span>
-                                <div className="home-container07"></div>
+                                </h3>
                               </div>
-                              <div className="home-container08">
-                                <span className="home-text06">KNOW MORE</span>
-                              </div>
-                              <div className="home-container09">
-                                <div className="home-more1"></div>
+                              <div className="home-container04">
+                                <span className="home-text01">KNOW MORE</span>
                               </div>
                             </div>
                           </div>
@@ -231,27 +139,26 @@ const Home = (props) => {
                       }
                       renderSuccess={(context_tz9kl) => (
                         <>
-                          <div className="home-container10">
+                          <div className="home-container05">
                             <img
                               src={context_tz9kl?.Image?.url}
                               loading="lazy"
-                              className="home-image03"
+                              className="home-image02"
                             />
                             <div className="home-content2">
-                              <div className="home-header02">
-                                <h3 className="home-heading2">
+                              <div className="home-title02">
+                                <h3 className="home-heading04">
                                   {context_tz9kl?.Title}
                                 </h3>
-                                <span className="home-text07">
+                                <div className="home-line2"></div>
+                              </div>
+                              <div className="home-description2">
+                                <h3 className="home-heading05">
                                   {context_tz9kl?.description}
-                                </span>
-                                <div className="home-container11"></div>
+                                </h3>
                               </div>
-                              <div className="home-container12">
-                                <span className="home-text08">KNOW MORE</span>
-                              </div>
-                              <div className="home-container13">
-                                <div className="home-more2"></div>
+                              <div className="home-container06">
+                                <span className="home-text02">KNOW MORE</span>
                               </div>
                             </div>
                           </div>
@@ -280,27 +187,26 @@ const Home = (props) => {
                       }
                       renderSuccess={(context_tz9kl) => (
                         <>
-                          <div className="home-container14">
+                          <div className="home-container07">
                             <img
                               src={context_tz9kl?.Image?.url}
                               loading="lazy"
-                              className="home-image04"
+                              className="home-image03"
                             />
                             <div className="home-content3">
-                              <div className="home-header03">
-                                <h3 className="home-heading3">
+                              <div className="home-title03">
+                                <h3 className="home-heading06">
                                   {context_tz9kl?.Title}
                                 </h3>
-                                <span className="home-text09">
+                                <div className="home-line3"></div>
+                              </div>
+                              <div className="home-description3">
+                                <h3 className="home-heading07">
                                   {context_tz9kl?.description}
-                                </span>
-                                <div className="home-container15"></div>
+                                </h3>
                               </div>
-                              <div className="home-container16">
-                                <span className="home-text10">KNOW MORE</span>
-                              </div>
-                              <div className="home-container17">
-                                <div className="home-more3"></div>
+                              <div className="home-container08">
+                                <span className="home-text03">KNOW MORE</span>
                               </div>
                             </div>
                           </div>
@@ -329,27 +235,26 @@ const Home = (props) => {
                       }
                       renderSuccess={(context_tz9kl) => (
                         <>
-                          <div className="home-container18">
+                          <div className="home-container09">
                             <img
                               src={context_tz9kl?.Image?.url}
                               loading="lazy"
-                              className="home-image05"
+                              className="home-image04"
                             />
                             <div className="home-content4">
-                              <div className="home-header04">
-                                <h3 className="home-heading4">
+                              <div className="home-title04">
+                                <h3 className="home-heading08">
                                   {context_tz9kl?.Title}
                                 </h3>
-                                <span className="home-text11">
+                                <div className="home-line4"></div>
+                              </div>
+                              <div className="home-description4">
+                                <h3 className="home-heading09">
                                   {context_tz9kl?.description}
-                                </span>
-                                <div className="home-container19"></div>
+                                </h3>
                               </div>
-                              <div className="home-container20">
-                                <span className="home-text12">KNOW MORE</span>
-                              </div>
-                              <div className="home-container21">
-                                <div className="home-more4"></div>
+                              <div className="home-container10">
+                                <span className="home-text04">KNOW MORE</span>
                               </div>
                             </div>
                           </div>
@@ -364,7 +269,7 @@ const Home = (props) => {
                   data-role="previous-banner-button"
                   className="home-previous blaze-prev button"
                 >
-                  <svg viewBox="0 0 1024 1024" className="home-icon10">
+                  <svg viewBox="0 0 1024 1024" className="home-icon">
                     <path d="M542.165 780.501l-225.835-225.835h494.336c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-494.336l225.835-225.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-298.667 298.667c-4.096 4.096-7.168 8.789-9.259 13.824-2.176 5.205-3.243 10.795-3.243 16.341 0 10.923 4.181 21.845 12.501 30.165l298.667 298.667c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path>
                   </svg>
                 </button>
@@ -372,7 +277,7 @@ const Home = (props) => {
                   data-role="next-banner-button"
                   className="home-next blaze-next button"
                 >
-                  <svg viewBox="0 0 1024 1024" className="home-icon12">
+                  <svg viewBox="0 0 1024 1024" className="home-icon2">
                     <path d="M481.835 243.499l225.835 225.835h-494.336c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667h494.336l-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l298.667-298.667c3.925-3.925 7.083-8.619 9.259-13.824 4.309-10.453 4.309-22.229 0-32.683-2.091-5.035-5.163-9.728-9.259-13.824l-298.667-298.667c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path>
                   </svg>
                 </button>
@@ -397,7 +302,7 @@ new BlazeSlider(el, {
         </section>
         <section className="home-hero">
           <div className="home-hero-content">
-            <h1 className="home-text13">REVNITRO</h1>
+            <h1 className="home-text05">REVNITRO</h1>
             <div className="home-caption">
               <p className="home-caption1">REDEFINING AUTOMOBILE JOURNALISM</p>
             </div>
@@ -405,36 +310,92 @@ new BlazeSlider(el, {
         </section>
         <Blogs1></Blogs1>
         <section id="service" className="home-services">
-          <div className="home-service">
-            <div className="home-brand brand">
-              <h2 className="home-title">Book a consultation</h2>
+          <div className="home-container11">
+            <h2 className="home-heading10 section-heading">
+              Book Services &amp; Consultation
+            </h2>
+          </div>
+        </section>
+        <div className="home-note">
+          <div className="home-image05">
+            <img
+              alt="image"
+              src="/bookings/home_page-200w.png"
+              className="home-image06"
+            />
+          </div>
+          <div className="home-content5">
+            <div className="home-caption2">
+              <h2 className="home-heading11 section-heading">
+                Choose our service
+              </h2>
             </div>
-            <div className="home-brand1 brand">
-              <h2 className="home-title1">Schedule a service</h2>
-            </div>
-            <div className="home-brand2 brand">
-              <img alt="image" src="/bookings/3.svg" className="home-image06" />
-              <h2 className="home-title2">New Car Purchase</h2>
-            </div>
-            <div className="home-brand3 brand">
-              <img alt="image" src="/bookings/4.svg" className="home-image07" />
-              <h2 className="home-title3">Car Services</h2>
-            </div>
-            <div className="home-brand4 brand">
-              <img alt="image" src="/bookings/2.svg" className="home-image08" />
-              <h2 className="home-title4">New Bike Purchase</h2>
-            </div>
-            <div className="home-brand5 brand">
-              <img alt="image" src="/bookings/1.svg" className="home-image09" />
-              <h2 className="home-title5">Bike Services</h2>
+            <div className="home-heading12">
+              <div className="home-accordion">
+                <div
+                  data-role="accordion-container"
+                  className="home-element accordion-element"
+                >
+                  <div className="home-details">
+                    <img
+                      alt="image"
+                      src="/bookings/3.svg"
+                      className="home-image07"
+                    />
+                    <span className="home-text06">
+                      CAR PURCHASE CONSULTATION
+                    </span>
+                  </div>
+                </div>
+                <div
+                  data-role="accordion-container"
+                  className="home-element1 accordion-element"
+                >
+                  <div className="home-details1">
+                    <img
+                      alt="image"
+                      src="/bookings/2.svg"
+                      className="home-image08"
+                    />
+                    <span className="home-text07">
+                      BIKE PURCHASE CONSULTATION
+                    </span>
+                  </div>
+                </div>
+                <div
+                  data-role="accordion-container"
+                  className="home-element2 accordion-element"
+                >
+                  <div className="home-details2">
+                    <img
+                      alt="image"
+                      src="/bookings/1.svg"
+                      className="home-image09"
+                    />
+                    <span className="home-text08">BIKE SERVICE BOOKING</span>
+                  </div>
+                </div>
+                <div
+                  data-role="accordion-container"
+                  className="home-element3 accordion-element"
+                >
+                  <div className="home-details3">
+                    <img
+                      alt="image"
+                      src="/bookings/4.svg"
+                      className="home-image10"
+                    />
+                    <span className="home-text09">CAR SERVICE BOOKING</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="home-brand6"></div>
-        </section>
+        </div>
         <section className="home-testimonials">
-          <div className="home-header05">
-            <div data-aos="fade-right" className="home-heading5">
-              <h2 className="home-title6">
+          <div className="home-header">
+            <div data-aos="fade-right" className="home-heading13">
+              <h2 className="home-title05">
                 Don’t just take our word for it. Here’s what our readers have to
                 say:
               </h2>
@@ -446,9 +407,9 @@ new BlazeSlider(el, {
                 <img
                   alt="image"
                   src="https://images.unsplash.com/photo-1622100685582-d8542910e078?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE1fHxpbmRpYW4lMjBtZW58ZW58MHx8fHwxNjk0NzY5MDMzfDA&amp;ixlib=rb-4.0.3&amp;w=200"
-                  className="home-image10"
+                  className="home-image11"
                 />
-                <div className="home-details">
+                <div className="home-details4">
                   <span className="home-name">Arjun</span>
                   <span className="home-handle">@arjun</span>
                 </div>
@@ -462,9 +423,9 @@ new BlazeSlider(el, {
                 <img
                   alt="image"
                   src="https://images.unsplash.com/photo-1530268729831-4b0b9e170218?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE3fHxpbmRpYW4lMjBtZW58ZW58MHx8fHwxNjk0NzY5MDMzfDA&amp;ixlib=rb-4.0.3&amp;w=200"
-                  className="home-image11"
+                  className="home-image12"
                 />
-                <div className="home-details1">
+                <div className="home-details5">
                   <span className="home-name1">Prakash</span>
                   <span className="home-handle1">@prakash234</span>
                 </div>
@@ -490,9 +451,9 @@ new BlazeSlider(el, {
                 <img
                   alt="image"
                   src="https://images.unsplash.com/photo-1623669458475-f0968102b12e?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDI1fHxpbmRpYW4lMjBtZW58ZW58MHx8fHwxNjk0NzY5MDYwfDA&amp;ixlib=rb-4.0.3&amp;w=200"
-                  className="home-image12"
+                  className="home-image13"
                 />
-                <div className="home-details2">
+                <div className="home-details6">
                   <span className="home-name2">John</span>
                   <span className="home-handle2">@joihm</span>
                 </div>
@@ -503,15 +464,15 @@ new BlazeSlider(el, {
             </div>
           </div>
           <div className="home-gradient gradient-background">
-            <div className="home-container22">
-              <div className="home-container23">
-                <h1 className="home-text17">
+            <div className="home-container12">
+              <div className="home-container13">
+                <h1 className="home-text13">
                   <span>FROM THE WORLD OF</span>
                   <br></br>
                   <span> MOTOSPORTS</span>
                 </h1>
-                <h1 className="home-text21">
-                  <span className="home-text22">Driven By Passion...</span>
+                <h1 className="home-text17">
+                  <span className="home-text18">Driven By Passion...</span>
                   <br></br>
                 </h1>
               </div>
@@ -529,15 +490,15 @@ new BlazeSlider(el, {
           </div>
         </section>
         <section className="home-racing">
-          <div className="home-header06">
+          <div className="home-header1">
             <div className="home-section-numeral">
               <div className="home-divide"></div>
-              <p className="home-text24">03</p>
+              <p className="home-text20">03</p>
             </div>
-            <div data-aos="fade-right" className="home-heading6">
-              <h2 className="home-title7">INDIAN RACING</h2>
-              <h2 className="home-title8">LET YOUR PASSION THROTTLE</h2>
-              <p className="home-caption2">
+            <div data-aos="fade-right" className="home-heading14">
+              <h2 className="home-title06">INDIAN RACING</h2>
+              <h2 className="home-title07">LET YOUR PASSION THROTTLE</h2>
+              <p className="home-caption3">
                 Are you ready to rev up your engines and take the racing world
                 by storm? The Ultimate Young Bike Racing Championships is
                 calling out to all young riders who have a burning passion for
@@ -547,19 +508,38 @@ new BlazeSlider(el, {
             <Raceaccordian1></Raceaccordian1>
           </div>
         </section>
-        <div className="home-container24">
+        <section className="home-racing1">
+          <div className="home-header2">
+            <div className="home-section-numeral1">
+              <div className="home-divide1"></div>
+              <p className="home-text21">03</p>
+            </div>
+            <div data-aos="fade-right" className="home-heading15">
+              <h2 className="home-title08">INDIAN RACING</h2>
+              <h2 className="home-title09">LET YOUR PASSION THROTTLE</h2>
+              <p className="home-caption4">
+                Are you ready to rev up your engines and take the racing world
+                by storm? The Ultimate Young Bike Racing Championships is
+                calling out to all young riders who have a burning passion for
+                speed, adrenaline, and the thrill of competition.
+              </p>
+            </div>
+          </div>
+          <Raceaccordianmobile rootClassName="raceaccordianmobile-root-class-name"></Raceaccordianmobile>
+        </section>
+        <div className="home-container14">
           <Videos2></Videos2>
         </div>
         <div className="home-hero1">
-          <h2 className="home-heading7">
-            <span className="home-text25">Questions on Automobiles?</span>
-            <br className="home-text26"></br>
-            <span className="home-text27">Reach our </span>
-            <span className="home-text28">forum</span>
-            <span className="home-text29"> </span>
-            <span className="home-text30">now!</span>
-            <br className="home-text31"></br>
-            <span className="home-text32">
+          <h2 className="home-heading16">
+            <span className="home-text22">Questions on Automobiles?</span>
+            <br className="home-text23"></br>
+            <span className="home-text24">Reach our </span>
+            <span className="home-text25">forum</span>
+            <span className="home-text26"> </span>
+            <span className="home-text27">now!</span>
+            <br className="home-text28"></br>
+            <span className="home-text29">
               <span
                 dangerouslySetInnerHTML={{
                   __html: ' ',
@@ -571,79 +551,12 @@ new BlazeSlider(el, {
             href="https://forum.revnitro.com"
             target="_blank"
             rel="noreferrer noopener"
-            className="home-link5 button"
+            className="home-link button"
           >
-            <span className="home-text33">Enter Forum</span>
+            <span className="home-text30">Enter Forum</span>
           </a>
         </div>
-        <div className="home-footer">
-          <div className="home-content5">
-            <div className="home-main">
-              <div className="home-branding">
-                <img
-                  src="/logo/ba365a50c6760909f3950a57a9b9ff1c-200h.webp"
-                  loading="eager"
-                  className="home-image13"
-                />
-                <span className="home-text34">
-                  <span>Redefining Automobile Journalism</span>
-                  <br className="home-text36"></br>
-                  <br></br>
-                  <span>
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: ' ',
-                      }}
-                    />
-                  </span>
-                  <span>
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: ' ',
-                      }}
-                    />
-                  </span>
-                </span>
-              </div>
-              <div className="home-links">
-                <div className="home-column">
-                  <span className="home-header07">Company</span>
-                  <div className="home-list">
-                    <span className="home-text40">About</span>
-                    <span className="home-text41">Services</span>
-                    <span className="home-text42">
-                      <span className="home-text43">Team</span>
-                      <br></br>
-                    </span>
-                  </div>
-                </div>
-                <div className="home-column1">
-                  <span className="home-header08">
-                    <span>Resources</span>
-                    <br></br>
-                  </span>
-                  <div className="home-list1">
-                    <span className="home-text47">Articles</span>
-                    <span className="home-text48">Blog</span>
-                  </div>
-                </div>
-                <div className="home-column2">
-                  <span className="home-header09">Social</span>
-                  <div className="home-list2">
-                    <span className="home-text49">Twitter</span>
-                    <span className="home-text50">Instagram</span>
-                    <span className="home-text51">Facebook</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="home-bottom">
-              <span className="home-text52">
-                © 2023 Revnitro - All rights reserved
-              </span>
-            </div>
-          </div>
-        </div>
+        <Footer></Footer>
       </div>
       <style jsx>
         {`
@@ -653,123 +566,9 @@ new BlazeSlider(el, {
             overflow: auto;
             min-height: 100vh;
             align-items: center;
+            user-select: none;
             flex-direction: column;
             background-color: var(--dl-color-gray-black);
-          }
-          .home-navbar {
-            width: 100%;
-            display: flex;
-            z-index: 1000;
-            position: relative;
-            max-width: var(--dl-size-size-maxwidth);
-            align-items: center;
-            padding-top: var(--dl-space-space-halfunit);
-            padding-bottom: var(--dl-space-space-halfunit);
-            justify-content: space-between;
-          }
-          .home-image {
-            width: 200px;
-            object-fit: cover;
-          }
-          .home-desktop-menu {
-            gap: var(--dl-space-space-threeunits);
-            display: flex;
-          }
-          .home-nav {
-            gap: var(--dl-space-space-oneandhalfunits);
-            flex: 0 0 auto;
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-          }
-          .home-link {
-            text-decoration: none;
-          }
-          .home-link2 {
-            text-decoration: none;
-          }
-          .home-link4 {
-            text-decoration: none;
-          }
-          .home-register {
-            margin-right: var(--dl-space-space-twounits);
-            text-decoration: none;
-          }
-          .home-text {
-            font-size: 16px;
-          }
-          .home-burger-menu {
-            display: none;
-            align-items: center;
-            justify-content: center;
-          }
-          .home-icon {
-            width: var(--dl-size-size-xsmall);
-            height: var(--dl-size-size-xsmall);
-          }
-          .home-mobile-menu {
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            padding: 32px;
-            z-index: 100;
-            position: fixed;
-            transform: translateX(100%);
-            transition: 0.5s;
-            flex-direction: column;
-            justify-content: space-between;
-            background-color: #ffffff;
-          }
-          .home-nav1 {
-            display: flex;
-            z-index: 20;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .home-container01 {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            margin-bottom: var(--dl-space-space-threeunits);
-            justify-content: space-between;
-          }
-          .home-menu-close {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          .home-icon02 {
-            width: var(--dl-size-size-xsmall);
-            height: var(--dl-size-size-xsmall);
-          }
-          .home-nav2 {
-            flex: 0 0 auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .home-icon-group {
-            display: flex;
-            z-index: 20;
-          }
-          .home-icons {
-            display: flex;
-          }
-          .home-icon04 {
-            width: var(--dl-size-size-xsmall);
-            height: var(--dl-size-size-xsmall);
-            margin-right: var(--dl-space-space-twounits);
-          }
-          .home-icon06 {
-            width: var(--dl-size-size-xsmall);
-            height: var(--dl-size-size-xsmall);
-            margin-right: var(--dl-space-space-twounits);
-          }
-          .home-icon08 {
-            width: var(--dl-size-size-xsmall);
-            height: var(--dl-size-size-xsmall);
           }
           .home-slides {
             gap: 0;
@@ -818,7 +617,102 @@ new BlazeSlider(el, {
             height: 60vh;
             background-color: transparent;
           }
+          .home-container01 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .home-image {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            aspect-ratio: 1;
+          }
+          .home-content {
+            top: 4px;
+            flex: 1;
+            left: 0px;
+            right: 0px;
+            height: auto;
+            margin: auto;
+            display: flex;
+            position: absolute;
+            align-items: flex-start;
+            padding-top: var(--dl-space-space-fiveunits);
+            padding-left: var(--dl-space-space-threeunits);
+            padding-right: var(--dl-space-space-threeunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-threeunits);
+            justify-content: space-between;
+          }
+          .home-title {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-heading {
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 700;
+          }
+          .home-line {
+            gap: var(--dl-space-space-threeunits);
+            height: 8px;
+            display: flex;
+            position: relative;
+            border-color: rgba(120, 120, 120, 0.4);
+            border-style: dashed;
+            border-width: 0px;
+            flex-direction: column;
+            background-color: #ff0000;
+          }
+          .home-description {
+            gap: var(--dl-space-space-threeunits);
+            display: flex;
+            position: relative;
+            margin-top: var(--dl-space-space-unit);
+            margin-bottom: var(--dl-space-space-unit);
+            flex-direction: column;
+          }
+          .home-heading01 {
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 500;
+          }
           .home-container02 {
+            flex: 0 0 auto;
+            width: var(--dl-size-size-large);
+            height: 36px;
+            display: flex;
+            align-items: center;
+            border-color: rgba(120, 120, 120, 0.4);
+            border-style: dashed;
+            border-width: 0px;
+            border-radius: 10px;
+            justify-content: center;
+            background-color: #ff0000;
+          }
+          .home-text {
+            color: var(--dl-color-gray-white);
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 500;
+          }
+          .home-slide1 {
+            width: 100%;
+            height: 60vh;
+            background-color: transparent;
+          }
+          .home-container03 {
             flex: 0 0 auto;
             width: 100%;
             height: 100%;
@@ -833,12 +727,12 @@ new BlazeSlider(el, {
             object-fit: cover;
             aspect-ratio: 1;
           }
-          .home-content {
+          .home-content1 {
             top: 4px;
             flex: 1;
             left: 0px;
             right: 0px;
-            height: 400px;
+            height: auto;
             margin: auto;
             display: flex;
             position: absolute;
@@ -850,42 +744,331 @@ new BlazeSlider(el, {
             padding-bottom: var(--dl-space-space-threeunits);
             justify-content: space-between;
           }
-          .home-header {
-            gap: var(--dl-space-space-threeunits);
+          .home-title01 {
             display: flex;
             position: relative;
             flex-direction: column;
+            justify-content: space-between;
           }
-          .home-heading {
+          .home-heading02 {
             color: rgb(255, 255, 255);
             font-size: 50px;
             font-style: normal;
             font-family: Poppins;
             font-weight: 700;
           }
-          .home-text03 {
-            color: var(--dl-color-gray-white);
-            font-size: 20px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 400;
-          }
-          .home-container03 {
-            flex: 0 0 auto;
-            left: 0px;
-            width: 100%;
-            bottom: 54px;
+          .home-line1 {
+            gap: var(--dl-space-space-threeunits);
             height: 8px;
             display: flex;
-            position: absolute;
-            margin-top: var(--dl-space-space-halfunit);
-            align-items: flex-start;
+            position: relative;
             border-color: rgba(120, 120, 120, 0.4);
             border-style: dashed;
             border-width: 0px;
+            flex-direction: column;
             background-color: #ff0000;
           }
+          .home-description1 {
+            gap: var(--dl-space-space-threeunits);
+            display: flex;
+            position: relative;
+            margin-top: var(--dl-space-space-unit);
+            margin-bottom: var(--dl-space-space-unit);
+            flex-direction: column;
+          }
+          .home-heading03 {
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 500;
+          }
           .home-container04 {
+            flex: 0 0 auto;
+            width: var(--dl-size-size-large);
+            height: 36px;
+            display: flex;
+            align-items: center;
+            border-color: rgba(120, 120, 120, 0.4);
+            border-style: dashed;
+            border-width: 0px;
+            border-radius: 10px;
+            justify-content: center;
+            background-color: #ff0000;
+          }
+          .home-text01 {
+            color: var(--dl-color-gray-white);
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 500;
+          }
+          .home-slide2 {
+            width: 100%;
+            height: 60vh;
+            background-color: transparent;
+          }
+          .home-container05 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .home-image02 {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            aspect-ratio: 1;
+          }
+          .home-content2 {
+            top: 4px;
+            flex: 1;
+            left: 0px;
+            right: 0px;
+            height: auto;
+            margin: auto;
+            display: flex;
+            position: absolute;
+            align-items: flex-start;
+            padding-top: var(--dl-space-space-fiveunits);
+            padding-left: var(--dl-space-space-threeunits);
+            padding-right: var(--dl-space-space-threeunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-threeunits);
+            justify-content: space-between;
+          }
+          .home-title02 {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-heading04 {
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 700;
+          }
+          .home-line2 {
+            gap: var(--dl-space-space-threeunits);
+            height: 8px;
+            display: flex;
+            position: relative;
+            border-color: rgba(120, 120, 120, 0.4);
+            border-style: dashed;
+            border-width: 0px;
+            flex-direction: column;
+            background-color: #ff0000;
+          }
+          .home-description2 {
+            gap: var(--dl-space-space-threeunits);
+            display: flex;
+            position: relative;
+            margin-top: var(--dl-space-space-unit);
+            margin-bottom: var(--dl-space-space-unit);
+            flex-direction: column;
+          }
+          .home-heading05 {
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 500;
+          }
+          .home-container06 {
+            flex: 0 0 auto;
+            width: var(--dl-size-size-large);
+            height: 36px;
+            display: flex;
+            align-items: center;
+            border-color: rgba(120, 120, 120, 0.4);
+            border-style: dashed;
+            border-width: 0px;
+            border-radius: 10px;
+            justify-content: center;
+            background-color: #ff0000;
+          }
+          .home-text02 {
+            color: var(--dl-color-gray-white);
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 500;
+          }
+          .home-slide3 {
+            width: 100%;
+            height: 60vh;
+            background-color: transparent;
+          }
+          .home-container07 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .home-image03 {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            aspect-ratio: 1;
+          }
+          .home-content3 {
+            top: 4px;
+            flex: 1;
+            left: 0px;
+            right: 0px;
+            height: auto;
+            margin: auto;
+            display: flex;
+            position: absolute;
+            align-items: flex-start;
+            padding-top: var(--dl-space-space-fiveunits);
+            padding-left: var(--dl-space-space-threeunits);
+            padding-right: var(--dl-space-space-threeunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-threeunits);
+            justify-content: space-between;
+          }
+          .home-title03 {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-heading06 {
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 700;
+          }
+          .home-line3 {
+            gap: var(--dl-space-space-threeunits);
+            height: 8px;
+            display: flex;
+            position: relative;
+            border-color: rgba(120, 120, 120, 0.4);
+            border-style: dashed;
+            border-width: 0px;
+            flex-direction: column;
+            background-color: #ff0000;
+          }
+          .home-description3 {
+            gap: var(--dl-space-space-threeunits);
+            display: flex;
+            position: relative;
+            margin-top: var(--dl-space-space-unit);
+            margin-bottom: var(--dl-space-space-unit);
+            flex-direction: column;
+          }
+          .home-heading07 {
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 500;
+          }
+          .home-container08 {
+            flex: 0 0 auto;
+            width: var(--dl-size-size-large);
+            height: 36px;
+            display: flex;
+            align-items: center;
+            border-color: rgba(120, 120, 120, 0.4);
+            border-style: dashed;
+            border-width: 0px;
+            border-radius: 10px;
+            justify-content: center;
+            background-color: #ff0000;
+          }
+          .home-text03 {
+            color: var(--dl-color-gray-white);
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 500;
+          }
+          .home-slide4 {
+            width: 100%;
+            height: 60vh;
+            background-color: transparent;
+          }
+          .home-container09 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .home-image04 {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            aspect-ratio: 1;
+          }
+          .home-content4 {
+            top: 4px;
+            flex: 1;
+            left: 0px;
+            right: 0px;
+            height: auto;
+            margin: auto;
+            display: flex;
+            position: absolute;
+            align-items: flex-start;
+            padding-top: var(--dl-space-space-fiveunits);
+            padding-left: var(--dl-space-space-threeunits);
+            padding-right: var(--dl-space-space-threeunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-threeunits);
+            justify-content: space-between;
+          }
+          .home-title04 {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-heading08 {
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 700;
+          }
+          .home-line4 {
+            gap: var(--dl-space-space-threeunits);
+            height: 8px;
+            display: flex;
+            position: relative;
+            border-color: rgba(120, 120, 120, 0.4);
+            border-style: dashed;
+            border-width: 0px;
+            flex-direction: column;
+            background-color: #ff0000;
+          }
+          .home-description4 {
+            gap: var(--dl-space-space-threeunits);
+            display: flex;
+            position: relative;
+            margin-top: var(--dl-space-space-unit);
+            margin-bottom: var(--dl-space-space-unit);
+            flex-direction: column;
+          }
+          .home-heading09 {
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 500;
+          }
+          .home-container10 {
             flex: 0 0 auto;
             width: var(--dl-size-size-large);
             height: 36px;
@@ -903,479 +1086,6 @@ new BlazeSlider(el, {
             font-style: normal;
             font-family: Poppins;
             font-weight: 500;
-          }
-          .home-container05 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-          }
-          .home-more {
-            gap: 4px;
-            border: 2px dashed rgba(120, 120, 120, 0.4);
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            flex-direction: row;
-            justify-content: center;
-          }
-          .home-more:hover {
-            opacity: 0.5;
-          }
-          .home-slide1 {
-            width: 100%;
-            height: 60vh;
-            background-color: transparent;
-          }
-          .home-container06 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            position: relative;
-            align-items: flex-start;
-            flex-direction: row;
-            background-color: var(--dl-color-gray-black);
-          }
-          .home-image02 {
-            width: 100%;
-            height: 60vh;
-            object-fit: cover;
-            aspect-ratio: 1;
-          }
-          .home-content1 {
-            top: 4px;
-            flex: 1;
-            left: 0px;
-            right: 0px;
-            height: 400px;
-            margin: auto;
-            display: flex;
-            position: absolute;
-            align-items: flex-start;
-            padding-top: var(--dl-space-space-fiveunits);
-            padding-left: var(--dl-space-space-threeunits);
-            padding-right: var(--dl-space-space-threeunits);
-            flex-direction: column;
-            padding-bottom: var(--dl-space-space-threeunits);
-            justify-content: space-between;
-          }
-          .home-header01 {
-            gap: var(--dl-space-space-threeunits);
-            display: flex;
-            position: relative;
-            flex-direction: column;
-          }
-          .home-heading1 {
-            color: rgb(255, 255, 255);
-            font-size: 50px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 700;
-          }
-          .home-text05 {
-            color: var(--dl-color-gray-white);
-            font-size: 20px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 400;
-          }
-          .home-container07 {
-            flex: 0 0 auto;
-            left: 0px;
-            width: 100%;
-            bottom: 54px;
-            height: 8px;
-            display: flex;
-            position: absolute;
-            margin-top: var(--dl-space-space-halfunit);
-            align-items: flex-start;
-            border-color: rgba(120, 120, 120, 0.4);
-            border-style: dashed;
-            border-width: 0px;
-            background-color: #ff0000;
-          }
-          .home-container08 {
-            flex: 0 0 auto;
-            width: var(--dl-size-size-large);
-            height: 36px;
-            display: flex;
-            align-items: center;
-            border-color: rgba(120, 120, 120, 0.4);
-            border-style: dashed;
-            border-width: 0px;
-            border-radius: 10px;
-            justify-content: center;
-            background-color: #ff0000;
-          }
-          .home-text06 {
-            color: var(--dl-color-gray-white);
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 500;
-          }
-          .home-container09 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-          }
-          .home-more1 {
-            gap: 4px;
-            border: 2px dashed rgba(120, 120, 120, 0.4);
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            flex-direction: row;
-            justify-content: center;
-          }
-          .home-more1:hover {
-            opacity: 0.5;
-          }
-          .home-slide2 {
-            width: 100%;
-            height: 60vh;
-            background-color: transparent;
-          }
-          .home-container10 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            position: relative;
-            align-items: flex-start;
-            flex-direction: row;
-            background-color: var(--dl-color-gray-black);
-          }
-          .home-image03 {
-            width: 100%;
-            height: 60vh;
-            object-fit: cover;
-            aspect-ratio: 1;
-          }
-          .home-content2 {
-            top: 4px;
-            flex: 1;
-            left: 0px;
-            right: 0px;
-            height: 400px;
-            margin: auto;
-            display: flex;
-            position: absolute;
-            align-items: flex-start;
-            padding-top: var(--dl-space-space-fiveunits);
-            padding-left: var(--dl-space-space-threeunits);
-            padding-right: var(--dl-space-space-threeunits);
-            flex-direction: column;
-            padding-bottom: var(--dl-space-space-threeunits);
-            justify-content: space-between;
-          }
-          .home-header02 {
-            gap: var(--dl-space-space-threeunits);
-            display: flex;
-            position: relative;
-            flex-direction: column;
-          }
-          .home-heading2 {
-            color: rgb(255, 255, 255);
-            font-size: 50px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 700;
-          }
-          .home-text07 {
-            color: var(--dl-color-gray-white);
-            font-size: 20px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 400;
-          }
-          .home-container11 {
-            flex: 0 0 auto;
-            left: 0px;
-            width: 100%;
-            bottom: 54px;
-            height: 8px;
-            display: flex;
-            position: absolute;
-            margin-top: var(--dl-space-space-halfunit);
-            align-items: flex-start;
-            border-color: rgba(120, 120, 120, 0.4);
-            border-style: dashed;
-            border-width: 0px;
-            background-color: #ff0000;
-          }
-          .home-container12 {
-            flex: 0 0 auto;
-            width: var(--dl-size-size-large);
-            height: 36px;
-            display: flex;
-            align-items: center;
-            border-color: rgba(120, 120, 120, 0.4);
-            border-style: dashed;
-            border-width: 0px;
-            border-radius: 10px;
-            justify-content: center;
-            background-color: #ff0000;
-          }
-          .home-text08 {
-            color: var(--dl-color-gray-white);
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 500;
-          }
-          .home-container13 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-          }
-          .home-more2 {
-            gap: 4px;
-            border: 2px dashed rgba(120, 120, 120, 0.4);
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            flex-direction: row;
-            justify-content: center;
-          }
-          .home-more2:hover {
-            opacity: 0.5;
-          }
-          .home-slide3 {
-            width: 100%;
-            height: 60vh;
-            background-color: transparent;
-          }
-          .home-container14 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            position: relative;
-            align-items: flex-start;
-            flex-direction: row;
-            background-color: var(--dl-color-gray-black);
-          }
-          .home-image04 {
-            width: 100%;
-            height: 60vh;
-            object-fit: cover;
-            aspect-ratio: 1;
-          }
-          .home-content3 {
-            top: 4px;
-            flex: 1;
-            left: 0px;
-            right: 0px;
-            height: 400px;
-            margin: auto;
-            display: flex;
-            position: absolute;
-            align-items: flex-start;
-            padding-top: var(--dl-space-space-fiveunits);
-            padding-left: var(--dl-space-space-threeunits);
-            padding-right: var(--dl-space-space-threeunits);
-            flex-direction: column;
-            padding-bottom: var(--dl-space-space-threeunits);
-            justify-content: space-between;
-          }
-          .home-header03 {
-            gap: var(--dl-space-space-threeunits);
-            display: flex;
-            position: relative;
-            flex-direction: column;
-          }
-          .home-heading3 {
-            color: rgb(255, 255, 255);
-            font-size: 50px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 700;
-          }
-          .home-text09 {
-            color: var(--dl-color-gray-white);
-            font-size: 20px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 400;
-          }
-          .home-container15 {
-            flex: 0 0 auto;
-            left: 0px;
-            width: 100%;
-            bottom: 54px;
-            height: 8px;
-            display: flex;
-            position: absolute;
-            margin-top: var(--dl-space-space-halfunit);
-            align-items: flex-start;
-            border-color: rgba(120, 120, 120, 0.4);
-            border-style: dashed;
-            border-width: 0px;
-            background-color: #ff0000;
-          }
-          .home-container16 {
-            flex: 0 0 auto;
-            width: var(--dl-size-size-large);
-            height: 36px;
-            display: flex;
-            align-items: center;
-            border-color: rgba(120, 120, 120, 0.4);
-            border-style: dashed;
-            border-width: 0px;
-            border-radius: 10px;
-            justify-content: center;
-            background-color: #ff0000;
-          }
-          .home-text10 {
-            color: var(--dl-color-gray-white);
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 500;
-          }
-          .home-container17 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-          }
-          .home-more3 {
-            gap: 4px;
-            border: 2px dashed rgba(120, 120, 120, 0.4);
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            flex-direction: row;
-            justify-content: center;
-          }
-          .home-more3:hover {
-            opacity: 0.5;
-          }
-          .home-slide4 {
-            width: 100%;
-            height: 60vh;
-            background-color: transparent;
-          }
-          .home-container18 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            position: relative;
-            align-items: flex-start;
-            flex-direction: row;
-            background-color: var(--dl-color-gray-black);
-          }
-          .home-image05 {
-            width: 100%;
-            height: 60vh;
-            object-fit: cover;
-            aspect-ratio: 1;
-          }
-          .home-content4 {
-            top: 4px;
-            flex: 1;
-            left: 0px;
-            right: 0px;
-            height: 400px;
-            margin: auto;
-            display: flex;
-            position: absolute;
-            align-items: flex-start;
-            padding-top: var(--dl-space-space-fiveunits);
-            padding-left: var(--dl-space-space-threeunits);
-            padding-right: var(--dl-space-space-threeunits);
-            flex-direction: column;
-            padding-bottom: var(--dl-space-space-threeunits);
-            justify-content: space-between;
-          }
-          .home-header04 {
-            gap: var(--dl-space-space-threeunits);
-            display: flex;
-            position: relative;
-            flex-direction: column;
-          }
-          .home-heading4 {
-            color: rgb(255, 255, 255);
-            font-size: 50px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 700;
-          }
-          .home-text11 {
-            color: var(--dl-color-gray-white);
-            font-size: 20px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 400;
-          }
-          .home-container19 {
-            flex: 0 0 auto;
-            left: 0px;
-            width: 100%;
-            bottom: 54px;
-            height: 8px;
-            display: flex;
-            position: absolute;
-            margin-top: var(--dl-space-space-halfunit);
-            align-items: flex-start;
-            border-color: rgba(120, 120, 120, 0.4);
-            border-style: dashed;
-            border-width: 0px;
-            background-color: #ff0000;
-          }
-          .home-container20 {
-            flex: 0 0 auto;
-            width: var(--dl-size-size-large);
-            height: 36px;
-            display: flex;
-            align-items: center;
-            border-color: rgba(120, 120, 120, 0.4);
-            border-style: dashed;
-            border-width: 0px;
-            border-radius: 10px;
-            justify-content: center;
-            background-color: #ff0000;
-          }
-          .home-text12 {
-            color: var(--dl-color-gray-white);
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 500;
-          }
-          .home-container21 {
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-          }
-          .home-more4 {
-            gap: 4px;
-            border: 2px dashed rgba(120, 120, 120, 0.4);
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            flex-direction: row;
-            justify-content: center;
-          }
-          .home-more4:hover {
-            opacity: 0.5;
           }
           .home-controls {
             gap: var(--dl-space-space-unit);
@@ -1405,7 +1115,7 @@ new BlazeSlider(el, {
             padding-bottom: var(--dl-space-space-oneandhalfunits);
             background-color: transparent;
           }
-          .home-icon10 {
+          .home-icon {
             top: 0px;
             fill: var(--dl-color-gray-white);
             left: 0px;
@@ -1433,7 +1143,7 @@ new BlazeSlider(el, {
             padding-bottom: var(--dl-space-space-oneandhalfunits);
             background-color: transparent;
           }
-          .home-icon12 {
+          .home-icon2 {
             top: 0px;
             fill: var(--dl-color-gray-white);
             left: 0px;
@@ -1472,7 +1182,7 @@ new BlazeSlider(el, {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text13 {
+          .home-text05 {
             color: var(--dl-color-gray-white);
             font-size: 90px;
             font-style: normal;
@@ -1497,7 +1207,7 @@ new BlazeSlider(el, {
             gap: var(--dl-space-space-fiveunits);
             width: 100%;
             display: flex;
-            padding: var(--dl-space-space-threeunits);
+            padding: 0px;
             position: relative;
             max-width: var(--dl-size-size-maxwidth);
             margin-top: var(--dl-space-space-fiveunits);
@@ -1505,114 +1215,197 @@ new BlazeSlider(el, {
             margin-bottom: var(--dl-space-space-fiveunits);
             flex-direction: column;
           }
-          .home-service {
-            width: auto;
-            height: 643px;
-            display: grid;
-            align-self: center;
+          .home-container11 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 100px;
+            display: flex;
             align-items: flex-start;
-            flex-direction: column;
-            padding-bottom: 157px;
-            grid-template-rows: repeat(2, 1fr);
-            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
           }
-          .home-brand {
-            width: 484px;
-            height: var(--dl-size-size-small);
+          .home-heading10 {
+            font-size: 54px;
           }
-          .home-title {
-            color: var(--dl-color-gray-white);
-            font-size: 32px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 700;
+          .home-note {
+            width: 100%;
+            display: flex;
+            padding: var(--dl-space-space-oneandhalfunits);
+            max-width: 100%;
+            margin-top: var(--dl-space-space-unit);
+            align-items: center;
+            margin-bottom: var(--dl-space-space-unit);
+            flex-direction: row-reverse;
+            justify-content: space-between;
           }
-          .home-brand1 {
-            width: 484px;
-            height: var(--dl-size-size-small);
-          }
-          .home-title1 {
-            color: var(--dl-color-gray-white);
-            font-size: 32px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 700;
-          }
-          .home-brand2 {
-            width: 484px;
-            height: var(--dl-size-size-xxlarge);
-            text-decoration: none;
+          .home-image05 {
+            flex: 1;
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
           }
           .home-image06 {
-            width: var(--dl-size-size-large);
+            width: auto;
             height: auto;
             object-fit: cover;
+            border-color: var(--dl-color-gray-white);
+            border-width: 1px;
+            border-radius: 24px;
           }
-          .home-title2 {
-            color: var(--dl-color-gray-white);
+          .home-content5 {
+            gap: var(--dl-space-space-oneandhalfunits);
+            flex: 0;
+            width: auto;
+            height: 100%;
+            display: flex;
+            max-width: auto;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-caption2 {
+            width: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-heading11 {
+            color: var(--dl-color-gray-700);
             font-size: 24px;
             font-style: normal;
-            font-family: Poppins;
-            font-weight: 400;
-            line-height: 28px;
+            font-weight: 500;
+            margin-left: 0px;
           }
-          .home-brand3 {
-            width: 484px;
-            height: var(--dl-size-size-xxlarge);
+          .home-heading12 {
+            gap: var(--dl-space-space-oneandhalfunits);
+            width: 100%;
+            display: flex;
+            max-width: 600px;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-accordion {
+            display: flex;
+            position: relative;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-element {
+            width: 640px;
+            user-select: none;
+          }
+          .home-details {
+            gap: var(--dl-space-space-halfunit);
+            width: 100%;
+            display: flex;
             align-items: center;
+            flex-direction: row;
+            justify-content: center;
           }
           .home-image07 {
-            width: var(--dl-size-size-large);
-            height: auto;
+            width: 132px;
+            height: 76px;
             object-fit: cover;
           }
-          .home-title3 {
+          .home-text06 {
             color: var(--dl-color-gray-white);
+            width: 100%;
             font-size: 24px;
+            max-width: auto;
             font-style: normal;
+            text-align: left;
             font-family: Poppins;
-            font-weight: 400;
-            line-height: 24px;
+            font-weight: 500;
+            line-height: 44px;
           }
-          .home-brand4 {
-            width: 484px;
-            height: var(--dl-size-size-xxlarge);
+          .home-element1 {
+            width: 640px;
+            user-select: none;
+          }
+          .home-details1 {
+            gap: var(--dl-space-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
           }
           .home-image08 {
-            width: var(--dl-size-size-large);
-            height: auto;
+            width: 132px;
+            height: 76px;
             object-fit: cover;
           }
-          .home-title4 {
+          .home-text07 {
             color: var(--dl-color-gray-white);
+            width: 100%;
             font-size: 24px;
+            max-width: auto;
             font-style: normal;
+            text-align: left;
             font-family: Poppins;
-            font-weight: 400;
-            line-height: 28px;
+            font-weight: 500;
+            line-height: 44px;
           }
-          .home-brand5 {
-            width: 484px;
-            height: var(--dl-size-size-xxlarge);
+          .home-element2 {
+            width: 640px;
+            user-select: none;
+          }
+          .home-details2 {
+            gap: var(--dl-space-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
           }
           .home-image09 {
-            width: var(--dl-size-size-large);
-            height: auto;
+            width: 132px;
+            height: 76px;
             object-fit: cover;
           }
-          .home-title5 {
+          .home-text08 {
             color: var(--dl-color-gray-white);
+            width: 100%;
             font-size: 24px;
+            max-width: auto;
             font-style: normal;
+            text-align: left;
             font-family: Poppins;
-            font-weight: 400;
-            line-height: 28px;
+            font-weight: 500;
+            line-height: 44px;
           }
-          .home-brand6 {
-            top: 0px;
-            right: 0px;
-            border: 2px dashed rgba(120, 120, 120, 0.4);
-            position: absolute;
+          .home-element3 {
+            width: 640px;
+            user-select: none;
+          }
+          .home-details3 {
+            gap: var(--dl-space-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+          }
+          .home-image10 {
+            width: 132px;
+            height: 76px;
+            object-fit: cover;
+          }
+          .home-text09 {
+            color: var(--dl-color-gray-white);
+            width: 100%;
+            font-size: 24px;
+            max-width: auto;
+            font-style: normal;
+            text-align: left;
+            font-family: Poppins;
+            font-weight: 500;
+            line-height: 44px;
           }
           .home-testimonials {
             gap: var(--dl-space-space-fiveunits);
@@ -1621,12 +1414,13 @@ new BlazeSlider(el, {
             display: flex;
             position: relative;
             align-self: center;
+            margin-top: var(--dl-space-space-fourunits);
             align-items: center;
             padding-top: var(--dl-space-space-oneandhalfunits);
             flex-direction: column;
             justify-content: center;
           }
-          .home-header05 {
+          .home-header {
             gap: var(--dl-space-space-oneandhalfunits);
             color: white;
             width: 100%;
@@ -1638,13 +1432,13 @@ new BlazeSlider(el, {
             padding-right: var(--dl-space-space-fiveunits);
             flex-direction: column;
           }
-          .home-heading5 {
+          .home-heading13 {
             gap: var(--dl-space-space-oneandhalfunits);
             display: flex;
             align-items: flex-start;
             flex-direction: column;
           }
-          .home-title6 {
+          .home-title05 {
             font-size: 40px;
             max-width: 900px;
             font-style: normal;
@@ -1685,13 +1479,13 @@ new BlazeSlider(el, {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image10 {
+          .home-image11 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details {
+          .home-details4 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -1735,13 +1529,13 @@ new BlazeSlider(el, {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image11 {
+          .home-image12 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details1 {
+          .home-details5 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -1786,13 +1580,13 @@ new BlazeSlider(el, {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image12 {
+          .home-image13 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details2 {
+          .home-details6 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -1825,7 +1619,7 @@ new BlazeSlider(el, {
             align-self: flex-start;
             justify-content: space-between;
           }
-          .home-container22 {
+          .home-container12 {
             flex: 0 0 auto;
             width: 100%;
             height: auto;
@@ -1837,7 +1631,7 @@ new BlazeSlider(el, {
             flex-direction: column;
             padding-bottom: var(--dl-space-space-halfunit);
           }
-          .home-container23 {
+          .home-container13 {
             flex: 0 0 auto;
             height: 100px;
             display: flex;
@@ -1845,7 +1639,7 @@ new BlazeSlider(el, {
             align-items: flex-start;
             justify-content: space-between;
           }
-          .home-text17 {
+          .home-text13 {
             color: var(--dl-color-gray-white);
             width: 560px;
             font-size: 34px;
@@ -1854,7 +1648,7 @@ new BlazeSlider(el, {
             font-weight: 600;
             margin-left: var(--dl-space-space-twounits);
           }
-          .home-text21 {
+          .home-text17 {
             color: var(--dl-color-gray-white);
             width: auto;
             font-style: italic;
@@ -1863,7 +1657,7 @@ new BlazeSlider(el, {
             font-weight: 500;
             margin-right: var(--dl-space-space-twounits);
           }
-          .home-text22 {
+          .home-text18 {
             font-family: Arial;
           }
           .home-div {
@@ -1878,7 +1672,7 @@ new BlazeSlider(el, {
             align-items: center;
             flex-direction: column;
           }
-          .home-header06 {
+          .home-header1 {
             gap: var(--dl-space-space-oneandhalfunits);
             width: 100%;
             display: flex;
@@ -1904,7 +1698,7 @@ new BlazeSlider(el, {
             flex-direction: row;
             background-color: #000000;
           }
-          .home-heading6 {
+          .home-heading14 {
             gap: var(--dl-space-space-oneandhalfunits);
             display: flex;
             align-self: center;
@@ -1913,7 +1707,7 @@ new BlazeSlider(el, {
             margin-right: var(--dl-space-space-twounits);
             flex-direction: column;
           }
-          .home-title7 {
+          .home-title06 {
             color: var(--dl-color-gray-white);
             font-size: 90px;
             font-style: normal;
@@ -1921,7 +1715,7 @@ new BlazeSlider(el, {
             font-weight: 600;
             line-height: 100px;
           }
-          .home-title8 {
+          .home-title07 {
             color: rgba(255, 255, 255, 0.54);
             font-size: 32px;
             font-style: normal;
@@ -1929,13 +1723,79 @@ new BlazeSlider(el, {
             font-weight: 600;
             line-height: 32px;
           }
-          .home-caption2 {
+          .home-caption3 {
             color: var(--dl-color-gray-white);
             font-size: 18px;
             font-family: Poppins;
             line-height: 27px;
           }
-          .home-container24 {
+          .home-racing1 {
+            gap: var(--dl-space-space-fiveunits);
+            width: auto;
+            display: none;
+            padding: 0px;
+            max-width: auto;
+            align-items: center;
+            flex-direction: column;
+          }
+          .home-header2 {
+            gap: var(--dl-space-space-oneandhalfunits);
+            width: 100%;
+            display: flex;
+            max-width: 100%;
+            min-width: 100%;
+            align-self: center;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .home-section-numeral1 {
+            gap: var(--dl-space-space-halfunit);
+            display: flex;
+            position: relative;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .home-divide1 {
+            width: 100px;
+            height: 1px;
+            display: flex;
+            margin-top: 4px;
+            align-items: center;
+            flex-direction: row;
+            background-color: #000000;
+          }
+          .home-heading15 {
+            gap: var(--dl-space-space-oneandhalfunits);
+            display: flex;
+            align-self: center;
+            align-items: center;
+            margin-left: var(--dl-space-space-twounits);
+            margin-right: var(--dl-space-space-twounits);
+            flex-direction: column;
+          }
+          .home-title08 {
+            color: var(--dl-color-gray-white);
+            font-size: 90px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 600;
+            line-height: 100px;
+          }
+          .home-title09 {
+            color: rgba(255, 255, 255, 0.54);
+            font-size: 32px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 600;
+            line-height: 32px;
+          }
+          .home-caption4 {
+            color: var(--dl-color-gray-white);
+            font-size: 18px;
+            font-family: Poppins;
+            line-height: 27px;
+          }
+          .home-container14 {
             flex: 0 0 auto;
             width: 100%;
             height: 100vh;
@@ -1955,7 +1815,7 @@ new BlazeSlider(el, {
             justify-content: center;
             background-color: var(--dl-color-gray-black);
           }
-          .home-heading7 {
+          .home-heading16 {
             color: rgb(255, 255, 255);
             height: auto;
             font-size: 100px;
@@ -1964,41 +1824,41 @@ new BlazeSlider(el, {
             font-family: Poppins;
             font-weight: 500;
           }
-          .home-text25 {
+          .home-text22 {
             font-size: 54px;
             font-weight: 500;
           }
-          .home-text26 {
+          .home-text23 {
             font-weight: 500;
+          }
+          .home-text24 {
+            font-weight: 500;
+          }
+          .home-text25 {
+            color: #2200ff;
+            font-style: italic;
+            font-family: Open Sans;
+            font-weight: 600;
+          }
+          .home-text26 {
+            color: #2200ff;
+            font-style: italic;
+            font-family: Open Sans;
+            font-weight: 600;
           }
           .home-text27 {
-            font-weight: 500;
-          }
-          .home-text28 {
-            color: #2200ff;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 600;
-          }
-          .home-text29 {
-            color: #2200ff;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 600;
-          }
-          .home-text30 {
             font-style: normal;
           }
-          .home-text31 {
+          .home-text28 {
             color: #ffffff;
             font-size: 100px;
             font-style: normal;
             font-weight: 500;
           }
-          .home-text32 {
+          .home-text29 {
             font-style: normal;
           }
-          .home-link5 {
+          .home-link {
             color: var(--dl-color-gray-white);
             width: auto;
             height: auto;
@@ -2007,224 +1867,22 @@ new BlazeSlider(el, {
             text-decoration: none;
             background-color: #2200ff;
           }
-          .home-text33 {
+          .home-text30 {
             margin: var(--dl-space-space-unit);
             font-size: 24px;
             font-family: Poppins;
-          }
-          .home-footer {
-            width: 100%;
-            display: flex;
-            max-width: var(--dl-size-size-maxwidth);
-            align-items: flex-start;
-            padding-left: var(--dl-space-space-fiveunits);
-            padding-right: var(--dl-space-space-fiveunits);
-            flex-direction: column;
-          }
-          .home-content5 {
-            gap: var(--dl-space-space-fiveunits);
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            padding-top: var(--dl-space-space-fiveunits);
-            border-color: #313133;
-            flex-direction: column;
-            padding-bottom: var(--dl-space-space-fiveunits);
-            border-top-width: 1px;
-          }
-          .home-main {
-            gap: 240px;
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .home-branding {
-            gap: var(--dl-space-space-twounits);
-            width: 400px;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .home-image13 {
-            width: 120px;
-            object-fit: cover;
-          }
-          .home-text34 {
-            color: rgb(124, 124, 128);
-            line-height: 24px;
-          }
-          .home-text36 {
-            color: #7c7c80;
-            line-height: 24px;
-          }
-          .home-links {
-            gap: 120px;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-          }
-          .home-column {
-            gap: var(--dl-space-space-threeunits);
-            color: white;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .home-header07 {
-            font-size: 24px;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 500;
-          }
-          .home-list {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .home-text40 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .home-text40:hover {
-            opacity: 0.5;
-          }
-          .home-text41 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .home-text41:hover {
-            opacity: 0.5;
-          }
-          .home-text42 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .home-text42:hover {
-            opacity: 0.5;
-          }
-          .home-text43:hover {
-            opacity: 0.5;
-          }
-          .home-column1 {
-            gap: var(--dl-space-space-threeunits);
-            color: white;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .home-header08 {
-            font-size: 24px;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 500;
-          }
-          .home-list1 {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .home-text47 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .home-text47:hover {
-            opacity: 0.5;
-          }
-          .home-text48 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .home-text48:hover {
-            opacity: 0.5;
-          }
-          .home-column2 {
-            gap: var(--dl-space-space-threeunits);
-            color: white;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .home-header09 {
-            font-size: 24px;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 500;
-          }
-          .home-list2 {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .home-text49 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .home-text49:hover {
-            opacity: 0.5;
-          }
-          .home-text50 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .home-text50:hover {
-            opacity: 0.5;
-          }
-          .home-text51 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .home-text51:hover {
-            opacity: 0.5;
-          }
-          .home-bottom {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            justify-content: space-between;
-          }
-          .home-text52 {
-            color: rgb(124, 124, 128);
-            font-size: 14px;
-            line-height: 21px;
           }
           @media (max-width: 991px) {
             .home-slider {
               gap: var(--dl-space-space-twounits);
             }
-            .home-image01 {
+            .home-image {
               width: 100%;
-              height: 120px;
+              height: 100%;
             }
             .home-content {
               gap: var(--dl-space-space-unit);
-              width: 100%;
+              width: auto;
               height: auto;
               padding-top: var(--dl-space-space-oneandhalfunits);
               padding-left: var(--dl-space-space-oneandhalfunits);
@@ -2232,20 +1890,33 @@ new BlazeSlider(el, {
               padding-bottom: var(--dl-space-space-oneandhalfunits);
               justify-content: flex-start;
             }
-            .home-header {
+            .home-title {
               gap: var(--dl-space-space-halfunit);
-              width: 100%;
+              width: auto;
             }
             .home-heading {
               font-size: 24px;
             }
-            .home-image02 {
+            .home-line {
+              gap: var(--dl-space-space-halfunit);
               width: 100%;
-              height: 120px;
+            }
+            .home-description {
+              gap: var(--dl-space-space-halfunit);
+              width: 100%;
+              margin-top: 0px;
+              margin-bottom: 0px;
+            }
+            .home-heading01 {
+              font-size: 24px;
+            }
+            .home-image01 {
+              width: 100%;
+              height: 100%;
             }
             .home-content1 {
               gap: var(--dl-space-space-unit);
-              width: 100%;
+              width: auto;
               height: auto;
               padding-top: var(--dl-space-space-oneandhalfunits);
               padding-left: var(--dl-space-space-oneandhalfunits);
@@ -2253,20 +1924,67 @@ new BlazeSlider(el, {
               padding-bottom: var(--dl-space-space-oneandhalfunits);
               justify-content: flex-start;
             }
-            .home-header01 {
+            .home-title01 {
+              gap: var(--dl-space-space-halfunit);
+              width: auto;
+            }
+            .home-heading02 {
+              font-size: 24px;
+            }
+            .home-line1 {
               gap: var(--dl-space-space-halfunit);
               width: 100%;
             }
-            .home-heading1 {
+            .home-description1 {
+              gap: var(--dl-space-space-halfunit);
+              width: 100%;
+              margin-top: 0px;
+              margin-bottom: 0px;
+            }
+            .home-heading03 {
+              font-size: 24px;
+            }
+            .home-image02 {
+              width: 100%;
+              height: 100%;
+            }
+            .home-content2 {
+              gap: var(--dl-space-space-unit);
+              width: auto;
+              height: auto;
+              padding-top: var(--dl-space-space-oneandhalfunits);
+              padding-left: var(--dl-space-space-oneandhalfunits);
+              padding-right: var(--dl-space-space-oneandhalfunits);
+              padding-bottom: var(--dl-space-space-oneandhalfunits);
+              justify-content: flex-start;
+            }
+            .home-title02 {
+              gap: var(--dl-space-space-halfunit);
+              width: auto;
+            }
+            .home-heading04 {
+              font-size: 24px;
+            }
+            .home-line2 {
+              gap: var(--dl-space-space-halfunit);
+              width: 100%;
+            }
+            .home-description2 {
+              gap: var(--dl-space-space-halfunit);
+              width: 100%;
+              margin-top: 0px;
+              margin-bottom: 0px;
+            }
+            .home-heading05 {
               font-size: 24px;
             }
             .home-image03 {
               width: 100%;
-              height: 120px;
+              height: 100%;
             }
-            .home-content2 {
+            .home-content3 {
               gap: var(--dl-space-space-unit);
-              width: 100%;
+              width: auto;
               height: auto;
               padding-top: var(--dl-space-space-oneandhalfunits);
               padding-left: var(--dl-space-space-oneandhalfunits);
@@ -2274,41 +1992,33 @@ new BlazeSlider(el, {
               padding-bottom: var(--dl-space-space-oneandhalfunits);
               justify-content: flex-start;
             }
-            .home-header02 {
+            .home-title03 {
+              gap: var(--dl-space-space-halfunit);
+              width: auto;
+            }
+            .home-heading06 {
+              font-size: 24px;
+            }
+            .home-line3 {
               gap: var(--dl-space-space-halfunit);
               width: 100%;
             }
-            .home-heading2 {
+            .home-description3 {
+              gap: var(--dl-space-space-halfunit);
+              width: 100%;
+              margin-top: 0px;
+              margin-bottom: 0px;
+            }
+            .home-heading07 {
               font-size: 24px;
             }
             .home-image04 {
               width: 100%;
-              height: 120px;
-            }
-            .home-content3 {
-              gap: var(--dl-space-space-unit);
-              width: 100%;
-              height: auto;
-              padding-top: var(--dl-space-space-oneandhalfunits);
-              padding-left: var(--dl-space-space-oneandhalfunits);
-              padding-right: var(--dl-space-space-oneandhalfunits);
-              padding-bottom: var(--dl-space-space-oneandhalfunits);
-              justify-content: flex-start;
-            }
-            .home-header03 {
-              gap: var(--dl-space-space-halfunit);
-              width: 100%;
-            }
-            .home-heading3 {
-              font-size: 24px;
-            }
-            .home-image05 {
-              width: 100%;
-              height: 120px;
+              height: 100%;
             }
             .home-content4 {
               gap: var(--dl-space-space-unit);
-              width: 100%;
+              width: auto;
               height: auto;
               padding-top: var(--dl-space-space-oneandhalfunits);
               padding-left: var(--dl-space-space-oneandhalfunits);
@@ -2316,81 +2026,55 @@ new BlazeSlider(el, {
               padding-bottom: var(--dl-space-space-oneandhalfunits);
               justify-content: flex-start;
             }
-            .home-header04 {
+            .home-title04 {
+              gap: var(--dl-space-space-halfunit);
+              width: auto;
+            }
+            .home-heading08 {
+              font-size: 24px;
+            }
+            .home-line4 {
               gap: var(--dl-space-space-halfunit);
               width: 100%;
             }
-            .home-heading4 {
+            .home-description4 {
+              gap: var(--dl-space-space-halfunit);
+              width: 100%;
+              margin-top: 0px;
+              margin-bottom: 0px;
+            }
+            .home-heading09 {
               font-size: 24px;
             }
-            .home-service {
-              grid-template-rows: repeat(2, 1fr);
-              grid-template-columns: repeat(2, 1fr);
+            .home-container11 {
+              height: auto;
             }
-            .home-brand {
-              border-top-width: 1px;
+            .home-note {
+              flex-direction: column-reverse;
             }
-            .home-brand1 {
-              border-top-width: 1px;
-            }
-            .home-brand2 {
-              border-top-width: 1px;
-            }
-            .home-brand3 {
-              border-top-width: 1px;
-            }
-            .home-brand4 {
-              border-top-width: 1px;
-            }
-            .home-brand5 {
-              border-top-width: 1px;
-            }
-            .home-brand6 {
-              border-right-width: 0px;
-            }
-            .home-heading7 {
-              font-size: 50px;
+            .home-image05 {
+              margin-top: var(--dl-space-space-oneandhalfunits);
             }
             .home-content5 {
-              border-top-width: 0px;
+              width: auto;
+              align-items: center;
             }
-            .home-main {
-              gap: var(--dl-space-space-threeunits);
-              flex-direction: column;
+            .home-heading11 {
+              margin-left: 0px;
+              margin-bottom: 0px;
             }
-            .home-branding {
-              width: 100%;
+            .home-heading12 {
+              width: auto;
+              max-width: auto;
+            }
+            .home-racing1 {
+              display: none;
+            }
+            .home-heading16 {
+              font-size: 50px;
             }
           }
           @media (max-width: 767px) {
-            .home-desktop-menu {
-              display: none;
-            }
-            .home-burger-menu {
-              display: flex;
-            }
-            .home-icon {
-              fill: white;
-            }
-            .home-nav1 {
-              gap: var(--dl-space-space-oneandhalfunits);
-            }
-            .home-container01 {
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home-nav2 {
-              gap: var(--dl-space-space-unit);
-            }
-            .home-text01 {
-              color: rgb(0, 0, 0);
-            }
-            .home-text02 {
-              color: rgb(0, 0, 0);
-            }
-            .home-icon-group {
-              width: 100%;
-              justify-content: flex-start;
-            }
             .home-slides {
               gap: var(--dl-space-space-oneandhalfunits);
             }
@@ -2400,19 +2084,79 @@ new BlazeSlider(el, {
             .home-slider-track {
               align-items: stretch;
             }
+            .home-image {
+              height: 100%;
+            }
+            .home-content {
+              width: auto;
+            }
+            .home-title {
+              width: auto;
+            }
             .home-heading {
               font-size: 18px;
             }
-            .home-heading1 {
+            .home-heading01 {
               font-size: 18px;
             }
-            .home-heading2 {
+            .home-image01 {
+              height: 100%;
+            }
+            .home-content1 {
+              width: auto;
+            }
+            .home-title01 {
+              width: auto;
+            }
+            .home-heading02 {
               font-size: 18px;
             }
-            .home-heading3 {
+            .home-heading03 {
               font-size: 18px;
             }
-            .home-heading4 {
+            .home-image02 {
+              height: 100%;
+            }
+            .home-content2 {
+              width: auto;
+            }
+            .home-title02 {
+              width: auto;
+            }
+            .home-heading04 {
+              font-size: 18px;
+            }
+            .home-heading05 {
+              font-size: 18px;
+            }
+            .home-image03 {
+              height: 100%;
+            }
+            .home-content3 {
+              width: auto;
+            }
+            .home-title03 {
+              width: auto;
+            }
+            .home-heading06 {
+              font-size: 18px;
+            }
+            .home-heading07 {
+              font-size: 18px;
+            }
+            .home-image04 {
+              height: 100%;
+            }
+            .home-content4 {
+              width: auto;
+            }
+            .home-title04 {
+              width: auto;
+            }
+            .home-heading08 {
+              font-size: 18px;
+            }
+            .home-heading09 {
               font-size: 18px;
             }
             .home-previous {
@@ -2421,7 +2165,7 @@ new BlazeSlider(el, {
               padding-right: var(--dl-space-space-unit);
               padding-bottom: var(--dl-space-space-unit);
             }
-            .home-icon10 {
+            .home-icon {
               width: 14px;
               height: 14px;
             }
@@ -2431,7 +2175,7 @@ new BlazeSlider(el, {
               padding-right: var(--dl-space-space-unit);
               padding-bottom: var(--dl-space-space-unit);
             }
-            .home-icon12 {
+            .home-icon2 {
               width: 14px;
               height: 14px;
             }
@@ -2458,42 +2202,63 @@ new BlazeSlider(el, {
               padding-right: var(--dl-space-space-oneandhalfunits);
               padding-bottom: var(--dl-space-space-threeunits);
             }
-            .home-title {
-              font-size: 30px;
-              line-height: 33px;
+            .home-image05 {
+              margin-top: var(--dl-space-space-oneandhalfunits);
             }
-            .home-title1 {
-              font-size: 30px;
-              line-height: 33px;
+            .home-content5 {
+              width: 100%;
+              align-items: center;
             }
-            .home-title2 {
-              font-size: 30px;
-              line-height: 33px;
+            .home-heading11 {
+              margin-bottom: 0px;
             }
-            .home-title3 {
-              font-size: 30px;
-              line-height: 33px;
+            .home-heading12 {
+              align-items: center;
             }
-            .home-title4 {
-              font-size: 30px;
-              line-height: 33px;
+            .home-element {
+              width: 100%;
+              max-width: 560px;
             }
-            .home-title5 {
-              font-size: 30px;
-              line-height: 33px;
+            .home-text06 {
+              font-size: 18px;
+              line-height: 24px;
+            }
+            .home-element1 {
+              width: 100%;
+              max-width: 560px;
+            }
+            .home-text07 {
+              font-size: 18px;
+              line-height: 24px;
+            }
+            .home-element2 {
+              width: 100%;
+              max-width: 560px;
+            }
+            .home-text08 {
+              font-size: 18px;
+              line-height: 24px;
+            }
+            .home-element3 {
+              width: 100%;
+              max-width: 560px;
+            }
+            .home-text09 {
+              font-size: 18px;
+              line-height: 24px;
             }
             .home-testimonials {
               gap: var(--dl-space-space-threeunits);
               padding-top: 0px;
             }
-            .home-header05 {
+            .home-header {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
             }
-            .home-heading5 {
+            .home-heading13 {
               gap: var(--dl-space-space-unit);
             }
-            .home-title6 {
+            .home-title05 {
               font-size: 30px;
               line-height: 33px;
             }
@@ -2518,10 +2283,10 @@ new BlazeSlider(el, {
             .home-author {
               width: 100%;
             }
-            .home-image10 {
+            .home-image11 {
               width: 40px;
             }
-            .home-details {
+            .home-details4 {
               flex: 1;
             }
             .home-name {
@@ -2554,10 +2319,10 @@ new BlazeSlider(el, {
             .home-author1 {
               width: 100%;
             }
-            .home-image11 {
+            .home-image12 {
               width: 40px;
             }
-            .home-details1 {
+            .home-details5 {
               flex: 1;
             }
             .home-name1 {
@@ -2604,26 +2369,50 @@ new BlazeSlider(el, {
             }
             .home-racing {
               gap: var(--dl-space-space-threeunits);
+              padding: 0px;
+            }
+            .home-divide {
+              width: 50px;
+            }
+            .home-heading14 {
+              gap: var(--dl-space-space-unit);
+            }
+            .home-title06 {
+              font-size: 30px;
+              line-height: 33px;
+            }
+            .home-title07 {
+              font-size: 30px;
+              line-height: 33px;
+            }
+            .home-caption3 {
+              width: 90%;
+              font-size: 16px;
+              line-height: 24px;
+            }
+            .home-racing1 {
+              gap: var(--dl-space-space-threeunits);
+              display: none;
               padding-top: var(--dl-space-space-threeunits);
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
               padding-bottom: var(--dl-space-space-threeunits);
             }
-            .home-divide {
+            .home-divide1 {
               width: 50px;
             }
-            .home-heading6 {
+            .home-heading15 {
               gap: var(--dl-space-space-unit);
             }
-            .home-title7 {
+            .home-title08 {
               font-size: 30px;
               line-height: 33px;
             }
-            .home-title8 {
+            .home-title09 {
               font-size: 30px;
               line-height: 33px;
             }
-            .home-caption2 {
+            .home-caption4 {
               width: 90%;
               font-size: 16px;
               line-height: 24px;
@@ -2632,50 +2421,304 @@ new BlazeSlider(el, {
               padding-left: var(--dl-space-space-twounits);
               padding-right: var(--dl-space-space-twounits);
             }
-            .home-heading7 {
+            .home-heading16 {
               font-size: 36px;
-            }
-            .home-footer {
-              padding-left: var(--dl-space-space-oneandhalfunits);
-              padding-right: var(--dl-space-space-oneandhalfunits);
-            }
-            .home-links {
-              gap: var(--dl-space-space-fiveunits);
-              flex-direction: row;
             }
           }
           @media (max-width: 479px) {
-            .home-mobile-menu {
-              padding: 16px;
-            }
-            .home-icon-group {
+            .home-container01 {
+              height: 100%;
+              align-items: center;
               justify-content: center;
             }
-            .home-text13 {
-              font-size: 50px;
-            }
-            .home-service {
-              width: 100%;
+            .home-image {
               height: 100%;
             }
-            .home-image06 {
-              width: 75%;
+            .home-content {
+              top: 0px;
+              flex: 1;
+              width: auto;
+              height: auto;
+              margin: var(--dl-space-space-unit);
+              justify-content: center;
             }
-            .home-image07 {
-              width: 75%;
+            .home-title {
+              width: auto;
+              height: auto;
             }
-            .home-image08 {
-              width: 75%;
+            .home-line {
+              width: 100%;
+              height: 4px;
+              border-width: 0px;
+              background-color: #ff0000;
             }
-            .home-image09 {
-              width: 75%;
+            .home-description {
+              width: auto;
+              height: auto;
+              margin-top: 0px;
+              margin-bottom: 0px;
+            }
+            .home-heading01 {
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 14px;
+            }
+            .home-container03 {
+              height: 100%;
+              align-items: center;
+              justify-content: center;
+            }
+            .home-image01 {
+              height: 100%;
+            }
+            .home-content1 {
+              top: 0px;
+              flex: 1;
+              width: auto;
+              height: auto;
+              margin: var(--dl-space-space-unit);
+              justify-content: center;
+            }
+            .home-title01 {
+              width: auto;
+              height: auto;
+            }
+            .home-line1 {
+              width: 100%;
+              height: 4px;
+              border-width: 0px;
+              background-color: #ff0000;
+            }
+            .home-description1 {
+              width: auto;
+              height: auto;
+              margin-top: 0px;
+              margin-bottom: 0px;
+            }
+            .home-heading03 {
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 14px;
+            }
+            .home-container05 {
+              height: 100%;
+              align-items: center;
+              justify-content: center;
+            }
+            .home-image02 {
+              height: 100%;
+            }
+            .home-content2 {
+              top: 0px;
+              flex: 1;
+              width: auto;
+              height: auto;
+              margin: var(--dl-space-space-unit);
+              justify-content: center;
+            }
+            .home-title02 {
+              width: auto;
+              height: auto;
+            }
+            .home-line2 {
+              width: 100%;
+              height: 4px;
+              border-width: 0px;
+              background-color: #ff0000;
+            }
+            .home-description2 {
+              width: auto;
+              height: auto;
+              margin-top: 0px;
+              margin-bottom: 0px;
+            }
+            .home-heading05 {
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 14px;
+            }
+            .home-container07 {
+              height: 100%;
+              align-items: center;
+              justify-content: center;
+            }
+            .home-image03 {
+              height: 100%;
+            }
+            .home-content3 {
+              top: 0px;
+              flex: 1;
+              width: auto;
+              height: auto;
+              margin: var(--dl-space-space-unit);
+              justify-content: center;
+            }
+            .home-title03 {
+              width: auto;
+              height: auto;
+            }
+            .home-line3 {
+              width: 100%;
+              height: 4px;
+              border-width: 0px;
+              background-color: #ff0000;
+            }
+            .home-description3 {
+              width: auto;
+              height: auto;
+              margin-top: 0px;
+              margin-bottom: 0px;
+            }
+            .home-heading07 {
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 14px;
+            }
+            .home-container09 {
+              height: 100%;
+              align-items: center;
+              justify-content: center;
+            }
+            .home-image04 {
+              height: 100%;
+            }
+            .home-content4 {
+              top: 0px;
+              flex: 1;
+              width: auto;
+              height: auto;
+              margin: var(--dl-space-space-unit);
+              justify-content: center;
+            }
+            .home-title04 {
+              width: auto;
+              height: auto;
+            }
+            .home-line4 {
+              width: 100%;
+              height: 4px;
+              border-width: 0px;
+              background-color: #ff0000;
+            }
+            .home-description4 {
+              width: auto;
+              height: auto;
+              margin-top: 0px;
+              margin-bottom: 0px;
+            }
+            .home-heading09 {
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 14px;
+            }
+            .home-previous {
+              width: auto;
+            }
+            .home-next {
+              width: auto;
+            }
+            .home-hero {
+              height: auto;
+              padding-bottom: var(--dl-space-space-oneandhalfunits);
+            }
+            .home-hero-content {
+              height: auto;
+            }
+            .home-text05 {
+              font-size: 50px;
+            }
+            .home-services {
+              margin-top: var(--dl-space-space-unit);
+              padding-top: var(--dl-space-space-unit);
+              margin-bottom: var(--dl-space-space-unit);
+              padding-bottom: var(--dl-space-space-unit);
+            }
+            .home-heading10 {
+              font-size: 32px;
+              text-align: center;
+            }
+            .home-image05 {
+              margin-top: var(--dl-space-space-twounits);
+            }
+            .home-content5 {
+              align-items: center;
+            }
+            .home-heading11 {
+              font-size: 16px;
+              margin-left: 0px;
+              margin-bottom: 0px;
+            }
+            .home-heading12 {
+              align-items: center;
+            }
+            .home-element {
+              width: 350px;
+              max-width: auto;
+            }
+            .home-details {
+              align-items: center;
+            }
+            .home-element1 {
+              width: 350px;
+              max-width: auto;
+            }
+            .home-element2 {
+              width: 350px;
+              max-width: auto;
+            }
+            .home-element3 {
+              width: 350px;
+              max-width: auto;
+            }
+            .home-text13 {
+              font-size: 18px;
+              margin-left: 0px;
+            }
+            .home-text17 {
+              font-size: 12px;
+            }
+            .home-racing {
+              display: none;
+              padding: 0px;
             }
             .home-divide {
               width: 20px;
             }
-            .home-text24 {
+            .home-text20 {
               font-size: 16px;
               line-height: 24px;
+            }
+            .home-title07 {
+              font-size: 22px;
+              text-align: center;
+            }
+            .home-caption3 {
+              text-align: center;
+            }
+            .home-racing1 {
+              width: 100%;
+              height: auto;
+              display: flex;
+              padding: 0px;
+            }
+            .home-divide1 {
+              width: 20px;
+            }
+            .home-text21 {
+              font-size: 16px;
+              line-height: 24px;
+            }
+            .home-title09 {
+              font-size: 22px;
+              text-align: center;
+            }
+            .home-caption4 {
+              text-align: center;
             }
             .home-hero1 {
               padding-top: var(--dl-space-space-twounits);
@@ -2683,23 +2726,14 @@ new BlazeSlider(el, {
               padding-right: var(--dl-space-space-unit);
               padding-bottom: var(--dl-space-space-twounits);
             }
-            .home-heading7 {
+            .home-heading16 {
               color: rgb(255, 255, 255);
               font-style: normal;
               text-align: center;
               font-weight: 500;
             }
-            .home-link5 {
+            .home-link {
               text-align: center;
-            }
-            .home-links {
-              gap: var(--dl-space-space-threeunits);
-              flex-direction: column;
-            }
-            .home-bottom {
-              gap: var(--dl-space-space-twounits);
-              flex-direction: column;
-              justify-content: center;
             }
           }
         `}

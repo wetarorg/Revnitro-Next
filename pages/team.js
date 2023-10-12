@@ -1,10 +1,11 @@
 import React from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
 
 import Script from 'dangerous-html/react'
 
+import Navbar from '../components/navbar'
 import IconContainer from '../components/icon-container'
+import Footer from '../components/footer'
 
 const Team = (props) => {
   return (
@@ -14,90 +15,7 @@ const Team = (props) => {
           <title>Team - Revnitro</title>
           <meta property="og:title" content="Team - Revnitro" />
         </Head>
-        <header data-thq="thq-navbar" className="team-navbar">
-          <Link href="/">
-            <a className="team-link">
-              <img
-                alt="image"
-                src="/logo/ba365a50c6760909f3950a57a9b9ff1c-200h.webp"
-                className="team-image"
-              />
-            </a>
-          </Link>
-          <div
-            data-thq="thq-navbar-nav"
-            data-role="Nav"
-            className="team-desktop-menu"
-          >
-            <nav
-              data-thq="thq-navbar-nav-links"
-              data-role="Nav"
-              className="team-nav"
-            >
-              <a
-                href="https://revnitroblog2.vercel.app/blog"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="team-link1 navLink"
-              >
-                Blogs
-              </a>
-              <span className="navLink">Course</span>
-              <span className="navLink">Forum</span>
-              <span className="navLink">Team</span>
-            </nav>
-          </div>
-          <div data-thq="thq-burger-menu" className="team-burger-menu">
-            <svg viewBox="0 0 1024 1024" className="team-icon">
-              <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
-            </svg>
-          </div>
-          <div data-thq="thq-mobile-menu" className="team-mobile-menu">
-            <div
-              data-thq="thq-mobile-menu-nav"
-              data-role="Nav"
-              className="team-nav1"
-            >
-              <div className="team-container01">
-                <div data-thq="thq-close-menu" className="team-menu-close">
-                  <svg viewBox="0 0 1024 1024" className="team-icon02">
-                    <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
-                  </svg>
-                </div>
-              </div>
-              <nav
-                data-thq="thq-mobile-menu-nav-links"
-                data-role="Nav"
-                className="team-nav2"
-              >
-                <span className="navLink team-text">Team</span>
-                <span className="navLink team-text01">Blog</span>
-              </nav>
-              <div className="team-icon-group">
-                <div className="team-icons">
-                  <svg
-                    viewBox="0 0 950.8571428571428 1024"
-                    className="team-icon04"
-                  >
-                    <path d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"></path>
-                  </svg>
-                  <svg
-                    viewBox="0 0 877.7142857142857 1024"
-                    className="team-icon06"
-                  >
-                    <path d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"></path>
-                  </svg>
-                  <svg
-                    viewBox="0 0 602.2582857142856 1024"
-                    className="team-icon08"
-                  >
-                    <path d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
+        <Navbar rootClassName="navbar-root-class-name5"></Navbar>
         <section className="team-hero">
           <video
             src="https://pub-30f0311bc9f042069ab58e9ea548fe98.r2.dev/revnitro3.mp4"
@@ -110,7 +28,7 @@ const Team = (props) => {
             className="team-video"
           ></video>
           <div className="team-hero-content">
-            <h1 className="team-text02">RevNitro Team</h1>
+            <h1 className="team-text">RevNitro Team</h1>
             <div className="team-caption">
               <p className="team-caption01">
                 RevNitro is a devoted community of engineers and auto
@@ -118,8 +36,8 @@ const Team = (props) => {
                 on automobiles and bikes.
               </p>
             </div>
-            <a href="#team" className="team-link5 button">
-              <span className="team-text03">OUR TEAM</span>
+            <a href="#team" className="team-link button">
+              <span className="team-text01">OUR TEAM</span>
             </a>
           </div>
         </section>
@@ -148,7 +66,7 @@ const Team = (props) => {
         </section>
         <div className="team-header">
           <div className="team-hero-content1">
-            <h1 className="team-text08">For Tamil Speaking Audience</h1>
+            <h1 className="team-text06">For Tamil Speaking Audience</h1>
             <div className="team-caption03">
               <p className="team-caption04">
                 <span>
@@ -190,14 +108,14 @@ const Team = (props) => {
                     alt="image"
                     src="/Team/dinesh-1400w.jpg"
                     loading="lazy"
-                    className="team-image1"
+                    className="team-image"
                   />
                   <div
                     data-role="accordion-container"
                     className="team-element accordion"
                   >
-                    <div className="team-container02">
-                      <div className="team-container03">
+                    <div className="team-container01">
+                      <div className="team-container02">
                         <h3 className="team-name">Dinesh</h3>
                         <span className="team-caption05">PUBLIC RELATIONS</span>
                       </div>
@@ -287,14 +205,14 @@ const Team = (props) => {
                     alt="image"
                     src="/Team/sriram-1400w.jpg"
                     loading="lazy"
-                    className="team-image2"
+                    className="team-image1"
                   />
                   <div
                     data-role="accordion-container"
                     className="team-element1 accordion"
                   >
-                    <div className="team-container04">
-                      <div className="team-container05">
+                    <div className="team-container03">
+                      <div className="team-container04">
                         <h3 className="team-name1">
                           <span>Sriram</span>
                           <br></br>
@@ -386,14 +304,14 @@ const Team = (props) => {
                     alt="image"
                     src="/Team/dani-bro-1400w.png"
                     loading="lazy"
-                    className="team-image3"
+                    className="team-image2"
                   />
                   <div
                     data-role="accordion-container"
                     className="team-element2 accordion"
                   >
-                    <div className="team-container06">
-                      <div className="team-container07">
+                    <div className="team-container05">
+                      <div className="team-container06">
                         <h3 className="team-name2">
                           <span>Daniel Raj</span>
                           <br></br>
@@ -496,14 +414,14 @@ const Team = (props) => {
                     alt="image"
                     src="/Team/gowtham-1400w.jpg"
                     loading="lazy"
-                    className="team-image4"
+                    className="team-image3"
                   />
                   <div
                     data-role="accordion-container"
                     className="team-element3 accordion"
                   >
-                    <div className="team-container08">
-                      <div className="team-container09">
+                    <div className="team-container07">
+                      <div className="team-container08">
                         <h3 className="team-name3">Gowtham</h3>
                         <span className="team-caption08">POST PRODUCTION</span>
                       </div>
@@ -583,14 +501,14 @@ const Team = (props) => {
                     alt="image"
                     src="/Team/sanjay-1400w.jpg"
                     loading="lazy"
-                    className="team-image5"
+                    className="team-image4"
                   />
                   <div
                     data-role="accordion-container"
                     className="team-element4 accordion"
                   >
-                    <div className="team-container10">
-                      <div className="team-container11">
+                    <div className="team-container09">
+                      <div className="team-container10">
                         <h3 className="team-name4">
                           <span>Sanjay</span>
                           <br></br>
@@ -685,14 +603,14 @@ const Team = (props) => {
                     alt="image"
                     src="/Team/sridhar-1400w.jpg"
                     loading="lazy"
-                    className="team-image6"
+                    className="team-image5"
                   />
                   <div
                     data-role="accordion-container"
                     className="team-element5 accordion"
                   >
-                    <div className="team-container12">
-                      <div className="team-container13">
+                    <div className="team-container11">
+                      <div className="team-container12">
                         <h3 className="team-name5">
                           <span>Sridhar</span>
                           <br></br>
@@ -788,14 +706,14 @@ const Team = (props) => {
         </section>
         <div className="team-hero1">
           <h2 className="team-heading1">
-            <span className="team-text31">Need help?</span>
-            <br className="team-text32"></br>
-            <span className="team-text33">Contact our </span>
-            <span className="team-text34">team</span>
-            <span className="team-text35"> </span>
-            <span className="team-text36">now!</span>
-            <br className="team-text37"></br>
-            <span className="team-text38">
+            <span className="team-text29">Need help?</span>
+            <br className="team-text30"></br>
+            <span className="team-text31">Contact our </span>
+            <span className="team-text32">team</span>
+            <span className="team-text33"> </span>
+            <span className="team-text34">now!</span>
+            <br className="team-text35"></br>
+            <span className="team-text36">
               <span
                 dangerouslySetInnerHTML={{
                   __html: ' ',
@@ -807,78 +725,12 @@ const Team = (props) => {
             href="https://forum.revnitro.com"
             target="_blank"
             rel="noreferrer noopener"
-            className="team-link6 button"
+            className="team-link1 button"
           >
-            <span className="team-text39">CONNECT</span>
+            <span className="team-text37">CONNECT</span>
           </a>
         </div>
-        <div className="team-footer">
-          <div className="team-content12">
-            <div className="team-main">
-              <div className="team-branding">
-                <img
-                  src="/logo/ba365a50c6760909f3950a57a9b9ff1c-200h.webp"
-                  className="team-image7"
-                />
-                <span className="team-text40">
-                  <span>Redefining Automobile Journalism</span>
-                  <br className="team-text42"></br>
-                  <br></br>
-                  <span>
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: ' ',
-                      }}
-                    />
-                  </span>
-                  <span>
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: ' ',
-                      }}
-                    />
-                  </span>
-                </span>
-              </div>
-              <div className="team-links">
-                <div className="team-column">
-                  <span className="team-header2">Company</span>
-                  <div className="team-list2">
-                    <span className="team-text46">About</span>
-                    <span className="team-text47">Services</span>
-                    <span className="team-text48">
-                      <span className="team-text49">Team</span>
-                      <br></br>
-                    </span>
-                  </div>
-                </div>
-                <div className="team-column1">
-                  <span className="team-header3">
-                    <span>Resources</span>
-                    <br></br>
-                  </span>
-                  <div className="team-list3">
-                    <span className="team-text53">Articles</span>
-                    <span className="team-text54">Blog</span>
-                  </div>
-                </div>
-                <div className="team-column2">
-                  <span className="team-header4">Social</span>
-                  <div className="team-list4">
-                    <span className="team-text55">Twitter</span>
-                    <span className="team-text56">Instagram</span>
-                    <span className="team-text57">Facebook</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="team-bottom">
-              <span className="team-text58">
-                © 2023 Revnitro - All rights reserved
-              </span>
-            </div>
-          </div>
-        </div>
+        <Footer rootClassName="footer-root-class-name3"></Footer>
       </div>
       <style jsx>
         {`
@@ -890,113 +742,6 @@ const Team = (props) => {
             align-items: center;
             flex-direction: column;
             background-color: var(--dl-color-gray-black);
-          }
-          .team-navbar {
-            width: 100%;
-            display: flex;
-            z-index: 1000;
-            position: relative;
-            max-width: var(--dl-size-size-maxwidth);
-            align-items: center;
-            padding-top: var(--dl-space-space-halfunit);
-            padding-bottom: var(--dl-space-space-halfunit);
-            justify-content: space-between;
-          }
-          .team-link {
-            display: contents;
-          }
-          .team-image {
-            width: 200px;
-            object-fit: cover;
-            text-decoration: none;
-          }
-          .team-desktop-menu {
-            gap: var(--dl-space-space-threeunits);
-            display: flex;
-          }
-          .team-nav {
-            gap: var(--dl-space-space-oneandhalfunits);
-            flex: 0 0 auto;
-            display: flex;
-            align-items: center;
-            margin-right: var(--dl-space-space-twounits);
-            flex-direction: row;
-          }
-          .team-link1 {
-            text-decoration: none;
-          }
-          .team-burger-menu {
-            display: none;
-            align-items: center;
-            justify-content: center;
-          }
-          .team-icon {
-            width: var(--dl-size-size-xsmall);
-            height: var(--dl-size-size-xsmall);
-          }
-          .team-mobile-menu {
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            padding: 32px;
-            z-index: 100;
-            position: fixed;
-            transform: translateX(100%);
-            transition: 0.5s;
-            flex-direction: column;
-            justify-content: space-between;
-            background-color: #ffffff;
-          }
-          .team-nav1 {
-            display: flex;
-            z-index: 20;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .team-container01 {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            margin-bottom: var(--dl-space-space-threeunits);
-            justify-content: space-between;
-          }
-          .team-menu-close {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          .team-icon02 {
-            width: var(--dl-size-size-xsmall);
-            height: var(--dl-size-size-xsmall);
-          }
-          .team-nav2 {
-            flex: 0 0 auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .team-icon-group {
-            display: flex;
-            z-index: 20;
-          }
-          .team-icons {
-            display: flex;
-          }
-          .team-icon04 {
-            width: var(--dl-size-size-xsmall);
-            height: var(--dl-size-size-xsmall);
-            margin-right: var(--dl-space-space-twounits);
-          }
-          .team-icon06 {
-            width: var(--dl-size-size-xsmall);
-            height: var(--dl-size-size-xsmall);
-            margin-right: var(--dl-space-space-twounits);
-          }
-          .team-icon08 {
-            width: var(--dl-size-size-xsmall);
-            height: var(--dl-size-size-xsmall);
           }
           .team-hero {
             width: 100%;
@@ -1030,7 +775,7 @@ const Team = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .team-text02 {
+          .team-text {
             color: rgb(255, 0, 0);
             font-size: 90px;
             font-style: normal;
@@ -1051,7 +796,7 @@ const Team = (props) => {
             font-style: normal;
             font-weight: 600;
           }
-          .team-link5 {
+          .team-link {
             color: var(--dl-color-gray-white);
             width: auto;
             height: auto;
@@ -1062,7 +807,7 @@ const Team = (props) => {
             text-decoration: none;
             background-color: transparent;
           }
-          .team-text03 {
+          .team-text01 {
             margin: var(--dl-space-space-unit);
             font-size: 24px;
           }
@@ -1108,7 +853,7 @@ const Team = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .team-text08 {
+          .team-text06 {
             color: rgb(255, 255, 255);
             font-size: 45px;
             font-style: normal;
@@ -1187,7 +932,7 @@ const Team = (props) => {
             flex-direction: column;
             padding-bottom: var(--dl-space-space-threeunits);
           }
-          .team-image1 {
+          .team-image {
             width: 100%;
             object-fit: cover;
             aspect-ratio: 1;
@@ -1196,7 +941,7 @@ const Team = (props) => {
           .team-element {
             padding: var(--dl-space-space-unit);
           }
-          .team-container02 {
+          .team-container01 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1204,7 +949,7 @@ const Team = (props) => {
             align-items: space-between;
             flex-direction: column;
           }
-          .team-container03 {
+          .team-container02 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1249,7 +994,7 @@ const Team = (props) => {
             flex-direction: column;
             padding-bottom: var(--dl-space-space-threeunits);
           }
-          .team-image2 {
+          .team-image1 {
             width: 100%;
             object-fit: cover;
             aspect-ratio: 1;
@@ -1258,7 +1003,7 @@ const Team = (props) => {
           .team-element1 {
             padding: var(--dl-space-space-unit);
           }
-          .team-container04 {
+          .team-container03 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1266,7 +1011,7 @@ const Team = (props) => {
             align-items: space-between;
             flex-direction: column;
           }
-          .team-container05 {
+          .team-container04 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1311,7 +1056,7 @@ const Team = (props) => {
             flex-direction: column;
             padding-bottom: var(--dl-space-space-threeunits);
           }
-          .team-image3 {
+          .team-image2 {
             width: 100%;
             object-fit: cover;
             aspect-ratio: 1;
@@ -1320,7 +1065,7 @@ const Team = (props) => {
           .team-element2 {
             padding: var(--dl-space-space-unit);
           }
-          .team-container06 {
+          .team-container05 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1328,7 +1073,7 @@ const Team = (props) => {
             align-items: space-between;
             flex-direction: column;
           }
-          .team-container07 {
+          .team-container06 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1389,7 +1134,7 @@ const Team = (props) => {
             flex-direction: column;
             padding-bottom: var(--dl-space-space-threeunits);
           }
-          .team-image4 {
+          .team-image3 {
             width: 100%;
             object-fit: cover;
             aspect-ratio: 1;
@@ -1398,7 +1143,7 @@ const Team = (props) => {
           .team-element3 {
             padding: var(--dl-space-space-unit);
           }
-          .team-container08 {
+          .team-container07 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1406,7 +1151,7 @@ const Team = (props) => {
             align-items: space-between;
             flex-direction: column;
           }
-          .team-container09 {
+          .team-container08 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1451,7 +1196,7 @@ const Team = (props) => {
             flex-direction: column;
             padding-bottom: var(--dl-space-space-threeunits);
           }
-          .team-image5 {
+          .team-image4 {
             width: 100%;
             object-fit: cover;
             aspect-ratio: 1;
@@ -1460,7 +1205,7 @@ const Team = (props) => {
           .team-element4 {
             padding: var(--dl-space-space-unit);
           }
-          .team-container10 {
+          .team-container09 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1468,7 +1213,7 @@ const Team = (props) => {
             align-items: space-between;
             flex-direction: column;
           }
-          .team-container11 {
+          .team-container10 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1513,7 +1258,7 @@ const Team = (props) => {
             flex-direction: column;
             padding-bottom: var(--dl-space-space-threeunits);
           }
-          .team-image6 {
+          .team-image5 {
             width: 100%;
             object-fit: cover;
             aspect-ratio: 1;
@@ -1522,7 +1267,7 @@ const Team = (props) => {
           .team-element5 {
             padding: var(--dl-space-space-unit);
           }
-          .team-container12 {
+          .team-container11 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1530,7 +1275,7 @@ const Team = (props) => {
             align-items: space-between;
             flex-direction: column;
           }
-          .team-container13 {
+          .team-container12 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1585,43 +1330,43 @@ const Team = (props) => {
             text-align: center;
             font-weight: 500;
           }
+          .team-text29 {
+            font-size: 54px;
+            font-weight: 500;
+          }
+          .team-text30 {
+            font-size: 54px;
+            font-weight: 500;
+          }
           .team-text31 {
-            font-size: 54px;
-            font-weight: 500;
-          }
-          .team-text32 {
-            font-size: 54px;
-            font-weight: 500;
-          }
-          .team-text33 {
             font-size: 100px;
             font-weight: 500;
           }
+          .team-text32 {
+            color: #2200ff;
+            font-style: italic;
+            font-family: Open Sans;
+            font-weight: 600;
+          }
+          .team-text33 {
+            color: #2200ff;
+            font-style: italic;
+            font-family: Open Sans;
+            font-weight: 600;
+          }
           .team-text34 {
-            color: #2200ff;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 600;
-          }
-          .team-text35 {
-            color: #2200ff;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 600;
-          }
-          .team-text36 {
             font-style: normal;
           }
-          .team-text37 {
+          .team-text35 {
             color: #ffffff;
             font-size: 100px;
             font-style: normal;
             font-weight: 500;
           }
-          .team-text38 {
+          .team-text36 {
             font-style: normal;
           }
-          .team-link6 {
+          .team-link1 {
             color: var(--dl-color-gray-white);
             width: auto;
             height: auto;
@@ -1630,211 +1375,9 @@ const Team = (props) => {
             text-decoration: none;
             background-color: #2200ff;
           }
-          .team-text39 {
+          .team-text37 {
             margin: var(--dl-space-space-unit);
             font-size: 24px;
-          }
-          .team-footer {
-            width: 100%;
-            display: flex;
-            max-width: var(--dl-size-size-maxwidth);
-            align-items: flex-start;
-            padding-left: var(--dl-space-space-fiveunits);
-            padding-right: var(--dl-space-space-fiveunits);
-            flex-direction: column;
-          }
-          .team-content12 {
-            gap: var(--dl-space-space-fiveunits);
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            padding-top: var(--dl-space-space-fiveunits);
-            border-color: #313133;
-            flex-direction: column;
-            padding-bottom: var(--dl-space-space-fiveunits);
-            border-top-width: 1px;
-          }
-          .team-main {
-            gap: 240px;
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .team-branding {
-            gap: var(--dl-space-space-twounits);
-            width: 400px;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .team-image7 {
-            width: 120px;
-            object-fit: cover;
-          }
-          .team-text40 {
-            color: rgb(124, 124, 128);
-            line-height: 24px;
-          }
-          .team-text42 {
-            color: #7c7c80;
-            line-height: 24px;
-          }
-          .team-links {
-            gap: 120px;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-          }
-          .team-column {
-            gap: var(--dl-space-space-threeunits);
-            color: white;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .team-header2 {
-            font-size: 24px;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 500;
-          }
-          .team-list2 {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .team-text46 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .team-text46:hover {
-            opacity: 0.5;
-          }
-          .team-text47 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .team-text47:hover {
-            opacity: 0.5;
-          }
-          .team-text48 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .team-text48:hover {
-            opacity: 0.5;
-          }
-          .team-text49:hover {
-            opacity: 0.5;
-          }
-          .team-column1 {
-            gap: var(--dl-space-space-threeunits);
-            color: white;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .team-header3 {
-            font-size: 24px;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 500;
-          }
-          .team-list3 {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .team-text53 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .team-text53:hover {
-            opacity: 0.5;
-          }
-          .team-text54 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .team-text54:hover {
-            opacity: 0.5;
-          }
-          .team-column2 {
-            gap: var(--dl-space-space-threeunits);
-            color: white;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .team-header4 {
-            font-size: 24px;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 500;
-          }
-          .team-list4 {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .team-text55 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .team-text55:hover {
-            opacity: 0.5;
-          }
-          .team-text56 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .team-text56:hover {
-            opacity: 0.5;
-          }
-          .team-text57 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .team-text57:hover {
-            opacity: 0.5;
-          }
-          .team-bottom {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            justify-content: space-between;
-          }
-          .team-text58 {
-            color: rgb(124, 124, 128);
-            font-size: 14px;
-            line-height: 21px;
           }
           @media (max-width: 991px) {
             .team-hero {
@@ -1882,46 +1425,8 @@ const Team = (props) => {
             .team-heading1 {
               font-size: 50px;
             }
-            .team-content12 {
-              border-top-width: 0px;
-            }
-            .team-main {
-              gap: var(--dl-space-space-threeunits);
-              flex-direction: column;
-            }
-            .team-branding {
-              width: 100%;
-            }
           }
           @media (max-width: 767px) {
-            .team-desktop-menu {
-              display: none;
-            }
-            .team-burger-menu {
-              display: flex;
-            }
-            .team-icon {
-              fill: white;
-            }
-            .team-nav1 {
-              gap: var(--dl-space-space-oneandhalfunits);
-            }
-            .team-container01 {
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .team-nav2 {
-              gap: var(--dl-space-space-unit);
-            }
-            .team-text {
-              color: rgb(0, 0, 0);
-            }
-            .team-text01 {
-              color: rgb(0, 0, 0);
-            }
-            .team-icon-group {
-              width: 100%;
-              justify-content: flex-start;
-            }
             .team-hero-content {
               gap: var(--dl-space-space-oneandhalfunits);
             }
@@ -2036,29 +1541,15 @@ const Team = (props) => {
             .team-heading1 {
               font-size: 36px;
             }
-            .team-footer {
-              padding-left: var(--dl-space-space-oneandhalfunits);
-              padding-right: var(--dl-space-space-oneandhalfunits);
-            }
-            .team-links {
-              gap: var(--dl-space-space-fiveunits);
-              flex-direction: row;
-            }
           }
           @media (max-width: 479px) {
-            .team-mobile-menu {
-              padding: 16px;
-            }
-            .team-icon-group {
-              justify-content: center;
-            }
-            .team-text02 {
+            .team-text {
               font-size: 50px;
             }
-            .team-link5 {
+            .team-link {
               text-align: center;
             }
-            .team-text08 {
+            .team-text06 {
               font-size: 50px;
             }
             .team-hero1 {
@@ -2073,17 +1564,8 @@ const Team = (props) => {
               text-align: center;
               font-weight: 500;
             }
-            .team-link6 {
+            .team-link1 {
               text-align: center;
-            }
-            .team-links {
-              gap: var(--dl-space-space-threeunits);
-              flex-direction: column;
-            }
-            .team-bottom {
-              gap: var(--dl-space-space-twounits);
-              flex-direction: column;
-              justify-content: center;
             }
           }
         `}

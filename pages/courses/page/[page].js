@@ -4,42 +4,42 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import slidersPageInitialPaths574beResource from '../../../resources/sliders-page-initial-paths-574be'
-import slidersPageInitialPropsBde53Resource from '../../../resources/sliders-page-initial-props-bde53'
+import coursesPageInitialPathsEf17aResource from '../../../resources/courses-page-initial-paths-ef17a'
+import coursesPageInitialProps518a4Resource from '../../../resources/courses-page-initial-props-518a4'
 
-const Sliders1 = (props) => {
+const Courses11 = (props) => {
   return (
     <>
-      <div className="sliders1-container">
+      <div className="courses11-container">
         <Head>
-          <title>Sliders - Revnitro</title>
-          <meta property="og:title" content="Sliders - Revnitro" />
+          <title>Courses1 - Revnitro</title>
+          <meta property="og:title" content="Courses1 - Revnitro" />
         </Head>
         <DataProvider
           renderSuccess={(params) => (
             <>
               <Repeater
                 items={params}
-                renderItem={(SlidersEntities) => (
+                renderItem={(CoursesEntities) => (
                   <>
-                    <div className="sliders1-container1">
-                      <h1>{SlidersEntities?.Title}</h1>
-                      <span>{SlidersEntities?.Title}</span>
-                      <span>{SlidersEntities?.description}</span>
+                    <div className="courses11-container1">
+                      <h1>{CoursesEntities?.Title}</h1>
+                      <span>{CoursesEntities?.Title}</span>
+                      <span>{CoursesEntities?.description}</span>
                     </div>
                   </>
                 )}
               />
             </>
           )}
-          initialData={props.slidersEntities}
+          initialData={props.coursesEntities}
           persistDataDuringLoading={true}
           key={props?.pagination?.page}
         />
       </div>
       <style jsx>
         {`
-          .sliders1-container {
+          .courses11-container {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -47,7 +47,7 @@ const Sliders1 = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .sliders1-container1 {
+          .courses11-container1 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -60,19 +60,19 @@ const Sliders1 = (props) => {
   )
 }
 
-Sliders1.defaultProps = {
-  slidersEntities: [],
+Courses11.defaultProps = {
+  coursesEntities: [],
 }
 
-Sliders1.propTypes = {
-  slidersEntities: PropTypes.array,
+Courses11.propTypes = {
+  coursesEntities: PropTypes.array,
 }
 
-export default Sliders1
+export default Courses11
 
 export async function getStaticPaths() {
   try {
-    const response = await slidersPageInitialPaths574beResource({})
+    const response = await coursesPageInitialPathsEf17aResource({})
     const totalCount = response?.meta?.pagination?.total
     const pagesCount = Math.ceil(totalCount / 10)
     return {
@@ -98,7 +98,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await slidersPageInitialPropsBde53Resource({
+    const response = await coursesPageInitialProps518a4Resource({
       ...context?.params,
       start: (context.params.page - 1) * 10,
     })
@@ -109,7 +109,7 @@ export async function getStaticProps(context) {
     }
     return {
       props: {
-        slidersEntities: response,
+        coursesEntities: response,
         ...response?.meta,
       },
       revalidate: 60,

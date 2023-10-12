@@ -11,7 +11,7 @@ const Blogs1 = (props) => {
       <section className="blogs1-blogs">
         <div className="blogs1-container">
           <div onClick={() => setTab(1)} className="blogs1-filter">
-            <h1 className="blogs1-text">{props.heading}</h1>
+            <h1 className="bloghead blogs1-text">{props.heading}</h1>
             {tab === 1 && <div className="blogs1-container1"></div>}
           </div>
           <div onClick={() => setTab(2)} className="blogs1-filter1">
@@ -249,6 +249,7 @@ const Blogs1 = (props) => {
           .blogs1-blogs {
             gap: var(--dl-space-space-fiveunits);
             width: 100%;
+            cursor: pointer;
             height: auto;
             display: flex;
             position: relative;
@@ -278,12 +279,6 @@ const Blogs1 = (props) => {
             transition: 0.3s;
           }
 
-          .blogs1-text {
-            color: var(--dl-color-gray-white);
-            font-size: 20px;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
-          }
           .blogs1-container1 {
             flex: 0 0 auto;
             left: 0px;
@@ -304,6 +299,7 @@ const Blogs1 = (props) => {
           .blogs1-text01 {
             color: var(--dl-color-gray-white);
             font-size: 20px;
+            user-select: none;
             padding-left: var(--dl-space-space-oneandhalfunits);
             padding-right: var(--dl-space-space-oneandhalfunits);
           }
@@ -610,6 +606,26 @@ const Blogs1 = (props) => {
             }
           }
           @media (max-width: 479px) {
+            .blogs1-text {
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 600;
+            }
+            .blogs1-text01 {
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 600;
+            }
+            .blogs1-text02 {
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 600;
+            }
+            .blogs1-text03 {
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 600;
+            }
             .blogs1-blog-cards {
               flex-direction: column;
             }
