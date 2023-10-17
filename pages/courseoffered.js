@@ -67,15 +67,12 @@ const Courseoffered = (props) => {
                                 <h3 className="courseoffered-name">
                                   {context_z7w9mp?.Title}
                                 </h3>
-                                <button
-                                  type="button"
-                                  className="courseoffered-button button"
-                                >
-                                  <span className="courseoffered-text4">
-                                    KNOW MORE
-                                  </span>
-                                </button>
                               </div>
+                              <button className="courseoffered-button button">
+                                <span className="courseoffered-text4">
+                                  KNOW MORE
+                                </span>
+                              </button>
                             </div>
                           </div>
                         </a>
@@ -186,14 +183,26 @@ const Courseoffered = (props) => {
             font-weight: 600;
           }
           .courseoffered-button {
-            color: #ff0000;
-            padding: 0px;
-            font-size: 20px;
-            border-width: 0px;
-            background-color: transparent;
+            color: var(--dl-color-gray-white);
+            width: auto;
+            height: auto;
+            margin-top: var(--dl-space-space-twounits);
+            border-radius: 50px;
+            background-color: #2200ff;
           }
           .courseoffered-text4 {
-            text-decoration: none;
+            margin: var(--dl-space-space-unit);
+            font-size: 24px;
+            font-family: Poppins;
+          }
+          @media (max-width: 1600px) {
+            .courseoffered-image {
+              border-radius: 4px;
+            }
+            .courseoffered-text4 {
+              font-size: 24px;
+              font-family: Poppins;
+            }
           }
           @media (max-width: 991px) {
             .courseoffered-header {
@@ -254,8 +263,8 @@ const Courseoffered = (props) => {
             .courseoffered-name {
               font-size: 24px;
             }
-            .courseoffered-text4 {
-              font-size: 14px;
+            .courseoffered-button {
+              text-align: center;
             }
           }
         `}

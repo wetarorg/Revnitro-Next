@@ -729,6 +729,81 @@ const Team = (props) => {
           >
             <span className="team-text37">CONNECT</span>
           </a>
+          <form className="team-form">
+            <input
+              type="text"
+              name="name"
+              placeholder="name"
+              className="input team-textinput"
+            />
+            <input
+              type="number"
+              name="age"
+              placeholder="age"
+              className="input team-textinput1"
+            />
+            <input
+              type="text"
+              name="place"
+              placeholder="place"
+              className="input team-textinput2"
+            />
+            <input
+              type="text"
+              name="skills"
+              placeholder="skill"
+              className="input team-textinput3"
+            />
+            <input
+              type="text"
+              name="softwares"
+              value="softwares known"
+              placeholder="place"
+              className="input team-textinput4"
+            />
+            <button type="submit" className="button team-button">
+              SUBMIT
+            </button>
+          </form>
+          <div className="team-div6">
+            <React.Fragment>
+              <React.Fragment>
+                <Script>{`
+  function handleFormSubmit(event) {
+    // Prevent the form from being submitted the default way
+    event.preventDefault();
+
+    // Get the form element
+    var form = document.getElementById("myForm");
+
+    // Attach the handleFormSubmit function to the form's submit event
+    form.addEventListener("submit", handleFormSubmit);
+
+    // Create a FormData object, passing in the form element
+    var formData = new FormData(form);
+
+    // Create an object to hold the form data
+    var data = {};
+    formData.forEach(function (value, key) {
+      data[key] = value;
+    });
+
+    // Convert the data object to a JSON string
+    var jsonData = JSON.stringify(data);
+
+    // Send the data to the Strapi backend
+    fetch("https://cmsadmin.revnitro.com/api/bookings", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: jsonData,
+    });
+  }
+`}</Script>
+              </React.Fragment>
+            </React.Fragment>
+          </div>
         </div>
         <Footer rootClassName="footer-root-class-name3"></Footer>
       </div>
@@ -1378,6 +1453,46 @@ const Team = (props) => {
           .team-text37 {
             margin: var(--dl-space-space-unit);
             font-size: 24px;
+          }
+          .team-form {
+            width: 200px;
+            height: 100px;
+            display: flex;
+          }
+          .team-div6 {
+            display: contents;
+          }
+          @media (max-width: 1600px) {
+            .team-form {
+              width: auto;
+              height: auto;
+              display: none;
+              flex-direction: column;
+            }
+            .team-textinput {
+              height: var(--dl-size-size-small);
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .team-textinput1 {
+              height: var(--dl-size-size-small);
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .team-textinput2 {
+              height: var(--dl-size-size-small);
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .team-textinput3 {
+              height: var(--dl-size-size-small);
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .team-textinput4 {
+              height: var(--dl-size-size-small);
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .team-button {
+              color: var(--dl-color-gray-white);
+              background-color: var(--dl-color-primary-100);
+            }
           }
           @media (max-width: 991px) {
             .team-hero {

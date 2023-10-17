@@ -8,26 +8,26 @@ const Blogs1 = (props) => {
   const [tab, setTab] = useState(1)
   return (
     <>
-      <section className="blogs1-blogs">
+      <section className={`blogs1-blogs ${props.rootClassName} `}>
         <div className="blogs1-container">
           <div onClick={() => setTab(1)} className="blogs1-filter">
             <h1 className="bloghead blogs1-text">{props.heading}</h1>
-            {tab === 1 && <div className="blogs1-container1"></div>}
+            {tab === 1 && <div className="blogs1-container01"></div>}
           </div>
           <div onClick={() => setTab(2)} className="blogs1-filter1">
             <h1 className="blogs1-text01">{props.heading4}</h1>
-            {tab === 2 && <div className="blogs1-container2"></div>}
+            {tab === 2 && <div className="blogs1-container02"></div>}
           </div>
           <div onClick={() => setTab(3)} className="blogs1-filter2">
             <h1 className="blogs1-text02">{props.heading3}</h1>
-            {tab === 3 && <div className="blogs1-container3"></div>}
+            {tab === 3 && <div className="blogs1-container03"></div>}
           </div>
           <div onClick={() => setTab(4)} className="blogs1-filter3">
             <h1 className="blogs1-text03">{props.heading2}</h1>
-            {tab === 4 && <div className="blogs1-container4"></div>}
+            {tab === 4 && <div className="blogs1-container04"></div>}
           </div>
         </div>
-        <div className="blogs1-container5">
+        <div className="blogs1-container05">
           {tab === 1 && (
             <div className="blogs1-blog-cards">
               <DataProvider
@@ -49,29 +49,23 @@ const Blogs1 = (props) => {
                       items={params}
                       renderItem={(context_oiflm) => (
                         <>
-                          <div className="blogs1-speaker">
-                            <img
-                              alt="image"
-                              src={context_oiflm?.thumbnail?.url}
-                              className="blogs1-image"
-                            />
-                            <div className="blogs1-deails">
-                              <h3 className="blogs1-name">
-                                {context_oiflm?.Title}
-                              </h3>
-                              <button
-                                type="button"
-                                className="blogs1-button button"
-                              >
-                                <Link href={`/blogs/${context_oiflm?.id}`}>
-                                  <a className="blogs1-link">
-                                    <span>Read</span>
-                                    <br></br>
-                                  </a>
-                                </Link>
-                              </button>
-                            </div>
-                          </div>
+                          <Link href={`/blogs/${context_oiflm?.id}`}>
+                            <a>
+                              <div className="blogs1-container06">
+                                <img
+                                  alt={props.imagealt}
+                                  src={context_oiflm?.thumbnail?.url}
+                                  className="blogs1-image"
+                                />
+                                <h1 className="blogs1-text04">
+                                  {context_oiflm?.Title}
+                                </h1>
+                                <span className="blogs1-text05">
+                                  {props.text2}
+                                </span>
+                              </div>
+                            </a>
+                          </Link>
                         </>
                       )}
                     />
@@ -103,29 +97,23 @@ const Blogs1 = (props) => {
                       items={params}
                       renderItem={(context_oiflm) => (
                         <>
-                          <div className="blogs1-speaker1">
-                            <img
-                              alt="image"
-                              src={context_oiflm?.thumbnail?.url}
-                              className="blogs1-image1"
-                            />
-                            <div className="blogs1-deails1">
-                              <h3 className="blogs1-name1">
-                                {context_oiflm?.Title}
-                              </h3>
-                              <button
-                                type="button"
-                                className="blogs1-button1 button"
-                              >
-                                <Link href={`/blogs/${context_oiflm?.id}`}>
-                                  <a className="blogs1-link1">
-                                    <span>Read</span>
-                                    <br></br>
-                                  </a>
-                                </Link>
-                              </button>
-                            </div>
-                          </div>
+                          <Link href={`/blogs/${context_oiflm?.id}`}>
+                            <a>
+                              <div className="blogs1-container07">
+                                <img
+                                  alt={props.imagealt2}
+                                  src={context_oiflm?.thumbnail?.url}
+                                  className="blogs1-image1"
+                                />
+                                <h1 className="blogs1-text06">
+                                  {context_oiflm?.Title}
+                                </h1>
+                                <span className="blogs1-text07">
+                                  {props.text22}
+                                </span>
+                              </div>
+                            </a>
+                          </Link>
                         </>
                       )}
                     />
@@ -157,29 +145,23 @@ const Blogs1 = (props) => {
                       items={params}
                       renderItem={(context_oiflm) => (
                         <>
-                          <div className="blogs1-speaker2">
-                            <img
-                              alt="image"
-                              src={context_oiflm?.thumbnail?.url}
-                              className="blogs1-image2"
-                            />
-                            <div className="blogs1-deails2">
-                              <h3 className="blogs1-name2">
-                                {context_oiflm?.Title}
-                              </h3>
-                              <button
-                                type="button"
-                                className="blogs1-button2 button"
-                              >
-                                <Link href={`/blogs/${context_oiflm?.id}`}>
-                                  <a className="blogs1-link2">
-                                    <span>Read</span>
-                                    <br></br>
-                                  </a>
-                                </Link>
-                              </button>
-                            </div>
-                          </div>
+                          <Link href={`/blogs/${context_oiflm?.id}`}>
+                            <a>
+                              <div className="blogs1-container08">
+                                <img
+                                  alt={props.imagealt22}
+                                  src={context_oiflm?.thumbnail?.url}
+                                  className="blogs1-image2"
+                                />
+                                <h1 className="blogs1-text08">
+                                  {context_oiflm?.Title}
+                                </h1>
+                                <span className="blogs1-text09">
+                                  {props.text222}
+                                </span>
+                              </div>
+                            </a>
+                          </Link>
                         </>
                       )}
                     />
@@ -188,7 +170,7 @@ const Blogs1 = (props) => {
               />
             </div>
           )}
-          {tab === 4 && (
+          {tab === 3 && (
             <div className="blogs1-blog-cards3">
               <DataProvider
                 fetchData={(params) =>
@@ -211,28 +193,18 @@ const Blogs1 = (props) => {
                       items={params}
                       renderItem={(context_oiflm) => (
                         <>
-                          <div className="blogs1-speaker3">
+                          <div className="blogs1-container09">
                             <img
-                              alt="image"
+                              alt={props.imagealt211}
                               src={context_oiflm?.thumbnail?.url}
                               className="blogs1-image3"
                             />
-                            <div className="blogs1-deails3">
-                              <h3 className="blogs1-name3">
-                                {context_oiflm?.Title}
-                              </h3>
-                              <button
-                                type="button"
-                                className="blogs1-button3 button"
-                              >
-                                <Link href={`/blogs/${context_oiflm?.id}`}>
-                                  <a className="blogs1-link3">
-                                    <span>Read</span>
-                                    <br></br>
-                                  </a>
-                                </Link>
-                              </button>
-                            </div>
+                            <h1 className="blogs1-text10">
+                              {context_oiflm?.Title}
+                            </h1>
+                            <span className="blogs1-text11">
+                              {props.text2211}
+                            </span>
                           </div>
                         </>
                       )}
@@ -279,7 +251,7 @@ const Blogs1 = (props) => {
             transition: 0.3s;
           }
 
-          .blogs1-container1 {
+          .blogs1-container01 {
             flex: 0 0 auto;
             left: 0px;
             width: 100%;
@@ -303,7 +275,7 @@ const Blogs1 = (props) => {
             padding-left: var(--dl-space-space-oneandhalfunits);
             padding-right: var(--dl-space-space-oneandhalfunits);
           }
-          .blogs1-container2 {
+          .blogs1-container02 {
             flex: 0 0 auto;
             left: 0px;
             width: 100%;
@@ -326,7 +298,7 @@ const Blogs1 = (props) => {
             padding-left: var(--dl-space-space-oneandhalfunits);
             padding-right: var(--dl-space-space-oneandhalfunits);
           }
-          .blogs1-container3 {
+          .blogs1-container03 {
             flex: 0 0 auto;
             left: 0px;
             width: 100%;
@@ -349,7 +321,7 @@ const Blogs1 = (props) => {
             padding-left: var(--dl-space-space-oneandhalfunits);
             padding-right: var(--dl-space-space-oneandhalfunits);
           }
-          .blogs1-container4 {
+          .blogs1-container04 {
             flex: 0 0 auto;
             left: 0px;
             width: 100%;
@@ -360,9 +332,9 @@ const Blogs1 = (props) => {
             align-items: flex-start;
             background-color: #2200ff;
           }
-          .blogs1-container5 {
+          .blogs1-container05 {
             flex: 0 0 auto;
-            width: auto;
+            width: 90%;
             display: flex;
             align-self: center;
             align-items: flex-start;
@@ -380,42 +352,27 @@ const Blogs1 = (props) => {
             margin-left: 0px;
             justify-content: center;
           }
-          .blogs1-speaker {
-            gap: var(--dl-space-space-oneandhalfunits);
-            width: 100%;
+          .blogs1-container06 {
+            flex: 0 0 auto;
+            width: 400px;
+            height: auto;
             display: flex;
-            position: relative;
             align-items: flex-start;
-            margin-right: var(--dl-space-space-oneandhalfunits);
             flex-direction: column;
-            padding-bottom: var(--dl-space-space-threeunits);
-            background-color: var(--dl-color-gray-black);
+            text-decoration: none;
           }
           .blogs1-image {
-            width: 100%;
+            width: 400px;
+            height: 400px;
             object-fit: cover;
-            aspect-ratio: 1;
           }
-          .blogs1-deails {
-            gap: var(--dl-space-space-halfunit);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .blogs1-name {
+          .blogs1-text04 {
             color: var(--dl-color-gray-white);
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 600;
+            margin-top: var(--dl-space-space-unit);
+            margin-bottom: var(--dl-space-space-unit);
           }
-          .blogs1-button {
+          .blogs1-text05 {
             color: #ff0000;
-            padding: 0px;
-            font-size: 20px;
-            background-color: transparent;
-          }
-          .blogs1-link {
-            text-decoration: none;
           }
           .blogs1-blog-cards1 {
             gap: var(--dl-space-space-twounits);
@@ -427,42 +384,27 @@ const Blogs1 = (props) => {
             margin-left: 0px;
             justify-content: center;
           }
-          .blogs1-speaker1 {
-            gap: var(--dl-space-space-oneandhalfunits);
-            width: 100%;
+          .blogs1-container07 {
+            flex: 0 0 auto;
+            width: 400px;
+            height: auto;
             display: flex;
-            position: relative;
             align-items: flex-start;
-            margin-right: var(--dl-space-space-oneandhalfunits);
             flex-direction: column;
-            padding-bottom: var(--dl-space-space-threeunits);
-            background-color: var(--dl-color-gray-black);
+            text-decoration: none;
           }
           .blogs1-image1 {
-            width: 100%;
+            width: 400px;
+            height: 400px;
             object-fit: cover;
-            aspect-ratio: 1;
           }
-          .blogs1-deails1 {
-            gap: var(--dl-space-space-halfunit);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .blogs1-name1 {
+          .blogs1-text06 {
             color: var(--dl-color-gray-white);
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 600;
+            margin-top: var(--dl-space-space-unit);
+            margin-bottom: var(--dl-space-space-unit);
           }
-          .blogs1-button1 {
+          .blogs1-text07 {
             color: #ff0000;
-            padding: 0px;
-            font-size: 20px;
-            background-color: transparent;
-          }
-          .blogs1-link1 {
-            text-decoration: none;
           }
           .blogs1-blog-cards2 {
             gap: var(--dl-space-space-twounits);
@@ -474,42 +416,27 @@ const Blogs1 = (props) => {
             margin-left: 0px;
             justify-content: center;
           }
-          .blogs1-speaker2 {
-            gap: var(--dl-space-space-oneandhalfunits);
-            width: 100%;
+          .blogs1-container08 {
+            flex: 0 0 auto;
+            width: 400px;
+            height: auto;
             display: flex;
-            position: relative;
             align-items: flex-start;
-            margin-right: var(--dl-space-space-oneandhalfunits);
             flex-direction: column;
-            padding-bottom: var(--dl-space-space-threeunits);
-            background-color: var(--dl-color-gray-black);
+            text-decoration: none;
           }
           .blogs1-image2 {
-            width: 100%;
+            width: 400px;
+            height: 400px;
             object-fit: cover;
-            aspect-ratio: 1;
           }
-          .blogs1-deails2 {
-            gap: var(--dl-space-space-halfunit);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .blogs1-name2 {
+          .blogs1-text08 {
             color: var(--dl-color-gray-white);
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 600;
+            margin-top: var(--dl-space-space-unit);
+            margin-bottom: var(--dl-space-space-unit);
           }
-          .blogs1-button2 {
+          .blogs1-text09 {
             color: #ff0000;
-            padding: 0px;
-            font-size: 20px;
-            background-color: transparent;
-          }
-          .blogs1-link2 {
-            text-decoration: none;
           }
           .blogs1-blog-cards3 {
             gap: var(--dl-space-space-twounits);
@@ -521,55 +448,254 @@ const Blogs1 = (props) => {
             margin-left: 0px;
             justify-content: center;
           }
-          .blogs1-speaker3 {
-            gap: var(--dl-space-space-oneandhalfunits);
-            width: 100%;
+          .blogs1-container09 {
+            flex: 0 0 auto;
+            width: 400px;
+            height: auto;
             display: flex;
-            position: relative;
             align-items: flex-start;
-            margin-right: var(--dl-space-space-oneandhalfunits);
             flex-direction: column;
-            padding-bottom: var(--dl-space-space-threeunits);
-            background-color: var(--dl-color-gray-black);
           }
           .blogs1-image3 {
-            width: 100%;
+            width: 400px;
+            height: 400px;
             object-fit: cover;
-            aspect-ratio: 1;
           }
-          .blogs1-deails3 {
-            gap: var(--dl-space-space-halfunit);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .blogs1-name3 {
+          .blogs1-text10 {
             color: var(--dl-color-gray-white);
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 600;
+            margin-top: var(--dl-space-space-unit);
+            margin-bottom: var(--dl-space-space-unit);
           }
-          .blogs1-button3 {
+          .blogs1-text11 {
             color: #ff0000;
-            padding: 0px;
-            font-size: 20px;
-            background-color: transparent;
           }
-          .blogs1-link3 {
-            text-decoration: none;
+          @media (max-width: 1600px) {
+            .blogs1-blogs {
+              width: 100%;
+              padding: 80px;
+            }
+            .blogs1-text {
+              font-size: 20px;
+            }
+            .blogs1-container05 {
+              width: 100%;
+              padding: var(--dl-space-space-halfunit);
+              align-self: center;
+              align-items: center;
+            }
+            .blogs1-blog-cards {
+              width: auto;
+            }
+            .blogs1-container06 {
+              width: 300px;
+            }
+            .blogs1-image {
+              width: 280px;
+              height: 280px;
+              border-radius: var(--dl-radius-radius-radius4);
+            }
+            .blogs1-text04 {
+              color: var(--dl-color-gray-white);
+              font-style: normal;
+              margin-top: var(--dl-space-space-unit);
+              font-family: Poppins;
+              font-weight: 500;
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .blogs1-text05 {
+              color: #ff0000;
+              font-family: Poppins;
+            }
+            .blogs1-blog-cards1 {
+              width: auto;
+            }
+            .blogs1-container07 {
+              width: 300px;
+            }
+            .blogs1-image1 {
+              width: 280px;
+              height: 280px;
+              border-radius: var(--dl-radius-radius-radius4);
+            }
+            .blogs1-text06 {
+              color: var(--dl-color-gray-white);
+              font-style: normal;
+              margin-top: var(--dl-space-space-unit);
+              font-family: Poppins;
+              font-weight: 500;
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .blogs1-text07 {
+              color: #ff0000;
+              font-family: Poppins;
+            }
+            .blogs1-blog-cards2 {
+              width: auto;
+            }
+            .blogs1-container08 {
+              width: 300px;
+            }
+            .blogs1-image2 {
+              width: 280px;
+              height: 280px;
+              border-radius: var(--dl-radius-radius-radius4);
+            }
+            .blogs1-text08 {
+              color: var(--dl-color-gray-white);
+              font-style: normal;
+              margin-top: var(--dl-space-space-unit);
+              font-family: Poppins;
+              font-weight: 500;
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .blogs1-text09 {
+              color: #ff0000;
+              font-family: Poppins;
+            }
+            .blogs1-blog-cards3 {
+              width: auto;
+            }
+            .blogs1-container09 {
+              width: 300px;
+            }
+            .blogs1-image3 {
+              width: 280px;
+              height: 280px;
+              border-radius: var(--dl-radius-radius-radius4);
+            }
+            .blogs1-text10 {
+              color: var(--dl-color-gray-white);
+              font-style: normal;
+              margin-top: var(--dl-space-space-unit);
+              font-family: Poppins;
+              font-weight: 500;
+              margin-bottom: var(--dl-space-space-unit);
+            }
+            .blogs1-text11 {
+              color: #ff0000;
+              font-family: Poppins;
+            }
+          }
+          @media (max-width: 1200px) {
+            .blogs1-blogs {
+              padding: var(--dl-space-space-fourunits);
+            }
+            .blogs1-container {
+              width: 100%;
+            }
+            .blogs1-container05 {
+              width: 100%;
+            }
+            .blogs1-blog-cards {
+              width: auto;
+              align-self: center;
+            }
+            .blogs1-container06 {
+              width: 240px;
+            }
+            .blogs1-image {
+              width: 240px;
+              height: 240px;
+            }
+            .blogs1-blog-cards1 {
+              width: auto;
+              align-self: center;
+            }
+            .blogs1-container07 {
+              width: 240px;
+            }
+            .blogs1-image1 {
+              width: 240px;
+              height: 240px;
+            }
+            .blogs1-blog-cards2 {
+              width: auto;
+              align-self: center;
+            }
+            .blogs1-container08 {
+              width: 240px;
+            }
+            .blogs1-image2 {
+              width: 240px;
+              height: 240px;
+            }
+            .blogs1-blog-cards3 {
+              width: auto;
+              align-self: center;
+            }
+            .blogs1-container09 {
+              width: 240px;
+            }
+            .blogs1-image3 {
+              width: 240px;
+              height: 240px;
+            }
           }
           @media (max-width: 991px) {
-            .blogs1-name {
-              font-size: 20px;
+            .blogs1-blog-cards {
+              gap: var(--dl-space-space-twounits);
+              flex-wrap: wrap;
+              align-self: center;
+              flex-direction: row;
+              justify-content: center;
             }
-            .blogs1-name1 {
-              font-size: 20px;
+            .blogs1-container06 {
+              width: var(--dl-size-size-xlarge);
+              margin-right: var(--dl-space-space-threeunits);
             }
-            .blogs1-name2 {
-              font-size: 20px;
+            .blogs1-image {
+              height: var(--dl-size-size-xlarge);
             }
-            .blogs1-name3 {
-              font-size: 20px;
+            .blogs1-text04 {
+              font-size: 18px;
+            }
+            .blogs1-blog-cards1 {
+              gap: var(--dl-space-space-twounits);
+              flex-wrap: wrap;
+              flex-direction: row;
+              justify-content: flex-start;
+            }
+            .blogs1-container07 {
+              width: var(--dl-size-size-xlarge);
+              margin-right: var(--dl-space-space-threeunits);
+            }
+            .blogs1-image1 {
+              height: var(--dl-size-size-xlarge);
+            }
+            .blogs1-text06 {
+              font-size: 18px;
+            }
+            .blogs1-blog-cards2 {
+              gap: var(--dl-space-space-twounits);
+              flex-wrap: wrap;
+              flex-direction: row;
+              justify-content: flex-start;
+            }
+            .blogs1-container08 {
+              width: var(--dl-size-size-xlarge);
+              margin-right: var(--dl-space-space-threeunits);
+            }
+            .blogs1-image2 {
+              height: var(--dl-size-size-xlarge);
+            }
+            .blogs1-text08 {
+              font-size: 18px;
+            }
+            .blogs1-blog-cards3 {
+              gap: var(--dl-space-space-twounits);
+              flex-wrap: wrap;
+              flex-direction: row;
+              justify-content: flex-start;
+            }
+            .blogs1-container09 {
+              width: var(--dl-size-size-xlarge);
+              margin-right: var(--dl-space-space-threeunits);
+            }
+            .blogs1-image3 {
+              height: var(--dl-size-size-xlarge);
+            }
+            .blogs1-text10 {
+              font-size: 18px;
             }
           }
           @media (max-width: 767px) {
@@ -580,63 +706,109 @@ const Blogs1 = (props) => {
               padding-right: var(--dl-space-space-oneandhalfunits);
               padding-bottom: var(--dl-space-space-threeunits);
             }
-            .blogs1-speaker {
-              padding-bottom: var(--dl-space-space-oneandhalfunits);
-            }
-            .blogs1-name {
-              font-size: 14px;
-            }
-            .blogs1-speaker1 {
-              padding-bottom: var(--dl-space-space-oneandhalfunits);
-            }
-            .blogs1-name1 {
-              font-size: 14px;
-            }
-            .blogs1-speaker2 {
-              padding-bottom: var(--dl-space-space-oneandhalfunits);
-            }
-            .blogs1-name2 {
-              font-size: 14px;
-            }
-            .blogs1-speaker3 {
-              padding-bottom: var(--dl-space-space-oneandhalfunits);
-            }
-            .blogs1-name3 {
-              font-size: 14px;
-            }
-          }
-          @media (max-width: 479px) {
-            .blogs1-text {
-              font-size: 14px;
-              font-style: normal;
-              font-weight: 600;
-            }
-            .blogs1-text01 {
-              font-size: 14px;
-              font-style: normal;
-              font-weight: 600;
-            }
-            .blogs1-text02 {
-              font-size: 14px;
-              font-style: normal;
-              font-weight: 600;
-            }
-            .blogs1-text03 {
-              font-size: 14px;
-              font-style: normal;
-              font-weight: 600;
-            }
             .blogs1-blog-cards {
+              align-items: center;
               flex-direction: column;
+            }
+            .blogs1-container06 {
+              width: 100%;
+              height: auto;
+            }
+            .blogs1-image {
+              width: 100%;
+              height: auto;
             }
             .blogs1-blog-cards1 {
               flex-direction: column;
             }
+            .blogs1-container07 {
+              width: 100%;
+              height: auto;
+            }
+            .blogs1-image1 {
+              width: 100%;
+              height: auto;
+            }
             .blogs1-blog-cards2 {
               flex-direction: column;
             }
+            .blogs1-container08 {
+              width: 100%;
+              height: auto;
+            }
+            .blogs1-image2 {
+              width: 100%;
+              height: auto;
+            }
             .blogs1-blog-cards3 {
               flex-direction: column;
+            }
+            .blogs1-container09 {
+              width: 100%;
+              height: auto;
+            }
+            .blogs1-image3 {
+              width: 100%;
+              height: auto;
+            }
+          }
+          @media (max-width: 479px) {
+            .blogs1-text {
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 600;
+            }
+            .blogs1-text01 {
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 600;
+            }
+            .blogs1-text02 {
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 600;
+            }
+            .blogs1-text03 {
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 600;
+            }
+            .blogs1-blog-cards {
+              align-items: center;
+              flex-direction: column;
+            }
+            .blogs1-container06 {
+              width: auto;
+            }
+            .blogs1-image {
+              width: 100%;
+            }
+            .blogs1-blog-cards1 {
+              flex-direction: column;
+            }
+            .blogs1-container07 {
+              width: auto;
+            }
+            .blogs1-image1 {
+              width: 100%;
+            }
+            .blogs1-blog-cards2 {
+              flex-direction: column;
+            }
+            .blogs1-container08 {
+              width: auto;
+            }
+            .blogs1-image2 {
+              width: 100%;
+            }
+            .blogs1-blog-cards3 {
+              flex-direction: column;
+            }
+            .blogs1-container09 {
+              width: auto;
+            }
+            .blogs1-image3 {
+              width: 100%;
             }
           }
         `}
@@ -647,34 +819,68 @@ const Blogs1 = (props) => {
 
 Blogs1.defaultProps = {
   rootClassName1: '',
+  text21: 'Read more',
+  imagealt1: 'image',
+  text221: 'Read more',
   name: 'Samantha Johnson',
   heading3: 'RIDER TIPS',
   heading11: 'TECHNICAL TIPS',
+  imagealt211: 'image',
+  heading1: 'Heading',
   heading4: 'CAR REVIEWS',
   image: '5caff76b-e5de-4574-b8e4-040b6183fe63',
+  imagealt: 'image',
   heading2: 'TECHNICAL TIPS',
   rootClassName111: '',
+  imagealt2: 'image',
   heading: 'BIKE REVIEWS',
   componentbutton: '',
+  text2: 'Read more',
+  text1: 'Read more',
+  text22: 'Read more',
   rootClassName: '',
+  linkbutton: 'https://forum.revnitro.com',
+  text: 'Read more',
+  imagesrc: 'https://play.teleporthq.io/static/svg/default-img.svg',
+  text222: 'Read more',
+  imagealt21: 'image',
   rootClassName11: '',
   heading12: 'RIDER TIPS',
+  imagealt22: 'image',
+  text2211: 'Read more',
 }
 
 Blogs1.propTypes = {
   rootClassName1: PropTypes.string,
+  text21: PropTypes.string,
+  imagealt1: PropTypes.string,
+  text221: PropTypes.string,
   name: PropTypes.string,
   heading3: PropTypes.string,
   heading11: PropTypes.string,
+  imagealt211: PropTypes.string,
+  heading1: PropTypes.string,
   heading4: PropTypes.string,
   image: PropTypes.string,
+  imagealt: PropTypes.string,
   heading2: PropTypes.string,
   rootClassName111: PropTypes.string,
+  imagealt2: PropTypes.string,
   heading: PropTypes.string,
   componentbutton: PropTypes.string,
+  text2: PropTypes.string,
+  text1: PropTypes.string,
+  text22: PropTypes.string,
   rootClassName: PropTypes.string,
+  linkbutton: PropTypes.string,
+  text: PropTypes.string,
+  imagesrc: PropTypes.string,
+  text222: PropTypes.string,
+  imagealt21: PropTypes.string,
   rootClassName11: PropTypes.string,
   heading12: PropTypes.string,
+  imagealt22: PropTypes.string,
+  text2211: PropTypes.string,
 }
 
 export default Blogs1

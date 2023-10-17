@@ -3,7 +3,7 @@ import { normalize } from '@teleporthq/cms-mappers/strapi'
 export default async function (params = {}) {
   const urlParams = {
     populate: '*',
-    'pagination[limit]': 4,
+    'pagination[limit]': 100,
   }
   const data = await fetch(
     `${process.env.CMS_URL}/api/Courses?${new URLSearchParams(urlParams)}`,

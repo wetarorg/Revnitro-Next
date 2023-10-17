@@ -366,6 +366,11 @@ const Videos2 = (props) => {
               font-size: 16px;
             }
           }
+          @media (max-width: 479px) {
+            .videos2-bike1 {
+              flex-direction: column;
+            }
+          }
         `}
       </style>
     </>

@@ -7,47 +7,40 @@ import PropTypes from 'prop-types'
 
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
-import blogsPageInitialPathsA79bbResource from '../../resources/blogs-page-initial-paths-a79bb'
-import blogsPageInitialPropsC5e1eResource from '../../resources/blogs-page-initial-props-c5e1e'
+import blogsPageInitialPaths1e257Resource from '../../resources/blogs-page-initial-paths-1e257'
+import blogsPageInitialProps523c6Resource from '../../resources/blogs-page-initial-props-523c6'
 
-const Blogs11 = (props) => {
+const Blogs = (props) => {
   return (
     <>
-      <div className="blogs11-container">
+      <div className="blogs-container">
         <Head>
-          <title>Blogs1 - Revnitro</title>
-          <meta property="og:title" content="Blogs1 - Revnitro" />
+          <title>Blogs - Revnitro</title>
+          <meta property="og:title" content="Blogs - Revnitro" />
         </Head>
-        <Navbar rootClassName="navbar-root-class-name3"></Navbar>
-        <div className="blogs11-container1">
-          <DataProvider
-            renderSuccess={(BlogsEntity) => (
-              <>
-                <div className="blogs11-container2">
-                  <h1 className="blogs11-text">{BlogsEntity?.Title}</h1>
-                  <div className="blogs11-container3">
-                    <span className="blogs11-text1">{BlogsEntity?.Date}</span>
-                    <span className="blogs11-text2">
-                      {BlogsEntity?.Category}
-                    </span>
-                    <span className="blogs11-text3">{BlogsEntity?.author}</span>
-                  </div>
-                  <div className="blogs11-container4">
-                    <ReactMarkdown>{BlogsEntity?.content}</ReactMarkdown>
-                  </div>
+        <Navbar rootClassName="navbar-root-class-name11"></Navbar>
+        <DataProvider
+          renderSuccess={(BlogsEntity) => (
+            <>
+              <div className="blogs-container1">
+                <h1>{BlogsEntity?.Title}</h1>
+                <span>{BlogsEntity?.description}</span>
+                <span>{BlogsEntity?.Category}</span>
+                <div className="blogs-container2">
+                  <ReactMarkdown>{BlogsEntity?.content}</ReactMarkdown>
                 </div>
-              </>
-            )}
-            initialData={props.blogsEntity}
-            persistDataDuringLoading={true}
-            key={props?.blogsEntity?.id}
-          />
-        </div>
-        <Footer rootClassName="footer-root-class-name1"></Footer>
+              </div>
+            </>
+          )}
+          initialData={props.blogsEntity}
+          persistDataDuringLoading={true}
+          key={props?.blogsEntity?.id}
+        />
+        <Footer rootClassName="footer-root-class-name7"></Footer>
       </div>
       <style jsx>
         {`
-          .blogs11-container {
+          .blogs-container {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -55,51 +48,19 @@ const Blogs11 = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .blogs11-container1 {
-            flex: 0 0 auto;
-            width: auto;
-            display: flex;
-            padding: var(--dl-space-space-fiveunits);
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .blogs11-container2 {
+          .blogs-container1 {
             gap: 12px;
             width: 100%;
             display: flex;
             flex-direction: column;
           }
-          .blogs11-text {
-            font-size: 60px;
-          }
-          .blogs11-container3 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-          }
-          .blogs11-text1 {
-            font-style: normal;
-            font-weight: 500;
-          }
-          .blogs11-text2 {
-            color: var(--dl-color-gray-500);
-            margin-left: var(--dl-space-space-oneandhalfunits);
-          }
-          .blogs11-text3 {
-            color: var(--dl-color-gray-500);
-            margin-left: var(--dl-space-space-oneandhalfunits);
-          }
-          .blogs11-container4 {
+          .blogs-container2 {
             width: 100%;
             align-self: stretch;
-            margin-top: var(--dl-space-space-unit);
           }
-          @media (max-width: 479px) {
-            .blogs11-container1 {
-              width: 100%;
-              padding: var(--dl-space-space-threeunits);
+          @media (max-width: 1600px) {
+            .blogs-container1 {
+              padding: var(--dl-space-space-sixunits);
             }
           }
         `}
@@ -108,19 +69,19 @@ const Blogs11 = (props) => {
   )
 }
 
-Blogs11.defaultProps = {
+Blogs.defaultProps = {
   blogsEntity: [],
 }
 
-Blogs11.propTypes = {
+Blogs.propTypes = {
   blogsEntity: PropTypes.array,
 }
 
-export default Blogs11
+export default Blogs
 
 export async function getStaticPaths() {
   try {
-    const response = await blogsPageInitialPathsA79bbResource({})
+    const response = await blogsPageInitialPaths1e257Resource({})
     return {
       paths: (response?.data || []).map((item) => {
         return {
@@ -141,7 +102,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await blogsPageInitialPropsC5e1eResource({
+    const response = await blogsPageInitialProps523c6Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {

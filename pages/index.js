@@ -284,21 +284,6 @@ const Home = (props) => {
               </div>
             </div>
           </div>
-          <div className="home-code-embed">
-            <React.Fragment>
-              <Script>{`
-const el = document.querySelector('.blaze-slider')
-
-new BlazeSlider(el, {
-  all: {
-    slidesToShow: 1,
-    loop: true,
-    enableAutoplay: true,
-  },
-})
-`}</Script>
-            </React.Fragment>
-          </div>
         </section>
         <section className="home-hero">
           <div className="home-hero-content">
@@ -320,7 +305,7 @@ new BlazeSlider(el, {
           <div className="home-image05">
             <img
               alt="image"
-              src="/bookings/home_page-200w.png"
+              src="/bookings/home_page-500h.png"
               className="home-image06"
             />
           </div>
@@ -351,7 +336,7 @@ new BlazeSlider(el, {
                   data-role="accordion-container"
                   className="home-element1 accordion-element"
                 >
-                  <div className="home-details1">
+                  <div className="home-details01">
                     <img
                       alt="image"
                       src="/bookings/2.svg"
@@ -366,7 +351,7 @@ new BlazeSlider(el, {
                   data-role="accordion-container"
                   className="home-element2 accordion-element"
                 >
-                  <div className="home-details2">
+                  <div className="home-details02">
                     <img
                       alt="image"
                       src="/bookings/1.svg"
@@ -379,7 +364,7 @@ new BlazeSlider(el, {
                   data-role="accordion-container"
                   className="home-element3 accordion-element"
                 >
-                  <div className="home-details3">
+                  <div className="home-details03">
                     <img
                       alt="image"
                       src="/bookings/4.svg"
@@ -396,43 +381,8 @@ new BlazeSlider(el, {
           <div className="home-header">
             <div data-aos="fade-right" className="home-heading13">
               <h2 className="home-title05">
-                Don’t just take our word for it. Here’s what our readers have to
-                say:
-              </h2>
-            </div>
-          </div>
-          <div className="home-quotes">
-            <div className="home-quote">
-              <div className="home-author">
-                <img
-                  alt="image"
-                  src="https://images.unsplash.com/photo-1622100685582-d8542910e078?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE1fHxpbmRpYW4lMjBtZW58ZW58MHx8fHwxNjk0NzY5MDMzfDA&amp;ixlib=rb-4.0.3&amp;w=200"
-                  className="home-image11"
-                />
-                <div className="home-details4">
-                  <span className="home-name">Arjun</span>
-                  <span className="home-handle">@arjun</span>
-                </div>
-              </div>
-              <p className="home-quote1">
-                “Revnitro is one complete journal for automobiles”
-              </p>
-            </div>
-            <div className="home-quote2">
-              <div className="home-author1">
-                <img
-                  alt="image"
-                  src="https://images.unsplash.com/photo-1530268729831-4b0b9e170218?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE3fHxpbmRpYW4lMjBtZW58ZW58MHx8fHwxNjk0NzY5MDMzfDA&amp;ixlib=rb-4.0.3&amp;w=200"
-                  className="home-image12"
-                />
-                <div className="home-details5">
-                  <span className="home-name1">Prakash</span>
-                  <span className="home-handle1">@prakash234</span>
-                </div>
-              </div>
-              <p className="home-quote3">
                 <span>
-                  “Great Team!
+                  Don’t just take our word for it.
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -440,29 +390,432 @@ new BlazeSlider(el, {
                   />
                 </span>
                 <br></br>
-                <span>
-                  I also like how willing people are to share knowledge, there
-                  is no sense of competitiveness.”
-                </span>
-              </p>
-            </div>
-            <div className="home-quote4">
-              <div className="home-author2">
-                <img
-                  alt="image"
-                  src="https://images.unsplash.com/photo-1623669458475-f0968102b12e?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDI1fHxpbmRpYW4lMjBtZW58ZW58MHx8fHwxNjk0NzY5MDYwfDA&amp;ixlib=rb-4.0.3&amp;w=200"
-                  className="home-image13"
-                />
-                <div className="home-details6">
-                  <span className="home-name2">John</span>
-                  <span className="home-handle2">@joihm</span>
-                </div>
-              </div>
-              <p className="home-quote5">
-                “Articles are top notch and deeply studied”
-              </p>
+                <span>Here’s what our readers have to say:</span>
+              </h2>
             </div>
           </div>
+          <section className="home-reviews">
+            <div className="home-slider1 slider blaze-slider">
+              <div className="home-slider-container1 blaze-container">
+                <div className="home-slider-track-container1 blaze-track-container">
+                  <div className="home-slider-track1 blaze-track">
+                    <div
+                      data-role="current-banner"
+                      className="home-slide5 banner"
+                    >
+                      <DataProvider
+                        fetchData={(params) =>
+                          fetch(
+                            `/api/home5resource-home5?${new URLSearchParams(
+                              params
+                            )}`,
+                            {
+                              headers: {
+                                'Content-Type': 'application/json',
+                              },
+                            }
+                          )
+                            .then((res) => res.json())
+                            .then((data) => data?.data?.[0])
+                        }
+                        renderSuccess={(context_tz9kl) => (
+                          <>
+                            <div className="home-quote">
+                              <div className="home-author">
+                                <img
+                                  alt="image"
+                                  src={context_tz9kl?.profile?.url}
+                                  className="home-image11"
+                                />
+                                <div className="home-details04">
+                                  <span className="home-name">
+                                    {context_tz9kl?.name}
+                                  </span>
+                                  <span className="home-handle">
+                                    {context_tz9kl?.contact}
+                                  </span>
+                                </div>
+                              </div>
+                              <p className="home-quote01">
+                                {context_tz9kl?.review}
+                              </p>
+                            </div>
+                          </>
+                        )}
+                      />
+                      <DataProvider
+                        fetchData={(params) =>
+                          fetch(
+                            `/api/home6resource-home6?${new URLSearchParams(
+                              params
+                            )}`,
+                            {
+                              headers: {
+                                'Content-Type': 'application/json',
+                              },
+                            }
+                          )
+                            .then((res) => res.json())
+                            .then((data) => data?.data?.[0])
+                        }
+                        renderSuccess={(context_tz9kl) => (
+                          <>
+                            <div className="home-quote02">
+                              <div className="home-author1">
+                                <img
+                                  alt="image"
+                                  src={context_tz9kl?.profile?.url}
+                                  className="home-image12"
+                                />
+                                <div className="home-details05">
+                                  <span className="home-name1">
+                                    {context_tz9kl?.name}
+                                  </span>
+                                  <span className="home-handle1">
+                                    {context_tz9kl?.contact}
+                                  </span>
+                                </div>
+                              </div>
+                              <p className="home-quote03">
+                                {context_tz9kl?.review}
+                              </p>
+                            </div>
+                          </>
+                        )}
+                      />
+                      <DataProvider
+                        fetchData={(params) =>
+                          fetch(
+                            `/api/home7resource-home7?${new URLSearchParams(
+                              params
+                            )}`,
+                            {
+                              headers: {
+                                'Content-Type': 'application/json',
+                              },
+                            }
+                          )
+                            .then((res) => res.json())
+                            .then((data) => data?.data?.[0])
+                        }
+                        renderSuccess={(context_tz9kl) => (
+                          <>
+                            <div className="home-quote04">
+                              <div className="home-author2">
+                                <img
+                                  alt="image"
+                                  src={context_tz9kl?.profile?.url}
+                                  className="home-image13"
+                                />
+                                <div className="home-details06">
+                                  <span className="home-name2">
+                                    {context_tz9kl?.name}
+                                  </span>
+                                  <span className="home-handle2">
+                                    {context_tz9kl?.contact}
+                                  </span>
+                                </div>
+                              </div>
+                              <p className="home-quote05">
+                                {context_tz9kl?.review}
+                              </p>
+                            </div>
+                          </>
+                        )}
+                      />
+                    </div>
+                    <div
+                      data-role="current-banner"
+                      className="home-slide6 banner"
+                    >
+                      <DataProvider
+                        fetchData={(params) =>
+                          fetch(
+                            `/api/home8resource-home8?${new URLSearchParams(
+                              params
+                            )}`,
+                            {
+                              headers: {
+                                'Content-Type': 'application/json',
+                              },
+                            }
+                          )
+                            .then((res) => res.json())
+                            .then((data) => data?.data?.[0])
+                        }
+                        renderSuccess={(context_tz9kl) => (
+                          <>
+                            <div className="home-quote06">
+                              <div className="home-author3">
+                                <img
+                                  alt="image"
+                                  src={context_tz9kl?.profile?.url}
+                                  className="home-image14"
+                                />
+                                <div className="home-details07">
+                                  <span className="home-name3">
+                                    {context_tz9kl?.name}
+                                  </span>
+                                  <span className="home-handle3">
+                                    {context_tz9kl?.contact}
+                                  </span>
+                                </div>
+                              </div>
+                              <p className="home-quote07">
+                                {context_tz9kl?.review}
+                              </p>
+                            </div>
+                          </>
+                        )}
+                      />
+                      <DataProvider
+                        fetchData={(params) =>
+                          fetch(
+                            `/api/home9resource-home9?${new URLSearchParams(
+                              params
+                            )}`,
+                            {
+                              headers: {
+                                'Content-Type': 'application/json',
+                              },
+                            }
+                          )
+                            .then((res) => res.json())
+                            .then((data) => data?.data?.[0])
+                        }
+                        renderSuccess={(context_tz9kl) => (
+                          <>
+                            <div className="home-quote08">
+                              <div className="home-author4">
+                                <img
+                                  alt="image"
+                                  src={context_tz9kl?.profile?.url}
+                                  className="home-image15"
+                                />
+                                <div className="home-details08">
+                                  <span className="home-name4">
+                                    {context_tz9kl?.name}
+                                  </span>
+                                  <span className="home-handle4">
+                                    {context_tz9kl?.contact}
+                                  </span>
+                                </div>
+                              </div>
+                              <p className="home-quote09">
+                                {context_tz9kl?.review}
+                              </p>
+                            </div>
+                          </>
+                        )}
+                      />
+                      <DataProvider
+                        fetchData={(params) =>
+                          fetch(
+                            `/api/home10resource-home10?${new URLSearchParams(
+                              params
+                            )}`,
+                            {
+                              headers: {
+                                'Content-Type': 'application/json',
+                              },
+                            }
+                          )
+                            .then((res) => res.json())
+                            .then((data) => data?.data?.[0])
+                        }
+                        renderSuccess={(context_tz9kl) => (
+                          <>
+                            <div className="home-quote10">
+                              <div className="home-author5">
+                                <img
+                                  alt="image"
+                                  src={context_tz9kl?.profile?.url}
+                                  className="home-image16"
+                                />
+                                <div className="home-details09">
+                                  <span className="home-name5">
+                                    {context_tz9kl?.name}
+                                  </span>
+                                  <span className="home-handle5">
+                                    {context_tz9kl?.contact}
+                                  </span>
+                                </div>
+                              </div>
+                              <p className="home-quote11">
+                                {context_tz9kl?.review}
+                              </p>
+                            </div>
+                          </>
+                        )}
+                      />
+                    </div>
+                    <div
+                      data-role="current-banner"
+                      className="home-slide7 banner"
+                    >
+                      <DataProvider
+                        fetchData={(params) =>
+                          fetch(
+                            `/api/home11resource-home11?${new URLSearchParams(
+                              params
+                            )}`,
+                            {
+                              headers: {
+                                'Content-Type': 'application/json',
+                              },
+                            }
+                          )
+                            .then((res) => res.json())
+                            .then((data) => data?.data?.[0])
+                        }
+                        renderSuccess={(context_tz9kl) => (
+                          <>
+                            <div className="home-quote12">
+                              <div className="home-author6">
+                                <img
+                                  alt="image"
+                                  src={context_tz9kl?.profile?.url}
+                                  className="home-image17"
+                                />
+                                <div className="home-details10">
+                                  <span className="home-name6">
+                                    {context_tz9kl?.name}
+                                  </span>
+                                  <span className="home-handle6">
+                                    {context_tz9kl?.contact}
+                                  </span>
+                                </div>
+                              </div>
+                              <p className="home-quote13">
+                                {context_tz9kl?.review}
+                              </p>
+                            </div>
+                          </>
+                        )}
+                      />
+                      <DataProvider
+                        fetchData={(params) =>
+                          fetch(
+                            `/api/home12resource-home12?${new URLSearchParams(
+                              params
+                            )}`,
+                            {
+                              headers: {
+                                'Content-Type': 'application/json',
+                              },
+                            }
+                          )
+                            .then((res) => res.json())
+                            .then((data) => data?.data?.[0])
+                        }
+                        renderSuccess={(context_tz9kl) => (
+                          <>
+                            <div className="home-quote14">
+                              <div className="home-author7">
+                                <img
+                                  alt="image"
+                                  src={context_tz9kl?.profile?.url}
+                                  className="home-image18"
+                                />
+                                <div className="home-details11">
+                                  <span className="home-name7">
+                                    {context_tz9kl?.name}
+                                  </span>
+                                  <span className="home-handle7">
+                                    {context_tz9kl?.contact}
+                                  </span>
+                                </div>
+                              </div>
+                              <p className="home-quote15">
+                                {context_tz9kl?.review}
+                              </p>
+                            </div>
+                          </>
+                        )}
+                      />
+                      <DataProvider
+                        fetchData={(params) =>
+                          fetch(
+                            `/api/home13resource-home13?${new URLSearchParams(
+                              params
+                            )}`,
+                            {
+                              headers: {
+                                'Content-Type': 'application/json',
+                              },
+                            }
+                          )
+                            .then((res) => res.json())
+                            .then((data) => data?.data?.[0])
+                        }
+                        renderSuccess={(context_tz9kl) => (
+                          <>
+                            <div className="home-quote16">
+                              <div className="home-author8">
+                                <img
+                                  alt="image"
+                                  src={context_tz9kl?.profile?.url}
+                                  className="home-image19"
+                                />
+                                <div className="home-details12">
+                                  <span className="home-name8">
+                                    {context_tz9kl?.name}
+                                  </span>
+                                  <span className="home-handle8">
+                                    {context_tz9kl?.contact}
+                                  </span>
+                                </div>
+                              </div>
+                              <p className="home-quote17">
+                                {context_tz9kl?.review}
+                              </p>
+                            </div>
+                          </>
+                        )}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="home-controls1">
+                  <button
+                    data-role="previous-banner-button"
+                    className="home-previous1 blaze-prev button"
+                  >
+                    <svg viewBox="0 0 1024 1024" className="home-icon4">
+                      <path d="M542.165 780.501l-225.835-225.835h494.336c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-494.336l225.835-225.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-298.667 298.667c-4.096 4.096-7.168 8.789-9.259 13.824-2.176 5.205-3.243 10.795-3.243 16.341 0 10.923 4.181 21.845 12.501 30.165l298.667 298.667c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path>
+                    </svg>
+                  </button>
+                  <button
+                    data-role="next-banner-button"
+                    className="home-next1 blaze-next button"
+                  >
+                    <svg viewBox="0 0 1024 1024" className="home-icon6">
+                      <path d="M481.835 243.499l225.835 225.835h-494.336c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667h494.336l-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l298.667-298.667c3.925-3.925 7.083-8.619 9.259-13.824 4.309-10.453 4.309-22.229 0-32.683-2.091-5.035-5.163-9.728-9.259-13.824l-298.667-298.667c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="home-code-embed">
+              <React.Fragment>
+                <React.Fragment>
+                  <Script>{`
+  document.querySelectorAll('.blaze-slider').forEach(el => {
+    new BlazeSlider(el, {
+      all: {
+        slidesToShow: 1,
+        loop: true,
+        enableAutoplay: true,
+      },
+    });
+  });
+`}</Script>
+                </React.Fragment>
+              </React.Fragment>
+            </div>
+          </section>
+        </section>
+        <section className="home-racing">
           <div className="home-gradient gradient-background">
             <div className="home-container12">
               <div className="home-container13">
@@ -488,8 +841,6 @@ new BlazeSlider(el, {
               </React.Fragment>
             </div>
           </div>
-        </section>
-        <section className="home-racing">
           <div className="home-header1">
             <div className="home-section-numeral">
               <div className="home-divide"></div>
@@ -1154,9 +1505,6 @@ new BlazeSlider(el, {
             margin: auto;
             position: absolute;
           }
-          .home-code-embed {
-            display: contents;
-          }
           .home-hero {
             width: 100%;
             height: auto;
@@ -1227,9 +1575,9 @@ new BlazeSlider(el, {
             font-size: 54px;
           }
           .home-note {
-            width: 100%;
+            width: 90%;
             display: flex;
-            padding: var(--dl-space-space-oneandhalfunits);
+            padding: 0px;
             max-width: 100%;
             margin-top: var(--dl-space-space-unit);
             align-items: center;
@@ -1238,8 +1586,8 @@ new BlazeSlider(el, {
             justify-content: space-between;
           }
           .home-image05 {
-            flex: 1;
-            width: 20%;
+            flex: 0;
+            width: auto;
             height: 100%;
             display: flex;
             align-items: center;
@@ -1247,8 +1595,8 @@ new BlazeSlider(el, {
             justify-content: center;
           }
           .home-image06 {
-            width: auto;
-            height: auto;
+            width: 196px;
+            height: 402px;
             object-fit: cover;
             border-color: var(--dl-color-gray-white);
             border-width: 1px;
@@ -1327,7 +1675,7 @@ new BlazeSlider(el, {
             width: 640px;
             user-select: none;
           }
-          .home-details1 {
+          .home-details01 {
             gap: var(--dl-space-space-halfunit);
             width: 100%;
             display: flex;
@@ -1355,7 +1703,7 @@ new BlazeSlider(el, {
             width: 640px;
             user-select: none;
           }
-          .home-details2 {
+          .home-details02 {
             gap: var(--dl-space-space-halfunit);
             width: 100%;
             display: flex;
@@ -1383,7 +1731,7 @@ new BlazeSlider(el, {
             width: 640px;
             user-select: none;
           }
-          .home-details3 {
+          .home-details03 {
             gap: var(--dl-space-space-halfunit);
             width: 100%;
             display: flex;
@@ -1446,19 +1794,52 @@ new BlazeSlider(el, {
             font-weight: 600;
             line-height: 55px;
           }
-          .home-quotes {
+          .home-reviews {
+            gap: 0;
             width: 100%;
-            height: auto;
+            height: 60vh;
             display: flex;
-            overflow: auto;
-            max-width: var(--dl-size-size-maxwidth);
-            align-items: flex-start;
-            margin-left: 0px;
-            border-color: rgba(255, 255, 255, 0.2);
-            margin-bottom: var(--dl-space-space-unit);
+            overflow: hidden;
+            position: relative;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 0px;
+          }
+          .home-slider1 {
+            gap: var(--dl-space-space-fiveunits);
+            width: 100%;
+            height: 60vh;
+            display: flex;
+            align-items: center;
             flex-direction: row;
-            justify-content: center;
-            border-bottom-width: 1px;
+          }
+          .home-slider-container1 {
+            gap: var(--dl-space-space-fourunits);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            align-items: center;
+            flex-direction: column;
+          }
+          .home-slider-track-container1 {
+            width: 100%;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+          }
+          .home-slider-track1 {
+            width: 100%;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+          }
+          .home-slide5 {
+            width: 100%;
+            height: 60vh;
+            background-color: transparent;
           }
           .home-quote {
             gap: var(--dl-space-space-threeunits);
@@ -1485,7 +1866,7 @@ new BlazeSlider(el, {
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details4 {
+          .home-details04 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -1502,7 +1883,7 @@ new BlazeSlider(el, {
             font-size: 14px;
             letter-spacing: 1%;
           }
-          .home-quote1 {
+          .home-quote01 {
             color: rgb(255, 255, 255);
             width: 100%;
             font-size: 22px;
@@ -1511,10 +1892,11 @@ new BlazeSlider(el, {
             line-height: 33px;
             letter-spacing: 1%;
           }
-          .home-quote2 {
+          .home-quote02 {
             gap: var(--dl-space-space-threeunits);
             display: flex;
             min-width: auto;
+            align-self: stretch;
             align-items: flex-start;
             border-color: rgba(255, 255, 255, 0.2);
             padding-left: var(--dl-space-space-threeunits);
@@ -1535,7 +1917,7 @@ new BlazeSlider(el, {
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details5 {
+          .home-details05 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -1552,7 +1934,7 @@ new BlazeSlider(el, {
             font-size: 14px;
             letter-spacing: 1%;
           }
-          .home-quote3 {
+          .home-quote03 {
             color: rgb(255, 255, 255);
             width: 100%;
             font-size: 22px;
@@ -1561,7 +1943,7 @@ new BlazeSlider(el, {
             line-height: 33px;
             letter-spacing: 1%;
           }
-          .home-quote4 {
+          .home-quote04 {
             gap: var(--dl-space-space-threeunits);
             display: flex;
             min-width: auto;
@@ -1586,7 +1968,7 @@ new BlazeSlider(el, {
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details6 {
+          .home-details06 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -1603,7 +1985,7 @@ new BlazeSlider(el, {
             font-size: 14px;
             letter-spacing: 1%;
           }
-          .home-quote5 {
+          .home-quote05 {
             color: rgb(255, 255, 255);
             width: 100%;
             font-size: 22px;
@@ -1611,6 +1993,401 @@ new BlazeSlider(el, {
             font-family: Poppins;
             line-height: 33px;
             letter-spacing: 1%;
+          }
+          .home-slide6 {
+            width: 100%;
+            height: 60vh;
+            background-color: transparent;
+          }
+          .home-quote06 {
+            gap: var(--dl-space-space-threeunits);
+            display: flex;
+            min-width: auto;
+            align-self: stretch;
+            align-items: flex-start;
+            border-color: rgba(255, 255, 255, 0.2);
+            padding-left: var(--dl-space-space-threeunits);
+            padding-right: var(--dl-space-space-threeunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-threeunits);
+            border-right-width: 1px;
+          }
+          .home-author3 {
+            gap: var(--dl-space-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .home-image14 {
+            width: 60px;
+            object-fit: cover;
+            aspect-ratio: 1;
+            border-radius: var(--dl-radius-radius-round);
+          }
+          .home-details07 {
+            gap: 4px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .home-name3 {
+            color: rgb(255, 255, 255);
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: 1%;
+          }
+          .home-handle3 {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+            letter-spacing: 1%;
+          }
+          .home-quote07 {
+            color: rgb(255, 255, 255);
+            width: 100%;
+            font-size: 22px;
+            max-width: 320px;
+            font-family: Poppins;
+            line-height: 33px;
+            letter-spacing: 1%;
+          }
+          .home-quote08 {
+            gap: var(--dl-space-space-threeunits);
+            display: flex;
+            min-width: auto;
+            align-self: stretch;
+            align-items: flex-start;
+            border-color: rgba(255, 255, 255, 0.2);
+            padding-left: var(--dl-space-space-threeunits);
+            padding-right: var(--dl-space-space-threeunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-threeunits);
+            border-right-width: 1px;
+          }
+          .home-author4 {
+            gap: var(--dl-space-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .home-image15 {
+            width: 60px;
+            object-fit: cover;
+            aspect-ratio: 1;
+            border-radius: var(--dl-radius-radius-round);
+          }
+          .home-details08 {
+            gap: 4px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .home-name4 {
+            color: rgb(255, 255, 255);
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: 1%;
+          }
+          .home-handle4 {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+            letter-spacing: 1%;
+          }
+          .home-quote09 {
+            color: rgb(255, 255, 255);
+            width: 100%;
+            font-size: 22px;
+            max-width: 320px;
+            font-family: Poppins;
+            line-height: 33px;
+            letter-spacing: 1%;
+          }
+          .home-quote10 {
+            gap: var(--dl-space-space-threeunits);
+            display: flex;
+            min-width: auto;
+            align-self: stretch;
+            align-items: flex-start;
+            border-color: rgba(255, 255, 255, 0.2);
+            padding-left: var(--dl-space-space-threeunits);
+            padding-right: var(--dl-space-space-threeunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-threeunits);
+            border-right-width: 1px;
+          }
+          .home-author5 {
+            gap: var(--dl-space-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .home-image16 {
+            width: 60px;
+            object-fit: cover;
+            aspect-ratio: 1;
+            border-radius: var(--dl-radius-radius-round);
+          }
+          .home-details09 {
+            gap: 4px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .home-name5 {
+            color: rgb(255, 255, 255);
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: 1%;
+          }
+          .home-handle5 {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+            letter-spacing: 1%;
+          }
+          .home-quote11 {
+            color: rgb(255, 255, 255);
+            width: 100%;
+            font-size: 22px;
+            max-width: 320px;
+            font-family: Poppins;
+            line-height: 33px;
+            letter-spacing: 1%;
+          }
+          .home-slide7 {
+            width: 100%;
+            height: 60vh;
+            background-color: transparent;
+          }
+          .home-quote12 {
+            gap: var(--dl-space-space-threeunits);
+            display: flex;
+            min-width: auto;
+            align-self: stretch;
+            align-items: flex-start;
+            border-color: rgba(255, 255, 255, 0.2);
+            padding-left: var(--dl-space-space-threeunits);
+            padding-right: var(--dl-space-space-threeunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-threeunits);
+            border-right-width: 1px;
+          }
+          .home-author6 {
+            gap: var(--dl-space-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .home-image17 {
+            width: 60px;
+            object-fit: cover;
+            aspect-ratio: 1;
+            border-radius: var(--dl-radius-radius-round);
+          }
+          .home-details10 {
+            gap: 4px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .home-name6 {
+            color: rgb(255, 255, 255);
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: 1%;
+          }
+          .home-handle6 {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+            letter-spacing: 1%;
+          }
+          .home-quote13 {
+            color: rgb(255, 255, 255);
+            width: 100%;
+            font-size: 22px;
+            max-width: 320px;
+            font-family: Poppins;
+            line-height: 33px;
+            letter-spacing: 1%;
+          }
+          .home-quote14 {
+            gap: var(--dl-space-space-threeunits);
+            display: flex;
+            min-width: auto;
+            align-self: stretch;
+            align-items: flex-start;
+            border-color: rgba(255, 255, 255, 0.2);
+            padding-left: var(--dl-space-space-threeunits);
+            padding-right: var(--dl-space-space-threeunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-threeunits);
+            border-right-width: 1px;
+          }
+          .home-author7 {
+            gap: var(--dl-space-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .home-image18 {
+            width: 60px;
+            object-fit: cover;
+            aspect-ratio: 1;
+            border-radius: var(--dl-radius-radius-round);
+          }
+          .home-details11 {
+            gap: 4px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .home-name7 {
+            color: rgb(255, 255, 255);
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: 1%;
+          }
+          .home-handle7 {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+            letter-spacing: 1%;
+          }
+          .home-quote15 {
+            color: rgb(255, 255, 255);
+            width: 100%;
+            font-size: 22px;
+            max-width: 320px;
+            font-family: Poppins;
+            line-height: 33px;
+            letter-spacing: 1%;
+          }
+          .home-quote16 {
+            gap: var(--dl-space-space-threeunits);
+            display: flex;
+            min-width: auto;
+            align-self: stretch;
+            align-items: flex-start;
+            border-color: rgba(255, 255, 255, 0.2);
+            padding-left: var(--dl-space-space-threeunits);
+            padding-right: var(--dl-space-space-threeunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-threeunits);
+            border-right-width: 1px;
+          }
+          .home-author8 {
+            gap: var(--dl-space-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+          }
+          .home-image19 {
+            width: 60px;
+            object-fit: cover;
+            aspect-ratio: 1;
+            border-radius: var(--dl-radius-radius-round);
+          }
+          .home-details12 {
+            gap: 4px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .home-name8 {
+            color: rgb(255, 255, 255);
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: 1%;
+          }
+          .home-handle8 {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+            letter-spacing: 1%;
+          }
+          .home-quote17 {
+            color: rgb(255, 255, 255);
+            width: 100%;
+            font-size: 22px;
+            max-width: 320px;
+            font-family: Poppins;
+            line-height: 33px;
+            letter-spacing: 1%;
+          }
+          .home-controls1 {
+            gap: var(--dl-space-space-unit);
+            right: 0px;
+            bottom: 0px;
+            height: auto;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            margin-right: var(--dl-space-space-threeunits);
+            margin-bottom: var(--dl-space-space-unit);
+            flex-direction: row;
+          }
+          .home-previous1 {
+            width: 46px;
+            height: 30px;
+            display: flex;
+            padding: var(--dl-space-space-halfunit);
+            position: relative;
+            padding-top: var(--dl-space-space-oneandhalfunits);
+            border-color: var(--dl-color-gray-white);
+            border-width: 2px;
+            padding-left: var(--dl-space-space-oneandhalfunits);
+            border-radius: var(--dl-radius-radius-round);
+            padding-right: var(--dl-space-space-oneandhalfunits);
+            flex-direction: row;
+            padding-bottom: var(--dl-space-space-oneandhalfunits);
+            background-color: transparent;
+          }
+          .home-icon4 {
+            top: 0px;
+            fill: var(--dl-color-gray-white);
+            left: 0px;
+            right: 0px;
+            width: 32px;
+            bottom: 0px;
+            height: 32px;
+            margin: auto;
+            padding: 0px;
+            position: absolute;
+          }
+          .home-next1 {
+            width: 46px;
+            height: 30px;
+            display: flex;
+            padding: var(--dl-space-space-halfunit);
+            position: relative;
+            padding-top: var(--dl-space-space-oneandhalfunits);
+            border-color: var(--dl-color-gray-white);
+            border-width: 2px;
+            padding-left: var(--dl-space-space-oneandhalfunits);
+            border-radius: var(--dl-radius-radius-round);
+            padding-right: var(--dl-space-space-oneandhalfunits);
+            flex-direction: row;
+            padding-bottom: var(--dl-space-space-oneandhalfunits);
+            background-color: transparent;
+          }
+          .home-icon6 {
+            top: 0px;
+            fill: var(--dl-color-gray-white);
+            left: 0px;
+            right: 0px;
+            width: 32px;
+            bottom: 0px;
+            height: 32px;
+            margin: auto;
+            position: absolute;
+          }
+          .home-code-embed {
+            display: contents;
+          }
+          .home-racing {
+            gap: var(--dl-space-space-fiveunits);
+            width: auto;
+            display: flex;
+            padding: 0px;
+            max-width: auto;
+            align-items: center;
+            flex-direction: column;
           }
           .home-gradient {
             width: 100%;
@@ -1662,15 +2439,6 @@ new BlazeSlider(el, {
           }
           .home-div {
             display: contents;
-          }
-          .home-racing {
-            gap: var(--dl-space-space-fiveunits);
-            width: auto;
-            display: flex;
-            padding: 0px;
-            max-width: auto;
-            align-items: center;
-            flex-direction: column;
           }
           .home-header1 {
             gap: var(--dl-space-space-oneandhalfunits);
@@ -1872,6 +2640,123 @@ new BlazeSlider(el, {
             font-size: 24px;
             font-family: Poppins;
           }
+          @media (max-width: 1600px) {
+            .home-image05 {
+              flex: 1;
+              width: auto;
+              margin: 0px;
+            }
+            .home-content5 {
+              flex: 1;
+              width: 70%;
+              margin-left: var(--dl-space-space-sixunits);
+            }
+            .home-heading11 {
+              margin-left: var(--dl-space-space-twounits);
+            }
+            .home-title05 {
+              width: 100%;
+              font-size: 50px;
+              max-width: 100%;
+              font-style: normal;
+              font-family: Poppins;
+              font-weight: 600;
+              line-height: 55px;
+            }
+            .home-slide5 {
+              width: 100%;
+              height: auto;
+              align-items: center;
+              justify-content: space-between;
+            }
+            .home-quote {
+              width: 30%;
+              height: 400px;
+              align-items: center;
+              justify-content: center;
+            }
+            .home-quote02 {
+              width: 30%;
+              height: 400px;
+              justify-content: center;
+            }
+            .home-quote04 {
+              width: 30%;
+              height: 400px;
+              justify-content: center;
+            }
+            .home-slide6 {
+              width: 100%;
+              height: auto;
+              align-items: center;
+              justify-content: space-between;
+            }
+            .home-quote06 {
+              width: 30%;
+              height: 400px;
+              align-items: center;
+              justify-content: center;
+            }
+            .home-quote08 {
+              width: 30%;
+              height: 400px;
+              justify-content: center;
+            }
+            .home-quote10 {
+              width: 30%;
+              height: 400px;
+              justify-content: center;
+            }
+            .home-slide7 {
+              width: 100%;
+              height: auto;
+              align-items: center;
+              justify-content: space-between;
+            }
+            .home-quote12 {
+              width: 30%;
+              height: 400px;
+              align-items: center;
+              justify-content: center;
+            }
+            .home-quote14 {
+              width: 30%;
+              height: 400px;
+              justify-content: center;
+            }
+            .home-quote16 {
+              width: 30%;
+              height: 400px;
+              justify-content: center;
+            }
+            .home-previous1 {
+              border-color: var(--dl-color-gray-black);
+            }
+            .home-next1 {
+              border-color: var(--dl-color-gray-black);
+            }
+            .home-racing {
+              margin-top: var(--dl-space-space-fiveunits);
+            }
+          }
+          @media (max-width: 1200px) {
+            .home-heading10 {
+              font-size: 54px;
+            }
+            .home-note {
+              width: 100%;
+              padding: var(--dl-space-space-threeunits);
+              position: relative;
+            }
+            .home-image05 {
+              flex: 1;
+              width: 30%;
+              justify-content: center;
+            }
+            .home-content5 {
+              width: 70%;
+            }
+          }
           @media (max-width: 991px) {
             .home-slider {
               gap: var(--dl-space-space-twounits);
@@ -2066,6 +2951,9 @@ new BlazeSlider(el, {
             .home-heading12 {
               width: auto;
               max-width: auto;
+            }
+            .home-slider1 {
+              gap: var(--dl-space-space-twounits);
             }
             .home-racing1 {
               display: none;
@@ -2262,11 +3150,14 @@ new BlazeSlider(el, {
               font-size: 30px;
               line-height: 33px;
             }
-            .home-quotes {
-              margin-left: 0px;
-              padding-left: var(--dl-space-space-oneandhalfunits);
-              padding-right: var(--dl-space-space-oneandhalfunits);
-              flex-direction: column;
+            .home-reviews {
+              gap: var(--dl-space-space-oneandhalfunits);
+            }
+            .home-slider1 {
+              gap: var(--dl-space-space-oneandhalfunits);
+            }
+            .home-slider-track1 {
+              align-items: stretch;
             }
             .home-quote {
               gap: var(--dl-space-space-unit);
@@ -2286,7 +3177,7 @@ new BlazeSlider(el, {
             .home-image11 {
               width: 40px;
             }
-            .home-details4 {
+            .home-details04 {
               flex: 1;
             }
             .home-name {
@@ -2299,12 +3190,12 @@ new BlazeSlider(el, {
               font-size: 14px;
               line-height: 16px;
             }
-            .home-quote1 {
+            .home-quote01 {
               width: 90%;
               font-size: 16px;
               line-height: 20px;
             }
-            .home-quote2 {
+            .home-quote02 {
               gap: var(--dl-space-space-unit);
               width: 100%;
               height: auto;
@@ -2322,7 +3213,7 @@ new BlazeSlider(el, {
             .home-image12 {
               width: 40px;
             }
-            .home-details5 {
+            .home-details05 {
               flex: 1;
             }
             .home-name1 {
@@ -2335,12 +3226,12 @@ new BlazeSlider(el, {
               font-size: 14px;
               line-height: 16px;
             }
-            .home-quote3 {
+            .home-quote03 {
               width: 90%;
               font-size: 16px;
               line-height: 20px;
             }
-            .home-quote4 {
+            .home-quote04 {
               gap: var(--dl-space-space-unit);
               width: 100%;
               height: auto;
@@ -2352,20 +3243,265 @@ new BlazeSlider(el, {
               border-right-width: 0px;
               border-bottom-width: 1px;
             }
+            .home-author2 {
+              width: 100%;
+            }
+            .home-image13 {
+              width: 40px;
+            }
+            .home-details06 {
+              flex: 1;
+            }
             .home-name2 {
               width: 90%;
               font-size: 16px;
-              line-height: 24px;
+              line-height: 20px;
             }
             .home-handle2 {
               width: 90%;
-              font-size: 16px;
-              line-height: 24px;
+              font-size: 14px;
+              line-height: 16px;
             }
-            .home-quote5 {
+            .home-quote05 {
               width: 90%;
               font-size: 16px;
-              line-height: 24px;
+              line-height: 20px;
+            }
+            .home-quote06 {
+              gap: var(--dl-space-space-unit);
+              width: 100%;
+              height: auto;
+              min-width: 100%;
+              padding-top: var(--dl-space-space-unit);
+              padding-left: 0px;
+              padding-right: 0px;
+              padding-bottom: var(--dl-space-space-unit);
+              border-right-width: 0px;
+              border-bottom-width: 1px;
+            }
+            .home-author3 {
+              width: 100%;
+            }
+            .home-image14 {
+              width: 40px;
+            }
+            .home-details07 {
+              flex: 1;
+            }
+            .home-name3 {
+              width: 90%;
+              font-size: 16px;
+              line-height: 20px;
+            }
+            .home-handle3 {
+              width: 90%;
+              font-size: 14px;
+              line-height: 16px;
+            }
+            .home-quote07 {
+              width: 90%;
+              font-size: 16px;
+              line-height: 20px;
+            }
+            .home-quote08 {
+              gap: var(--dl-space-space-unit);
+              width: 100%;
+              height: auto;
+              min-width: 100%;
+              padding-top: var(--dl-space-space-unit);
+              padding-left: 0px;
+              padding-right: 0px;
+              padding-bottom: var(--dl-space-space-unit);
+              border-right-width: 0px;
+              border-bottom-width: 1px;
+            }
+            .home-author4 {
+              width: 100%;
+            }
+            .home-image15 {
+              width: 40px;
+            }
+            .home-details08 {
+              flex: 1;
+            }
+            .home-name4 {
+              width: 90%;
+              font-size: 16px;
+              line-height: 20px;
+            }
+            .home-handle4 {
+              width: 90%;
+              font-size: 14px;
+              line-height: 16px;
+            }
+            .home-quote09 {
+              width: 90%;
+              font-size: 16px;
+              line-height: 20px;
+            }
+            .home-quote10 {
+              gap: var(--dl-space-space-unit);
+              width: 100%;
+              height: auto;
+              min-width: 100%;
+              padding-top: var(--dl-space-space-unit);
+              padding-left: 0px;
+              padding-right: 0px;
+              padding-bottom: var(--dl-space-space-unit);
+              border-right-width: 0px;
+              border-bottom-width: 1px;
+            }
+            .home-author5 {
+              width: 100%;
+            }
+            .home-image16 {
+              width: 40px;
+            }
+            .home-details09 {
+              flex: 1;
+            }
+            .home-name5 {
+              width: 90%;
+              font-size: 16px;
+              line-height: 20px;
+            }
+            .home-handle5 {
+              width: 90%;
+              font-size: 14px;
+              line-height: 16px;
+            }
+            .home-quote11 {
+              width: 90%;
+              font-size: 16px;
+              line-height: 20px;
+            }
+            .home-quote12 {
+              gap: var(--dl-space-space-unit);
+              width: 100%;
+              height: auto;
+              min-width: 100%;
+              padding-top: var(--dl-space-space-unit);
+              padding-left: 0px;
+              padding-right: 0px;
+              padding-bottom: var(--dl-space-space-unit);
+              border-right-width: 0px;
+              border-bottom-width: 1px;
+            }
+            .home-author6 {
+              width: 100%;
+            }
+            .home-image17 {
+              width: 40px;
+            }
+            .home-details10 {
+              flex: 1;
+            }
+            .home-name6 {
+              width: 90%;
+              font-size: 16px;
+              line-height: 20px;
+            }
+            .home-handle6 {
+              width: 90%;
+              font-size: 14px;
+              line-height: 16px;
+            }
+            .home-quote13 {
+              width: 90%;
+              font-size: 16px;
+              line-height: 20px;
+            }
+            .home-quote14 {
+              gap: var(--dl-space-space-unit);
+              width: 100%;
+              height: auto;
+              min-width: 100%;
+              padding-top: var(--dl-space-space-unit);
+              padding-left: 0px;
+              padding-right: 0px;
+              padding-bottom: var(--dl-space-space-unit);
+              border-right-width: 0px;
+              border-bottom-width: 1px;
+            }
+            .home-author7 {
+              width: 100%;
+            }
+            .home-image18 {
+              width: 40px;
+            }
+            .home-details11 {
+              flex: 1;
+            }
+            .home-name7 {
+              width: 90%;
+              font-size: 16px;
+              line-height: 20px;
+            }
+            .home-handle7 {
+              width: 90%;
+              font-size: 14px;
+              line-height: 16px;
+            }
+            .home-quote15 {
+              width: 90%;
+              font-size: 16px;
+              line-height: 20px;
+            }
+            .home-quote16 {
+              gap: var(--dl-space-space-unit);
+              width: 100%;
+              height: auto;
+              min-width: 100%;
+              padding-top: var(--dl-space-space-unit);
+              padding-left: 0px;
+              padding-right: 0px;
+              padding-bottom: var(--dl-space-space-unit);
+              border-right-width: 0px;
+              border-bottom-width: 1px;
+            }
+            .home-author8 {
+              width: 100%;
+            }
+            .home-image19 {
+              width: 40px;
+            }
+            .home-details12 {
+              flex: 1;
+            }
+            .home-name8 {
+              width: 90%;
+              font-size: 16px;
+              line-height: 20px;
+            }
+            .home-handle8 {
+              width: 90%;
+              font-size: 14px;
+              line-height: 16px;
+            }
+            .home-quote17 {
+              width: 90%;
+              font-size: 16px;
+              line-height: 20px;
+            }
+            .home-previous1 {
+              padding-top: var(--dl-space-space-unit);
+              padding-left: var(--dl-space-space-unit);
+              padding-right: var(--dl-space-space-unit);
+              padding-bottom: var(--dl-space-space-unit);
+            }
+            .home-icon4 {
+              width: 14px;
+              height: 14px;
+            }
+            .home-next1 {
+              padding-top: var(--dl-space-space-unit);
+              padding-left: var(--dl-space-space-unit);
+              padding-right: var(--dl-space-space-unit);
+              padding-bottom: var(--dl-space-space-unit);
+            }
+            .home-icon6 {
+              width: 14px;
+              height: 14px;
             }
             .home-racing {
               gap: var(--dl-space-space-threeunits);
@@ -2645,7 +3781,12 @@ new BlazeSlider(el, {
             .home-image05 {
               margin-top: var(--dl-space-space-twounits);
             }
+            .home-image06 {
+              width: auto;
+              height: auto;
+            }
             .home-content5 {
+              margin: var(--dl-space-space-unit);
               align-items: center;
             }
             .home-heading11 {
@@ -2675,16 +3816,22 @@ new BlazeSlider(el, {
               width: 350px;
               max-width: auto;
             }
+            .home-previous1 {
+              width: auto;
+            }
+            .home-next1 {
+              width: auto;
+            }
+            .home-racing {
+              display: none;
+              padding: 0px;
+            }
             .home-text13 {
               font-size: 18px;
               margin-left: 0px;
             }
             .home-text17 {
               font-size: 12px;
-            }
-            .home-racing {
-              display: none;
-              padding: 0px;
             }
             .home-divide {
               width: 20px;

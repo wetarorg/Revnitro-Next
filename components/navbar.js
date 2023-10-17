@@ -27,20 +27,15 @@ const Navbar = (props) => {
               data-role="Nav"
               className="navbar-nav"
             >
-              <a
-                href="https://revnitroblog2.vercel.app/blog"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="navbar-link1 navLink"
-              >
-                {props.link}
-              </a>
+              <Link href="/allblogs">
+                <a className="navbar-link2 navLink">{props.link1}</a>
+              </Link>
               <Link href="/courseoffered">
-                <a className="navbar-link3 navLink">{props.link1}</a>
+                <a className="navbar-link4 navLink">{props.link11}</a>
               </Link>
               <span className="navLink">{props.link2}</span>
               <Link href="/team">
-                <a className="navbar-link6 navLink">{props.link3}</a>
+                <a className="navbar-link7 navLink">{props.link3}</a>
               </Link>
             </nav>
           </div>
@@ -135,13 +130,13 @@ const Navbar = (props) => {
             margin-right: var(--dl-space-space-twounits);
             flex-direction: row;
           }
-          .navbar-link1 {
+          .navbar-link2 {
             text-decoration: none;
           }
-          .navbar-link3 {
+          .navbar-link4 {
             text-decoration: none;
           }
-          .navbar-link6 {
+          .navbar-link7 {
             text-decoration: none;
           }
           .navbar-burger-menu {
@@ -277,7 +272,8 @@ Navbar.defaultProps = {
   text: 'Team',
   linkLink: 'https://revnitroblog2.vercel.app/blog',
   link3: 'Team',
-  link1: 'Course',
+  link1: 'Blogs',
+  link11: 'Course',
   link2: 'Forum',
   imagesrc: '/external/ba365a50c6760909f3950a57a9b9ff1c-200h-200h.webp',
   text1: 'Blog',
@@ -291,6 +287,7 @@ Navbar.propTypes = {
   linkLink: PropTypes.string,
   link3: PropTypes.string,
   link1: PropTypes.string,
+  link11: PropTypes.string,
   link2: PropTypes.string,
   imagesrc: PropTypes.string,
   text1: PropTypes.string,

@@ -7,8 +7,8 @@ import PropTypes from 'prop-types'
 
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
-import coursesPageInitialPaths52b42Resource from '../../resources/courses-page-initial-paths-52b42'
-import coursesPageInitialProps12bc2Resource from '../../resources/courses-page-initial-props-12bc2'
+import coursesPageInitialPaths77bd8Resource from '../../resources/courses-page-initial-paths-77bd8'
+import coursesPageInitialProps2983aResource from '../../resources/courses-page-initial-props-2983a'
 
 const Courses = (props) => {
   return (
@@ -18,100 +18,99 @@ const Courses = (props) => {
           <title>Courses - Revnitro</title>
           <meta property="og:title" content="Courses - Revnitro" />
         </Head>
-        <Navbar rootClassName="navbar-root-class-name2"></Navbar>
+        <Navbar rootClassName="navbar-root-class-name12"></Navbar>
         <DataProvider
           renderSuccess={(CoursesEntity) => (
             <>
               <div className="courses-container1">
-                <div className="courses-navbar"></div>
-                <header className="courses-hero">
+                <div className="courses-medias">
+                  <div className="courses-image">
+                    <img
+                      alt="image"
+                      src={CoursesEntity?.primaryimage?.url}
+                      className="courses-image1"
+                    />
+                  </div>
+                  <div className="courses-work">
+                    <img
+                      alt="image"
+                      src={CoursesEntity?.image1?.url}
+                      className="courses-image2"
+                    />
+                    <img
+                      alt="image"
+                      src={CoursesEntity?.image2?.url}
+                      className="courses-image3"
+                    />
+                    <img
+                      alt="image"
+                      src={CoursesEntity?.image3?.url}
+                      className="courses-image4"
+                    />
+                  </div>
+                </div>
+                <div className="courses-content">
                   <div className="courses-header">
                     <h1 className="courses-title">{CoursesEntity?.Title}</h1>
-                    <p className="courses-description">
+                    <p className="courses-description description">
                       {CoursesEntity?.description}
                     </p>
                   </div>
-                </header>
-                <div className="courses-image">
-                  <img
-                    alt="image"
-                    src={CoursesEntity?.primaryimage?.url}
-                    className="courses-image1"
-                  />
-                </div>
-                <div className="courses-description1">
-                  <div>
-                    <ReactMarkdown>
-                      {CoursesEntity?.programoutcome}
-                    </ReactMarkdown>
+                  <div className="courses-description1">
+                    <div className="courses-content1">
+                      <div className="description">
+                        <ReactMarkdown>
+                          {CoursesEntity?.programoutcome}
+                        </ReactMarkdown>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="courses-featured">
                   <div className="courses-header1">
-                    <h2 className="heading">PROGRAM OUTCOME</h2>
+                    <h2 className="courses-title1 heading">PROGRAM OUTCOME</h2>
                     <div className="courses-link"></div>
                   </div>
-                  <div className="courses-list">
-                    <div className="courses-work">
-                      <img
-                        alt="image"
-                        src={CoursesEntity?.image1?.url}
-                        className="courses-image2"
-                      />
-                      <img
-                        alt="image"
-                        src={CoursesEntity?.image2?.url}
-                        className="courses-image3"
-                      />
-                      <img
-                        alt="image"
-                        src={CoursesEntity?.image3?.url}
-                        className="courses-image4"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="courses-about">
-                  <div className="courses-client-list">
-                    <div className="courses-header2">
-                      <h2 className="courses-title2 heading">DETAILS</h2>
-                    </div>
-                    <div className="courses-row">
-                      <div className="courses-list1">
-                        <div className="courses-item service">
-                          <div className="courses-details">
-                            <span className="courses-text">Venue</span>
-                            <span className="courses-text1">
-                              {CoursesEntity?.venue}
-                            </span>
+                  <div className="courses-about">
+                    <div className="courses-client-list">
+                      <div className="courses-header2">
+                        <h2 className="courses-title2 heading">DETAILS</h2>
+                      </div>
+                      <div className="courses-row">
+                        <div className="courses-list">
+                          <div className="courses-item service">
+                            <div className="courses-details">
+                              <span className="courses-text">Venue</span>
+                              <span className="courses-text1">
+                                {CoursesEntity?.venue}
+                              </span>
+                            </div>
                           </div>
-                        </div>
-                        <div className="courses-item1 service">
-                          <div className="courses-details1">
-                            <span className="courses-text2">
-                              Course Duration
-                            </span>
-                            <span className="courses-text3">
-                              {CoursesEntity?.duration}
-                            </span>
+                          <div className="courses-item1 service">
+                            <div className="courses-details1">
+                              <span className="courses-text2">
+                                Course Duration
+                              </span>
+                              <span className="courses-text3">
+                                {CoursesEntity?.duration}
+                              </span>
+                            </div>
                           </div>
-                        </div>
-                        <div className="courses-item2 service">
-                          <div className="courses-details2">
-                            <span className="courses-text4">
-                              Next available slot
-                            </span>
-                            <span className="courses-text5">
-                              {CoursesEntity?.nextslot}
-                            </span>
+                          <div className="courses-item2 service">
+                            <div className="courses-details2">
+                              <span className="courses-text4">
+                                Next available slot
+                              </span>
+                              <span className="courses-text5">
+                                {CoursesEntity?.nextslot}
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <button className="courses-button button start-button">
+                      <span className="courses-text6">ENROLL COURSE</span>
+                    </button>
                   </div>
-                  <button className="courses-button button start-button">
-                    <span className="courses-text6">ENROLL COURSE</span>
-                  </button>
                 </div>
               </div>
             </>
@@ -120,7 +119,7 @@ const Courses = (props) => {
           persistDataDuringLoading={true}
           key={props?.coursesEntity?.id}
         />
-        <Footer rootClassName="footer-root-class-name"></Footer>
+        <Footer rootClassName="footer-root-class-name8"></Footer>
       </div>
       <style jsx>
         {`
@@ -133,65 +132,25 @@ const Courses = (props) => {
             flex-direction: column;
           }
           .courses-container1 {
+            flex: 0 0 auto;
             width: 100%;
             display: flex;
-            overflow: hidden;
-            min-height: 100vh;
-            align-items: center;
-            flex-direction: column;
+            align-items: flex-start;
           }
-          .courses-navbar {
-            width: 100%;
-            border: 2px dashed rgba(120, 120, 120, 0.4);
+          .courses-medias {
+            flex: 0 0 auto;
+            width: 50%;
+            height: auto;
             display: flex;
-            z-index: 100;
-            align-items: center;
+            align-items: flex-start;
             flex-direction: column;
-            background-color: #151515;
-          }
-          .courses-hero {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
-            flex-direction: column;
-          }
-          .courses-header {
-            gap: var(--dl-space-space-twounits);
-            width: 100%;
-            display: flex;
-            max-width: 1280px;
-            align-items: center;
-            padding-top: var(--dl-space-space-sixunits);
-            flex-direction: column;
-            padding-bottom: 150px;
-          }
-          .courses-title {
-            color: var(--dl-color-gray-black);
-            width: 100%;
-            font-size: 80px;
-            max-width: 895px;
-            font-style: normal;
-            text-align: center;
-            font-family: Poppins;
-            font-weight: 700;
-            line-height: 90px;
-            text-transform: uppercase;
-          }
-          .courses-description {
-            color: var(--dl-color-gray-black);
-            width: 100%;
-            font-size: 24px;
-            max-width: 800px;
-            text-align: center;
-            line-height: 36px;
           }
           .courses-image {
             width: 100%;
             cursor: pointer;
             height: 100%;
             display: flex;
+            padding: var(--dl-space-space-twounits);
             overflow: hidden;
             position: relative;
             align-items: center;
@@ -201,6 +160,81 @@ const Courses = (props) => {
           .courses-image1 {
             width: 100%;
             object-fit: cover;
+            border-radius: 17px;
+          }
+          .courses-work {
+            gap: var(--dl-space-space-oneandhalfunits);
+            flex: 0;
+            width: 100%;
+            display: flex;
+            padding: var(--dl-space-space-twounits);
+            position: relative;
+            align-items: center;
+            border-color: #151515;
+            flex-direction: column;
+            border-bottom-width: 0px;
+          }
+          .courses-image2 {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-color: var(--dl-color-gray-black);
+            border-width: 1px;
+            border-radius: 16px;
+          }
+          .courses-image3 {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-color: var(--dl-color-gray-black);
+            border-width: 1px;
+            border-radius: 16px;
+          }
+          .courses-image4 {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-color: var(--dl-color-gray-black);
+            border-width: 1px;
+            border-radius: 16px;
+          }
+          .courses-content {
+            flex: 0 0 auto;
+            width: 50%;
+            height: auto;
+            display: flex;
+            padding: var(--dl-space-space-twounits);
+            flex-direction: column;
+          }
+          .courses-header {
+            gap: var(--dl-space-space-twounits);
+            width: 100%;
+            display: flex;
+            max-width: 1280px;
+            align-items: flex-start;
+            padding-top: var(--dl-space-space-sixunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-space-space-sixunits);
+          }
+          .courses-title {
+            color: var(--dl-color-gray-black);
+            width: 100%;
+            font-size: 40px;
+            max-width: auto;
+            font-style: normal;
+            text-align: left;
+            font-family: Poppins;
+            font-weight: 700;
+            line-height: 40px;
+            text-transform: uppercase;
+          }
+          .courses-description {
+            color: var(--dl-color-gray-black);
+            width: 100%;
+            font-size: 24px;
+            max-width: 800px;
+            text-align: left;
+            line-height: 36px;
           }
           .courses-description1 {
             width: 100%;
@@ -216,13 +250,12 @@ const Courses = (props) => {
             padding-bottom: 120px;
             border-top-width: 1px;
           }
-          .courses-featured {
+          .courses-content1 {
+            gap: var(--dl-space-space-threeunits);
             width: 100%;
             display: flex;
-            max-width: 1280px;
-            align-items: center;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
+            max-width: 900px;
+            align-items: flex-start;
             flex-direction: column;
           }
           .courses-header1 {
@@ -235,6 +268,13 @@ const Courses = (props) => {
             justify-content: space-between;
             border-bottom-width: 1px;
           }
+          .courses-title1 {
+            font-size: 40px;
+            font-style: normal;
+            text-align: left;
+            font-weight: 600;
+            line-height: 40px;
+          }
           .courses-link {
             border: 2px dashed rgba(120, 120, 120, 0.4);
             display: flex;
@@ -242,49 +282,15 @@ const Courses = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .courses-list {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          }
-          .courses-work {
-            gap: var(--dl-space-space-oneandhalfunits);
-            flex: 0;
-            width: 100%;
-            display: flex;
-            padding: var(--dl-space-space-twounits);
-            position: relative;
-            align-items: flex-start;
-            border-color: #151515;
-            flex-direction: row;
-            border-bottom-width: 1px;
-          }
-          .courses-image2 {
-            width: 369px;
-            height: 407px;
-            object-fit: cover;
-          }
-          .courses-image3 {
-            width: 369px;
-            height: 407px;
-            object-fit: cover;
-          }
-          .courses-image4 {
-            width: 369px;
-            height: 407px;
-            object-fit: cover;
-          }
           .courses-about {
             width: 100%;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             padding-top: 120px;
             padding-left: var(--dl-space-space-oneandhalfunits);
             padding-right: var(--dl-space-space-oneandhalfunits);
             flex-direction: column;
             padding-bottom: 120px;
-            background-color: #151515;
           }
           .courses-client-list {
             gap: var(--dl-space-space-fiveunits);
@@ -300,11 +306,14 @@ const Courses = (props) => {
             align-items: flex-start;
             border-color: #ffffff;
             flex-direction: column;
-            padding-bottom: var(--dl-space-space-fiveunits);
+            padding-bottom: 0px;
             border-bottom-width: 1px;
           }
           .courses-title2 {
-            color: rgb(255, 255, 255);
+            color: var(--dl-color-gray-black);
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
           }
           .courses-row {
             width: 100%;
@@ -314,7 +323,7 @@ const Courses = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .courses-list1 {
+          .courses-list {
             width: 100%;
             display: flex;
             align-items: flex-start;
@@ -327,15 +336,14 @@ const Courses = (props) => {
           }
           .courses-details {
             flex: 1;
+            margin: 0px;
             display: flex;
             align-items: center;
-            margin-left: var(--dl-space-space-twounits);
-            margin-right: var(--dl-space-space-twounits);
             flex-direction: row;
             justify-content: space-between;
           }
           .courses-text {
-            color: rgb(255, 255, 255);
+            color: var(--dl-color-gray-black);
             width: 190px;
             font-size: 24px;
             font-style: normal;
@@ -343,7 +351,7 @@ const Courses = (props) => {
             line-height: 36px;
           }
           .courses-text1 {
-            color: rgb(153, 153, 153);
+            color: var(--dl-color-gray-black);
             font-size: 24px;
             line-height: 36px;
           }
@@ -353,15 +361,14 @@ const Courses = (props) => {
           }
           .courses-details1 {
             flex: 1;
+            margin: 0px;
             display: flex;
             align-items: center;
-            margin-left: var(--dl-space-space-twounits);
-            margin-right: var(--dl-space-space-twounits);
             flex-direction: row;
             justify-content: space-between;
           }
           .courses-text2 {
-            color: rgb(255, 255, 255);
+            color: var(--dl-color-gray-black);
             width: 190px;
             font-size: 24px;
             font-style: normal;
@@ -369,7 +376,7 @@ const Courses = (props) => {
             line-height: 36px;
           }
           .courses-text3 {
-            color: rgb(153, 153, 153);
+            color: var(--dl-color-gray-black);
             font-size: 24px;
             line-height: 36px;
           }
@@ -379,15 +386,14 @@ const Courses = (props) => {
           }
           .courses-details2 {
             flex: 1;
+            margin: 0px;
             display: flex;
             align-items: center;
-            margin-left: var(--dl-space-space-twounits);
-            margin-right: var(--dl-space-space-twounits);
             flex-direction: row;
             justify-content: space-between;
           }
           .courses-text4 {
-            color: rgb(255, 255, 255);
+            color: var(--dl-color-gray-black);
             width: 190px;
             font-size: 24px;
             font-style: normal;
@@ -395,12 +401,12 @@ const Courses = (props) => {
             line-height: 36px;
           }
           .courses-text5 {
-            color: rgb(153, 153, 153);
+            color: var(--dl-color-gray-black);
             font-size: 24px;
             line-height: 36px;
           }
           .courses-button {
-            align-self: flex-end;
+            align-self: flex-start;
             margin-top: var(--dl-space-space-fourunits);
             background-color: #2200ff;
           }
@@ -408,6 +414,23 @@ const Courses = (props) => {
             color: rgb(255, 255, 255);
           }
           @media (max-width: 991px) {
+            .courses-work {
+              gap: 0px;
+              padding-top: var(--dl-space-space-threeunits);
+              padding-left: 0;
+              padding-right: 0;
+              flex-direction: column;
+              padding-bottom: var(--dl-space-space-threeunits);
+            }
+            .courses-image2 {
+              width: 100%;
+            }
+            .courses-image3 {
+              width: 100%;
+            }
+            .courses-image4 {
+              width: 100%;
+            }
             .courses-header {
               height: 100%;
               padding-bottom: var(--dl-space-space-sixunits);
@@ -432,23 +455,6 @@ const Courses = (props) => {
             .courses-link {
               display: none;
             }
-            .courses-work {
-              gap: 0px;
-              padding-top: var(--dl-space-space-threeunits);
-              padding-left: 0;
-              padding-right: 0;
-              flex-direction: column;
-              padding-bottom: var(--dl-space-space-threeunits);
-            }
-            .courses-image2 {
-              width: 100%;
-            }
-            .courses-image3 {
-              width: 100%;
-            }
-            .courses-image4 {
-              width: 100%;
-            }
             .courses-about {
               padding-top: var(--dl-space-space-fourunits);
               padding-bottom: var(--dl-space-space-fourunits);
@@ -462,7 +468,7 @@ const Courses = (props) => {
             .courses-row {
               flex-direction: column;
             }
-            .courses-list1 {
+            .courses-list {
               width: 100%;
             }
             .courses-item {
@@ -563,7 +569,7 @@ export default Courses
 
 export async function getStaticPaths() {
   try {
-    const response = await coursesPageInitialPaths52b42Resource({})
+    const response = await coursesPageInitialPaths77bd8Resource({})
     return {
       paths: (response?.data || []).map((item) => {
         return {
@@ -584,7 +590,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await coursesPageInitialProps12bc2Resource({
+    const response = await coursesPageInitialProps2983aResource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {

@@ -390,6 +390,14 @@
   padding-left: var(--dl-space-space-oneandhalfunits);
   padding-right: var(--dl-space-space-oneandhalfunits);
 }
+.description {
+  color: var(--dl-color-gray-black);
+  width: 100%;
+  font-size: 24px;
+  max-width: 800px;
+  text-align: left;
+  line-height: 36px;
+}
 .Content {
   font-size: 16px;
   font-family: Inter;
@@ -430,6 +438,10 @@
   .social {
     font-size: 16px;
     line-height: 19px;
+  }
+  .description {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 @media(max-width: 767px) {
