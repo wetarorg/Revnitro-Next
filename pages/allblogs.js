@@ -65,17 +65,23 @@ const Allblogs = (props) => {
                         items={params}
                         renderItem={(context_7wa07) => (
                           <>
-                            <div className="allblogs-container3">
-                              <img
-                                alt="image"
-                                src={context_7wa07?.thumbnail?.url}
-                                className="allblogs-image"
-                              />
-                              <h1 className="allblogs-text07">
-                                {context_7wa07?.Title}
-                              </h1>
-                              <span className="allblogs-text08">Read more</span>
-                            </div>
+                            <Link href={`/blogs/${context_7wa07?.id}`}>
+                              <a>
+                                <div className="allblogs-container3">
+                                  <img
+                                    alt="image"
+                                    src={context_7wa07?.thumbnail?.url}
+                                    className="allblogs-image"
+                                  />
+                                  <h1 className="allblogs-text07">
+                                    {context_7wa07?.Title}
+                                  </h1>
+                                  <span className="allblogs-text08">
+                                    Read more
+                                  </span>
+                                </div>
+                              </a>
+                            </Link>
                           </>
                         )}
                       />
@@ -88,7 +94,7 @@ const Allblogs = (props) => {
                                 parseInt(router.query['cPage-toz6x3']) - 1 || 1,
                             })}`}
                           >
-                            <a className="allblogs-link">
+                            <a className="allblogs-link1">
                               <div className="allblogs-previous button">
                                 <span>Previous</span>
                               </div>
@@ -103,7 +109,7 @@ const Allblogs = (props) => {
                                 parseInt(router.query['cPage-toz6x3']) + 1 || 2,
                             })}`}
                           >
-                            <a className="allblogs-link1">
+                            <a className="allblogs-link2">
                               <div className="allblogs-next button">
                                 <span>Next</span>
                               </div>
@@ -115,7 +121,7 @@ const Allblogs = (props) => {
                   )}
                   params={{
                     'pagination[start]':
-                      (parseInt(router.query?.['cPage-toz6x3'] ?? 1) - 1) * 4,
+                      (parseInt(router.query?.['cPage-toz6x3'] ?? 1) - 1) * 3,
                   }}
                 />
               </div>
@@ -287,13 +293,13 @@ const Allblogs = (props) => {
           .allblogs-cms-pagination-node {
             display: flex;
           }
-          .allblogs-link {
+          .allblogs-link1 {
             display: contents;
           }
           .allblogs-previous {
             display: flex;
           }
-          .allblogs-link1 {
+          .allblogs-link2 {
             display: contents;
           }
           .allblogs-next {
@@ -354,8 +360,8 @@ const Allblogs = (props) => {
               align-items: center;
             }
             .allblogs-blog-cards {
-              width: 100%;
               flex-wrap: wrap;
+              align-self: stretch;
               align-items: flex-end;
               justify-content: flex-start;
             }

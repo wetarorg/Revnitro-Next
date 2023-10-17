@@ -373,6 +373,19 @@ const Home = (props) => {
                     <span className="home-text09">CAR SERVICE BOOKING</span>
                   </div>
                 </div>
+                <div
+                  data-role="accordion-container"
+                  className="home-element4 accordion-element"
+                >
+                  <div className="home-details04">
+                    <img
+                      alt="image"
+                      src="/bookings/ecu%20tuning.svg"
+                      className="home-image11"
+                    />
+                    <span className="home-text10">ECU TUNING</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -425,9 +438,9 @@ const Home = (props) => {
                                 <img
                                   alt="image"
                                   src={context_tz9kl?.profile?.url}
-                                  className="home-image11"
+                                  className="home-image12"
                                 />
-                                <div className="home-details04">
+                                <div className="home-details05">
                                   <span className="home-name">
                                     {context_tz9kl?.name}
                                   </span>
@@ -465,9 +478,9 @@ const Home = (props) => {
                                 <img
                                   alt="image"
                                   src={context_tz9kl?.profile?.url}
-                                  className="home-image12"
+                                  className="home-image13"
                                 />
-                                <div className="home-details05">
+                                <div className="home-details06">
                                   <span className="home-name1">
                                     {context_tz9kl?.name}
                                   </span>
@@ -505,9 +518,9 @@ const Home = (props) => {
                                 <img
                                   alt="image"
                                   src={context_tz9kl?.profile?.url}
-                                  className="home-image13"
+                                  className="home-image14"
                                 />
-                                <div className="home-details06">
+                                <div className="home-details07">
                                   <span className="home-name2">
                                     {context_tz9kl?.name}
                                   </span>
@@ -550,9 +563,9 @@ const Home = (props) => {
                                 <img
                                   alt="image"
                                   src={context_tz9kl?.profile?.url}
-                                  className="home-image14"
+                                  className="home-image15"
                                 />
-                                <div className="home-details07">
+                                <div className="home-details08">
                                   <span className="home-name3">
                                     {context_tz9kl?.name}
                                   </span>
@@ -590,9 +603,9 @@ const Home = (props) => {
                                 <img
                                   alt="image"
                                   src={context_tz9kl?.profile?.url}
-                                  className="home-image15"
+                                  className="home-image16"
                                 />
-                                <div className="home-details08">
+                                <div className="home-details09">
                                   <span className="home-name4">
                                     {context_tz9kl?.name}
                                   </span>
@@ -630,9 +643,9 @@ const Home = (props) => {
                                 <img
                                   alt="image"
                                   src={context_tz9kl?.profile?.url}
-                                  className="home-image16"
+                                  className="home-image17"
                                 />
-                                <div className="home-details09">
+                                <div className="home-details10">
                                   <span className="home-name5">
                                     {context_tz9kl?.name}
                                   </span>
@@ -675,9 +688,9 @@ const Home = (props) => {
                                 <img
                                   alt="image"
                                   src={context_tz9kl?.profile?.url}
-                                  className="home-image17"
+                                  className="home-image18"
                                 />
-                                <div className="home-details10">
+                                <div className="home-details11">
                                   <span className="home-name6">
                                     {context_tz9kl?.name}
                                   </span>
@@ -715,9 +728,9 @@ const Home = (props) => {
                                 <img
                                   alt="image"
                                   src={context_tz9kl?.profile?.url}
-                                  className="home-image18"
+                                  className="home-image19"
                                 />
-                                <div className="home-details11">
+                                <div className="home-details12">
                                   <span className="home-name7">
                                     {context_tz9kl?.name}
                                   </span>
@@ -755,9 +768,9 @@ const Home = (props) => {
                                 <img
                                   alt="image"
                                   src={context_tz9kl?.profile?.url}
-                                  className="home-image19"
+                                  className="home-image20"
                                 />
-                                <div className="home-details12">
+                                <div className="home-details13">
                                   <span className="home-name8">
                                     {context_tz9kl?.name}
                                   </span>
@@ -819,13 +832,13 @@ const Home = (props) => {
           <div className="home-gradient gradient-background">
             <div className="home-container12">
               <div className="home-container13">
-                <h1 className="home-text13">
+                <h1 className="home-text14">
                   <span>FROM THE WORLD OF</span>
                   <br></br>
                   <span> MOTOSPORTS</span>
                 </h1>
-                <h1 className="home-text17">
-                  <span className="home-text18">Driven By Passion...</span>
+                <h1 className="home-text18">
+                  <span className="home-text19">Driven By Passion...</span>
                   <br></br>
                 </h1>
               </div>
@@ -844,7 +857,7 @@ const Home = (props) => {
           <div className="home-header1">
             <div className="home-section-numeral">
               <div className="home-divide"></div>
-              <p className="home-text20">03</p>
+              <p className="home-text21">03</p>
             </div>
             <div data-aos="fade-right" className="home-heading14">
               <h2 className="home-title06">INDIAN RACING</h2>
@@ -863,7 +876,7 @@ const Home = (props) => {
           <div className="home-header2">
             <div className="home-section-numeral1">
               <div className="home-divide1"></div>
-              <p className="home-text21">03</p>
+              <p className="home-text22">03</p>
             </div>
             <div data-aos="fade-right" className="home-heading15">
               <h2 className="home-title08">INDIAN RACING</h2>
@@ -883,14 +896,14 @@ const Home = (props) => {
         </div>
         <div className="home-hero1">
           <h2 className="home-heading16">
-            <span className="home-text22">Questions on Automobiles?</span>
-            <br className="home-text23"></br>
-            <span className="home-text24">Reach our </span>
-            <span className="home-text25">forum</span>
-            <span className="home-text26"> </span>
-            <span className="home-text27">now!</span>
-            <br className="home-text28"></br>
-            <span className="home-text29">
+            <span className="home-text23">Questions on Automobiles?</span>
+            <br className="home-text24"></br>
+            <span className="home-text25">Reach our </span>
+            <span className="home-text26">forum</span>
+            <span className="home-text27"> </span>
+            <span className="home-text28">now!</span>
+            <br className="home-text29"></br>
+            <span className="home-text30">
               <span
                 dangerouslySetInnerHTML={{
                   __html: ' ',
@@ -904,7 +917,7 @@ const Home = (props) => {
             rel="noreferrer noopener"
             className="home-link button"
           >
-            <span className="home-text30">Enter Forum</span>
+            <span className="home-text31">Enter Forum</span>
           </a>
         </div>
         <Footer></Footer>
@@ -1755,6 +1768,34 @@ const Home = (props) => {
             font-weight: 500;
             line-height: 44px;
           }
+          .home-element4 {
+            width: 640px;
+            user-select: none;
+          }
+          .home-details04 {
+            gap: var(--dl-space-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+          }
+          .home-image11 {
+            width: 132px;
+            height: 76px;
+            object-fit: cover;
+          }
+          .home-text10 {
+            color: var(--dl-color-gray-white);
+            width: 100%;
+            font-size: 24px;
+            max-width: auto;
+            font-style: normal;
+            text-align: left;
+            font-family: Poppins;
+            font-weight: 500;
+            line-height: 44px;
+          }
           .home-testimonials {
             gap: var(--dl-space-space-fiveunits);
             width: 100%;
@@ -1860,13 +1901,13 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image11 {
+          .home-image12 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details04 {
+          .home-details05 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -1911,13 +1952,13 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image12 {
+          .home-image13 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details05 {
+          .home-details06 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -1962,13 +2003,13 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image13 {
+          .home-image14 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details06 {
+          .home-details07 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -2018,13 +2059,13 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image14 {
+          .home-image15 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details07 {
+          .home-details08 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -2069,13 +2110,13 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image15 {
+          .home-image16 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details08 {
+          .home-details09 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -2120,13 +2161,13 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image16 {
+          .home-image17 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details09 {
+          .home-details10 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -2176,13 +2217,13 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image17 {
+          .home-image18 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details10 {
+          .home-details11 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -2227,13 +2268,13 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image18 {
+          .home-image19 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details11 {
+          .home-details12 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -2278,13 +2319,13 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-image19 {
+          .home-image20 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
             border-radius: var(--dl-radius-radius-round);
           }
-          .home-details12 {
+          .home-details13 {
             gap: 4px;
             display: flex;
             align-items: flex-start;
@@ -2416,7 +2457,7 @@ const Home = (props) => {
             align-items: flex-start;
             justify-content: space-between;
           }
-          .home-text13 {
+          .home-text14 {
             color: var(--dl-color-gray-white);
             width: 560px;
             font-size: 34px;
@@ -2425,7 +2466,7 @@ const Home = (props) => {
             font-weight: 600;
             margin-left: var(--dl-space-space-twounits);
           }
-          .home-text17 {
+          .home-text18 {
             color: var(--dl-color-gray-white);
             width: auto;
             font-style: italic;
@@ -2434,7 +2475,7 @@ const Home = (props) => {
             font-weight: 500;
             margin-right: var(--dl-space-space-twounits);
           }
-          .home-text18 {
+          .home-text19 {
             font-family: Arial;
           }
           .home-div {
@@ -2592,21 +2633,15 @@ const Home = (props) => {
             font-family: Poppins;
             font-weight: 500;
           }
-          .home-text22 {
-            font-size: 54px;
-            font-weight: 500;
-          }
           .home-text23 {
+            font-size: 54px;
             font-weight: 500;
           }
           .home-text24 {
             font-weight: 500;
           }
           .home-text25 {
-            color: #2200ff;
-            font-style: italic;
-            font-family: Open Sans;
-            font-weight: 600;
+            font-weight: 500;
           }
           .home-text26 {
             color: #2200ff;
@@ -2615,15 +2650,21 @@ const Home = (props) => {
             font-weight: 600;
           }
           .home-text27 {
-            font-style: normal;
+            color: #2200ff;
+            font-style: italic;
+            font-family: Open Sans;
+            font-weight: 600;
           }
           .home-text28 {
+            font-style: normal;
+          }
+          .home-text29 {
             color: #ffffff;
             font-size: 100px;
             font-style: normal;
             font-weight: 500;
           }
-          .home-text29 {
+          .home-text30 {
             font-style: normal;
           }
           .home-link {
@@ -2635,7 +2676,7 @@ const Home = (props) => {
             text-decoration: none;
             background-color: #2200ff;
           }
-          .home-text30 {
+          .home-text31 {
             margin: var(--dl-space-space-unit);
             font-size: 24px;
             font-family: Poppins;
@@ -2653,6 +2694,9 @@ const Home = (props) => {
             }
             .home-heading11 {
               margin-left: var(--dl-space-space-twounits);
+            }
+            .home-text10 {
+              color: var(--dl-color-gray-white);
             }
             .home-title05 {
               width: 100%;
@@ -3135,6 +3179,14 @@ const Home = (props) => {
               font-size: 18px;
               line-height: 24px;
             }
+            .home-element4 {
+              width: 100%;
+              max-width: 560px;
+            }
+            .home-text10 {
+              font-size: 18px;
+              line-height: 24px;
+            }
             .home-testimonials {
               gap: var(--dl-space-space-threeunits);
               padding-top: 0px;
@@ -3174,10 +3226,10 @@ const Home = (props) => {
             .home-author {
               width: 100%;
             }
-            .home-image11 {
+            .home-image12 {
               width: 40px;
             }
-            .home-details04 {
+            .home-details05 {
               flex: 1;
             }
             .home-name {
@@ -3210,10 +3262,10 @@ const Home = (props) => {
             .home-author1 {
               width: 100%;
             }
-            .home-image12 {
+            .home-image13 {
               width: 40px;
             }
-            .home-details05 {
+            .home-details06 {
               flex: 1;
             }
             .home-name1 {
@@ -3246,10 +3298,10 @@ const Home = (props) => {
             .home-author2 {
               width: 100%;
             }
-            .home-image13 {
+            .home-image14 {
               width: 40px;
             }
-            .home-details06 {
+            .home-details07 {
               flex: 1;
             }
             .home-name2 {
@@ -3282,10 +3334,10 @@ const Home = (props) => {
             .home-author3 {
               width: 100%;
             }
-            .home-image14 {
+            .home-image15 {
               width: 40px;
             }
-            .home-details07 {
+            .home-details08 {
               flex: 1;
             }
             .home-name3 {
@@ -3318,10 +3370,10 @@ const Home = (props) => {
             .home-author4 {
               width: 100%;
             }
-            .home-image15 {
+            .home-image16 {
               width: 40px;
             }
-            .home-details08 {
+            .home-details09 {
               flex: 1;
             }
             .home-name4 {
@@ -3354,10 +3406,10 @@ const Home = (props) => {
             .home-author5 {
               width: 100%;
             }
-            .home-image16 {
+            .home-image17 {
               width: 40px;
             }
-            .home-details09 {
+            .home-details10 {
               flex: 1;
             }
             .home-name5 {
@@ -3390,10 +3442,10 @@ const Home = (props) => {
             .home-author6 {
               width: 100%;
             }
-            .home-image17 {
+            .home-image18 {
               width: 40px;
             }
-            .home-details10 {
+            .home-details11 {
               flex: 1;
             }
             .home-name6 {
@@ -3426,10 +3478,10 @@ const Home = (props) => {
             .home-author7 {
               width: 100%;
             }
-            .home-image18 {
+            .home-image19 {
               width: 40px;
             }
-            .home-details11 {
+            .home-details12 {
               flex: 1;
             }
             .home-name7 {
@@ -3462,10 +3514,10 @@ const Home = (props) => {
             .home-author8 {
               width: 100%;
             }
-            .home-image19 {
+            .home-image20 {
               width: 40px;
             }
-            .home-details12 {
+            .home-details13 {
               flex: 1;
             }
             .home-name8 {
@@ -3816,6 +3868,10 @@ const Home = (props) => {
               width: 350px;
               max-width: auto;
             }
+            .home-element4 {
+              width: 350px;
+              max-width: auto;
+            }
             .home-previous1 {
               width: auto;
             }
@@ -3826,17 +3882,17 @@ const Home = (props) => {
               display: none;
               padding: 0px;
             }
-            .home-text13 {
+            .home-text14 {
               font-size: 18px;
               margin-left: 0px;
             }
-            .home-text17 {
+            .home-text18 {
               font-size: 12px;
             }
             .home-divide {
               width: 20px;
             }
-            .home-text20 {
+            .home-text21 {
               font-size: 16px;
               line-height: 24px;
             }
@@ -3856,7 +3912,7 @@ const Home = (props) => {
             .home-divide1 {
               width: 20px;
             }
-            .home-text21 {
+            .home-text22 {
               font-size: 16px;
               line-height: 24px;
             }
