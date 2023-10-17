@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import videosPageInitialProps2c82cResource from '../../resources/videos-page-initial-props-2c82c'
+import videosPageInitialProps904bfResource from '../../resources/videos-page-initial-props-904bf'
 
 const Videos1 = (props) => {
   return (
@@ -71,7 +71,7 @@ export default Videos1
 
 export async function getStaticProps(context) {
   try {
-    const response = await videosPageInitialProps2c82cResource({
+    const response = await videosPageInitialProps904bfResource({
       ...context?.params,
     })
     if (!response) {

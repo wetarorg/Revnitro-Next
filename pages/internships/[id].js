@@ -4,8 +4,8 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import internshipsPageInitialPathsC219aResource from '../../resources/internships-page-initial-paths-c219a'
-import internshipsPageInitialProps19cc9Resource from '../../resources/internships-page-initial-props-19cc9'
+import internshipsPageInitialPathsB2233Resource from '../../resources/internships-page-initial-paths-b2233'
+import internshipsPageInitialPropsAd663Resource from '../../resources/internships-page-initial-props-ad663'
 
 const Internships11 = (props) => {
   return (
@@ -64,7 +64,7 @@ export default Internships11
 
 export async function getStaticPaths() {
   try {
-    const response = await internshipsPageInitialPathsC219aResource({})
+    const response = await internshipsPageInitialPathsB2233Resource({})
     return {
       paths: (response?.data || []).map((item) => {
         return {
@@ -85,7 +85,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await internshipsPageInitialProps19cc9Resource({
+    const response = await internshipsPageInitialPropsAd663Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
