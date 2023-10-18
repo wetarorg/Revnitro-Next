@@ -11,19 +11,19 @@ const Blogs1 = (props) => {
       <section className={`blogs1-blogs ${props.rootClassName} `}>
         <div className="blogs1-container">
           <div onClick={() => setTab(1)} className="blogs1-filter">
-            <h1 className="bloghead blogs1-text">{props.heading}</h1>
+            <h1 className="bloghead">{props.heading}</h1>
             {tab === 1 && <div className="blogs1-container01"></div>}
           </div>
           <div onClick={() => setTab(2)} className="blogs1-filter1">
-            <h1 className="blogs1-text01">{props.heading4}</h1>
+            <h1 className="bloghead">{props.heading4}</h1>
             {tab === 2 && <div className="blogs1-container02"></div>}
           </div>
           <div onClick={() => setTab(3)} className="blogs1-filter2">
-            <h1 className="blogs1-text02">{props.heading3}</h1>
+            <h1 className="bloghead">{props.heading3}</h1>
             {tab === 3 && <div className="blogs1-container03"></div>}
           </div>
           <div onClick={() => setTab(4)} className="blogs1-filter3">
-            <h1 className="blogs1-text03">{props.heading2}</h1>
+            <h1 className="blogs1-text03 bloghead">{props.heading2}</h1>
             {tab === 4 && <div className="blogs1-container04"></div>}
           </div>
         </div>
@@ -268,13 +268,6 @@ const Blogs1 = (props) => {
             transition: 0.3s;
           }
 
-          .blogs1-text01 {
-            color: var(--dl-color-gray-white);
-            font-size: 20px;
-            user-select: none;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
-          }
           .blogs1-container02 {
             flex: 0 0 auto;
             left: 0px;
@@ -292,12 +285,6 @@ const Blogs1 = (props) => {
             transition: 0.3s;
           }
 
-          .blogs1-text02 {
-            color: var(--dl-color-gray-white);
-            font-size: 20px;
-            padding-left: var(--dl-space-space-oneandhalfunits);
-            padding-right: var(--dl-space-space-oneandhalfunits);
-          }
           .blogs1-container03 {
             flex: 0 0 auto;
             left: 0px;
@@ -474,9 +461,6 @@ const Blogs1 = (props) => {
               width: 100%;
               padding: 80px;
             }
-            .blogs1-text {
-              font-size: 20px;
-            }
             .blogs1-container05 {
               width: 100%;
               padding: var(--dl-space-space-halfunit);
@@ -641,7 +625,10 @@ const Blogs1 = (props) => {
             }
             .blogs1-container06 {
               width: var(--dl-size-size-xlarge);
-              margin-right: var(--dl-space-space-threeunits);
+              margin-top: var(--dl-space-space-halfunit);
+              margin-left: var(--dl-space-space-halfunit);
+              margin-right: var(--dl-space-space-twounits);
+              margin-bottom: var(--dl-space-space-halfunit);
             }
             .blogs1-image {
               height: var(--dl-size-size-xlarge);
@@ -753,20 +740,24 @@ const Blogs1 = (props) => {
             }
           }
           @media (max-width: 479px) {
-            .blogs1-text {
-              font-size: 12px;
-              font-style: normal;
-              font-weight: 600;
+            .blogs1-blogs {
+              width: auto;
             }
-            .blogs1-text01 {
-              font-size: 12px;
-              font-style: normal;
-              font-weight: 600;
+            .blogs1-container {
+              width: auto;
+              height: var(--dl-size-size-small);
             }
-            .blogs1-text02 {
-              font-size: 12px;
-              font-style: normal;
-              font-weight: 600;
+            .blogs1-filter {
+              height: var(--dl-size-size-small);
+            }
+            .blogs1-filter1 {
+              height: var(--dl-size-size-small);
+            }
+            .blogs1-filter2 {
+              height: var(--dl-size-size-small);
+            }
+            .blogs1-filter3 {
+              height: var(--dl-size-size-small);
             }
             .blogs1-text03 {
               font-size: 12px;
@@ -776,9 +767,11 @@ const Blogs1 = (props) => {
             .blogs1-blog-cards {
               align-items: center;
               flex-direction: column;
+              justify-content: center;
             }
             .blogs1-container06 {
               width: auto;
+              margin: var(--dl-space-space-halfunit);
             }
             .blogs1-image {
               width: 100%;

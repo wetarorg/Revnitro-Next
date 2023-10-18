@@ -181,20 +181,22 @@ const Allblogs = (props) => {
           .allblogs-container1 {
             flex: 0 0 auto;
             width: 100%;
-            height: 100px;
+            height: var(--dl-size-size-medium);
             display: flex;
             align-items: flex-start;
+            justify-content: center;
           }
           .allblogs-button {
             color: var(--dl-color-gray-white);
             width: auto;
             height: auto;
-            margin-top: var(--dl-space-space-twounits);
+            margin-top: var(--dl-space-space-unit);
+            margin-right: var(--dl-space-space-twounits);
             border-radius: 50px;
             background-color: #2200ff;
           }
           .allblogs-text04 {
-            margin: var(--dl-space-space-unit);
+            margin: 0px;
             font-size: 24px;
             font-family: Poppins;
           }
@@ -202,12 +204,13 @@ const Allblogs = (props) => {
             color: var(--dl-color-gray-white);
             width: auto;
             height: auto;
-            margin-top: var(--dl-space-space-twounits);
+            margin-top: var(--dl-space-space-unit);
+            margin-right: var(--dl-space-space-twounits);
             border-radius: 50px;
             background-color: #2200ff;
           }
           .allblogs-text05 {
-            margin: var(--dl-space-space-unit);
+            margin: 0px;
             font-size: 24px;
             font-family: Poppins;
           }
@@ -215,12 +218,13 @@ const Allblogs = (props) => {
             color: var(--dl-color-gray-white);
             width: auto;
             height: auto;
-            margin-top: var(--dl-space-space-twounits);
+            margin-top: var(--dl-space-space-unit);
+            margin-right: var(--dl-space-space-twounits);
             border-radius: 50px;
             background-color: #2200ff;
           }
           .allblogs-text06 {
-            margin: var(--dl-space-space-unit);
+            margin: 0px;
             font-size: 24px;
             font-family: Poppins;
           }
@@ -235,18 +239,18 @@ const Allblogs = (props) => {
             justify-content: flex-start;
           }
           .allblogs-blogs {
-            gap: var(--dl-space-space-fiveunits);
+            gap: var(--dl-space-space-twounits);
             width: 100%;
             cursor: pointer;
             height: auto;
             display: flex;
             position: relative;
+            flex-wrap: wrap;
             align-items: center;
             padding-top: 80px;
             flex-direction: column;
             padding-bottom: 80px;
             justify-content: center;
-            background-color: var(--dl-color-gray-black);
           }
           .allblogs-container2 {
             flex: 0 0 auto;
@@ -314,29 +318,32 @@ const Allblogs = (props) => {
             .allblogs-container1 {
               height: auto;
               padding-left: var(--dl-space-space-oneandhalfunits);
-              justify-content: flex-start;
+              justify-content: center;
             }
             .allblogs-button {
-              height: var(--dl-size-size-small);
+              height: auto;
               margin: var(--dl-space-space-halfunit);
             }
             .allblogs-text04 {
+              margin: 0px;
               font-size: 24px;
               font-family: Poppins;
             }
             .allblogs-button1 {
-              height: var(--dl-size-size-small);
+              height: auto;
               margin: var(--dl-space-space-halfunit);
             }
             .allblogs-text05 {
+              margin: 0px;
               font-size: 24px;
               font-family: Poppins;
             }
             .allblogs-button2 {
-              height: var(--dl-size-size-small);
+              height: auto;
               margin: var(--dl-space-space-halfunit);
             }
             .allblogs-text06 {
+              margin: 0px;
               font-size: 24px;
               font-family: Poppins;
             }
@@ -415,27 +422,30 @@ const Allblogs = (props) => {
             }
             .allblogs-button {
               width: auto;
-              height: var(--dl-size-size-small);
+              height: auto;
               margin: var(--dl-space-space-halfunit);
             }
             .allblogs-text04 {
+              margin: 0px;
               font-size: 24px;
               font-family: Poppins;
             }
             .allblogs-button1 {
               width: auto;
-              height: var(--dl-size-size-small);
+              height: auto;
               margin: var(--dl-space-space-halfunit);
             }
             .allblogs-text05 {
+              margin: 0px;
               font-size: 24px;
             }
             .allblogs-button2 {
               width: auto;
-              height: var(--dl-size-size-small);
+              height: auto;
               margin: var(--dl-space-space-halfunit);
             }
             .allblogs-text06 {
+              margin: 0px;
               font-size: 24px;
             }
             .allblogs-blog {
@@ -480,6 +490,18 @@ const Allblogs = (props) => {
               font-size: 16px;
               line-height: 24px;
             }
+            .allblogs-container1 {
+              justify-content: center;
+            }
+            .allblogs-text04 {
+              margin: 0px;
+            }
+            .allblogs-text05 {
+              margin: 0px;
+            }
+            .allblogs-text06 {
+              margin: 0px;
+            }
             .allblogs-blog {
               flex-direction: column;
             }
@@ -504,6 +526,15 @@ const Allblogs = (props) => {
           @media (max-width: 767px) {
             .allblogs-header {
               padding-bottom: var(--dl-space-space-fiveunits);
+            }
+            .allblogs-text04 {
+              margin: 0px;
+            }
+            .allblogs-text05 {
+              margin: 0px;
+            }
+            .allblogs-text06 {
+              margin: 0px;
             }
             .allblogs-blog {
               padding-left: var(--dl-space-space-twounits);
@@ -531,13 +562,28 @@ const Allblogs = (props) => {
           }
           @media (max-width: 479px) {
             .allblogs-button {
+              height: auto;
               text-align: center;
+            }
+            .allblogs-text04 {
+              margin: 0px;
+              font-size: 12px;
             }
             .allblogs-button1 {
+              height: auto;
               text-align: center;
             }
+            .allblogs-text05 {
+              margin: 0px;
+              font-size: 12px;
+            }
             .allblogs-button2 {
+              height: auto;
               text-align: center;
+            }
+            .allblogs-text06 {
+              margin: 0px;
+              font-size: 12px;
             }
             .allblogs-blog {
               padding-top: var(--dl-space-space-twounits);

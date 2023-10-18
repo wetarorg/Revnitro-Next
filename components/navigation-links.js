@@ -44,6 +44,7 @@ const NavigationLinks = (props) => {
             .navigation-links-nav {
               align-items: flex-start;
               flex-direction: column;
+              background-color: var(--dl-color-gray-black);
             }
             .navigation-links-text {
               margin-bottom: var(--dl-space-space-unit);

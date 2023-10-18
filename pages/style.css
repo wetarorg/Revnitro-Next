@@ -25,6 +25,7 @@
   --dl-color-success-500: #32A94C;
   --dl-color-success-700: #4CC366;
   --dl-size-size-xxlarge: 288px;
+  --dl-color-scheme-white: #FFFFFF;
   --dl-size-size-maxwidth: 1400px;
   --dl-radius-radius-round: 50%;
   --dl-space-space-halfunit: 8px;
@@ -386,7 +387,8 @@
 }
 .bloghead {
   color: var(--dl-color-gray-white);
-  font-size: 14x;
+  font-size: 20px;
+  user-select: none;
   padding-left: var(--dl-space-space-oneandhalfunits);
   padding-right: var(--dl-space-space-oneandhalfunits);
 }
@@ -397,6 +399,26 @@
   max-width: 800px;
   text-align: left;
   line-height: 36px;
+}
+.button-md {
+  padding-top: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 12px;
+}
+.button-secondary-white {
+  color: #191919;
+  cursor: pointer;
+  font-style: normal;
+  transition: 0.3s;
+  font-weight: 700;
+  line-height: 1;
+  border-color: transparent;
+  border-radius: var(--dl-radius-radius-radius4);
+  background-color: var(--dl-color-scheme-white);
+}
+.button-secondary-white:hover {
+  color: var(--dl-color-scheme-white);
 }
 .Content {
   font-size: 16px;
@@ -414,6 +436,12 @@
   text-transform: none;
   text-decoration: none;
 }
+@media(max-width: 1600px) {
+  .bloghead {
+    font-size: 20px;
+  }
+}
+
 @media(max-width: 991px) {
   .banner {
     flex-direction: column;
@@ -459,6 +487,14 @@
   .accordion-element {
     gap: var(--dl-space-space-oneandhalfunits);
   }
+  .button-md {
+    text-align: center;
+  }
+  .button-secondary-white {
+    text-align: center;
+    margin-right: 0px;
+    margin-bottom: var(--dl-space-space-unit);
+  }
 }
 @media(max-width: 479px) {
   .gradient-background {
@@ -471,6 +507,8 @@
     max-width: auto;
   }
   .bloghead {
-    font-size: 14px;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: 400;
   }
 }

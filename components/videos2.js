@@ -62,16 +62,16 @@ const Videos2 = (props) => {
                   <>
                     <Repeater
                       items={params}
-                      renderItem={(context_t7eeho) => (
+                      renderItem={(context_3gxso9) => (
                         <>
                           <div className="videos2-container2">
                             <iframe
-                              src={context_t7eeho?.url}
+                              src={context_3gxso9?.url}
                               allowFullScreen="true"
                               className="videos2-iframe"
                             ></iframe>
                             <h1 className="videos2-text4">
-                              {context_t7eeho?.Title}
+                              {context_3gxso9?.Title}
                             </h1>
                           </div>
                         </>
@@ -103,16 +103,16 @@ const Videos2 = (props) => {
                   <>
                     <Repeater
                       items={params}
-                      renderItem={(context_t7eeho) => (
+                      renderItem={(context_3gxso9) => (
                         <>
                           <div className="videos2-container3">
                             <iframe
-                              src={context_t7eeho?.url}
+                              src={context_3gxso9?.url}
                               allowFullScreen="true"
                               className="videos2-iframe1"
                             ></iframe>
                             <h1 className="videos2-text5">
-                              {context_t7eeho?.Title}
+                              {context_3gxso9?.Title}
                             </h1>
                           </div>
                         </>
@@ -131,11 +131,14 @@ const Videos2 = (props) => {
             gap: var(--dl-space-space-fiveunits);
             width: 100%;
             display: flex;
-            padding: var(--dl-space-space-oneandhalfunits);
             position: relative;
             max-width: auto;
             align-items: center;
+            padding-top: var(--dl-space-space-fiveunits);
+            padding-left: var(--dl-space-space-unit);
+            padding-right: var(--dl-space-space-fiveunits);
             flex-direction: column;
+            padding-bottom: var(--dl-space-space-fiveunits);
             background-color: var(--dl-color-gray-black);
           }
           .videos2-header {
@@ -278,60 +281,118 @@ const Videos2 = (props) => {
             align-self: center;
             align-items: center;
             flex-direction: column;
+            grid-auto-flow: row;
           }
           .videos2-bike1 {
-            gap: var(--dl-space-space-unit);
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
+            width: 100%;
+            display: grid;
+            grid-row-gap: 40px;
+            grid-column-gap: 20px;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
           }
           .videos2-container2 {
             flex: 0 0 auto;
             width: auto;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             margin-right: 0px;
             flex-direction: column;
           }
           .videos2-iframe {
-            width: auto;
-            height: auto;
+            flex: 1;
+            width: 640px;
+            height: 360px;
+            align-self: center;
           }
           .videos2-text4 {
             color: var(--dl-color-gray-white);
-            font-size: 16px;
+            width: 100%;
+            font-size: 24px;
             font-style: normal;
-            margin-top: var(--dl-space-space-halfunit);
+            margin-top: var(--dl-space-space-twounits);
+            text-align: center;
             font-weight: 500;
           }
           .videos2-car1 {
-            gap: var(--dl-space-space-unit);
-            flex: 0 0 auto;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
+            width: 100%;
+            display: grid;
+            grid-row-gap: 40px;
+            grid-column-gap: 20px;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
           }
           .videos2-container3 {
             flex: 0 0 auto;
             width: auto;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             margin-right: 0px;
             flex-direction: column;
           }
           .videos2-iframe1 {
-            width: auto;
-            height: auto;
+            flex: 1;
+            width: 640px;
+            height: 360px;
+            align-self: center;
           }
           .videos2-text5 {
             color: var(--dl-color-gray-white);
-            font-size: 16px;
+            width: 100%;
+            font-size: 32px;
             font-style: normal;
-            margin-top: var(--dl-space-space-halfunit);
+            margin-top: var(--dl-space-space-twounits);
+            text-align: center;
             font-weight: 500;
+          }
+          @media (max-width: 1600px) {
+            .videos2-videos {
+              height: 100%;
+            }
+            .videos2-main {
+              flex-wrap: wrap;
+            }
+            .videos2-text4 {
+              font-size: 24px;
+            }
+          }
+          @media (max-width: 1200px) {
+            .videos2-videos {
+              padding: var(--dl-space-space-unit);
+              align-items: center;
+            }
+            .videos2-iframe {
+              width: 500px;
+            }
+            .videos2-text4 {
+              font-size: 24px;
+            }
+            .videos2-iframe1 {
+              width: 500px;
+            }
+          }
+          @media (max-width: 991px) {
+            .videos2-videos {
+              padding: var(--dl-space-space-unit);
+            }
+            .videos2-bike1 {
+              grid-template-columns: repeat(2, 1fr);
+            }
+            .videos2-iframe {
+              width: 400px;
+              height: 264px;
+            }
+            .videos2-text4 {
+              font-size: 20px;
+              margin-top: var(--dl-space-space-twounits);
+            }
+            .videos2-car1 {
+              grid-template-columns: repeat(2, 1fr);
+            }
+            .videos2-iframe1 {
+              width: 400px;
+              height: 264px;
+            }
           }
           @media (max-width: 767px) {
             .videos2-videos {
@@ -365,10 +426,55 @@ const Videos2 = (props) => {
             .videos2-text3 {
               font-size: 16px;
             }
+            .videos2-bike1 {
+              grid-template-columns: 1fr;
+            }
+            .videos2-container2 {
+              align-items: center;
+              justify-content: center;
+            }
+            .videos2-iframe {
+              width: 600px;
+              height: 360px;
+              align-self: center;
+            }
+            .videos2-text4 {
+              font-size: 22px;
+              margin-top: var(--dl-space-space-unit);
+            }
+            .videos2-car1 {
+              grid-template-columns: 1fr;
+            }
+            .videos2-container3 {
+              align-items: center;
+              justify-content: center;
+            }
+            .videos2-iframe1 {
+              width: 600px;
+              height: 360px;
+              align-self: center;
+            }
+            .videos2-text5 {
+              margin-top: var(--dl-space-space-unit);
+            }
           }
           @media (max-width: 479px) {
-            .videos2-bike1 {
-              flex-direction: column;
+            .videos2-videos {
+              height: auto;
+            }
+            .videos2-main {
+              height: auto;
+            }
+            .videos2-iframe {
+              width: 350px;
+              height: 260px;
+            }
+            .videos2-text4 {
+              font-size: 20px;
+            }
+            .videos2-iframe1 {
+              width: 350px;
+              height: 260px;
             }
           }
         `}
