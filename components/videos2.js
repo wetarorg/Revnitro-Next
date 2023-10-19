@@ -7,7 +7,7 @@ const Videos2 = (props) => {
   const [filter, setFilter] = useState('bike')
   return (
     <>
-      <section className="videos2-videos">
+      <section className={`videos2-videos ${props.rootClassName} `}>
         <div className="videos2-header">
           <div data-aos="fade-right" className="videos2-heading">
             <h2 className="videos2-title">{props.title}</h2>
@@ -276,7 +276,7 @@ const Videos2 = (props) => {
           }
           .videos2-main {
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             align-self: center;
             align-items: center;
@@ -285,7 +285,9 @@ const Videos2 = (props) => {
           }
           .videos2-bike1 {
             width: 100%;
+            height: auto;
             display: grid;
+            padding: 150px;
             grid-row-gap: 40px;
             grid-column-gap: 20px;
             grid-template-rows: repeat(2, 1fr);
@@ -293,17 +295,15 @@ const Videos2 = (props) => {
           }
           .videos2-container2 {
             flex: 0 0 auto;
-            width: auto;
+            width: 100%;
             display: flex;
             align-items: center;
             margin-right: 0px;
             flex-direction: column;
           }
           .videos2-iframe {
-            flex: 1;
-            width: 640px;
-            height: 360px;
-            align-self: center;
+            width: 600px;
+            height: 350px;
           }
           .videos2-text4 {
             color: var(--dl-color-gray-white);
@@ -312,7 +312,7 @@ const Videos2 = (props) => {
             font-style: normal;
             margin-top: var(--dl-space-space-twounits);
             text-align: center;
-            font-weight: 500;
+            font-weight: 400;
           }
           .videos2-car1 {
             width: 100%;
@@ -331,10 +331,8 @@ const Videos2 = (props) => {
             flex-direction: column;
           }
           .videos2-iframe1 {
-            flex: 1;
-            width: 640px;
-            height: 360px;
-            align-self: center;
+            width: 500px;
+            height: 350px;
           }
           .videos2-text5 {
             color: var(--dl-color-gray-white);
@@ -343,8 +341,9 @@ const Videos2 = (props) => {
             font-style: normal;
             margin-top: var(--dl-space-space-twounits);
             text-align: center;
-            font-weight: 500;
+            font-weight: 400;
           }
+
           @media (max-width: 1600px) {
             .videos2-videos {
               height: 100%;
@@ -355,6 +354,9 @@ const Videos2 = (props) => {
             .videos2-text4 {
               font-size: 24px;
             }
+            .videos2-root-class-name {
+              height: auto;
+            }
           }
           @media (max-width: 1200px) {
             .videos2-videos {
@@ -362,13 +364,11 @@ const Videos2 = (props) => {
               align-items: center;
             }
             .videos2-iframe {
-              width: 500px;
+              width: 400px;
+              height: 250px;
             }
             .videos2-text4 {
               font-size: 24px;
-            }
-            .videos2-iframe1 {
-              width: 500px;
             }
           }
           @media (max-width: 991px) {
@@ -376,11 +376,8 @@ const Videos2 = (props) => {
               padding: var(--dl-space-space-unit);
             }
             .videos2-bike1 {
+              padding: var(--dl-space-space-threeunits);
               grid-template-columns: repeat(2, 1fr);
-            }
-            .videos2-iframe {
-              width: 400px;
-              height: 264px;
             }
             .videos2-text4 {
               font-size: 20px;
@@ -388,10 +385,6 @@ const Videos2 = (props) => {
             }
             .videos2-car1 {
               grid-template-columns: repeat(2, 1fr);
-            }
-            .videos2-iframe1 {
-              width: 400px;
-              height: 264px;
             }
           }
           @media (max-width: 767px) {
@@ -433,11 +426,6 @@ const Videos2 = (props) => {
               align-items: center;
               justify-content: center;
             }
-            .videos2-iframe {
-              width: 600px;
-              height: 360px;
-              align-self: center;
-            }
             .videos2-text4 {
               font-size: 22px;
               margin-top: var(--dl-space-space-unit);
@@ -448,11 +436,6 @@ const Videos2 = (props) => {
             .videos2-container3 {
               align-items: center;
               justify-content: center;
-            }
-            .videos2-iframe1 {
-              width: 600px;
-              height: 360px;
-              align-self: center;
             }
             .videos2-text5 {
               margin-top: var(--dl-space-space-unit);
@@ -465,16 +448,15 @@ const Videos2 = (props) => {
             .videos2-main {
               height: auto;
             }
+            .videos2-bike1 {
+              padding: var(--dl-space-space-halfunit);
+            }
             .videos2-iframe {
-              width: 350px;
-              height: 260px;
+              width: 300px;
+              height: 200px;
             }
             .videos2-text4 {
               font-size: 20px;
-            }
-            .videos2-iframe1 {
-              width: 350px;
-              height: 260px;
             }
           }
         `}
@@ -489,6 +471,7 @@ Videos2.defaultProps = {
   text22: 'BIKE',
   title: 'REVNITRO',
   text: 'BIKE',
+  rootClassName: '',
   text21: 'CAR',
   text1: 'CARS',
   text2: 'BIKE',
@@ -500,6 +483,7 @@ Videos2.propTypes = {
   text22: PropTypes.string,
   title: PropTypes.string,
   text: PropTypes.string,
+  rootClassName: PropTypes.string,
   text21: PropTypes.string,
   text1: PropTypes.string,
   text2: PropTypes.string,

@@ -196,10 +196,24 @@ const Courseoffered = (props) => {
             font-family: Poppins;
           }
           @media (max-width: 1600px) {
+            .courseoffered-header {
+              padding-top: var(--dl-space-space-threeunits);
+            }
+            .courseoffered-title {
+              font-size: 50px;
+              line-height: 50px;
+            }
+            .courseoffered-courses {
+              padding: var(--dl-space-space-threeunits);
+            }
             .courseoffered-image {
               border-radius: 4px;
             }
+            .courseoffered-button {
+              margin-top: 0px;
+            }
             .courseoffered-text4 {
+              margin: 0px;
               font-size: 24px;
               font-family: Poppins;
             }

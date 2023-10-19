@@ -4,8 +4,8 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import videosPageInitialPaths73df3Resource from '../../resources/videos-page-initial-paths-73df3'
-import videosPageInitialProps9f384Resource from '../../resources/videos-page-initial-props-9f384'
+import videosPageInitialPathsB20bfResource from '../../resources/videos-page-initial-paths-b20bf'
+import videosPageInitialPropsBaccdResource from '../../resources/videos-page-initial-props-baccd'
 
 const Videos = (props) => {
   return (
@@ -64,7 +64,7 @@ export default Videos
 
 export async function getStaticPaths() {
   try {
-    const response = await videosPageInitialPaths73df3Resource({})
+    const response = await videosPageInitialPathsB20bfResource({})
     return {
       paths: (response?.data || []).map((item) => {
         return {
@@ -85,7 +85,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await videosPageInitialProps9f384Resource({
+    const response = await videosPageInitialPropsBaccdResource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {

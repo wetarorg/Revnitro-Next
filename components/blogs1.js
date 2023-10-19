@@ -149,7 +149,7 @@ const Blogs1 = (props) => {
                             <a>
                               <div className="blogs1-container08">
                                 <img
-                                  alt={props.imagealt22}
+                                  alt={props.imagealt25}
                                   src={context_oiflm?.thumbnail?.url}
                                   className="blogs1-image2"
                                 />
@@ -157,7 +157,7 @@ const Blogs1 = (props) => {
                                   {context_oiflm?.Title}
                                 </h1>
                                 <span className="blogs1-text09">
-                                  {props.text222}
+                                  {props.text225}
                                 </span>
                               </div>
                             </a>
@@ -170,7 +170,7 @@ const Blogs1 = (props) => {
               />
             </div>
           )}
-          {tab === 3 && (
+          {tab === 4 && (
             <div className="blogs1-blog-cards3">
               <DataProvider
                 fetchData={(params) =>
@@ -193,19 +193,23 @@ const Blogs1 = (props) => {
                       items={params}
                       renderItem={(context_oiflm) => (
                         <>
-                          <div className="blogs1-container09">
-                            <img
-                              alt={props.imagealt211}
-                              src={context_oiflm?.thumbnail?.url}
-                              className="blogs1-image3"
-                            />
-                            <h1 className="blogs1-text10">
-                              {context_oiflm?.Title}
-                            </h1>
-                            <span className="blogs1-text11">
-                              {props.text2211}
-                            </span>
-                          </div>
+                          <Link href={`/blogs/${context_oiflm?.id}`}>
+                            <a>
+                              <div className="blogs1-container09">
+                                <img
+                                  alt={props.imagealt251}
+                                  src={context_oiflm?.thumbnail?.url}
+                                  className="blogs1-image3"
+                                />
+                                <h1 className="blogs1-text10">
+                                  {context_oiflm?.Title}
+                                </h1>
+                                <span className="blogs1-text11">
+                                  {props.text2251}
+                                </span>
+                              </div>
+                            </a>
+                          </Link>
                         </>
                       )}
                     />
@@ -442,6 +446,7 @@ const Blogs1 = (props) => {
             display: flex;
             align-items: flex-start;
             flex-direction: column;
+            text-decoration: none;
           }
           .blogs1-image3 {
             width: 400px;
@@ -841,6 +846,14 @@ Blogs1.defaultProps = {
   heading12: 'RIDER TIPS',
   imagealt22: 'image',
   text2211: 'Read more',
+  imagealt23: 'image',
+  text223: 'Read more',
+  imagealt24: 'image',
+  text224: 'Read more',
+  imagealt25: 'image',
+  text225: 'Read more',
+  imagealt251: 'image',
+  text2251: 'Read more',
 }
 
 Blogs1.propTypes = {
@@ -874,6 +887,14 @@ Blogs1.propTypes = {
   heading12: PropTypes.string,
   imagealt22: PropTypes.string,
   text2211: PropTypes.string,
+  imagealt23: PropTypes.string,
+  text223: PropTypes.string,
+  imagealt24: PropTypes.string,
+  text224: PropTypes.string,
+  imagealt25: PropTypes.string,
+  text225: PropTypes.string,
+  imagealt251: PropTypes.string,
+  text2251: PropTypes.string,
 }
 
 export default Blogs1

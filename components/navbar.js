@@ -33,7 +33,7 @@ const Navbar = (props) => {
               <Link href="/courseoffered">
                 <a className="navbar-link04 navLink">{props.link11}</a>
               </Link>
-              <span className="navLink">{props.link2}</span>
+              <span className="navbar-link05 navLink">{props.link2}</span>
               <Link href="/team">
                 <a className="navbar-link07 navLink">{props.link3}</a>
               </Link>
@@ -68,7 +68,7 @@ const Navbar = (props) => {
                 <Link href="/courseoffered">
                   <a className="navbar-link11 navLink">{props.link111}</a>
                 </Link>
-                <span className="navLink">{props.link21}</span>
+                <span className="navbar-link12 navLink">{props.link21}</span>
                 <Link href="/team">
                   <a className="navbar-link14 navLink">{props.link31}</a>
                 </Link>
@@ -121,6 +121,9 @@ const Navbar = (props) => {
           }
           .navbar-link04 {
             text-decoration: none;
+          }
+          .navbar-link05 {
+            display: none;
           }
           .navbar-link07 {
             text-decoration: none;
@@ -184,6 +187,9 @@ const Navbar = (props) => {
           }
           .navbar-link11 {
             text-decoration: none;
+          }
+          .navbar-link12 {
+            display: none;
           }
           .navbar-link14 {
             text-decoration: none;

@@ -19,16 +19,16 @@ const Allblogs = (props) => {
         </Head>
         <Navbar rootClassName="navbar-root-class-name10"></Navbar>
         <div className="allblogs-header">
-          <h1 className="allblogs-title">All Posts</h1>
+          <h1 className="allblogs-title">REDEFINING MOBILE JOURNALISM</h1>
           <p className="allblogs-description">
-            <span>Redefining Mobile Journalism</span>
-            <br></br>
-          </p>
-          <p className="allblogs-description1">
-            <span>TAGS</span>
+            <span>All posts</span>
             <br></br>
           </p>
           <div className="allblogs-container1">
+            <p className="allblogs-description1">
+              <span>TAGS</span>
+              <br></br>
+            </p>
             <button className="allblogs-button button">
               <span className="allblogs-text04">BIKE REVIEW</span>
             </button>
@@ -170,6 +170,14 @@ const Allblogs = (props) => {
             text-align: center;
             line-height: 36px;
           }
+          .allblogs-container1 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: var(--dl-size-size-medium);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+          }
           .allblogs-description1 {
             color: var(--dl-color-gray-black);
             width: 100%;
@@ -177,14 +185,6 @@ const Allblogs = (props) => {
             max-width: 800px;
             text-align: center;
             line-height: 36px;
-          }
-          .allblogs-container1 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: var(--dl-size-size-medium);
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
           }
           .allblogs-button {
             color: var(--dl-color-gray-white);
@@ -310,15 +310,33 @@ const Allblogs = (props) => {
             display: flex;
           }
           @media (max-width: 1600px) {
-            .allblogs-description1 {
-              align-self: flex-start;
-              text-align: left;
-              margin-left: var(--dl-space-space-twounits);
+            .allblogs-header {
+              padding-top: var(--dl-space-space-threeunits);
+            }
+            .allblogs-title {
+              color: var(--dl-color-gray-black);
+              font-size: 50px;
+              font-style: normal;
+              font-family: Poppins;
+              font-weight: 700;
+              line-height: 50px;
+              text-transform: uppercase;
+            }
+            .allblogs-description {
+              color: var(--dl-color-gray-black);
             }
             .allblogs-container1 {
               height: auto;
+              align-items: center;
               padding-left: var(--dl-space-space-oneandhalfunits);
               justify-content: center;
+            }
+            .allblogs-description1 {
+              max-width: auto;
+              align-self: center;
+              text-align: left;
+              line-height: 24px;
+              margin-left: var(--dl-space-space-twounits);
             }
             .allblogs-button {
               height: auto;
@@ -405,20 +423,25 @@ const Allblogs = (props) => {
             }
             .allblogs-description {
               color: var(--dl-color-gray-black);
-            }
-            .allblogs-description1 {
-              color: var(--dl-color-gray-black);
-              font-size: 24px;
-              align-self: flex-start;
-              text-align: left;
-              line-height: 36px;
-              margin-left: var(--dl-space-space-twounits);
+              max-width: auto;
             }
             .allblogs-container1 {
               height: auto;
+              align-self: flex-start;
               align-items: center;
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
+              justify-content: flex-start;
+            }
+            .allblogs-description1 {
+              color: var(--dl-color-gray-black);
+              width: var(--dl-size-size-xlarge);
+              font-size: 24px;
+              max-width: 100%;
+              align-self: center;
+              text-align: left;
+              line-height: 36px;
+              margin-left: var(--dl-space-space-twounits);
             }
             .allblogs-button {
               width: auto;
@@ -486,12 +509,12 @@ const Allblogs = (props) => {
               font-size: 16px;
               line-height: 24px;
             }
+            .allblogs-container1 {
+              justify-content: center;
+            }
             .allblogs-description1 {
               font-size: 16px;
               line-height: 24px;
-            }
-            .allblogs-container1 {
-              justify-content: center;
             }
             .allblogs-text04 {
               margin: 0px;
@@ -526,6 +549,9 @@ const Allblogs = (props) => {
           @media (max-width: 767px) {
             .allblogs-header {
               padding-bottom: var(--dl-space-space-fiveunits);
+            }
+            .allblogs-description1 {
+              width: var(--dl-size-size-small);
             }
             .allblogs-text04 {
               margin: 0px;
