@@ -140,7 +140,7 @@ const Courseoffered = (props) => {
             width: 100%;
             height: auto;
             display: flex;
-            padding: 10%;
+            padding: var(--dl-space-space-twounits);
             align-items: flex-start;
             margin-left: 0px;
             justify-content: center;
@@ -186,12 +186,12 @@ const Courseoffered = (props) => {
             color: var(--dl-color-gray-white);
             width: auto;
             height: auto;
-            margin-top: var(--dl-space-space-twounits);
-            border-radius: 50px;
+            margin-top: 0px;
+            border-radius: 30px;
             background-color: #2200ff;
           }
           .courseoffered-text4 {
-            margin: var(--dl-space-space-unit);
+            margin: 0px;
             font-size: 24px;
             font-family: Poppins;
           }
@@ -279,6 +279,9 @@ const Courseoffered = (props) => {
             }
             .courseoffered-button {
               text-align: center;
+            }
+            .courseoffered-text4 {
+              font-size: 12px;
             }
           }
         `}

@@ -7,8 +7,8 @@ import PropTypes from 'prop-types'
 
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
-import coursesPageInitialPaths60618Resource from '../../resources/courses-page-initial-paths-60618'
-import coursesPageInitialProps1d92dResource from '../../resources/courses-page-initial-props-1d92d'
+import coursesPageInitialPaths1416fResource from '../../resources/courses-page-initial-paths-1416f'
+import coursesPageInitialPropsE7a68Resource from '../../resources/courses-page-initial-props-e7a68'
 
 const Courses = (props) => {
   return (
@@ -36,16 +36,6 @@ const Courses = (props) => {
                       alt="image"
                       src={CoursesEntity?.image1?.url}
                       className="courses-image2"
-                    />
-                    <img
-                      alt="image"
-                      src={CoursesEntity?.image2?.url}
-                      className="courses-image3"
-                    />
-                    <img
-                      alt="image"
-                      src={CoursesEntity?.image3?.url}
-                      className="courses-image4"
                     />
                   </div>
                 </div>
@@ -182,22 +172,6 @@ const Courses = (props) => {
             border-width: 1px;
             border-radius: 16px;
           }
-          .courses-image3 {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-color: var(--dl-color-gray-black);
-            border-width: 1px;
-            border-radius: 16px;
-          }
-          .courses-image4 {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-color: var(--dl-color-gray-black);
-            border-width: 1px;
-            border-radius: 16px;
-          }
           .courses-content {
             flex: 0 0 auto;
             width: 50%;
@@ -210,22 +184,21 @@ const Courses = (props) => {
             gap: var(--dl-space-space-twounits);
             width: 100%;
             display: flex;
+            padding: 0px;
             max-width: 1280px;
             align-items: flex-start;
-            padding-top: var(--dl-space-space-sixunits);
             flex-direction: column;
-            padding-bottom: var(--dl-space-space-sixunits);
           }
           .courses-title {
             color: var(--dl-color-gray-black);
             width: 100%;
-            font-size: 40px;
+            font-size: 60px;
             max-width: auto;
             font-style: normal;
             text-align: left;
             font-family: Poppins;
             font-weight: 700;
-            line-height: 40px;
+            line-height: 60px;
             text-transform: uppercase;
           }
           .courses-description {
@@ -425,12 +398,6 @@ const Courses = (props) => {
             .courses-image2 {
               width: 100%;
             }
-            .courses-image3 {
-              width: 100%;
-            }
-            .courses-image4 {
-              width: 100%;
-            }
             .courses-header {
               height: 100%;
               padding-bottom: var(--dl-space-space-sixunits);
@@ -569,7 +536,7 @@ export default Courses
 
 export async function getStaticPaths() {
   try {
-    const response = await coursesPageInitialPaths60618Resource({})
+    const response = await coursesPageInitialPaths1416fResource({})
     return {
       paths: (response?.data || []).map((item) => {
         return {
@@ -590,7 +557,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await coursesPageInitialProps1d92dResource({
+    const response = await coursesPageInitialPropsE7a68Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {

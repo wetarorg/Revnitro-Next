@@ -59,15 +59,28 @@ const Footer = (props) => {
               <div className="footer-column2">
                 <span className="footer-header2">{props.header1}</span>
                 <div className="footer-list2">
-                  <span className="footer-text15">{props.text5}</span>
-                  <span className="footer-text16">{props.text6}</span>
-                  <span className="footer-text17">{props.text7}</span>
+                  <a
+                    href="https://www.instagram.com/revnitro_official"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="footer-link"
+                  >
+                    {props.text6}
+                  </a>
+                  <a
+                    href="https://www.facebook.com/p/RevNitro-100064120381674"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="footer-link1"
+                  >
+                    {props.text7}
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div className="footer-bottom">
-            <span className="footer-text18">{props.text}</span>
+            <span className="footer-text15">{props.text}</span>
           </div>
         </div>
       </div>
@@ -96,12 +109,11 @@ const Footer = (props) => {
             border-top-width: 1px;
           }
           .footer-main {
-            gap: 240px;
             width: 100%;
             display: flex;
             align-items: flex-start;
             flex-direction: row;
-            justify-content: flex-start;
+            justify-content: space-between;
           }
           .footer-branding {
             gap: var(--dl-space-space-twounits);
@@ -131,7 +143,7 @@ const Footer = (props) => {
           .footer-column {
             gap: var(--dl-space-space-threeunits);
             color: white;
-            display: flex;
+            display: none;
             align-items: flex-start;
             flex-direction: column;
           }
@@ -235,34 +247,24 @@ const Footer = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .footer-text15 {
+          .footer-link {
             cursor: pointer;
             font-size: 16px;
             transition: 0.3s;
             line-height: 32px;
             text-decoration: none;
           }
-          .footer-text15:hover {
+          .footer-link:hover {
             opacity: 0.5;
           }
-          .footer-text16 {
+          .footer-link1 {
             cursor: pointer;
             font-size: 16px;
             transition: 0.3s;
             line-height: 32px;
             text-decoration: none;
           }
-          .footer-text16:hover {
-            opacity: 0.5;
-          }
-          .footer-text17 {
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-            line-height: 32px;
-            text-decoration: none;
-          }
-          .footer-text17:hover {
+          .footer-link1:hover {
             opacity: 0.5;
           }
           .footer-bottom {
@@ -272,7 +274,7 @@ const Footer = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .footer-text18 {
+          .footer-text15 {
             color: rgb(124, 124, 128);
             font-size: 14px;
             line-height: 21px;
@@ -329,7 +331,7 @@ Footer.defaultProps = {
   text5: 'Twitter',
   header1: 'Social',
   text4: 'Blog',
-  text3: 'Articles',
+  text3: 'Courses',
 }
 
 Footer.propTypes = {

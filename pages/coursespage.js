@@ -24,17 +24,17 @@ const Coursespage = (props) => {
             <div className="coursespage-work">
               <img
                 alt="image"
-                src="/external/work%20%231-1500w-800w.png"
+                src="/external/work%20%231-1500w-1500w.png"
                 className="coursespage-image2"
               />
               <img
                 alt="image"
-                src="/external/work%20%231-1500w-800w.png"
+                src="/external/work%20%231-1500w-1500w.png"
                 className="coursespage-image3"
               />
               <img
                 alt="image"
-                src="/external/work%20%231-1500w-800w.png"
+                src="/external/work%20%231-1500w-1500w.png"
                 className="coursespage-image4"
               />
             </div>
@@ -570,6 +570,24 @@ const Coursespage = (props) => {
           @media (max-width: 767px) {
             .coursespage-header {
               padding-bottom: var(--dl-space-space-fiveunits);
+            }
+          }
+          @media (max-width: 479px) {
+            .coursespage-container1 {
+              padding: var(--dl-space-space-twounits);
+              flex-direction: column;
+            }
+            .coursespage-medias {
+              width: 100%;
+            }
+            .coursespage-image2 {
+              margin-bottom: var(--dl-space-space-twounits);
+            }
+            .coursespage-image3 {
+              margin-bottom: var(--dl-space-space-twounits);
+            }
+            .coursespage-content {
+              width: 100%;
             }
           }
         `}

@@ -61,9 +61,16 @@ const Home = (props) => {
                                   {context_tz9kl?.description}
                                 </h3>
                               </div>
-                              <div className="home-container02">
-                                <span className="home-text">KNOW MORE</span>
-                              </div>
+                              <a
+                                href={context_tz9kl?.url}
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                className="home-link"
+                              >
+                                <div className="home-container02">
+                                  <span className="home-text">KNOW MORE</span>
+                                </div>
+                              </a>
                             </div>
                           </div>
                         </>
@@ -109,9 +116,16 @@ const Home = (props) => {
                                   {context_tz9kl?.description}
                                 </h3>
                               </div>
-                              <div className="home-container04">
-                                <span className="home-text01">KNOW MORE</span>
-                              </div>
+                              <a
+                                href={context_tz9kl?.url}
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                className="home-link1"
+                              >
+                                <div className="home-container04">
+                                  <span className="home-text01">KNOW MORE</span>
+                                </div>
+                              </a>
                             </div>
                           </div>
                         </>
@@ -157,9 +171,16 @@ const Home = (props) => {
                                   {context_tz9kl?.description}
                                 </h3>
                               </div>
-                              <div className="home-container06">
-                                <span className="home-text02">KNOW MORE</span>
-                              </div>
+                              <a
+                                href={context_tz9kl?.url}
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                className="home-link2"
+                              >
+                                <div className="home-container06">
+                                  <span className="home-text02">KNOW MORE</span>
+                                </div>
+                              </a>
                             </div>
                           </div>
                         </>
@@ -205,9 +226,16 @@ const Home = (props) => {
                                   {context_tz9kl?.description}
                                 </h3>
                               </div>
-                              <div className="home-container08">
-                                <span className="home-text03">KNOW MORE</span>
-                              </div>
+                              <a
+                                href={context_tz9kl?.url}
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                className="home-link3"
+                              >
+                                <div className="home-container08">
+                                  <span className="home-text03">KNOW MORE</span>
+                                </div>
+                              </a>
                             </div>
                           </div>
                         </>
@@ -253,9 +281,16 @@ const Home = (props) => {
                                   {context_tz9kl?.description}
                                 </h3>
                               </div>
-                              <div className="home-container10">
-                                <span className="home-text04">KNOW MORE</span>
-                              </div>
+                              <a
+                                href={context_tz9kl?.url}
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                className="home-link4"
+                              >
+                                <div className="home-container10">
+                                  <span className="home-text04">KNOW MORE</span>
+                                </div>
+                              </a>
                             </div>
                           </div>
                         </>
@@ -915,7 +950,7 @@ const Home = (props) => {
             href="https://forum.revnitro.com"
             target="_blank"
             rel="noreferrer noopener"
-            className="home-link button"
+            className="home-link5 button"
           >
             <span className="home-text31">Enter Forum</span>
           </a>
@@ -1052,6 +1087,9 @@ const Home = (props) => {
             font-family: Poppins;
             font-weight: 500;
           }
+          .home-link {
+            display: contents;
+          }
           .home-container02 {
             flex: 0 0 auto;
             width: var(--dl-size-size-large);
@@ -1146,6 +1184,9 @@ const Home = (props) => {
             font-style: normal;
             font-family: Poppins;
             font-weight: 500;
+          }
+          .home-link1 {
+            display: contents;
           }
           .home-container04 {
             flex: 0 0 auto;
@@ -1242,6 +1283,9 @@ const Home = (props) => {
             font-family: Poppins;
             font-weight: 500;
           }
+          .home-link2 {
+            display: contents;
+          }
           .home-container06 {
             flex: 0 0 auto;
             width: var(--dl-size-size-large);
@@ -1337,6 +1381,9 @@ const Home = (props) => {
             font-family: Poppins;
             font-weight: 500;
           }
+          .home-link3 {
+            display: contents;
+          }
           .home-container08 {
             flex: 0 0 auto;
             width: var(--dl-size-size-large);
@@ -1431,6 +1478,9 @@ const Home = (props) => {
             font-style: normal;
             font-family: Poppins;
             font-weight: 500;
+          }
+          .home-link4 {
+            display: contents;
           }
           .home-container10 {
             flex: 0 0 auto;
@@ -2668,7 +2718,7 @@ const Home = (props) => {
           .home-text30 {
             font-style: normal;
           }
-          .home-link {
+          .home-link5 {
             color: var(--dl-color-gray-white);
             width: auto;
             height: auto;
@@ -4130,7 +4180,7 @@ const Home = (props) => {
               text-align: center;
               font-weight: 500;
             }
-            .home-link {
+            .home-link5 {
               text-align: center;
             }
           }

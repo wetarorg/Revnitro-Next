@@ -174,7 +174,7 @@ const Allblogs = (props) => {
             flex: 0 0 auto;
             width: 100%;
             height: var(--dl-size-size-medium);
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: flex-start;
           }
@@ -587,6 +587,10 @@ const Allblogs = (props) => {
             }
           }
           @media (max-width: 479px) {
+            .allblogs-header {
+              padding-top: var(--dl-space-space-unit);
+              padding-bottom: var(--dl-space-space-unit);
+            }
             .allblogs-button {
               height: auto;
               text-align: center;
@@ -618,6 +622,7 @@ const Allblogs = (props) => {
               padding-bottom: var(--dl-space-space-twounits);
             }
             .allblogs-blog-cards {
+              align-self: center;
               align-items: center;
               flex-direction: column;
             }

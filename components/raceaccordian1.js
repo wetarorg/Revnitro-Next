@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Link from 'next/link'
 
 import PropTypes from 'prop-types'
 
@@ -18,9 +17,14 @@ const Raceaccordian1 = (props) => {
             {menu === 1 && (
               <div className="raceaccordian1-container2">
                 <span className="raceaccordian1-text">{props.text12}</span>
-                <Link href="/tvs">
-                  <a className="raceaccordian1-link button">{props.button12}</a>
-                </Link>
+                <a
+                  href="https://tvsmotor.com/tvsracing/tvs-asia-one-make-championship-omc"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="raceaccordian1-link button"
+                >
+                  {props.button12}
+                </a>
               </div>
             )}
           </div>
@@ -37,9 +41,14 @@ const Raceaccordian1 = (props) => {
             {menu === 2 && (
               <div className="raceaccordian1-container3">
                 <span className="raceaccordian1-text1">{props.text1}</span>
-                <Link href="/suzuki">
-                  <a className="raceaccordian1-link1 button">{props.button1}</a>
-                </Link>
+                <a
+                  href="https://suzukicycles.com/racing"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="raceaccordian1-link1 button"
+                >
+                  {props.button1}
+                </a>
               </div>
             )}
           </div>
@@ -56,11 +65,14 @@ const Raceaccordian1 = (props) => {
             {menu === 3 && (
               <div className="raceaccordian1-container4">
                 <span className="raceaccordian1-text2">{props.text11}</span>
-                <Link href="/ktm">
-                  <a className="raceaccordian1-link2 button">
-                    {props.button11}
-                  </a>
-                </Link>
+                <a
+                  href="https://www.ktmindia.com/ktmrccup"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="raceaccordian1-link2 button"
+                >
+                  {props.button11}
+                </a>
               </div>
             )}
           </div>
@@ -77,11 +89,14 @@ const Raceaccordian1 = (props) => {
             {menu === 4 && (
               <div className="raceaccordian1-container5">
                 <span className="raceaccordian1-text3">{props.text111}</span>
-                <Link href="/gtcup">
-                  <a className="raceaccordian1-link3 button">
-                    {props.button111}
-                  </a>
-                </Link>
+                <a
+                  href="https://www.royalenfield.com/in/en/gtcup/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="raceaccordian1-link3 button"
+                >
+                  {props.button111}
+                </a>
               </div>
             )}
           </div>
@@ -98,11 +113,14 @@ const Raceaccordian1 = (props) => {
             {menu === 5 && (
               <div className="raceaccordian1-container6">
                 <span className="raceaccordian1-text4">{props.text1111}</span>
-                <Link href="/hr">
-                  <a className="raceaccordian1-link4 button">
-                    {props.button1111}
-                  </a>
-                </Link>
+                <a
+                  href="https://honda.racing/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="raceaccordian1-link4 button"
+                >
+                  {props.button1111}
+                </a>
               </div>
             )}
           </div>
