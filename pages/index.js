@@ -3849,7 +3849,7 @@ const Home = (props) => {
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
-              line-height: 14px;
+              line-height: 18px;
             }
             .home-container03 {
               height: 100%;
@@ -3895,7 +3895,7 @@ const Home = (props) => {
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
-              line-height: 14px;
+              line-height: 18px;
             }
             .home-container05 {
               height: 100%;
@@ -3941,7 +3941,7 @@ const Home = (props) => {
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
-              line-height: 14px;
+              line-height: 18px;
             }
             .home-container07 {
               height: 100%;
@@ -3987,7 +3987,7 @@ const Home = (props) => {
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
-              line-height: 14px;
+              line-height: 18px;
             }
             .home-slide4 {
               display: flex;
@@ -4036,7 +4036,7 @@ const Home = (props) => {
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
-              line-height: 14px;
+              line-height: 18px;
             }
             .home-previous {
               width: auto;

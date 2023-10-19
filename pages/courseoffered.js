@@ -267,6 +267,13 @@ const Courseoffered = (props) => {
             }
           }
           @media (max-width: 479px) {
+            .courseoffered-header {
+              padding: var(--dl-space-space-unit);
+            }
+            .courseoffered-description {
+              font-size: 14px;
+              line-height: 16px;
+            }
             .courseoffered-courses {
               align-items: center;
               flex-direction: column;
@@ -278,6 +285,7 @@ const Courseoffered = (props) => {
               font-size: 24px;
             }
             .courseoffered-button {
+              align-self: flex-start;
               text-align: center;
             }
             .courseoffered-text4 {

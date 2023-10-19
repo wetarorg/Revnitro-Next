@@ -706,7 +706,7 @@ const Team = (props) => {
         </section>
         <div className="team-hero1">
           <h2 className="team-heading1">
-            <span className="team-text29">Need help?</span>
+            <span className="team-text29">Want to join our team</span>
             <br className="team-text30"></br>
             <span className="team-text31">Contact our </span>
             <span className="team-text32">team</span>
@@ -721,50 +721,9 @@ const Team = (props) => {
               />
             </span>
           </h2>
-          <a
-            href="https://forum.revnitro.com"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="team-link1 button"
-          >
+          <button className="team-button button">
             <span className="team-text37">CONNECT</span>
-          </a>
-          <form className="team-form">
-            <input
-              type="text"
-              name="name"
-              placeholder="name"
-              className="input team-textinput"
-            />
-            <input
-              type="number"
-              name="age"
-              placeholder="age"
-              className="input team-textinput1"
-            />
-            <input
-              type="text"
-              name="place"
-              placeholder="place"
-              className="input team-textinput2"
-            />
-            <input
-              type="text"
-              name="skills"
-              placeholder="skill"
-              className="input team-textinput3"
-            />
-            <input
-              type="text"
-              name="softwares"
-              value="softwares known"
-              placeholder="place"
-              className="input team-textinput4"
-            />
-            <button type="submit" className="button team-button">
-              SUBMIT
-            </button>
-          </form>
+          </button>
           <div className="team-div6">
             <React.Fragment>
               <React.Fragment>
@@ -1406,27 +1365,24 @@ const Team = (props) => {
             font-weight: 500;
           }
           .team-text29 {
-            font-size: 54px;
             font-weight: 500;
           }
           .team-text30 {
-            font-size: 54px;
             font-weight: 500;
           }
           .team-text31 {
-            font-size: 100px;
             font-weight: 500;
           }
           .team-text32 {
             color: #2200ff;
             font-style: italic;
-            font-family: Open Sans;
+            font-family: 'Open Sans';
             font-weight: 600;
           }
           .team-text33 {
             color: #2200ff;
             font-style: italic;
-            font-family: Open Sans;
+            font-family: 'Open Sans';
             font-weight: 600;
           }
           .team-text34 {
@@ -1434,65 +1390,26 @@ const Team = (props) => {
           }
           .team-text35 {
             color: #ffffff;
-            font-size: 100px;
             font-style: normal;
             font-weight: 500;
           }
           .team-text36 {
             font-style: normal;
           }
-          .team-link1 {
+          .team-button {
             color: var(--dl-color-gray-white);
             width: auto;
             height: auto;
             margin-top: var(--dl-space-space-twounits);
             border-radius: 50px;
-            text-decoration: none;
             background-color: #2200ff;
           }
           .team-text37 {
             margin: var(--dl-space-space-unit);
             font-size: 24px;
           }
-          .team-form {
-            width: 200px;
-            height: 100px;
-            display: flex;
-          }
           .team-div6 {
             display: contents;
-          }
-          @media (max-width: 1600px) {
-            .team-form {
-              width: auto;
-              height: auto;
-              display: none;
-              flex-direction: column;
-            }
-            .team-textinput {
-              height: var(--dl-size-size-small);
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .team-textinput1 {
-              height: var(--dl-size-size-small);
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .team-textinput2 {
-              height: var(--dl-size-size-small);
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .team-textinput3 {
-              height: var(--dl-size-size-small);
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .team-textinput4 {
-              height: var(--dl-size-size-small);
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .team-button {
-              color: var(--dl-color-gray-white);
-              background-color: var(--dl-color-primary-100);
-            }
           }
           @media (max-width: 991px) {
             .team-hero {
@@ -1664,6 +1581,9 @@ const Team = (props) => {
             .team-link {
               text-align: center;
             }
+            .team-hero-content1 {
+              padding: var(--dl-space-space-unit);
+            }
             .team-text06 {
               font-size: 50px;
             }
@@ -1679,7 +1599,7 @@ const Team = (props) => {
               text-align: center;
               font-weight: 500;
             }
-            .team-link1 {
+            .team-button {
               text-align: center;
             }
           }
