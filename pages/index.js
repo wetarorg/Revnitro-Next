@@ -3772,6 +3772,7 @@ const Home = (props) => {
               width: auto;
               height: auto;
               position: absolute;
+              max-width: 60%;
               align-items: flex-start;
               justify-content: center;
             }
@@ -3817,6 +3818,7 @@ const Home = (props) => {
               width: auto;
               height: auto;
               position: absolute;
+              max-width: 60%;
               align-items: flex-start;
               justify-content: center;
             }
@@ -3862,6 +3864,7 @@ const Home = (props) => {
               width: auto;
               height: auto;
               position: absolute;
+              max-width: 60%;
               align-items: flex-start;
               justify-content: center;
             }
@@ -3907,6 +3910,7 @@ const Home = (props) => {
               width: auto;
               height: auto;
               position: absolute;
+              max-width: 60%;
               align-items: flex-start;
               justify-content: center;
             }
@@ -3955,6 +3959,7 @@ const Home = (props) => {
               width: auto;
               height: auto;
               position: absolute;
+              max-width: 60%;
               align-items: flex-start;
               justify-content: center;
             }

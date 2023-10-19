@@ -7,8 +7,8 @@ import PropTypes from 'prop-types'
 
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
-import blogsPageInitialPaths2d4f3Resource from '../../resources/blogs-page-initial-paths-2d4f3'
-import blogsPageInitialProps4d796Resource from '../../resources/blogs-page-initial-props-4d796'
+import blogsPageInitialPathsE63dbResource from '../../resources/blogs-page-initial-paths-e63db'
+import blogsPageInitialProps3b2cdResource from '../../resources/blogs-page-initial-props-3b2cd'
 
 const Blogs = (props) => {
   return (
@@ -52,11 +52,29 @@ const Blogs = (props) => {
             gap: 12px;
             width: 100%;
             display: flex;
+            padding: var(--dl-space-space-threeunits);
             flex-direction: column;
           }
           @media (max-width: 1600px) {
             .blogs-container1 {
-              padding: var(--dl-space-space-sixunits);
+              padding: var(--dl-space-space-threeunits);
+            }
+          }
+          @media (max-width: 1200px) {
+            .blogs-container1 {
+              padding: var(--dl-space-space-twounits);
+            }
+          }
+          @media (max-width: 991px) {
+            .blogs-container1 {
+              width: 100%;
+              padding: var(--dl-space-space-unit);
+              max-width: 100%;
+            }
+          }
+          @media (max-width: 479px) {
+            .blogs-container1 {
+              padding: var(--dl-space-space-unit);
             }
           }
         `}
@@ -77,7 +95,7 @@ export default Blogs
 
 export async function getStaticPaths() {
   try {
-    const response = await blogsPageInitialPaths2d4f3Resource({})
+    const response = await blogsPageInitialPathsE63dbResource({})
     return {
       paths: (response?.data || []).map((item) => {
         return {
@@ -98,7 +116,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await blogsPageInitialProps4d796Resource({
+    const response = await blogsPageInitialProps3b2cdResource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {

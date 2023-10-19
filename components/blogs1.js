@@ -765,7 +765,7 @@ const Blogs1 = (props) => {
               height: var(--dl-size-size-small);
             }
             .blogs1-text03 {
-              font-size: 12px;
+              font-size: 10px;
               font-style: normal;
               font-weight: 600;
             }
@@ -782,19 +782,27 @@ const Blogs1 = (props) => {
               width: 100%;
             }
             .blogs1-blog-cards1 {
+              align-self: center;
+              align-items: center;
               flex-direction: column;
+              justify-content: center;
             }
             .blogs1-container07 {
               width: auto;
+              margin-right: 0px;
             }
             .blogs1-image1 {
               width: 100%;
             }
             .blogs1-blog-cards2 {
+              align-self: center;
+              align-items: center;
               flex-direction: column;
+              justify-content: flex-start;
             }
             .blogs1-container08 {
               width: auto;
+              margin-right: 0px;
             }
             .blogs1-image2 {
               width: 100%;
@@ -804,6 +812,7 @@ const Blogs1 = (props) => {
             }
             .blogs1-container09 {
               width: auto;
+              margin-right: 0px;
             }
             .blogs1-image3 {
               width: 100%;
