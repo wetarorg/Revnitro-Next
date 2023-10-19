@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import reviewsPageInitialProps8a662Resource from '../../resources/reviews-page-initial-props-8a662'
+import reviewsPageInitialProps8c40fResource from '../../resources/reviews-page-initial-props-8c40f'
 
 const Reviews1 = (props) => {
   return (
@@ -71,7 +71,7 @@ export default Reviews1
 
 export async function getStaticProps(context) {
   try {
-    const response = await reviewsPageInitialProps8a662Resource({
+    const response = await reviewsPageInitialProps8c40fResource({
       ...context?.params,
     })
     if (!response) {

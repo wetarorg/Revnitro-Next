@@ -7,8 +7,8 @@ import PropTypes from 'prop-types'
 
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
-import blogsPageInitialPaths323e7Resource from '../../resources/blogs-page-initial-paths-323e7'
-import blogsPageInitialProps1866cResource from '../../resources/blogs-page-initial-props-1866c'
+import blogsPageInitialPaths2d4f3Resource from '../../resources/blogs-page-initial-paths-2d4f3'
+import blogsPageInitialProps4d796Resource from '../../resources/blogs-page-initial-props-4d796'
 
 const Blogs = (props) => {
   return (
@@ -26,7 +26,7 @@ const Blogs = (props) => {
                 <h1>{BlogsEntity?.Title}</h1>
                 <span>{BlogsEntity?.description}</span>
                 <span>{BlogsEntity?.Category}</span>
-                <div className="blogs-container2">
+                <div>
                   <ReactMarkdown>{BlogsEntity?.content}</ReactMarkdown>
                 </div>
               </div>
@@ -54,10 +54,6 @@ const Blogs = (props) => {
             display: flex;
             flex-direction: column;
           }
-          .blogs-container2 {
-            width: 100%;
-            align-self: stretch;
-          }
           @media (max-width: 1600px) {
             .blogs-container1 {
               padding: var(--dl-space-space-sixunits);
@@ -81,7 +77,7 @@ export default Blogs
 
 export async function getStaticPaths() {
   try {
-    const response = await blogsPageInitialPaths323e7Resource({})
+    const response = await blogsPageInitialPaths2d4f3Resource({})
     return {
       paths: (response?.data || []).map((item) => {
         return {
@@ -102,7 +98,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await blogsPageInitialProps1866cResource({
+    const response = await blogsPageInitialProps4d796Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
