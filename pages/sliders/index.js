@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import slidersPageInitialPropsC9abcResource from '../../resources/sliders-page-initial-props-c9abc'
+import slidersPageInitialPropsE526dResource from '../../resources/sliders-page-initial-props-e526d'
 
 const Sliders = (props) => {
   return (
@@ -71,7 +71,7 @@ export default Sliders
 
 export async function getStaticProps(context) {
   try {
-    const response = await slidersPageInitialPropsC9abcResource({
+    const response = await slidersPageInitialPropsE526dResource({
       ...context?.params,
     })
     if (!response) {

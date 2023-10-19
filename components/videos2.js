@@ -287,7 +287,8 @@ const Videos2 = (props) => {
             width: 100%;
             height: auto;
             display: grid;
-            padding: 150px;
+            padding: var(--dl-space-space-sixunits);
+            align-self: center;
             grid-row-gap: 40px;
             grid-column-gap: 20px;
             grid-template-rows: repeat(2, 1fr);
@@ -351,6 +352,9 @@ const Videos2 = (props) => {
             .videos2-main {
               flex-wrap: wrap;
             }
+            .videos2-bike1 {
+              padding: var(--dl-space-space-fourunits);
+            }
             .videos2-text4 {
               font-size: 24px;
             }
@@ -362,6 +366,9 @@ const Videos2 = (props) => {
             .videos2-videos {
               padding: var(--dl-space-space-unit);
               align-items: center;
+            }
+            .videos2-bike1 {
+              padding: var(--dl-space-space-threeunits);
             }
             .videos2-iframe {
               width: 400px;
