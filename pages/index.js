@@ -120,7 +120,7 @@ const Home = (props) => {
                                 href={context_tz9kl?.url}
                                 target="_blank"
                                 rel="noreferrer noopener"
-                                className="home-link1"
+                                className="home-link01"
                               >
                                 <div className="home-container04">
                                   <span className="home-text01">KNOW MORE</span>
@@ -175,7 +175,7 @@ const Home = (props) => {
                                 href={context_tz9kl?.url}
                                 target="_blank"
                                 rel="noreferrer noopener"
-                                className="home-link2"
+                                className="home-link02"
                               >
                                 <div className="home-container06">
                                   <span className="home-text02">KNOW MORE</span>
@@ -230,7 +230,7 @@ const Home = (props) => {
                                 href={context_tz9kl?.url}
                                 target="_blank"
                                 rel="noreferrer noopener"
-                                className="home-link3"
+                                className="home-link03"
                               >
                                 <div className="home-container08">
                                   <span className="home-text03">KNOW MORE</span>
@@ -285,7 +285,7 @@ const Home = (props) => {
                                 href={context_tz9kl?.url}
                                 target="_blank"
                                 rel="noreferrer noopener"
-                                className="home-link4"
+                                className="home-link04"
                               >
                                 <div className="home-container10">
                                   <span className="home-text04">KNOW MORE</span>
@@ -352,75 +352,110 @@ const Home = (props) => {
             </div>
             <div className="home-heading12">
               <div className="home-accordion">
-                <div
-                  data-role="accordion-container"
-                  className="home-element accordion-element"
+                <a
+                  href="https://book.revnitro.com/car"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="home-link05"
                 >
-                  <div className="home-details">
-                    <img
-                      alt="image"
-                      src="/bookings/3.svg"
-                      className="home-image07"
-                    />
-                    <span className="home-text06">
-                      CAR PURCHASE CONSULTATION
-                    </span>
+                  <div
+                    data-role="accordion-container"
+                    className="home-element accordion-element"
+                  >
+                    <div className="home-details">
+                      <img
+                        alt="image"
+                        src="/bookings/3.svg"
+                        className="home-image07"
+                      />
+                      <span className="home-text06">
+                        CAR PURCHASE CONSULTATION
+                      </span>
+                    </div>
                   </div>
-                </div>
-                <div
-                  data-role="accordion-container"
-                  className="home-element1 accordion-element"
+                </a>
+                <a
+                  href="https://book.revnitro.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="home-link06"
                 >
-                  <div className="home-details01">
-                    <img
-                      alt="image"
-                      src="/bookings/2.svg"
-                      className="home-image08"
-                    />
-                    <span className="home-text07">
-                      BIKE PURCHASE CONSULTATION
-                    </span>
+                  <div
+                    data-role="accordion-container"
+                    className="home-element1 accordion-element"
+                  >
+                    <div className="home-details01">
+                      <img
+                        alt="image"
+                        src="/bookings/2.svg"
+                        className="home-image08"
+                      />
+                      <span className="home-text07">
+                        BIKE PURCHASE CONSULTATION
+                      </span>
+                    </div>
                   </div>
-                </div>
-                <div
-                  data-role="accordion-container"
-                  className="home-element2 accordion-element"
+                </a>
+                <a
+                  href="https://book.revnitro.com/bikeservice"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="home-link07"
                 >
-                  <div className="home-details02">
-                    <img
-                      alt="image"
-                      src="/bookings/1.svg"
-                      className="home-image09"
-                    />
-                    <span className="home-text08">BIKE SERVICE BOOKING</span>
+                  <div
+                    data-role="accordion-container"
+                    className="home-element2 accordion-element"
+                  >
+                    <div className="home-details02">
+                      <img
+                        alt="image"
+                        src="/bookings/1.svg"
+                        className="home-image09"
+                      />
+                      <span className="home-text08">BIKE SERVICE BOOKING</span>
+                    </div>
                   </div>
-                </div>
-                <div
-                  data-role="accordion-container"
-                  className="home-element3 accordion-element"
+                </a>
+                <a
+                  href="https://book.revnitro.com/carservice"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="home-link08"
                 >
-                  <div className="home-details03">
-                    <img
-                      alt="image"
-                      src="/bookings/4.svg"
-                      className="home-image10"
-                    />
-                    <span className="home-text09">CAR SERVICE BOOKING</span>
+                  <div
+                    data-role="accordion-container"
+                    className="home-element3 accordion-element"
+                  >
+                    <div className="home-details03">
+                      <img
+                        alt="image"
+                        src="/bookings/4.svg"
+                        className="home-image10"
+                      />
+                      <span className="home-text09">CAR SERVICE BOOKING</span>
+                    </div>
                   </div>
-                </div>
-                <div
-                  data-role="accordion-container"
-                  className="home-element4 accordion-element"
+                </a>
+                <a
+                  href="https://book.revnitro.com/ecuservice"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="home-link09"
                 >
-                  <div className="home-details04">
-                    <img
-                      alt="image"
-                      src="/bookings/ecu%20tuning%20(2).svg"
-                      className="home-image11"
-                    />
-                    <span className="home-text10">ECU TUNING</span>
+                  <div
+                    data-role="accordion-container"
+                    className="home-element4 accordion-element"
+                  >
+                    <div className="home-details04">
+                      <img
+                        alt="image"
+                        src="/bookings/ecu%20tuning%20(2).svg"
+                        className="home-image11"
+                      />
+                      <span className="home-text10">ECU TUNING</span>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -950,7 +985,7 @@ const Home = (props) => {
             href="https://forum.revnitro.com"
             target="_blank"
             rel="noreferrer noopener"
-            className="home-link5 button"
+            className="home-link10 button"
           >
             <span className="home-text31">Enter Forum</span>
           </a>
@@ -1185,7 +1220,7 @@ const Home = (props) => {
             font-family: Poppins;
             font-weight: 500;
           }
-          .home-link1 {
+          .home-link01 {
             display: contents;
           }
           .home-container04 {
@@ -1283,7 +1318,7 @@ const Home = (props) => {
             font-family: Poppins;
             font-weight: 500;
           }
-          .home-link2 {
+          .home-link02 {
             display: contents;
           }
           .home-container06 {
@@ -1381,7 +1416,7 @@ const Home = (props) => {
             font-family: Poppins;
             font-weight: 500;
           }
-          .home-link3 {
+          .home-link03 {
             display: contents;
           }
           .home-container08 {
@@ -1479,7 +1514,7 @@ const Home = (props) => {
             font-family: Poppins;
             font-weight: 500;
           }
-          .home-link4 {
+          .home-link04 {
             display: contents;
           }
           .home-container10 {
@@ -1707,9 +1742,13 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
+          .home-link05 {
+            display: contents;
+          }
           .home-element {
             width: 640px;
             user-select: none;
+            text-decoration: none;
           }
           .home-details {
             gap: var(--dl-space-space-halfunit);
@@ -1735,9 +1774,13 @@ const Home = (props) => {
             font-weight: 500;
             line-height: 44px;
           }
+          .home-link06 {
+            display: contents;
+          }
           .home-element1 {
             width: 640px;
             user-select: none;
+            text-decoration: none;
           }
           .home-details01 {
             gap: var(--dl-space-space-halfunit);
@@ -1763,9 +1806,13 @@ const Home = (props) => {
             font-weight: 500;
             line-height: 44px;
           }
+          .home-link07 {
+            display: contents;
+          }
           .home-element2 {
             width: 640px;
             user-select: none;
+            text-decoration: none;
           }
           .home-details02 {
             gap: var(--dl-space-space-halfunit);
@@ -1791,9 +1838,13 @@ const Home = (props) => {
             font-weight: 500;
             line-height: 44px;
           }
+          .home-link08 {
+            display: contents;
+          }
           .home-element3 {
             width: 640px;
             user-select: none;
+            text-decoration: none;
           }
           .home-details03 {
             gap: var(--dl-space-space-halfunit);
@@ -1819,9 +1870,13 @@ const Home = (props) => {
             font-weight: 500;
             line-height: 44px;
           }
+          .home-link09 {
+            display: contents;
+          }
           .home-element4 {
             width: 640px;
             user-select: none;
+            text-decoration: none;
           }
           .home-details04 {
             gap: var(--dl-space-space-halfunit);
@@ -2718,7 +2773,7 @@ const Home = (props) => {
           .home-text30 {
             font-style: normal;
           }
-          .home-link5 {
+          .home-link10 {
             color: var(--dl-color-gray-white);
             width: auto;
             height: auto;
@@ -4180,7 +4235,7 @@ const Home = (props) => {
               text-align: center;
               font-weight: 500;
             }
-            .home-link5 {
+            .home-link10 {
               text-align: center;
             }
           }

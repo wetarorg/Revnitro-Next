@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import bookingsPageInitialPropsE92aaResource from '../../resources/bookings-page-initial-props-e92aa'
+import bookingsPageInitialProps68befResource from '../../resources/bookings-page-initial-props-68bef'
 
 const Bookings = (props) => {
   return (
@@ -71,7 +71,7 @@ export default Bookings
 
 export async function getStaticProps(context) {
   try {
-    const response = await bookingsPageInitialPropsE92aaResource({
+    const response = await bookingsPageInitialProps68befResource({
       ...context?.params,
     })
     if (!response) {

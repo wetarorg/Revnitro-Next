@@ -19,17 +19,13 @@ const Courseoffered = (props) => {
         <header className="courseoffered-hero">
           <div className="courseoffered-header">
             <h1 className="courseoffered-title">Courses offered</h1>
-            <p className="courseoffered-description">
-              <span className="courseoffered-text">
-                Team Revnitro is committed in sharing knowledge
-              </span>
-              <br></br>
+            <span>
+              <span>Team Revnitro is committed in sharing knowledge, </span>
               <span>
                 following are the course offered by team Revnitro in alliance
                 with hands on experience
               </span>
-              <br></br>
-            </p>
+            </span>
           </div>
         </header>
         <div className="courseoffered-courses">
@@ -69,7 +65,7 @@ const Courseoffered = (props) => {
                                 </h3>
                               </div>
                               <button className="courseoffered-button button">
-                                <span className="courseoffered-text4">
+                                <span className="courseoffered-text3">
                                   KNOW MORE
                                 </span>
                               </button>
@@ -121,18 +117,10 @@ const Courseoffered = (props) => {
             max-width: 895px;
             font-style: normal;
             text-align: center;
-            font-family: Poppins;
+            font-family: 'Poppins';
             font-weight: 700;
             line-height: 115px;
             text-transform: uppercase;
-          }
-          .courseoffered-description {
-            color: var(--dl-color-gray-black);
-            width: 100%;
-            font-size: 24px;
-            max-width: 800px;
-            text-align: center;
-            line-height: 36px;
           }
           .courseoffered-courses {
             gap: var(--dl-space-space-twounits);
@@ -190,7 +178,7 @@ const Courseoffered = (props) => {
             border-radius: 30px;
             background-color: #2200ff;
           }
-          .courseoffered-text4 {
+          .courseoffered-text3 {
             margin: 0px;
             font-size: 24px;
             font-family: Poppins;
@@ -212,7 +200,7 @@ const Courseoffered = (props) => {
             .courseoffered-button {
               margin-top: 0px;
             }
-            .courseoffered-text4 {
+            .courseoffered-text3 {
               margin: 0px;
               font-size: 24px;
               font-family: Poppins;
@@ -227,14 +215,6 @@ const Courseoffered = (props) => {
             .courseoffered-title {
               font-size: 40px;
               line-height: 36px;
-            }
-            .courseoffered-description {
-              font-size: 16px;
-              line-height: 24px;
-            }
-            .courseoffered-text {
-              font-size: 16px;
-              line-height: 24px;
             }
             .courseoffered-courses {
               flex-direction: column;
@@ -270,10 +250,6 @@ const Courseoffered = (props) => {
             .courseoffered-header {
               padding: var(--dl-space-space-unit);
             }
-            .courseoffered-description {
-              font-size: 14px;
-              line-height: 16px;
-            }
             .courseoffered-courses {
               align-items: center;
               flex-direction: column;
@@ -288,7 +264,7 @@ const Courseoffered = (props) => {
               align-self: flex-start;
               text-align: center;
             }
-            .courseoffered-text4 {
+            .courseoffered-text3 {
               font-size: 12px;
             }
           }

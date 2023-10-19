@@ -721,9 +721,14 @@ const Team = (props) => {
               />
             </span>
           </h2>
-          <button className="team-button button">
+          <a
+            href="https://book.revnitro.com/internship"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="team-link1 button"
+          >
             <span className="team-text37">CONNECT</span>
-          </button>
+          </a>
           <div className="team-div6">
             <React.Fragment>
               <React.Fragment>
@@ -1396,12 +1401,13 @@ const Team = (props) => {
           .team-text36 {
             font-style: normal;
           }
-          .team-button {
+          .team-link1 {
             color: var(--dl-color-gray-white);
             width: auto;
             height: auto;
             margin-top: var(--dl-space-space-twounits);
             border-radius: 50px;
+            text-decoration: none;
             background-color: #2200ff;
           }
           .team-text37 {
@@ -1599,7 +1605,7 @@ const Team = (props) => {
               text-align: center;
               font-weight: 500;
             }
-            .team-button {
+            .team-link1 {
               text-align: center;
             }
           }

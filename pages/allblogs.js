@@ -437,7 +437,6 @@ const Allblogs = (props) => {
               color: var(--dl-color-gray-black);
               width: var(--dl-size-size-xlarge);
               font-size: 24px;
-              max-width: 100%;
               align-self: center;
               text-align: left;
               line-height: 36px;

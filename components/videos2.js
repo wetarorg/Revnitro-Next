@@ -317,7 +317,10 @@ const Videos2 = (props) => {
           }
           .videos2-car1 {
             width: 100%;
+            height: auto;
             display: grid;
+            padding: var(--dl-space-space-sixunits);
+            align-self: center;
             grid-row-gap: 40px;
             grid-column-gap: 20px;
             grid-template-rows: repeat(2, 1fr);
@@ -325,20 +328,20 @@ const Videos2 = (props) => {
           }
           .videos2-container3 {
             flex: 0 0 auto;
-            width: auto;
+            width: 100%;
             display: flex;
             align-items: center;
             margin-right: 0px;
             flex-direction: column;
           }
           .videos2-iframe1 {
-            width: 500px;
+            width: 600px;
             height: 350px;
           }
           .videos2-text5 {
             color: var(--dl-color-gray-white);
             width: 100%;
-            font-size: 32px;
+            font-size: 24px;
             font-style: normal;
             margin-top: var(--dl-space-space-twounits);
             text-align: center;
@@ -356,6 +359,12 @@ const Videos2 = (props) => {
               padding: var(--dl-space-space-fourunits);
             }
             .videos2-text4 {
+              font-size: 24px;
+            }
+            .videos2-car1 {
+              padding: var(--dl-space-space-fourunits);
+            }
+            .videos2-text5 {
               font-size: 24px;
             }
             .videos2-root-class-name {
@@ -377,6 +386,16 @@ const Videos2 = (props) => {
             .videos2-text4 {
               font-size: 24px;
             }
+            .videos2-car1 {
+              padding: var(--dl-space-space-threeunits);
+            }
+            .videos2-iframe1 {
+              width: 400px;
+              height: 250px;
+            }
+            .videos2-text5 {
+              font-size: 24px;
+            }
           }
           @media (max-width: 991px) {
             .videos2-videos {
@@ -391,7 +410,12 @@ const Videos2 = (props) => {
               margin-top: var(--dl-space-space-twounits);
             }
             .videos2-car1 {
+              padding: var(--dl-space-space-threeunits);
               grid-template-columns: repeat(2, 1fr);
+            }
+            .videos2-text5 {
+              font-size: 20px;
+              margin-top: var(--dl-space-space-twounits);
             }
           }
           @media (max-width: 767px) {
@@ -445,6 +469,7 @@ const Videos2 = (props) => {
               justify-content: center;
             }
             .videos2-text5 {
+              font-size: 22px;
               margin-top: var(--dl-space-space-unit);
             }
           }
@@ -463,6 +488,16 @@ const Videos2 = (props) => {
               height: 200px;
             }
             .videos2-text4 {
+              font-size: 20px;
+            }
+            .videos2-car1 {
+              padding: var(--dl-space-space-halfunit);
+            }
+            .videos2-iframe1 {
+              width: 300px;
+              height: 200px;
+            }
+            .videos2-text5 {
               font-size: 20px;
             }
           }
