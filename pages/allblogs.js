@@ -287,7 +287,7 @@ const Allblogs = (props) => {
             object-fit: cover;
           }
           .allblogs-text07 {
-            color: var(--dl-color-gray-white);
+            color: var(--dl-color-gray-black);
             margin-top: var(--dl-space-space-unit);
             margin-bottom: var(--dl-space-space-unit);
           }

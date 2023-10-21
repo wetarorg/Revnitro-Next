@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import internshipsPageInitialProps225e3Resource from '../../resources/internships-page-initial-props-225e3'
+import internshipsPageInitialPropsE286cResource from '../../resources/internships-page-initial-props-e286c'
 
 const Internships = (props) => {
   return (
@@ -71,7 +71,7 @@ export default Internships
 
 export async function getStaticProps(context) {
   try {
-    const response = await internshipsPageInitialProps225e3Resource({
+    const response = await internshipsPageInitialPropsE286cResource({
       ...context?.params,
     })
     if (!response) {

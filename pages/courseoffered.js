@@ -20,11 +20,9 @@ const Courseoffered = (props) => {
           <div className="courseoffered-header">
             <h1 className="courseoffered-title">Courses offered</h1>
             <span>
-              <span>Team Revnitro is committed in sharing knowledge, </span>
-              <span>
-                following are the course offered by team Revnitro in alliance
-                with hands on experience
-              </span>
+              Team Revnitro is committed in sharing knowledgefollowing are the
+              course offered by team Revnitro in alliance with hands on
+              experience
             </span>
           </div>
         </header>
@@ -65,7 +63,7 @@ const Courseoffered = (props) => {
                                 </h3>
                               </div>
                               <button className="courseoffered-button button">
-                                <span className="courseoffered-text3">
+                                <span className="courseoffered-text1">
                                   KNOW MORE
                                 </span>
                               </button>
@@ -178,7 +176,7 @@ const Courseoffered = (props) => {
             border-radius: 30px;
             background-color: #2200ff;
           }
-          .courseoffered-text3 {
+          .courseoffered-text1 {
             margin: 0px;
             font-size: 24px;
             font-family: Poppins;
@@ -200,7 +198,7 @@ const Courseoffered = (props) => {
             .courseoffered-button {
               margin-top: 0px;
             }
-            .courseoffered-text3 {
+            .courseoffered-text1 {
               margin: 0px;
               font-size: 24px;
               font-family: Poppins;
@@ -264,7 +262,7 @@ const Courseoffered = (props) => {
               align-self: flex-start;
               text-align: center;
             }
-            .courseoffered-text3 {
+            .courseoffered-text1 {
               font-size: 12px;
             }
           }

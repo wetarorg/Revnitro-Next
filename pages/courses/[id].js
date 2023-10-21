@@ -7,8 +7,8 @@ import PropTypes from 'prop-types'
 
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
-import coursesPageInitialPaths8169eResource from '../../resources/courses-page-initial-paths-8169e'
-import coursesPageInitialProps3aed8Resource from '../../resources/courses-page-initial-props-3aed8'
+import coursesPageInitialPathsDfcd1Resource from '../../resources/courses-page-initial-paths-dfcd1'
+import coursesPageInitialPropsF8b57Resource from '../../resources/courses-page-initial-props-f8b57'
 
 const Courses = (props) => {
   return (
@@ -536,7 +536,7 @@ export default Courses
 
 export async function getStaticPaths() {
   try {
-    const response = await coursesPageInitialPaths8169eResource({})
+    const response = await coursesPageInitialPathsDfcd1Resource({})
     return {
       paths: (response?.data || []).map((item) => {
         return {
@@ -557,7 +557,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await coursesPageInitialProps3aed8Resource({
+    const response = await coursesPageInitialPropsF8b57Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {

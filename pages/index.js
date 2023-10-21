@@ -1986,6 +1986,7 @@ const Home = (props) => {
           .home-slide5 {
             width: 100%;
             height: auto;
+            justify-content: space-between;
             background-color: transparent;
           }
           .home-quote {
@@ -2144,6 +2145,7 @@ const Home = (props) => {
           .home-slide6 {
             width: 100%;
             height: auto;
+            justify-content: space-between;
             background-color: transparent;
           }
           .home-quote06 {
@@ -2302,6 +2304,7 @@ const Home = (props) => {
           .home-slide7 {
             width: 100%;
             height: 60vh;
+            justify-content: space-between;
             background-color: transparent;
           }
           .home-quote12 {
