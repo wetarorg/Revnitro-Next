@@ -4,8 +4,8 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import reviewsPageInitialPathsF3fdcResource from '../../resources/reviews-page-initial-paths-f3fdc'
-import reviewsPageInitialProps6f124Resource from '../../resources/reviews-page-initial-props-6f124'
+import reviewsPageInitialPaths3eb5bResource from '../../resources/reviews-page-initial-paths-3eb5b'
+import reviewsPageInitialPropsAc07dResource from '../../resources/reviews-page-initial-props-ac07d'
 
 const Reviews = (props) => {
   return (
@@ -64,7 +64,7 @@ export default Reviews
 
 export async function getStaticPaths() {
   try {
-    const response = await reviewsPageInitialPathsF3fdcResource({})
+    const response = await reviewsPageInitialPaths3eb5bResource({})
     return {
       paths: (response?.data || []).map((item) => {
         return {
@@ -85,7 +85,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await reviewsPageInitialProps6f124Resource({
+    const response = await reviewsPageInitialPropsAc07dResource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {

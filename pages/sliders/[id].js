@@ -4,8 +4,8 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import slidersPageInitialPaths80a78Resource from '../../resources/sliders-page-initial-paths-80a78'
-import slidersPageInitialProps99a2fResource from '../../resources/sliders-page-initial-props-99a2f'
+import slidersPageInitialPathsD10baResource from '../../resources/sliders-page-initial-paths-d10ba'
+import slidersPageInitialProps6f1d5Resource from '../../resources/sliders-page-initial-props-6f1d5'
 
 const Sliders11 = (props) => {
   return (
@@ -64,7 +64,7 @@ export default Sliders11
 
 export async function getStaticPaths() {
   try {
-    const response = await slidersPageInitialPaths80a78Resource({})
+    const response = await slidersPageInitialPathsD10baResource({})
     return {
       paths: (response?.data || []).map((item) => {
         return {
@@ -85,7 +85,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await slidersPageInitialProps99a2fResource({
+    const response = await slidersPageInitialProps6f1d5Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {

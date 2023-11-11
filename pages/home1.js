@@ -1341,6 +1341,7 @@ const Home1 = (props) => {
           .home1-controls {
             gap: var(--dl-space-space-unit);
             right: 0px;
+            width: auto;
             bottom: 0px;
             height: auto;
             display: flex;
