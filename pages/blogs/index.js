@@ -4,15 +4,15 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import blogsPageInitialProps99d1cResource from '../../resources/blogs-page-initial-props-99d1c'
+import blogsPageInitialProps3c66cResource from '../../resources/blogs-page-initial-props-3c66c'
 
-const Blogs = (props) => {
+const Blogs1 = (props) => {
   return (
     <>
-      <div className="blogs-container">
+      <div className="blogs1-container">
         <Head>
-          <title>Blogs - Revnitro</title>
-          <meta property="og:title" content="Blogs - Revnitro" />
+          <title>Blogs1 - Revnitro</title>
+          <meta property="og:title" content="Blogs1 - Revnitro" />
         </Head>
         <DataProvider
           renderSuccess={(params) => (
@@ -21,7 +21,7 @@ const Blogs = (props) => {
                 items={params}
                 renderItem={(BlogsEntities) => (
                   <>
-                    <div className="blogs-container1">
+                    <div className="blogs1-container1">
                       <h1>{BlogsEntities?.Title}</h1>
                       <span>{BlogsEntities?.Title}</span>
                       <span>{BlogsEntities?.description}</span>
@@ -38,7 +38,7 @@ const Blogs = (props) => {
       </div>
       <style jsx>
         {`
-          .blogs-container {
+          .blogs1-container {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -46,7 +46,7 @@ const Blogs = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .blogs-container1 {
+          .blogs1-container1 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -59,19 +59,19 @@ const Blogs = (props) => {
   )
 }
 
-Blogs.defaultProps = {
+Blogs1.defaultProps = {
   blogsEntities: [],
 }
 
-Blogs.propTypes = {
+Blogs1.propTypes = {
   blogsEntities: PropTypes.array,
 }
 
-export default Blogs
+export default Blogs1
 
 export async function getStaticProps(context) {
   try {
-    const response = await blogsPageInitialProps99d1cResource({
+    const response = await blogsPageInitialProps3c66cResource({
       ...context?.params,
     })
     if (!response) {

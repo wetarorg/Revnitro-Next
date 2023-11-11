@@ -144,10 +144,11 @@ const Team = (props) => {
                       </span>
                     </p>
                   </div>
-                  <div className="team-div">
-                    <React.Fragment>
+                  <div>
+                    <div className="team-container04">
                       <React.Fragment>
-                        <Script>{`
+                        <React.Fragment>
+                          <Script>{`
  /*
   Accordion - Code Embed
   */
@@ -196,8 +197,9 @@ const Team = (props) => {
       });
   });
 `}</Script>
+                        </React.Fragment>
                       </React.Fragment>
-                    </React.Fragment>
+                    </div>
                   </div>
                 </div>
                 <div className="team-speaker1">
@@ -211,8 +213,8 @@ const Team = (props) => {
                     data-role="accordion-container"
                     className="team-element1 accordion"
                   >
-                    <div className="team-container03">
-                      <div className="team-container04">
+                    <div className="team-container05">
+                      <div className="team-container06">
                         <h3 className="team-name1">
                           <span>Sriram</span>
                           <br></br>
@@ -243,10 +245,11 @@ const Team = (props) => {
                       </span>
                     </p>
                   </div>
-                  <div className="team-div1">
-                    <React.Fragment>
+                  <div>
+                    <div className="team-container08">
                       <React.Fragment>
-                        <Script>{`
+                        <React.Fragment>
+                          <Script>{`
  /*
   Accordion - Code Embed
   */
@@ -295,8 +298,9 @@ const Team = (props) => {
       });
   });
 `}</Script>
+                        </React.Fragment>
                       </React.Fragment>
-                    </React.Fragment>
+                    </div>
                   </div>
                 </div>
                 <div className="team-speaker2">
@@ -310,8 +314,8 @@ const Team = (props) => {
                     data-role="accordion-container"
                     className="team-element2 accordion"
                   >
-                    <div className="team-container05">
-                      <div className="team-container06">
+                    <div className="team-container09">
+                      <div className="team-container10">
                         <h3 className="team-name2">
                           <span>Daniel Raj</span>
                           <br></br>
@@ -347,10 +351,11 @@ const Team = (props) => {
                       </span>
                     </p>
                   </div>
-                  <div className="team-div2">
-                    <React.Fragment>
+                  <div>
+                    <div className="team-container12">
                       <React.Fragment>
-                        <Script>{`
+                        <React.Fragment>
+                          <Script>{`
  /*
   Accordion - Code Embed
   */
@@ -399,8 +404,9 @@ const Team = (props) => {
       });
   });
 `}</Script>
+                        </React.Fragment>
                       </React.Fragment>
-                    </React.Fragment>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -420,8 +426,8 @@ const Team = (props) => {
                     data-role="accordion-container"
                     className="team-element3 accordion"
                   >
-                    <div className="team-container07">
-                      <div className="team-container08">
+                    <div className="team-container13">
+                      <div className="team-container14">
                         <h3 className="team-name3">Gowtham</h3>
                         <span className="team-caption08">POST PRODUCTION</span>
                       </div>
@@ -440,10 +446,11 @@ const Team = (props) => {
                       audience successfully.
                     </p>
                   </div>
-                  <div className="team-div3">
-                    <React.Fragment>
+                  <div>
+                    <div className="team-container16">
                       <React.Fragment>
-                        <Script>{`
+                        <React.Fragment>
+                          <Script>{`
  /*
   Accordion - Code Embed
   */
@@ -492,8 +499,9 @@ const Team = (props) => {
       });
   });
 `}</Script>
+                        </React.Fragment>
                       </React.Fragment>
-                    </React.Fragment>
+                    </div>
                   </div>
                 </div>
                 <div className="team-speaker4">
@@ -507,8 +515,8 @@ const Team = (props) => {
                     data-role="accordion-container"
                     className="team-element4 accordion"
                   >
-                    <div className="team-container09">
-                      <div className="team-container10">
+                    <div className="team-container17">
+                      <div className="team-container18">
                         <h3 className="team-name4">
                           <span>Sanjay</span>
                           <br></br>
@@ -542,10 +550,11 @@ const Team = (props) => {
                       </span>
                     </p>
                   </div>
-                  <div className="team-div4">
-                    <React.Fragment>
+                  <div>
+                    <div className="team-container20">
                       <React.Fragment>
-                        <Script>{`
+                        <React.Fragment>
+                          <Script>{`
  /*
   Accordion - Code Embed
   */
@@ -594,8 +603,9 @@ const Team = (props) => {
       });
   });
 `}</Script>
+                        </React.Fragment>
                       </React.Fragment>
-                    </React.Fragment>
+                    </div>
                   </div>
                 </div>
                 <div className="team-speaker5">
@@ -609,8 +619,8 @@ const Team = (props) => {
                     data-role="accordion-container"
                     className="team-element5 accordion"
                   >
-                    <div className="team-container11">
-                      <div className="team-container12">
+                    <div className="team-container21">
+                      <div className="team-container22">
                         <h3 className="team-name5">
                           <span>Sridhar</span>
                           <br></br>
@@ -644,10 +654,11 @@ const Team = (props) => {
                       </span>
                     </p>
                   </div>
-                  <div className="team-div5">
-                    <React.Fragment>
+                  <div>
+                    <div className="team-container24">
                       <React.Fragment>
-                        <Script>{`
+                        <React.Fragment>
+                          <Script>{`
  /*
   Accordion - Code Embed
   */
@@ -696,8 +707,9 @@ const Team = (props) => {
       });
   });
 `}</Script>
+                        </React.Fragment>
                       </React.Fragment>
-                    </React.Fragment>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -729,10 +741,11 @@ const Team = (props) => {
           >
             <span className="team-text37">CONNECT</span>
           </a>
-          <div className="team-div6">
-            <React.Fragment>
+          <div>
+            <div className="team-container26">
               <React.Fragment>
-                <Script>{`
+                <React.Fragment>
+                  <Script>{`
   function handleFormSubmit(event) {
     // Prevent the form from being submitted the default way
     event.preventDefault();
@@ -765,8 +778,9 @@ const Team = (props) => {
     });
   }
 `}</Script>
+                </React.Fragment>
               </React.Fragment>
-            </React.Fragment>
+            </div>
           </div>
         </div>
         <Footer rootClassName="footer-root-class-name3"></Footer>
@@ -1020,7 +1034,7 @@ const Team = (props) => {
             text-align: left;
             font-weight: 400;
           }
-          .team-div {
+          .team-container04 {
             display: contents;
           }
           .team-speaker1 {
@@ -1042,7 +1056,7 @@ const Team = (props) => {
           .team-element1 {
             padding: var(--dl-space-space-unit);
           }
-          .team-container03 {
+          .team-container05 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1050,7 +1064,7 @@ const Team = (props) => {
             align-items: space-between;
             flex-direction: column;
           }
-          .team-container04 {
+          .team-container06 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1082,7 +1096,7 @@ const Team = (props) => {
             text-align: left;
             font-weight: 400;
           }
-          .team-div1 {
+          .team-container08 {
             display: contents;
           }
           .team-speaker2 {
@@ -1104,7 +1118,7 @@ const Team = (props) => {
           .team-element2 {
             padding: var(--dl-space-space-unit);
           }
-          .team-container05 {
+          .team-container09 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1112,7 +1126,7 @@ const Team = (props) => {
             align-items: space-between;
             flex-direction: column;
           }
-          .team-container06 {
+          .team-container10 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1144,7 +1158,7 @@ const Team = (props) => {
             text-align: left;
             font-weight: 400;
           }
-          .team-div2 {
+          .team-container12 {
             display: contents;
           }
           .team-list1 {
@@ -1182,7 +1196,7 @@ const Team = (props) => {
           .team-element3 {
             padding: var(--dl-space-space-unit);
           }
-          .team-container07 {
+          .team-container13 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1190,7 +1204,7 @@ const Team = (props) => {
             align-items: space-between;
             flex-direction: column;
           }
-          .team-container08 {
+          .team-container14 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1222,7 +1236,7 @@ const Team = (props) => {
             text-align: left;
             font-weight: 400;
           }
-          .team-div3 {
+          .team-container16 {
             display: contents;
           }
           .team-speaker4 {
@@ -1244,7 +1258,7 @@ const Team = (props) => {
           .team-element4 {
             padding: var(--dl-space-space-unit);
           }
-          .team-container09 {
+          .team-container17 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1252,7 +1266,7 @@ const Team = (props) => {
             align-items: space-between;
             flex-direction: column;
           }
-          .team-container10 {
+          .team-container18 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1284,7 +1298,7 @@ const Team = (props) => {
             text-align: left;
             font-weight: 400;
           }
-          .team-div4 {
+          .team-container20 {
             display: contents;
           }
           .team-speaker5 {
@@ -1306,7 +1320,7 @@ const Team = (props) => {
           .team-element5 {
             padding: var(--dl-space-space-unit);
           }
-          .team-container11 {
+          .team-container21 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1314,7 +1328,7 @@ const Team = (props) => {
             align-items: space-between;
             flex-direction: column;
           }
-          .team-container12 {
+          .team-container22 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -1346,7 +1360,7 @@ const Team = (props) => {
             text-align: left;
             font-weight: 400;
           }
-          .team-div5 {
+          .team-container24 {
             display: contents;
           }
           .team-hero1 {
@@ -1414,7 +1428,7 @@ const Team = (props) => {
             margin: var(--dl-space-space-unit);
             font-size: 24px;
           }
-          .team-div6 {
+          .team-container26 {
             display: contents;
           }
           @media (max-width: 991px) {

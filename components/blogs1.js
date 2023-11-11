@@ -33,7 +33,9 @@ const Blogs1 = (props) => {
               <DataProvider
                 fetchData={(params) =>
                   fetch(
-                    `/api/blogs1resource-blogs1?${new URLSearchParams(params)}`,
+                    `/api/blogs1-resource-blogs1?${new URLSearchParams(
+                      params
+                    )}`,
                     {
                       headers: {
                         'Content-Type': 'application/json',
@@ -79,7 +81,7 @@ const Blogs1 = (props) => {
               <DataProvider
                 fetchData={(params) =>
                   fetch(
-                    `/api/blogs11resource-blogs11?${new URLSearchParams(
+                    `/api/blogs11-resource-blogs11?${new URLSearchParams(
                       params
                     )}`,
                     {
@@ -127,7 +129,7 @@ const Blogs1 = (props) => {
               <DataProvider
                 fetchData={(params) =>
                   fetch(
-                    `/api/blogs12resource-blogs12?${new URLSearchParams(
+                    `/api/blogs12-resource-blogs12?${new URLSearchParams(
                       params
                     )}`,
                     {
@@ -175,7 +177,7 @@ const Blogs1 = (props) => {
               <DataProvider
                 fetchData={(params) =>
                   fetch(
-                    `/api/blogs13resource-blogs13?${new URLSearchParams(
+                    `/api/blogs13-resource-blogs13?${new URLSearchParams(
                       params
                     )}`,
                     {

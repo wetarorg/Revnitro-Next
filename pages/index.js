@@ -84,7 +84,7 @@ const Home = (props) => {
                     <DataProvider
                       fetchData={(params) =>
                         fetch(
-                          `/api/home1resource-home1?${new URLSearchParams(
+                          `/api/home1-resource-home1?${new URLSearchParams(
                             params
                           )}`,
                           {
@@ -139,7 +139,7 @@ const Home = (props) => {
                     <DataProvider
                       fetchData={(params) =>
                         fetch(
-                          `/api/home2resource-home2?${new URLSearchParams(
+                          `/api/home2-resource-home2?${new URLSearchParams(
                             params
                           )}`,
                           {
@@ -194,7 +194,7 @@ const Home = (props) => {
                     <DataProvider
                       fetchData={(params) =>
                         fetch(
-                          `/api/home3resource-home3?${new URLSearchParams(
+                          `/api/home3-resource-home3?${new URLSearchParams(
                             params
                           )}`,
                           {
@@ -249,7 +249,7 @@ const Home = (props) => {
                     <DataProvider
                       fetchData={(params) =>
                         fetch(
-                          `/api/home4resource-home4?${new URLSearchParams(
+                          `/api/home4-resource-home4?${new URLSearchParams(
                             params
                           )}`,
                           {
@@ -489,7 +489,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home5resource-home5?${new URLSearchParams(
+                            `/api/home5-resource-home5?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -529,7 +529,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home6resource-home6?${new URLSearchParams(
+                            `/api/home6-resource-home6?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -569,7 +569,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home7resource-home7?${new URLSearchParams(
+                            `/api/home7-resource-home7?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -614,7 +614,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home8resource-home8?${new URLSearchParams(
+                            `/api/home8-resource-home8?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -654,7 +654,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home9resource-home9?${new URLSearchParams(
+                            `/api/home9-resource-home9?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -694,7 +694,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home10resource-home10?${new URLSearchParams(
+                            `/api/home10-resource-home10?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -739,7 +739,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home11resource-home11?${new URLSearchParams(
+                            `/api/home11-resource-home11?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -779,7 +779,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home12resource-home12?${new URLSearchParams(
+                            `/api/home12-resource-home12?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -819,7 +819,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home13resource-home13?${new URLSearchParams(
+                            `/api/home13-resource-home13?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -879,10 +879,11 @@ const Home = (props) => {
                 </button>
               </div>
             </div>
-            <div className="home-code-embed">
-              <React.Fragment>
+            <div>
+              <div className="home-container13">
                 <React.Fragment>
-                  <Script>{`
+                  <React.Fragment>
+                    <Script>{`
   document.querySelectorAll('.blaze-slider').forEach(el => {
     new BlazeSlider(el, {
       all: {
@@ -893,15 +894,16 @@ const Home = (props) => {
     });
   });
 `}</Script>
+                  </React.Fragment>
                 </React.Fragment>
-              </React.Fragment>
+              </div>
             </div>
           </section>
         </section>
         <section className="home-racing">
           <div className="home-gradient gradient-background">
-            <div className="home-container12">
-              <div className="home-container13">
+            <div className="home-container14">
+              <div className="home-container15">
                 <h1 className="home-text14">
                   <span>FROM THE WORLD OF</span>
                   <br></br>
@@ -913,15 +915,17 @@ const Home = (props) => {
                 </h1>
               </div>
             </div>
-            <div className="home-div">
-              <React.Fragment>
-                <style
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      '\n.gradient-background {\n  background: linear-gradient(300deg,darkviolet,#f30000);\n  background-size: 120% 120%;\n  animation: gradient-animation 12s ease infinite;\n}\n\n@keyframes gradient-animation {\n  0% {\n    background-position: 0% 50%;\n  }\n  50% {\n    background-position: 100% 50%;\n  }\n  100% {\n    background-position: 0% 50%;\n  }\n}\n',
-                  }}
-                />
-              </React.Fragment>
+            <div className="home-container16">
+              <div className="home-container17">
+                <React.Fragment>
+                  <style
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        '\n.gradient-background {\n  background: linear-gradient(300deg,darkviolet,#f30000);\n  background-size: 120% 120%;\n  animation: gradient-animation 12s ease infinite;\n}\n\n@keyframes gradient-animation {\n  0% {\n    background-position: 0% 50%;\n  }\n  50% {\n    background-position: 100% 50%;\n  }\n  100% {\n    background-position: 0% 50%;\n  }\n}\n',
+                    }}
+                  />
+                </React.Fragment>
+              </div>
             </div>
           </div>
           <div className="home-header1">
@@ -961,7 +965,7 @@ const Home = (props) => {
           </div>
           <Raceaccordianmobile rootClassName="raceaccordianmobile-root-class-name"></Raceaccordianmobile>
         </section>
-        <div className="home-container14">
+        <div className="home-container18">
           <Videos2 rootClassName="videos2-root-class-name"></Videos2>
         </div>
         <div className="home-hero1">
@@ -2527,7 +2531,7 @@ const Home = (props) => {
             margin: auto;
             position: absolute;
           }
-          .home-code-embed {
+          .home-container13 {
             display: contents;
           }
           .home-racing {
@@ -2546,7 +2550,7 @@ const Home = (props) => {
             align-self: flex-start;
             justify-content: space-between;
           }
-          .home-container12 {
+          .home-container14 {
             flex: 0 0 auto;
             width: 100%;
             height: auto;
@@ -2558,7 +2562,7 @@ const Home = (props) => {
             flex-direction: column;
             padding-bottom: var(--dl-space-space-halfunit);
           }
-          .home-container13 {
+          .home-container15 {
             flex: 0 0 auto;
             height: 100px;
             display: flex;
@@ -2587,7 +2591,11 @@ const Home = (props) => {
           .home-text19 {
             font-family: Arial;
           }
-          .home-div {
+          .home-container16 {
+            width: auto;
+            height: 100%;
+          }
+          .home-container17 {
             display: contents;
           }
           .home-header1 {
@@ -2713,7 +2721,7 @@ const Home = (props) => {
             font-family: Poppins;
             line-height: 27px;
           }
-          .home-container14 {
+          .home-container18 {
             flex: 0 0 auto;
             width: 100%;
             height: 100%;
@@ -3851,7 +3859,7 @@ const Home = (props) => {
               font-size: 16px;
               line-height: 24px;
             }
-            .home-container14 {
+            .home-container18 {
               height: auto;
             }
             .home-hero1 {

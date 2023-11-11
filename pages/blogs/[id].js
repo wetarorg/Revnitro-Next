@@ -7,8 +7,8 @@ import PropTypes from 'prop-types'
 
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
-import blogsPageInitialPathsC6ad1Resource from '../../resources/blogs-page-initial-paths-c6ad1'
-import blogsPageInitialProps076c4Resource from '../../resources/blogs-page-initial-props-076c4'
+import blogsPageInitialPaths43899Resource from '../../resources/blogs-page-initial-paths-43899'
+import blogsPageInitialProps2ddb4Resource from '../../resources/blogs-page-initial-props-2ddb4'
 
 const Blogs = (props) => {
   return (
@@ -23,9 +23,9 @@ const Blogs = (props) => {
           renderSuccess={(BlogsEntity) => (
             <>
               <div className="blogs-container1">
-                <h1>{BlogsEntity?.Title}</h1>
-                <span>{BlogsEntity?.description}</span>
-                <span>{BlogsEntity?.Category}</span>
+                <h1 className="blogs-text">{BlogsEntity?.Title}</h1>
+                <span className="blogs-text1">{BlogsEntity?.description}</span>
+                <span className="blogs-text2">{BlogsEntity?.Category}</span>
                 <div>
                   <ReactMarkdown>{BlogsEntity?.content}</ReactMarkdown>
                 </div>
@@ -64,6 +64,17 @@ const Blogs = (props) => {
             .blogs-container1 {
               padding: var(--dl-space-space-twounits);
             }
+            .blogs-text {
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 700;
+            }
+            .blogs-text1 {
+              color: var(--dl-color-gray-500);
+            }
+            .blogs-text2 {
+              color: var(--dl-color-gray-700);
+            }
           }
           @media (max-width: 991px) {
             .blogs-container1 {
@@ -95,7 +106,7 @@ export default Blogs
 
 export async function getStaticPaths() {
   try {
-    const response = await blogsPageInitialPathsC6ad1Resource({})
+    const response = await blogsPageInitialPaths43899Resource({})
     return {
       paths: (response?.data || []).map((item) => {
         return {
@@ -116,7 +127,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await blogsPageInitialProps076c4Resource({
+    const response = await blogsPageInitialProps2ddb4Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {

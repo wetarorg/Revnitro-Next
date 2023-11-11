@@ -46,7 +46,7 @@ const Videos2 = (props) => {
               <DataProvider
                 fetchData={(params) =>
                   fetch(
-                    `/api/videos2resource-videos2?${new URLSearchParams(
+                    `/api/videos2-resource-videos2?${new URLSearchParams(
                       params
                     )}`,
                     {
@@ -87,7 +87,7 @@ const Videos2 = (props) => {
               <DataProvider
                 fetchData={(params) =>
                   fetch(
-                    `/api/videos21resource-videos21?${new URLSearchParams(
+                    `/api/videos21-resource-videos21?${new URLSearchParams(
                       params
                     )}`,
                     {
@@ -368,6 +368,9 @@ const Videos2 = (props) => {
               font-size: 24px;
             }
             .videos2-root-class-name {
+              height: auto;
+            }
+            .videos2-root-class-name1 {
               height: auto;
             }
           }
