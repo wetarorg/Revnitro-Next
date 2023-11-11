@@ -32,7 +32,7 @@ const Home1 = (props) => {
                     <DataProvider
                       fetchData={(params) =>
                         fetch(
-                          `/api/home14-resource-home14?${new URLSearchParams(
+                          `/api/home1-resource-home1?${new URLSearchParams(
                             params
                           )}`,
                           {
@@ -48,8 +48,8 @@ const Home1 = (props) => {
                         <>
                           <div className="home1-container01">
                             <img
-                              src={context_tz9kl?.Image?.url}
                               alt="image"
+                              src={context_tz9kl?.Image?.url}
                               className="home1-image"
                             />
                             <div className="home1-container02">
@@ -80,7 +80,7 @@ const Home1 = (props) => {
                     <DataProvider
                       fetchData={(params) =>
                         fetch(
-                          `/api/home15-resource-home15?${new URLSearchParams(
+                          `/api/home11-resource-home11?${new URLSearchParams(
                             params
                           )}`,
                           {
@@ -96,8 +96,8 @@ const Home1 = (props) => {
                         <>
                           <div className="home1-container04">
                             <img
-                              src={context_tz9kl?.Image?.url}
                               alt="image"
+                              src={context_tz9kl?.Image?.url}
                               className="home1-image01"
                             />
                             <div className="home1-container05">
@@ -128,7 +128,7 @@ const Home1 = (props) => {
                     <DataProvider
                       fetchData={(params) =>
                         fetch(
-                          `/api/home16-resource-home16?${new URLSearchParams(
+                          `/api/home12-resource-home12?${new URLSearchParams(
                             params
                           )}`,
                           {
@@ -144,8 +144,8 @@ const Home1 = (props) => {
                         <>
                           <div className="home1-container07">
                             <img
-                              src={context_tz9kl?.Image?.url}
                               alt="image"
+                              src={context_tz9kl?.Image?.url}
                               className="home1-image02"
                             />
                             <div className="home1-container08">
@@ -176,7 +176,7 @@ const Home1 = (props) => {
                     <DataProvider
                       fetchData={(params) =>
                         fetch(
-                          `/api/home17-resource-home17?${new URLSearchParams(
+                          `/api/home13-resource-home13?${new URLSearchParams(
                             params
                           )}`,
                           {
@@ -192,8 +192,8 @@ const Home1 = (props) => {
                         <>
                           <div className="home1-container10">
                             <img
-                              src={context_tz9kl?.Image?.url}
                               alt="image"
+                              src={context_tz9kl?.Image?.url}
                               className="home1-image03"
                             />
                             <div className="home1-container11">
@@ -224,7 +224,7 @@ const Home1 = (props) => {
                     <DataProvider
                       fetchData={(params) =>
                         fetch(
-                          `/api/home18-resource-home18?${new URLSearchParams(
+                          `/api/home14-resource-home14?${new URLSearchParams(
                             params
                           )}`,
                           {
@@ -240,8 +240,8 @@ const Home1 = (props) => {
                         <>
                           <div className="home1-container13">
                             <img
-                              src={context_tz9kl?.Image?.url}
                               alt="image"
+                              src={context_tz9kl?.Image?.url}
                               className="home1-image04"
                             />
                             <div className="home1-container14">
@@ -457,7 +457,7 @@ const Home1 = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home19-resource-home19?${new URLSearchParams(
+                            `/api/home15-resource-home15?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -497,7 +497,7 @@ const Home1 = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home110-resource-home110?${new URLSearchParams(
+                            `/api/home16-resource-home16?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -537,7 +537,7 @@ const Home1 = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home111-resource-home111?${new URLSearchParams(
+                            `/api/home17-resource-home17?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -582,7 +582,7 @@ const Home1 = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home112-resource-home112?${new URLSearchParams(
+                            `/api/home18-resource-home18?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -622,7 +622,7 @@ const Home1 = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home113-resource-home113?${new URLSearchParams(
+                            `/api/home19-resource-home19?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -662,7 +662,7 @@ const Home1 = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home114-resource-home114?${new URLSearchParams(
+                            `/api/home110-resource-home110?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -707,7 +707,7 @@ const Home1 = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home115-resource-home115?${new URLSearchParams(
+                            `/api/home111-resource-home111?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -747,7 +747,7 @@ const Home1 = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home116-resource-home116?${new URLSearchParams(
+                            `/api/home112-resource-home112?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -787,7 +787,7 @@ const Home1 = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home117-resource-home117?${new URLSearchParams(
+                            `/api/home113-resource-home113?${new URLSearchParams(
                               params
                             )}`,
                             {

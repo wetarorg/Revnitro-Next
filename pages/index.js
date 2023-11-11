@@ -84,7 +84,7 @@ const Home = (props) => {
                     <DataProvider
                       fetchData={(params) =>
                         fetch(
-                          `/api/home1-resource-home1?${new URLSearchParams(
+                          `/api/home2-resource-home2?${new URLSearchParams(
                             params
                           )}`,
                           {
@@ -139,7 +139,7 @@ const Home = (props) => {
                     <DataProvider
                       fetchData={(params) =>
                         fetch(
-                          `/api/home2-resource-home2?${new URLSearchParams(
+                          `/api/home3-resource-home3?${new URLSearchParams(
                             params
                           )}`,
                           {
@@ -194,7 +194,7 @@ const Home = (props) => {
                     <DataProvider
                       fetchData={(params) =>
                         fetch(
-                          `/api/home3-resource-home3?${new URLSearchParams(
+                          `/api/home4-resource-home4?${new URLSearchParams(
                             params
                           )}`,
                           {
@@ -249,7 +249,7 @@ const Home = (props) => {
                     <DataProvider
                       fetchData={(params) =>
                         fetch(
-                          `/api/home4-resource-home4?${new URLSearchParams(
+                          `/api/home5-resource-home5?${new URLSearchParams(
                             params
                           )}`,
                           {
@@ -489,7 +489,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home5-resource-home5?${new URLSearchParams(
+                            `/api/home6-resource-home6?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -529,7 +529,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home6-resource-home6?${new URLSearchParams(
+                            `/api/home7-resource-home7?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -569,7 +569,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home7-resource-home7?${new URLSearchParams(
+                            `/api/home8-resource-home8?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -614,7 +614,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home8-resource-home8?${new URLSearchParams(
+                            `/api/home9-resource-home9?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -654,7 +654,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home9-resource-home9?${new URLSearchParams(
+                            `/api/home10-resource-home10?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -694,7 +694,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home10-resource-home10?${new URLSearchParams(
+                            `/api/home20-resource-home20?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -739,7 +739,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home11-resource-home11?${new URLSearchParams(
+                            `/api/home21-resource-home21?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -779,7 +779,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home12-resource-home12?${new URLSearchParams(
+                            `/api/home22-resource-home22?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -819,7 +819,7 @@ const Home = (props) => {
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home13-resource-home13?${new URLSearchParams(
+                            `/api/home23-resource-home23?${new URLSearchParams(
                               params
                             )}`,
                             {
