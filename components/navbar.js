@@ -90,7 +90,7 @@ const Navbar = (props) => {
             display: flex;
             z-index: 1000;
             position: relative;
-            max-width: var(--dl-size-size-maxwidth);
+            max-width: auto;
             align-items: center;
             padding-top: var(--dl-space-space-halfunit);
             padding-bottom: var(--dl-space-space-halfunit);
