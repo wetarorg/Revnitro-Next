@@ -57,204 +57,12 @@ const Home1 = (props) => {
                                 <h1 className="home1-text">
                                   {context_tz9kl?.Title}
                                 </h1>
-                                <span className="home1-text01">
+                                <span className="home1-text01 sctn1desc">
                                   {context_tz9kl?.description}
                                 </span>
                                 <button
                                   type="button"
-                                  className="home1-button button"
-                                >
-                                  KNOW MORE
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </>
-                      )}
-                    />
-                  </div>
-                  <div
-                    data-role="current-banner"
-                    className="home1-slide1 banner"
-                  >
-                    <DataProvider
-                      fetchData={(params) =>
-                        fetch(
-                          `/api/home11-resource-home11?${new URLSearchParams(
-                            params
-                          )}`,
-                          {
-                            headers: {
-                              'Content-Type': 'application/json',
-                            },
-                          }
-                        )
-                          .then((res) => res.json())
-                          .then((data) => data?.data?.[0])
-                      }
-                      renderSuccess={(context_tz9kl) => (
-                        <>
-                          <div className="home1-container04">
-                            <img
-                              alt="image"
-                              src={context_tz9kl?.Image?.url}
-                              className="home1-image01"
-                            />
-                            <div className="home1-container05">
-                              <div className="home1-container06">
-                                <h1 className="home1-text02">
-                                  {context_tz9kl?.Title}
-                                </h1>
-                                <span className="home1-text03">
-                                  {context_tz9kl?.description}
-                                </span>
-                                <button
-                                  type="button"
-                                  className="home1-button1 button"
-                                >
-                                  KNOW MORE
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </>
-                      )}
-                    />
-                  </div>
-                  <div
-                    data-role="current-banner"
-                    className="home1-slide2 banner"
-                  >
-                    <DataProvider
-                      fetchData={(params) =>
-                        fetch(
-                          `/api/home12-resource-home12?${new URLSearchParams(
-                            params
-                          )}`,
-                          {
-                            headers: {
-                              'Content-Type': 'application/json',
-                            },
-                          }
-                        )
-                          .then((res) => res.json())
-                          .then((data) => data?.data?.[0])
-                      }
-                      renderSuccess={(context_tz9kl) => (
-                        <>
-                          <div className="home1-container07">
-                            <img
-                              alt="image"
-                              src={context_tz9kl?.Image?.url}
-                              className="home1-image02"
-                            />
-                            <div className="home1-container08">
-                              <div className="home1-container09">
-                                <h1 className="home1-text04">
-                                  {context_tz9kl?.Title}
-                                </h1>
-                                <span className="home1-text05">
-                                  {context_tz9kl?.description}
-                                </span>
-                                <button
-                                  type="button"
-                                  className="home1-button2 button"
-                                >
-                                  KNOW MORE
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </>
-                      )}
-                    />
-                  </div>
-                  <div
-                    data-role="current-banner"
-                    className="home1-slide3 banner"
-                  >
-                    <DataProvider
-                      fetchData={(params) =>
-                        fetch(
-                          `/api/home13-resource-home13?${new URLSearchParams(
-                            params
-                          )}`,
-                          {
-                            headers: {
-                              'Content-Type': 'application/json',
-                            },
-                          }
-                        )
-                          .then((res) => res.json())
-                          .then((data) => data?.data?.[0])
-                      }
-                      renderSuccess={(context_tz9kl) => (
-                        <>
-                          <div className="home1-container10">
-                            <img
-                              alt="image"
-                              src={context_tz9kl?.Image?.url}
-                              className="home1-image03"
-                            />
-                            <div className="home1-container11">
-                              <div className="home1-container12">
-                                <h1 className="home1-text06">
-                                  {context_tz9kl?.Title}
-                                </h1>
-                                <span className="home1-text07">
-                                  {context_tz9kl?.description}
-                                </span>
-                                <button
-                                  type="button"
-                                  className="home1-button3 button"
-                                >
-                                  KNOW MORE
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </>
-                      )}
-                    />
-                  </div>
-                  <div
-                    data-role="current-banner"
-                    className="home1-slide4 banner"
-                  >
-                    <DataProvider
-                      fetchData={(params) =>
-                        fetch(
-                          `/api/home14-resource-home14?${new URLSearchParams(
-                            params
-                          )}`,
-                          {
-                            headers: {
-                              'Content-Type': 'application/json',
-                            },
-                          }
-                        )
-                          .then((res) => res.json())
-                          .then((data) => data?.data?.[0])
-                      }
-                      renderSuccess={(context_tz9kl) => (
-                        <>
-                          <div className="home1-container13">
-                            <img
-                              alt="image"
-                              src={context_tz9kl?.Image?.url}
-                              className="home1-image04"
-                            />
-                            <div className="home1-container14">
-                              <div className="home1-container15">
-                                <h1 className="home1-text08">
-                                  {context_tz9kl?.Title}
-                                </h1>
-                                <span className="home1-text09">
-                                  {context_tz9kl?.description}
-                                </span>
-                                <button
-                                  type="button"
-                                  className="home1-button4 button"
+                                  className="home1-button button section1"
                                 >
                                   KNOW MORE
                                 </button>
@@ -290,7 +98,7 @@ const Home1 = (props) => {
         </section>
         <section className="home1-hero">
           <div className="home1-hero-content">
-            <h1 className="home1-text10">REVNITRO</h1>
+            <h1 className="home1-text02">REVNITRO</h1>
             <div className="home1-caption">
               <p className="home1-caption1">REDEFINING AUTOMOBILE JOURNALISM</p>
             </div>
@@ -298,18 +106,18 @@ const Home1 = (props) => {
         </section>
         <Blogs1></Blogs1>
         <section id="service" className="home1-services">
-          <div className="home1-container16">
+          <div className="home1-container04">
             <h2 className="home1-heading section-heading">
               Book Services &amp; Consultation
             </h2>
           </div>
         </section>
         <div className="home1-note">
-          <div className="home1-image05">
+          <div className="home1-image01">
             <img
               alt="image"
               src="/bookings/home_page-300w.png"
-              className="home1-image06"
+              className="home1-image02"
             />
           </div>
           <div className="home1-content">
@@ -334,9 +142,9 @@ const Home1 = (props) => {
                       <img
                         alt="image"
                         src="/bookings/3.svg"
-                        className="home1-image07"
+                        className="home1-image03"
                       />
-                      <span className="home1-text11">
+                      <span className="home1-text03">
                         CAR PURCHASE CONSULTATION
                       </span>
                     </div>
@@ -356,9 +164,9 @@ const Home1 = (props) => {
                       <img
                         alt="image"
                         src="/bookings/2.svg"
-                        className="home1-image08"
+                        className="home1-image04"
                       />
-                      <span className="home1-text12">
+                      <span className="home1-text04">
                         BIKE PURCHASE CONSULTATION
                       </span>
                     </div>
@@ -378,9 +186,9 @@ const Home1 = (props) => {
                       <img
                         alt="image"
                         src="/bookings/1.svg"
-                        className="home1-image09"
+                        className="home1-image05"
                       />
-                      <span className="home1-text13">BIKE SERVICE BOOKING</span>
+                      <span className="home1-text05">BIKE SERVICE BOOKING</span>
                     </div>
                   </div>
                 </a>
@@ -398,9 +206,9 @@ const Home1 = (props) => {
                       <img
                         alt="image"
                         src="/bookings/4.svg"
-                        className="home1-image10"
+                        className="home1-image06"
                       />
-                      <span className="home1-text14">CAR SERVICE BOOKING</span>
+                      <span className="home1-text06">CAR SERVICE BOOKING</span>
                     </div>
                   </div>
                 </a>
@@ -418,9 +226,9 @@ const Home1 = (props) => {
                       <img
                         alt="image"
                         src="/bookings/ecu%20tuning%20(2).svg"
-                        className="home1-image11"
+                        className="home1-image07"
                       />
-                      <span className="home1-text15">ECU TUNING</span>
+                      <span className="home1-text07">ECU TUNING</span>
                     </div>
                   </div>
                 </a>
@@ -452,12 +260,12 @@ const Home1 = (props) => {
                   <div className="home1-slider-track1 blaze-track">
                     <div
                       data-role="current-banner"
-                      className="home1-slide5 banner"
+                      className="home1-slide1 banner"
                     >
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
-                            `/api/home15-resource-home15?${new URLSearchParams(
+                            `/api/home11-resource-home11?${new URLSearchParams(
                               params
                             )}`,
                             {
@@ -476,7 +284,7 @@ const Home1 = (props) => {
                                 <img
                                   alt="image"
                                   src={context_tz9kl?.profile?.url}
-                                  className="home1-image12"
+                                  className="home1-image08"
                                 />
                                 <div className="home1-details05">
                                   <span className="home1-name">
@@ -488,6 +296,171 @@ const Home1 = (props) => {
                                 </div>
                               </div>
                               <p className="home1-quote01">
+                                {context_tz9kl?.review}
+                              </p>
+                            </div>
+                          </>
+                        )}
+                      />
+                      <DataProvider
+                        fetchData={(params) =>
+                          fetch(
+                            `/api/home12-resource-home12?${new URLSearchParams(
+                              params
+                            )}`,
+                            {
+                              headers: {
+                                'Content-Type': 'application/json',
+                              },
+                            }
+                          )
+                            .then((res) => res.json())
+                            .then((data) => data?.data?.[0])
+                        }
+                        renderSuccess={(context_tz9kl) => (
+                          <>
+                            <div className="home1-quote02">
+                              <div className="home1-author1">
+                                <img
+                                  alt="image"
+                                  src={context_tz9kl?.profile?.url}
+                                  className="home1-image09"
+                                />
+                                <div className="home1-details06">
+                                  <span className="home1-name1">
+                                    {context_tz9kl?.name}
+                                  </span>
+                                  <span className="home1-handle1">
+                                    {context_tz9kl?.contact}
+                                  </span>
+                                </div>
+                              </div>
+                              <p className="home1-quote03">
+                                {context_tz9kl?.review}
+                              </p>
+                            </div>
+                          </>
+                        )}
+                      />
+                      <DataProvider
+                        fetchData={(params) =>
+                          fetch(
+                            `/api/home13-resource-home13?${new URLSearchParams(
+                              params
+                            )}`,
+                            {
+                              headers: {
+                                'Content-Type': 'application/json',
+                              },
+                            }
+                          )
+                            .then((res) => res.json())
+                            .then((data) => data?.data?.[0])
+                        }
+                        renderSuccess={(context_tz9kl) => (
+                          <>
+                            <div className="home1-quote04">
+                              <div className="home1-author2">
+                                <img
+                                  alt="image"
+                                  src={context_tz9kl?.profile?.url}
+                                  className="home1-image10"
+                                />
+                                <div className="home1-details07">
+                                  <span className="home1-name2">
+                                    {context_tz9kl?.name}
+                                  </span>
+                                  <span className="home1-handle2">
+                                    {context_tz9kl?.contact}
+                                  </span>
+                                </div>
+                              </div>
+                              <p className="home1-quote05">
+                                {context_tz9kl?.review}
+                              </p>
+                            </div>
+                          </>
+                        )}
+                      />
+                    </div>
+                    <div
+                      data-role="current-banner"
+                      className="home1-slide2 banner"
+                    >
+                      <DataProvider
+                        fetchData={(params) =>
+                          fetch(
+                            `/api/home14-resource-home14?${new URLSearchParams(
+                              params
+                            )}`,
+                            {
+                              headers: {
+                                'Content-Type': 'application/json',
+                              },
+                            }
+                          )
+                            .then((res) => res.json())
+                            .then((data) => data?.data?.[0])
+                        }
+                        renderSuccess={(context_tz9kl) => (
+                          <>
+                            <div className="home1-quote06">
+                              <div className="home1-author3">
+                                <img
+                                  alt="image"
+                                  src={context_tz9kl?.profile?.url}
+                                  className="home1-image11"
+                                />
+                                <div className="home1-details08">
+                                  <span className="home1-name3">
+                                    {context_tz9kl?.name}
+                                  </span>
+                                  <span className="home1-handle3">
+                                    {context_tz9kl?.contact}
+                                  </span>
+                                </div>
+                              </div>
+                              <p className="home1-quote07">
+                                {context_tz9kl?.review}
+                              </p>
+                            </div>
+                          </>
+                        )}
+                      />
+                      <DataProvider
+                        fetchData={(params) =>
+                          fetch(
+                            `/api/home15-resource-home15?${new URLSearchParams(
+                              params
+                            )}`,
+                            {
+                              headers: {
+                                'Content-Type': 'application/json',
+                              },
+                            }
+                          )
+                            .then((res) => res.json())
+                            .then((data) => data?.data?.[0])
+                        }
+                        renderSuccess={(context_tz9kl) => (
+                          <>
+                            <div className="home1-quote08">
+                              <div className="home1-author4">
+                                <img
+                                  alt="image"
+                                  src={context_tz9kl?.profile?.url}
+                                  className="home1-image12"
+                                />
+                                <div className="home1-details09">
+                                  <span className="home1-name4">
+                                    {context_tz9kl?.name}
+                                  </span>
+                                  <span className="home1-handle4">
+                                    {context_tz9kl?.contact}
+                                  </span>
+                                </div>
+                              </div>
+                              <p className="home1-quote09">
                                 {context_tz9kl?.review}
                               </p>
                             </div>
@@ -511,29 +484,34 @@ const Home1 = (props) => {
                         }
                         renderSuccess={(context_tz9kl) => (
                           <>
-                            <div className="home1-quote02">
-                              <div className="home1-author1">
+                            <div className="home1-quote10">
+                              <div className="home1-author5">
                                 <img
                                   alt="image"
                                   src={context_tz9kl?.profile?.url}
                                   className="home1-image13"
                                 />
-                                <div className="home1-details06">
-                                  <span className="home1-name1">
+                                <div className="home1-details10">
+                                  <span className="home1-name5">
                                     {context_tz9kl?.name}
                                   </span>
-                                  <span className="home1-handle1">
+                                  <span className="home1-handle5">
                                     {context_tz9kl?.contact}
                                   </span>
                                 </div>
                               </div>
-                              <p className="home1-quote03">
+                              <p className="home1-quote11">
                                 {context_tz9kl?.review}
                               </p>
                             </div>
                           </>
                         )}
                       />
+                    </div>
+                    <div
+                      data-role="current-banner"
+                      className="home1-slide3 banner"
+                    >
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
@@ -551,34 +529,29 @@ const Home1 = (props) => {
                         }
                         renderSuccess={(context_tz9kl) => (
                           <>
-                            <div className="home1-quote04">
-                              <div className="home1-author2">
+                            <div className="home1-quote12">
+                              <div className="home1-author6">
                                 <img
                                   alt="image"
                                   src={context_tz9kl?.profile?.url}
                                   className="home1-image14"
                                 />
-                                <div className="home1-details07">
-                                  <span className="home1-name2">
+                                <div className="home1-details11">
+                                  <span className="home1-name6">
                                     {context_tz9kl?.name}
                                   </span>
-                                  <span className="home1-handle2">
+                                  <span className="home1-handle6">
                                     {context_tz9kl?.contact}
                                   </span>
                                 </div>
                               </div>
-                              <p className="home1-quote05">
+                              <p className="home1-quote13">
                                 {context_tz9kl?.review}
                               </p>
                             </div>
                           </>
                         )}
                       />
-                    </div>
-                    <div
-                      data-role="current-banner"
-                      className="home1-slide6 banner"
-                    >
                       <DataProvider
                         fetchData={(params) =>
                           fetch(
@@ -596,23 +569,23 @@ const Home1 = (props) => {
                         }
                         renderSuccess={(context_tz9kl) => (
                           <>
-                            <div className="home1-quote06">
-                              <div className="home1-author3">
+                            <div className="home1-quote14">
+                              <div className="home1-author7">
                                 <img
                                   alt="image"
                                   src={context_tz9kl?.profile?.url}
                                   className="home1-image15"
                                 />
-                                <div className="home1-details08">
-                                  <span className="home1-name3">
+                                <div className="home1-details12">
+                                  <span className="home1-name7">
                                     {context_tz9kl?.name}
                                   </span>
-                                  <span className="home1-handle3">
+                                  <span className="home1-handle7">
                                     {context_tz9kl?.contact}
                                   </span>
                                 </div>
                               </div>
-                              <p className="home1-quote07">
+                              <p className="home1-quote15">
                                 {context_tz9kl?.review}
                               </p>
                             </div>
@@ -636,177 +609,12 @@ const Home1 = (props) => {
                         }
                         renderSuccess={(context_tz9kl) => (
                           <>
-                            <div className="home1-quote08">
-                              <div className="home1-author4">
-                                <img
-                                  alt="image"
-                                  src={context_tz9kl?.profile?.url}
-                                  className="home1-image16"
-                                />
-                                <div className="home1-details09">
-                                  <span className="home1-name4">
-                                    {context_tz9kl?.name}
-                                  </span>
-                                  <span className="home1-handle4">
-                                    {context_tz9kl?.contact}
-                                  </span>
-                                </div>
-                              </div>
-                              <p className="home1-quote09">
-                                {context_tz9kl?.review}
-                              </p>
-                            </div>
-                          </>
-                        )}
-                      />
-                      <DataProvider
-                        fetchData={(params) =>
-                          fetch(
-                            `/api/home110-resource-home110?${new URLSearchParams(
-                              params
-                            )}`,
-                            {
-                              headers: {
-                                'Content-Type': 'application/json',
-                              },
-                            }
-                          )
-                            .then((res) => res.json())
-                            .then((data) => data?.data?.[0])
-                        }
-                        renderSuccess={(context_tz9kl) => (
-                          <>
-                            <div className="home1-quote10">
-                              <div className="home1-author5">
-                                <img
-                                  alt="image"
-                                  src={context_tz9kl?.profile?.url}
-                                  className="home1-image17"
-                                />
-                                <div className="home1-details10">
-                                  <span className="home1-name5">
-                                    {context_tz9kl?.name}
-                                  </span>
-                                  <span className="home1-handle5">
-                                    {context_tz9kl?.contact}
-                                  </span>
-                                </div>
-                              </div>
-                              <p className="home1-quote11">
-                                {context_tz9kl?.review}
-                              </p>
-                            </div>
-                          </>
-                        )}
-                      />
-                    </div>
-                    <div
-                      data-role="current-banner"
-                      className="home1-slide7 banner"
-                    >
-                      <DataProvider
-                        fetchData={(params) =>
-                          fetch(
-                            `/api/home111-resource-home111?${new URLSearchParams(
-                              params
-                            )}`,
-                            {
-                              headers: {
-                                'Content-Type': 'application/json',
-                              },
-                            }
-                          )
-                            .then((res) => res.json())
-                            .then((data) => data?.data?.[0])
-                        }
-                        renderSuccess={(context_tz9kl) => (
-                          <>
-                            <div className="home1-quote12">
-                              <div className="home1-author6">
-                                <img
-                                  alt="image"
-                                  src={context_tz9kl?.profile?.url}
-                                  className="home1-image18"
-                                />
-                                <div className="home1-details11">
-                                  <span className="home1-name6">
-                                    {context_tz9kl?.name}
-                                  </span>
-                                  <span className="home1-handle6">
-                                    {context_tz9kl?.contact}
-                                  </span>
-                                </div>
-                              </div>
-                              <p className="home1-quote13">
-                                {context_tz9kl?.review}
-                              </p>
-                            </div>
-                          </>
-                        )}
-                      />
-                      <DataProvider
-                        fetchData={(params) =>
-                          fetch(
-                            `/api/home112-resource-home112?${new URLSearchParams(
-                              params
-                            )}`,
-                            {
-                              headers: {
-                                'Content-Type': 'application/json',
-                              },
-                            }
-                          )
-                            .then((res) => res.json())
-                            .then((data) => data?.data?.[0])
-                        }
-                        renderSuccess={(context_tz9kl) => (
-                          <>
-                            <div className="home1-quote14">
-                              <div className="home1-author7">
-                                <img
-                                  alt="image"
-                                  src={context_tz9kl?.profile?.url}
-                                  className="home1-image19"
-                                />
-                                <div className="home1-details12">
-                                  <span className="home1-name7">
-                                    {context_tz9kl?.name}
-                                  </span>
-                                  <span className="home1-handle7">
-                                    {context_tz9kl?.contact}
-                                  </span>
-                                </div>
-                              </div>
-                              <p className="home1-quote15">
-                                {context_tz9kl?.review}
-                              </p>
-                            </div>
-                          </>
-                        )}
-                      />
-                      <DataProvider
-                        fetchData={(params) =>
-                          fetch(
-                            `/api/home113-resource-home113?${new URLSearchParams(
-                              params
-                            )}`,
-                            {
-                              headers: {
-                                'Content-Type': 'application/json',
-                              },
-                            }
-                          )
-                            .then((res) => res.json())
-                            .then((data) => data?.data?.[0])
-                        }
-                        renderSuccess={(context_tz9kl) => (
-                          <>
                             <div className="home1-quote16">
                               <div className="home1-author8">
                                 <img
                                   alt="image"
                                   src={context_tz9kl?.profile?.url}
-                                  className="home1-image20"
+                                  className="home1-image16"
                                 />
                                 <div className="home1-details13">
                                   <span className="home1-name8">
@@ -848,7 +656,7 @@ const Home1 = (props) => {
               </div>
             </div>
             <div>
-              <div className="home1-container18">
+              <div className="home1-container06">
                 <React.Fragment>
                   <React.Fragment>
                     <Script>{`
@@ -870,21 +678,21 @@ const Home1 = (props) => {
         </section>
         <section className="home1-racing">
           <div className="home1-gradient gradient-background">
-            <div className="home1-container19">
-              <div className="home1-container20">
-                <h1 className="home1-text19">
+            <div className="home1-container07">
+              <div className="home1-container08">
+                <h1 className="home1-text11">
                   <span>FROM THE WORLD OF</span>
                   <br></br>
                   <span> MOTOSPORTS</span>
                 </h1>
-                <h1 className="home1-text23">
-                  <span className="home1-text24">Driven By Passion...</span>
+                <h1 className="home1-text15">
+                  <span className="home1-text16">Driven By Passion...</span>
                   <br></br>
                 </h1>
               </div>
             </div>
-            <div className="home1-container21">
-              <div className="home1-container22">
+            <div className="home1-container09">
+              <div className="home1-container10">
                 <React.Fragment>
                   <style
                     dangerouslySetInnerHTML={{
@@ -899,7 +707,7 @@ const Home1 = (props) => {
           <div className="home1-header1">
             <div className="home1-section-numeral">
               <div className="home1-divide"></div>
-              <p className="home1-text26">03</p>
+              <p className="home1-text18">03</p>
             </div>
             <div data-aos="fade-right" className="home1-heading4">
               <h2 className="home1-title1">INDIAN RACING</h2>
@@ -918,7 +726,7 @@ const Home1 = (props) => {
           <div className="home1-header2">
             <div className="home1-section-numeral1">
               <div className="home1-divide1"></div>
-              <p className="home1-text27">03</p>
+              <p className="home1-text19">03</p>
             </div>
             <div data-aos="fade-right" className="home1-heading5">
               <h2 className="home1-title3">INDIAN RACING</h2>
@@ -933,19 +741,19 @@ const Home1 = (props) => {
           </div>
           <Raceaccordianmobile rootClassName="raceaccordianmobile-root-class-name1"></Raceaccordianmobile>
         </section>
-        <div className="home1-container23">
+        <div className="home1-container11">
           <Videos2 rootClassName="videos2-root-class-name1"></Videos2>
         </div>
         <div className="home1-hero1">
           <h2 className="home1-heading6">
-            <span className="home1-text28">Questions on Automobiles?</span>
-            <br className="home1-text29"></br>
-            <span className="home1-text30">Reach our </span>
-            <span className="home1-text31">forum</span>
-            <span className="home1-text32"> </span>
-            <span className="home1-text33">now!</span>
-            <br className="home1-text34"></br>
-            <span className="home1-text35">
+            <span className="home1-text20">Questions on Automobiles?</span>
+            <br className="home1-text21"></br>
+            <span className="home1-text22">Reach our </span>
+            <span className="home1-text23">forum</span>
+            <span className="home1-text24"> </span>
+            <span className="home1-text25">now!</span>
+            <br className="home1-text26"></br>
+            <span className="home1-text27">
               <span
                 dangerouslySetInnerHTML={{
                   __html: ' ',
@@ -959,7 +767,7 @@ const Home1 = (props) => {
             rel="noreferrer noopener"
             className="home1-link5 button"
           >
-            <span className="home1-text36">Enter Forum</span>
+            <span className="home1-text28">Enter Forum</span>
           </a>
         </div>
         <Footer></Footer>
@@ -1047,18 +855,19 @@ const Home1 = (props) => {
             align-items: flex-start;
             background-image: linear-gradient(
               90deg,
-              rgb(0, 0, 0) 0%,
+              rgb(0, 0, 0) 25%,
               rgba(44, 62, 80, 0) 68%,
               rgba(44, 62, 80, 0) 98%
             );
           }
           .home1-container03 {
             flex: 0 0 auto;
-            width: auto;
+            width: 100%;
             display: flex;
             align-self: center;
             align-items: flex-start;
-            margin-left: var(--dl-space-space-fiveunits);
+            margin-left: 0vh;
+            padding-left: 5vh;
             flex-direction: column;
           }
           .home1-text {
@@ -1068,275 +877,15 @@ const Home1 = (props) => {
             font-weight: 800;
           }
           .home1-text01 {
-            color: var(--dl-color-gray-white);
-            width: 50%;
-            font-size: 24px;
+            width: 30%;
+            font-size: 28px;
             font-style: normal;
-            margin-top: var(--dl-space-space-unit);
+            margin-top: 40px;
             font-weight: 500;
-            margin-bottom: var(--dl-space-space-unit);
+            margin-bottom: 40px;
           }
           .home1-button {
-            color: var(--dl-color-gray-white);
-            padding: var(--dl-space-space-unit);
-            font-size: 24px;
-            background-color: #ff0000;
-          }
-          .home1-slide1 {
-            width: 100%;
-            height: 60vh;
-            background-color: transparent;
-          }
-          .home1-container04 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            position: relative;
-            align-items: flex-start;
-          }
-          .home1-image01 {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-          .home1-container05 {
-            top: 0px;
-            flex: 0 0 auto;
-            right: 0px;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            position: absolute;
-            align-items: flex-start;
-            background-image: linear-gradient(
-              90deg,
-              rgb(0, 0, 0) 0%,
-              rgba(44, 62, 80, 0) 68%,
-              rgba(44, 62, 80, 0) 98%
-            );
-          }
-          .home1-container06 {
-            flex: 0 0 auto;
-            width: auto;
-            display: flex;
-            align-self: center;
-            align-items: flex-start;
-            margin-left: var(--dl-space-space-fiveunits);
-            flex-direction: column;
-          }
-          .home1-text02 {
-            color: var(--dl-color-gray-white);
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 800;
-          }
-          .home1-text03 {
-            color: var(--dl-color-gray-white);
-            width: 50%;
-            font-size: 24px;
-            font-style: normal;
-            margin-top: var(--dl-space-space-unit);
-            font-weight: 500;
-            margin-bottom: var(--dl-space-space-unit);
-          }
-          .home1-button1 {
-            color: var(--dl-color-gray-white);
-            padding: var(--dl-space-space-unit);
-            font-size: 24px;
-            background-color: #ff0000;
-          }
-          .home1-slide2 {
-            width: 100%;
-            height: 60vh;
-            background-color: transparent;
-          }
-          .home1-container07 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            position: relative;
-            align-items: flex-start;
-          }
-          .home1-image02 {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-          .home1-container08 {
-            top: 0px;
-            flex: 0 0 auto;
-            right: 0px;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            position: absolute;
-            align-items: flex-start;
-            background-image: linear-gradient(
-              90deg,
-              rgb(0, 0, 0) 0%,
-              rgba(44, 62, 80, 0) 68%,
-              rgba(44, 62, 80, 0) 98%
-            );
-          }
-          .home1-container09 {
-            flex: 0 0 auto;
-            width: auto;
-            display: flex;
-            align-self: center;
-            align-items: flex-start;
-            margin-left: var(--dl-space-space-fiveunits);
-            flex-direction: column;
-          }
-          .home1-text04 {
-            color: var(--dl-color-gray-white);
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 800;
-          }
-          .home1-text05 {
-            color: var(--dl-color-gray-white);
-            width: 50%;
-            font-size: 24px;
-            font-style: normal;
-            margin-top: var(--dl-space-space-unit);
-            font-weight: 500;
-            margin-bottom: var(--dl-space-space-unit);
-          }
-          .home1-button2 {
-            color: var(--dl-color-gray-white);
-            padding: var(--dl-space-space-unit);
-            font-size: 24px;
-            background-color: #ff0000;
-          }
-          .home1-slide3 {
-            width: 100%;
-            height: 60vh;
-            background-color: transparent;
-          }
-          .home1-container10 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            position: relative;
-            align-items: flex-start;
-          }
-          .home1-image03 {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-          .home1-container11 {
-            top: 0px;
-            flex: 0 0 auto;
-            right: 0px;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            position: absolute;
-            align-items: flex-start;
-            background-image: linear-gradient(
-              90deg,
-              rgb(0, 0, 0) 0%,
-              rgba(44, 62, 80, 0) 68%,
-              rgba(44, 62, 80, 0) 98%
-            );
-          }
-          .home1-container12 {
-            flex: 0 0 auto;
-            width: auto;
-            display: flex;
-            align-self: center;
-            align-items: flex-start;
-            margin-left: var(--dl-space-space-fiveunits);
-            flex-direction: column;
-          }
-          .home1-text06 {
-            color: var(--dl-color-gray-white);
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 800;
-          }
-          .home1-text07 {
-            color: var(--dl-color-gray-white);
-            width: 50%;
-            font-size: 24px;
-            font-style: normal;
-            margin-top: var(--dl-space-space-unit);
-            font-weight: 500;
-            margin-bottom: var(--dl-space-space-unit);
-          }
-          .home1-button3 {
-            color: var(--dl-color-gray-white);
-            padding: var(--dl-space-space-unit);
-            font-size: 24px;
-            background-color: #ff0000;
-          }
-          .home1-slide4 {
-            width: 100%;
-            height: 60vh;
-            background-color: transparent;
-          }
-          .home1-container13 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            position: relative;
-            align-items: flex-start;
-          }
-          .home1-image04 {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-          .home1-container14 {
-            top: 0px;
-            flex: 0 0 auto;
-            right: 0px;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            position: absolute;
-            align-items: flex-start;
-            background-image: linear-gradient(
-              90deg,
-              rgb(0, 0, 0) 0%,
-              rgba(44, 62, 80, 0) 68%,
-              rgba(44, 62, 80, 0) 98%
-            );
-          }
-          .home1-container15 {
-            flex: 0 0 auto;
-            width: auto;
-            display: flex;
-            align-self: center;
-            align-items: flex-start;
-            margin-left: var(--dl-space-space-fiveunits);
-            flex-direction: column;
-          }
-          .home1-text08 {
-            color: var(--dl-color-gray-white);
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 800;
-          }
-          .home1-text09 {
-            color: var(--dl-color-gray-white);
-            width: 50%;
-            font-size: 24px;
-            font-style: normal;
-            margin-top: var(--dl-space-space-unit);
-            font-weight: 500;
-            margin-bottom: var(--dl-space-space-unit);
-          }
-          .home1-button4 {
-            color: var(--dl-color-gray-white);
-            padding: var(--dl-space-space-unit);
-            font-size: 24px;
-            background-color: #ff0000;
+            font-size: 16px;
           }
           .home1-controls {
             gap: var(--dl-space-space-unit);
@@ -1431,7 +980,7 @@ const Home1 = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home1-text10 {
+          .home1-text02 {
             color: var(--dl-color-gray-white);
             font-size: 90px;
             font-style: normal;
@@ -1464,7 +1013,7 @@ const Home1 = (props) => {
             margin-bottom: var(--dl-space-space-fiveunits);
             flex-direction: column;
           }
-          .home1-container16 {
+          .home1-container04 {
             flex: 0 0 auto;
             width: 100%;
             height: 100px;
@@ -1487,7 +1036,7 @@ const Home1 = (props) => {
             flex-direction: row-reverse;
             justify-content: center;
           }
-          .home1-image05 {
+          .home1-image01 {
             flex: 0;
             width: auto;
             height: 100%;
@@ -1496,7 +1045,7 @@ const Home1 = (props) => {
             flex-direction: row;
             justify-content: center;
           }
-          .home1-image06 {
+          .home1-image02 {
             width: 196px;
             height: 402px;
             object-fit: cover;
@@ -1561,12 +1110,12 @@ const Home1 = (props) => {
             flex-direction: row;
             justify-content: center;
           }
-          .home1-image07 {
+          .home1-image03 {
             width: 132px;
             height: 76px;
             object-fit: cover;
           }
-          .home1-text11 {
+          .home1-text03 {
             color: var(--dl-color-gray-white);
             width: 100%;
             font-size: 24px;
@@ -1593,12 +1142,12 @@ const Home1 = (props) => {
             flex-direction: row;
             justify-content: center;
           }
-          .home1-image08 {
+          .home1-image04 {
             width: 132px;
             height: 76px;
             object-fit: cover;
           }
-          .home1-text12 {
+          .home1-text04 {
             color: var(--dl-color-gray-white);
             width: 100%;
             font-size: 24px;
@@ -1625,12 +1174,12 @@ const Home1 = (props) => {
             flex-direction: row;
             justify-content: center;
           }
-          .home1-image09 {
+          .home1-image05 {
             width: 132px;
             height: 76px;
             object-fit: cover;
           }
-          .home1-text13 {
+          .home1-text05 {
             color: var(--dl-color-gray-white);
             width: 100%;
             font-size: 24px;
@@ -1657,12 +1206,12 @@ const Home1 = (props) => {
             flex-direction: row;
             justify-content: center;
           }
-          .home1-image10 {
+          .home1-image06 {
             width: 132px;
             height: 76px;
             object-fit: cover;
           }
-          .home1-text14 {
+          .home1-text06 {
             color: var(--dl-color-gray-white);
             width: 100%;
             font-size: 24px;
@@ -1689,12 +1238,12 @@ const Home1 = (props) => {
             flex-direction: row;
             justify-content: center;
           }
-          .home1-image11 {
+          .home1-image07 {
             width: 132px;
             height: 76px;
             object-fit: cover;
           }
-          .home1-text15 {
+          .home1-text07 {
             color: var(--dl-color-gray-white);
             width: 100%;
             font-size: 24px;
@@ -1786,7 +1335,7 @@ const Home1 = (props) => {
             flex-direction: row;
             justify-content: center;
           }
-          .home1-slide5 {
+          .home1-slide1 {
             width: 100%;
             height: auto;
             justify-content: space-between;
@@ -1811,7 +1360,7 @@ const Home1 = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home1-image12 {
+          .home1-image08 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
@@ -1862,7 +1411,7 @@ const Home1 = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home1-image13 {
+          .home1-image09 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
@@ -1913,7 +1462,7 @@ const Home1 = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home1-image14 {
+          .home1-image10 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
@@ -1945,7 +1494,7 @@ const Home1 = (props) => {
             line-height: 33px;
             letter-spacing: 1%;
           }
-          .home1-slide6 {
+          .home1-slide2 {
             width: 100%;
             height: auto;
             justify-content: space-between;
@@ -1970,7 +1519,7 @@ const Home1 = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home1-image15 {
+          .home1-image11 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
@@ -2021,7 +1570,7 @@ const Home1 = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home1-image16 {
+          .home1-image12 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
@@ -2072,7 +1621,7 @@ const Home1 = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home1-image17 {
+          .home1-image13 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
@@ -2104,7 +1653,7 @@ const Home1 = (props) => {
             line-height: 33px;
             letter-spacing: 1%;
           }
-          .home1-slide7 {
+          .home1-slide3 {
             width: 100%;
             height: 60vh;
             justify-content: space-between;
@@ -2129,7 +1678,7 @@ const Home1 = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home1-image18 {
+          .home1-image14 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
@@ -2180,7 +1729,7 @@ const Home1 = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home1-image19 {
+          .home1-image15 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
@@ -2231,7 +1780,7 @@ const Home1 = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home1-image20 {
+          .home1-image16 {
             width: 60px;
             object-fit: cover;
             aspect-ratio: 1;
@@ -2330,7 +1879,7 @@ const Home1 = (props) => {
             margin: auto;
             position: absolute;
           }
-          .home1-container18 {
+          .home1-container06 {
             display: contents;
           }
           .home1-racing {
@@ -2349,7 +1898,7 @@ const Home1 = (props) => {
             align-self: flex-start;
             justify-content: space-between;
           }
-          .home1-container19 {
+          .home1-container07 {
             flex: 0 0 auto;
             width: 100%;
             height: auto;
@@ -2361,7 +1910,7 @@ const Home1 = (props) => {
             flex-direction: column;
             padding-bottom: var(--dl-space-space-halfunit);
           }
-          .home1-container20 {
+          .home1-container08 {
             flex: 0 0 auto;
             height: 100px;
             display: flex;
@@ -2369,7 +1918,7 @@ const Home1 = (props) => {
             align-items: flex-start;
             justify-content: space-between;
           }
-          .home1-text19 {
+          .home1-text11 {
             color: var(--dl-color-gray-white);
             width: 560px;
             font-size: 34px;
@@ -2378,7 +1927,7 @@ const Home1 = (props) => {
             font-weight: 600;
             margin-left: var(--dl-space-space-twounits);
           }
-          .home1-text23 {
+          .home1-text15 {
             color: var(--dl-color-gray-white);
             width: auto;
             font-style: italic;
@@ -2387,14 +1936,14 @@ const Home1 = (props) => {
             font-weight: 500;
             margin-right: var(--dl-space-space-twounits);
           }
-          .home1-text24 {
+          .home1-text16 {
             font-family: Arial;
           }
-          .home1-container21 {
+          .home1-container09 {
             width: auto;
             height: 100%;
           }
-          .home1-container22 {
+          .home1-container10 {
             display: contents;
           }
           .home1-header1 {
@@ -2520,7 +2069,7 @@ const Home1 = (props) => {
             font-family: Poppins;
             line-height: 27px;
           }
-          .home1-container23 {
+          .home1-container11 {
             flex: 0 0 auto;
             width: 100%;
             height: 100%;
@@ -2549,38 +2098,38 @@ const Home1 = (props) => {
             font-family: Poppins;
             font-weight: 500;
           }
-          .home1-text28 {
+          .home1-text20 {
             font-size: 54px;
             font-weight: 500;
           }
-          .home1-text29 {
+          .home1-text21 {
             font-weight: 500;
           }
-          .home1-text30 {
+          .home1-text22 {
             font-weight: 500;
           }
-          .home1-text31 {
+          .home1-text23 {
             color: #2200ff;
             font-style: italic;
             font-family: Open Sans;
             font-weight: 600;
           }
-          .home1-text32 {
+          .home1-text24 {
             color: #2200ff;
             font-style: italic;
             font-family: Open Sans;
             font-weight: 600;
           }
-          .home1-text33 {
+          .home1-text25 {
             font-style: normal;
           }
-          .home1-text34 {
+          .home1-text26 {
             color: #ffffff;
             font-size: 100px;
             font-style: normal;
             font-weight: 500;
           }
-          .home1-text35 {
+          .home1-text27 {
             font-style: normal;
           }
           .home1-link5 {
@@ -2592,7 +2141,7 @@ const Home1 = (props) => {
             text-decoration: none;
             background-color: #2200ff;
           }
-          .home1-text36 {
+          .home1-text28 {
             margin: var(--dl-space-space-unit);
             font-size: 24px;
             font-family: Poppins;
@@ -2628,185 +2177,10 @@ const Home1 = (props) => {
               font-style: normal;
               font-weight: 700;
             }
-            .home1-text01 {
-              color: var(--dl-color-gray-white);
-              width: 40%;
-              font-size: 20px;
-              margin-top: var(--dl-space-space-unit);
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home1-button {
-              color: var(--dl-color-gray-white);
-              background-color: #ff0000;
-            }
             .home1-container04 {
-              height: 100%;
-              position: relative;
-            }
-            .home1-image01 {
-              width: 100%;
-              height: 100%;
-            }
-            .home1-container05 {
-              top: 0px;
-              left: 0px;
-              height: 100%;
-              position: absolute;
-              background-image: linear-gradient(
-                90deg,
-                rgb(0, 0, 0) 21%,
-                rgba(44, 62, 80, 0) 99%
-              );
-            }
-            .home1-container06 {
-              width: auto;
-              align-self: center;
-              margin-left: var(--dl-space-space-fourunits);
-            }
-            .home1-text02 {
-              color: var(--dl-color-gray-white);
-              font-size: 32px;
-              font-style: normal;
-              font-weight: 700;
-            }
-            .home1-text03 {
-              color: var(--dl-color-gray-white);
-              width: 40%;
-              font-size: 20px;
-              margin-top: var(--dl-space-space-unit);
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home1-button1 {
-              color: var(--dl-color-gray-white);
-              background-color: #ff0000;
-            }
-            .home1-container07 {
-              height: 100%;
-              position: relative;
-            }
-            .home1-image02 {
-              width: 100%;
-              height: 100%;
-            }
-            .home1-container08 {
-              top: 0px;
-              left: 0px;
-              height: 100%;
-              position: absolute;
-              background-image: linear-gradient(
-                90deg,
-                rgb(0, 0, 0) 21%,
-                rgba(44, 62, 80, 0) 99%
-              );
-            }
-            .home1-container09 {
-              width: auto;
-              align-self: center;
-              margin-left: var(--dl-space-space-fourunits);
-            }
-            .home1-text04 {
-              color: var(--dl-color-gray-white);
-              font-size: 32px;
-              font-style: normal;
-              font-weight: 700;
-            }
-            .home1-text05 {
-              color: var(--dl-color-gray-white);
-              width: 40%;
-              font-size: 20px;
-              margin-top: var(--dl-space-space-unit);
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home1-button2 {
-              color: var(--dl-color-gray-white);
-              background-color: #ff0000;
-            }
-            .home1-container10 {
-              height: 100%;
-              position: relative;
-            }
-            .home1-image03 {
-              width: 100%;
-              height: 100%;
-            }
-            .home1-container11 {
-              top: 0px;
-              left: 0px;
-              height: 100%;
-              position: absolute;
-              background-image: linear-gradient(
-                90deg,
-                rgb(0, 0, 0) 21%,
-                rgba(44, 62, 80, 0) 99%
-              );
-            }
-            .home1-container12 {
-              width: auto;
-              align-self: center;
-              margin-left: var(--dl-space-space-fourunits);
-            }
-            .home1-text06 {
-              color: var(--dl-color-gray-white);
-              font-size: 32px;
-              font-style: normal;
-              font-weight: 700;
-            }
-            .home1-text07 {
-              color: var(--dl-color-gray-white);
-              width: 40%;
-              font-size: 20px;
-              margin-top: var(--dl-space-space-unit);
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home1-button3 {
-              color: var(--dl-color-gray-white);
-              background-color: #ff0000;
-            }
-            .home1-container13 {
-              height: 100%;
-              position: relative;
-            }
-            .home1-image04 {
-              width: 100%;
-              height: 100%;
-            }
-            .home1-container14 {
-              top: 0px;
-              left: 0px;
-              height: 100%;
-              position: absolute;
-              background-image: linear-gradient(
-                90deg,
-                rgb(0, 0, 0) 21%,
-                rgba(44, 62, 80, 0) 99%
-              );
-            }
-            .home1-container15 {
-              width: auto;
-              align-self: center;
-              margin-left: var(--dl-space-space-fourunits);
-            }
-            .home1-text08 {
-              color: var(--dl-color-gray-white);
-              font-size: 32px;
-              font-style: normal;
-              font-weight: 700;
-            }
-            .home1-text09 {
-              color: var(--dl-color-gray-white);
-              width: 40%;
-              font-size: 20px;
-              margin-top: var(--dl-space-space-unit);
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home1-button4 {
-              color: var(--dl-color-gray-white);
-              background-color: #ff0000;
-            }
-            .home1-container16 {
               justify-content: center;
             }
-            .home1-image05 {
+            .home1-image01 {
               flex: 1;
               width: auto;
               margin: 0px;
@@ -2819,7 +2193,7 @@ const Home1 = (props) => {
             .home1-heading1 {
               margin-left: var(--dl-space-space-twounits);
             }
-            .home1-text15 {
+            .home1-text07 {
               color: var(--dl-color-gray-white);
             }
             .home1-title {
@@ -2843,7 +2217,7 @@ const Home1 = (props) => {
             .home1-slider-track1 {
               height: auto;
             }
-            .home1-slide5 {
+            .home1-slide1 {
               width: 100%;
               height: auto;
               align-items: center;
@@ -2865,7 +2239,7 @@ const Home1 = (props) => {
               height: 400px;
               justify-content: center;
             }
-            .home1-slide6 {
+            .home1-slide2 {
               width: 100%;
               height: auto;
               align-items: center;
@@ -2887,7 +2261,7 @@ const Home1 = (props) => {
               height: 400px;
               justify-content: center;
             }
-            .home1-slide7 {
+            .home1-slide3 {
               width: 100%;
               height: auto;
               align-items: center;
@@ -2957,254 +2331,6 @@ const Home1 = (props) => {
               font-weight: 800;
               margin-bottom: var(--dl-space-space-unit);
             }
-            .home1-text01 {
-              color: var(--dl-color-gray-white);
-              width: 30%;
-              font-size: 18px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 1.5;
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home1-button {
-              color: var(--dl-color-gray-white);
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 500;
-              padding-top: var(--dl-space-space-unit);
-              padding-left: var(--dl-space-space-unit);
-              padding-right: var(--dl-space-space-unit);
-              padding-bottom: var(--dl-space-space-unit);
-              background-color: rgb(255, 0, 0);
-            }
-            .home1-slide1 {
-              background-color: transparent;
-            }
-            .home1-container04 {
-              height: 60vh;
-              position: relative;
-              flex-direction: column;
-            }
-            .home1-image01 {
-              width: 100%;
-              height: 100%;
-            }
-            .home1-container05 {
-              top: 0px;
-              left: 0px;
-              height: 60vh;
-              position: absolute;
-              background-image: linear-gradient(
-                90deg,
-                rgb(0, 0, 0) 12%,
-                rgba(255, 255, 255, 0) 100%
-              );
-            }
-            .home1-container06 {
-              width: auto;
-              height: auto;
-              align-self: center;
-              margin-left: var(--dl-space-space-fourunits);
-            }
-            .home1-text02 {
-              color: var(--dl-color-gray-white);
-              font-size: 40px;
-              font-style: normal;
-              margin-top: var(--dl-space-space-unit);
-              font-weight: 800;
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home1-text03 {
-              color: var(--dl-color-gray-white);
-              width: 30%;
-              font-size: 18px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 1.5;
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home1-button1 {
-              color: var(--dl-color-gray-white);
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 500;
-              padding-top: var(--dl-space-space-unit);
-              padding-left: var(--dl-space-space-unit);
-              padding-right: var(--dl-space-space-unit);
-              padding-bottom: var(--dl-space-space-unit);
-              background-color: rgb(255, 0, 0);
-            }
-            .home1-slide2 {
-              background-color: transparent;
-            }
-            .home1-container07 {
-              height: 60vh;
-              position: relative;
-              flex-direction: column;
-            }
-            .home1-image02 {
-              width: 100%;
-              height: 100%;
-            }
-            .home1-container08 {
-              top: 0px;
-              left: 0px;
-              height: 60vh;
-              position: absolute;
-              background-image: linear-gradient(
-                90deg,
-                rgb(0, 0, 0) 12%,
-                rgba(255, 255, 255, 0) 100%
-              );
-            }
-            .home1-container09 {
-              width: auto;
-              height: auto;
-              align-self: center;
-              margin-left: var(--dl-space-space-fourunits);
-            }
-            .home1-text04 {
-              color: var(--dl-color-gray-white);
-              font-size: 40px;
-              font-style: normal;
-              margin-top: var(--dl-space-space-unit);
-              font-weight: 800;
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home1-text05 {
-              color: var(--dl-color-gray-white);
-              width: 30%;
-              font-size: 18px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 1.5;
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home1-button2 {
-              color: var(--dl-color-gray-white);
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 500;
-              padding-top: var(--dl-space-space-unit);
-              padding-left: var(--dl-space-space-unit);
-              padding-right: var(--dl-space-space-unit);
-              padding-bottom: var(--dl-space-space-unit);
-              background-color: rgb(255, 0, 0);
-            }
-            .home1-slide3 {
-              background-color: transparent;
-            }
-            .home1-container10 {
-              height: 60vh;
-              position: relative;
-              flex-direction: column;
-            }
-            .home1-image03 {
-              width: 100%;
-              height: 100%;
-            }
-            .home1-container11 {
-              top: 0px;
-              left: 0px;
-              height: 60vh;
-              position: absolute;
-              background-image: linear-gradient(
-                90deg,
-                rgb(0, 0, 0) 12%,
-                rgba(255, 255, 255, 0) 100%
-              );
-            }
-            .home1-container12 {
-              width: auto;
-              height: auto;
-              align-self: center;
-              margin-left: var(--dl-space-space-fourunits);
-            }
-            .home1-text06 {
-              color: var(--dl-color-gray-white);
-              font-size: 40px;
-              font-style: normal;
-              margin-top: var(--dl-space-space-unit);
-              font-weight: 800;
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home1-text07 {
-              color: var(--dl-color-gray-white);
-              width: 30%;
-              font-size: 18px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 1.5;
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home1-button3 {
-              color: var(--dl-color-gray-white);
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 500;
-              padding-top: var(--dl-space-space-unit);
-              padding-left: var(--dl-space-space-unit);
-              padding-right: var(--dl-space-space-unit);
-              padding-bottom: var(--dl-space-space-unit);
-              background-color: rgb(255, 0, 0);
-            }
-            .home1-slide4 {
-              background-color: transparent;
-            }
-            .home1-container13 {
-              height: 60vh;
-              position: relative;
-              flex-direction: column;
-            }
-            .home1-image04 {
-              width: 100%;
-              height: 100%;
-            }
-            .home1-container14 {
-              top: 0px;
-              left: 0px;
-              height: 60vh;
-              position: absolute;
-              background-image: linear-gradient(
-                90deg,
-                rgb(0, 0, 0) 12%,
-                rgba(255, 255, 255, 0) 100%
-              );
-            }
-            .home1-container15 {
-              width: auto;
-              height: auto;
-              align-self: center;
-              margin-left: var(--dl-space-space-fourunits);
-            }
-            .home1-text08 {
-              color: var(--dl-color-gray-white);
-              font-size: 40px;
-              font-style: normal;
-              margin-top: var(--dl-space-space-unit);
-              font-weight: 800;
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home1-text09 {
-              color: var(--dl-color-gray-white);
-              width: 30%;
-              font-size: 18px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 1.5;
-              margin-bottom: var(--dl-space-space-unit);
-            }
-            .home1-button4 {
-              color: var(--dl-color-gray-white);
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 500;
-              padding-top: var(--dl-space-space-unit);
-              padding-left: var(--dl-space-space-unit);
-              padding-right: var(--dl-space-space-unit);
-              padding-bottom: var(--dl-space-space-unit);
-              background-color: rgb(255, 0, 0);
-            }
             .home1-heading {
               font-size: 54px;
             }
@@ -3213,7 +2339,7 @@ const Home1 = (props) => {
               padding: var(--dl-space-space-threeunits);
               position: relative;
             }
-            .home1-image05 {
+            .home1-image01 {
               flex: 1;
               width: 30%;
               justify-content: center;
@@ -3232,18 +2358,18 @@ const Home1 = (props) => {
             .home1-slider {
               gap: var(--dl-space-space-twounits);
             }
-            .home1-container16 {
+            .home1-container04 {
               height: auto;
             }
             .home1-note {
               flex-direction: column-reverse;
             }
-            .home1-image05 {
+            .home1-image01 {
               flex: 1;
               width: 100%;
               margin-top: var(--dl-space-space-oneandhalfunits);
             }
-            .home1-image06 {
+            .home1-image02 {
               width: var(--dl-size-size-xxlarge);
               height: auto;
             }
@@ -3291,6 +2417,9 @@ const Home1 = (props) => {
             .home1-slider-track {
               align-items: stretch;
             }
+            .home1-container03 {
+              width: auto;
+            }
             .home1-previous {
               padding-top: var(--dl-space-space-unit);
               padding-left: var(--dl-space-space-unit);
@@ -3334,7 +2463,7 @@ const Home1 = (props) => {
               padding-right: var(--dl-space-space-oneandhalfunits);
               padding-bottom: var(--dl-space-space-threeunits);
             }
-            .home1-container16 {
+            .home1-container04 {
               align-self: center;
             }
             .home1-heading {
@@ -3343,7 +2472,7 @@ const Home1 = (props) => {
             .home1-note {
               justify-content: center;
             }
-            .home1-image05 {
+            .home1-image01 {
               margin-top: var(--dl-space-space-oneandhalfunits);
             }
             .home1-content {
@@ -3361,7 +2490,7 @@ const Home1 = (props) => {
               width: 100%;
               max-width: 560px;
             }
-            .home1-text11 {
+            .home1-text03 {
               font-size: 18px;
               line-height: 24px;
             }
@@ -3369,7 +2498,7 @@ const Home1 = (props) => {
               width: 100%;
               max-width: 560px;
             }
-            .home1-text12 {
+            .home1-text04 {
               font-size: 18px;
               line-height: 24px;
             }
@@ -3377,7 +2506,7 @@ const Home1 = (props) => {
               width: 100%;
               max-width: 560px;
             }
-            .home1-text13 {
+            .home1-text05 {
               font-size: 18px;
               line-height: 24px;
             }
@@ -3385,7 +2514,7 @@ const Home1 = (props) => {
               width: 100%;
               max-width: 560px;
             }
-            .home1-text14 {
+            .home1-text06 {
               font-size: 18px;
               line-height: 24px;
             }
@@ -3393,7 +2522,7 @@ const Home1 = (props) => {
               width: 100%;
               max-width: 560px;
             }
-            .home1-text15 {
+            .home1-text07 {
               font-size: 18px;
               line-height: 24px;
             }
@@ -3436,7 +2565,7 @@ const Home1 = (props) => {
             .home1-author {
               width: 100%;
             }
-            .home1-image12 {
+            .home1-image08 {
               width: 40px;
             }
             .home1-details05 {
@@ -3472,7 +2601,7 @@ const Home1 = (props) => {
             .home1-author1 {
               width: 100%;
             }
-            .home1-image13 {
+            .home1-image09 {
               width: 40px;
             }
             .home1-details06 {
@@ -3508,7 +2637,7 @@ const Home1 = (props) => {
             .home1-author2 {
               width: 100%;
             }
-            .home1-image14 {
+            .home1-image10 {
               width: 40px;
             }
             .home1-details07 {
@@ -3544,7 +2673,7 @@ const Home1 = (props) => {
             .home1-author3 {
               width: 100%;
             }
-            .home1-image15 {
+            .home1-image11 {
               width: 40px;
             }
             .home1-details08 {
@@ -3580,7 +2709,7 @@ const Home1 = (props) => {
             .home1-author4 {
               width: 100%;
             }
-            .home1-image16 {
+            .home1-image12 {
               width: 40px;
             }
             .home1-details09 {
@@ -3616,7 +2745,7 @@ const Home1 = (props) => {
             .home1-author5 {
               width: 100%;
             }
-            .home1-image17 {
+            .home1-image13 {
               width: 40px;
             }
             .home1-details10 {
@@ -3652,7 +2781,7 @@ const Home1 = (props) => {
             .home1-author6 {
               width: 100%;
             }
-            .home1-image18 {
+            .home1-image14 {
               width: 40px;
             }
             .home1-details11 {
@@ -3688,7 +2817,7 @@ const Home1 = (props) => {
             .home1-author7 {
               width: 100%;
             }
-            .home1-image19 {
+            .home1-image15 {
               width: 40px;
             }
             .home1-details12 {
@@ -3724,7 +2853,7 @@ const Home1 = (props) => {
             .home1-author8 {
               width: 100%;
             }
-            .home1-image20 {
+            .home1-image16 {
               width: 40px;
             }
             .home1-details13 {
@@ -3815,7 +2944,7 @@ const Home1 = (props) => {
               font-size: 16px;
               line-height: 24px;
             }
-            .home1-container23 {
+            .home1-container11 {
               height: auto;
             }
             .home1-hero1 {
@@ -3827,6 +2956,48 @@ const Home1 = (props) => {
             }
           }
           @media (max-width: 479px) {
+            .home1-slides {
+              height: auto;
+            }
+            .home1-slider {
+              height: auto;
+            }
+            .home1-slider-container {
+              height: auto;
+            }
+            .home1-slider-track-container {
+              height: auto;
+            }
+            .home1-slider-track {
+              height: auto;
+            }
+            .home1-slide {
+              height: auto;
+            }
+            .home1-container01 {
+              height: auto;
+            }
+            .home1-image {
+              height: auto;
+            }
+            .home1-container02 {
+              height: auto;
+              position: static;
+            }
+            .home1-container03 {
+              width: 100%;
+              padding: var(--dl-space-space-twounits);
+              margin-left: 0px;
+            }
+            .home1-text01 {
+              width: auto;
+              font-size: 18px;
+            }
+            .home1-button {
+              padding: var(--dl-space-space-halfunit);
+              font-size: 12px;
+              border-radius: var(--dl-radius-radius-radius8);
+            }
             .home1-previous {
               width: auto;
             }
@@ -3840,7 +3011,7 @@ const Home1 = (props) => {
             .home1-hero-content {
               height: auto;
             }
-            .home1-text10 {
+            .home1-text02 {
               font-size: 50px;
             }
             .home1-services {
@@ -3853,10 +3024,10 @@ const Home1 = (props) => {
               font-size: 32px;
               text-align: center;
             }
-            .home1-image05 {
+            .home1-image01 {
               margin-top: var(--dl-space-space-twounits);
             }
-            .home1-image06 {
+            .home1-image02 {
               width: auto;
               height: auto;
             }
@@ -3915,17 +3086,17 @@ const Home1 = (props) => {
               display: none;
               padding: 0px;
             }
-            .home1-text19 {
+            .home1-text11 {
               font-size: 18px;
               margin-left: 0px;
             }
-            .home1-text23 {
+            .home1-text15 {
               font-size: 12px;
             }
             .home1-divide {
               width: 20px;
             }
-            .home1-text26 {
+            .home1-text18 {
               font-size: 16px;
               line-height: 24px;
             }
@@ -3946,7 +3117,7 @@ const Home1 = (props) => {
             .home1-divide1 {
               width: 20px;
             }
-            .home1-text27 {
+            .home1-text19 {
               font-size: 16px;
               line-height: 24px;
             }
