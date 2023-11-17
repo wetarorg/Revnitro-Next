@@ -480,21 +480,57 @@ const Raceaccordianmobile = (props) => {
               width: 100%;
               height: var(--dl-size-size-xlarge);
             }
+            .raceaccordianmobile-container2 {
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 55%,
+                rgba(0, 0, 0, 0) 92%
+              );
+            }
             .raceaccordianmobile-two {
               width: 100%;
               height: var(--dl-size-size-xlarge);
+            }
+            .raceaccordianmobile-container3 {
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 52%,
+                rgba(0, 0, 0, 0) 92%
+              );
             }
             .raceaccordianmobile-three {
               width: 100%;
               height: var(--dl-size-size-xlarge);
             }
+            .raceaccordianmobile-container4 {
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 49%,
+                rgba(0, 0, 0, 0) 92%
+              );
+            }
             .raceaccordianmobile-four {
               width: 100%;
               height: var(--dl-size-size-xlarge);
             }
+            .raceaccordianmobile-container5 {
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 52%,
+                rgba(0, 0, 0, 0) 92%
+              );
+            }
             .raceaccordianmobile-five {
               width: 100%;
               height: var(--dl-size-size-xlarge);
+            }
+            .raceaccordianmobile-container6 {
+              width: 100%;
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 51%,
+                rgba(0, 0, 0, 0) 92%
+              );
             }
           }
         `}

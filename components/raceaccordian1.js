@@ -394,7 +394,7 @@ const Raceaccordian1 = (props) => {
             flex: 0 0 auto;
             left: 0px;
             right: 0px;
-            width: auto;
+            width: 100%;
             bottom: 0px;
             margin: auto;
             display: flex;
@@ -425,6 +425,81 @@ const Raceaccordian1 = (props) => {
             border-radius: var(--dl-radius-radius-radius8);
             text-decoration: none;
             background-color: transparent;
+          }
+          @media (max-width: 1600px) {
+            .raceaccordian1-container2 {
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 51%,
+                rgba(0, 0, 0, 0) 92%
+              );
+            }
+            .raceaccordian1-container3 {
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 51%,
+                rgba(0, 0, 0, 0) 92%
+              );
+            }
+            .raceaccordian1-container4 {
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 51%,
+                rgba(0, 0, 0, 0) 92%
+              );
+            }
+            .raceaccordian1-container5 {
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 51%,
+                rgba(0, 0, 0, 0) 92%
+              );
+            }
+            .raceaccordian1-container6 {
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 53%,
+                rgba(0, 0, 0, 0) 92%
+              );
+            }
+          }
+          @media (max-width: 1200px) {
+            .raceaccordian1-container2 {
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 52%,
+                rgba(0, 0, 0, 0) 92%,
+                rgba(0, 3, 4, 0.99) 100%
+              );
+            }
+            .raceaccordian1-container3 {
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 51%,
+                rgba(0, 0, 0, 0) 92%
+              );
+            }
+            .raceaccordian1-container4 {
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 52%,
+                rgba(0, 0, 0, 0) 92%
+              );
+            }
+            .raceaccordian1-container5 {
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 51%,
+                rgba(0, 0, 0, 0) 92%
+              );
+            }
+            .raceaccordian1-container6 {
+              background-image: linear-gradient(
+                0deg,
+                rgba(0, 3, 4, 0.99) 51%,
+                rgba(0, 0, 0, 0) 92%
+              );
+            }
           }
           @media (max-width: 767px) {
             .raceaccordian1-text {

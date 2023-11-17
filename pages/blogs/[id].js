@@ -7,8 +7,8 @@ import PropTypes from 'prop-types'
 
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
-import blogsPageInitialPathsBa1faResource from '../../resources/blogs-page-initial-paths-ba1fa'
-import blogsPageInitialPropsEeff9Resource from '../../resources/blogs-page-initial-props-eeff9'
+import blogsPageInitialPaths2dc23Resource from '../../resources/blogs-page-initial-paths-2dc23'
+import blogsPageInitialPropsDcc2fResource from '../../resources/blogs-page-initial-props-dcc2f'
 
 const Blogs = (props) => {
   return (
@@ -106,7 +106,7 @@ export default Blogs
 
 export async function getStaticPaths() {
   try {
-    const response = await blogsPageInitialPathsBa1faResource({})
+    const response = await blogsPageInitialPaths2dc23Resource({})
     return {
       paths: (response?.data || []).map((item) => {
         return {
@@ -127,7 +127,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await blogsPageInitialPropsEeff9Resource({
+    const response = await blogsPageInitialPropsDcc2fResource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {

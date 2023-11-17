@@ -131,14 +131,11 @@ const Videos2 = (props) => {
             gap: var(--dl-space-space-fiveunits);
             width: 100%;
             display: flex;
+            padding: var(--dl-space-space-fiveunits);
             position: relative;
             max-width: auto;
             align-items: center;
-            padding-top: var(--dl-space-space-fiveunits);
-            padding-left: var(--dl-space-space-unit);
-            padding-right: var(--dl-space-space-fiveunits);
             flex-direction: column;
-            padding-bottom: var(--dl-space-space-fiveunits);
             background-color: var(--dl-color-gray-black);
           }
           .videos2-header {
@@ -296,23 +293,26 @@ const Videos2 = (props) => {
           }
           .videos2-container2 {
             flex: 0 0 auto;
-            width: 100%;
+            width: auto;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             margin-right: 0px;
             flex-direction: column;
           }
           .videos2-iframe {
             width: 600px;
             height: 350px;
+            align-self: center;
+            border-radius: 16px;
           }
           .videos2-text4 {
             color: var(--dl-color-gray-white);
             width: 100%;
             font-size: 24px;
+            align-self: center;
             font-style: normal;
             margin-top: var(--dl-space-space-twounits);
-            text-align: center;
+            text-align: left;
             font-weight: 400;
           }
           .videos2-car1 {
@@ -357,9 +357,20 @@ const Videos2 = (props) => {
             }
             .videos2-bike1 {
               padding: var(--dl-space-space-fourunits);
+              align-self: center;
+            }
+            .videos2-container2 {
+              position: relative;
+              align-items: center;
+            }
+            .videos2-iframe {
+              width: 500px;
+              height: 300px;
+              align-self: center;
             }
             .videos2-text4 {
               font-size: 24px;
+              margin-left: var(--dl-space-space-fourunits);
             }
             .videos2-car1 {
               padding: var(--dl-space-space-fourunits);
